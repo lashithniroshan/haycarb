@@ -51,7 +51,7 @@ const Msgvideo = () => {
         <div className="w-full md:w-1/3 p-4 md:p-8 text-white text-center md:text-left">
           <h1 className={styles.maintitle}>Haycarb 2024/25: Impact in Brief</h1>
           <p className="mt-4 text-base md:text-lg para">
-            At Haycarb, we lead with expertise, global reach, and purpose. Like strength beneath waves, our deep innovation fuels sustainable manufacturing, ethical leadership, and lasting impact. We deliver value beyond carbon to industries worldwide. Here's a brief about our impact during 2024/25.
+            At Haycarb, we lead with expertise, global reach, and purpose. Like strength beneath waves, our deep innovation fuels sustainable manufacturing, ethical leadership, and lasting impact. We deliver value beyond carbon to industries worldwide. Here&apos;s a brief about our impact during 2024/25.
           </p>
           <button
             className="mt-4 md:mt-6 px-4 py-2 md:px-6 md:py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom"
