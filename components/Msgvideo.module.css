@@ -1,0 +1,95 @@
+/* Msgvideo.module.css */
+.maintitle {
+  font-size: 42px;
+  color: rgba(73, 220, 248, 1);
+  line-height: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes borderFadeIn {
+  from {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5), 0 0 0 0 rgba(255, 255, 255, 0.3);
+  }
+  to {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5), 0 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes borderFadeOut {
+  from {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5), 0 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  to {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5), 0 0 0 0 rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Responsive Styles */
+.leftSection,
+.rightSection {
+  width: 100%;
+  padding: 10px;
+}
+
+@media (min-width: 769px) {
+  .leftSection {
+    width: 40%;
+  }
+
+  .rightSection {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .leftSection {
+    width: 33.33%;
+  }
+
+  .rightSection {
+    width: 66.66%;
+  }
+
+  .maintitle {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .maintitle {
+    font-size: 28px;
+  }
+
+  .para {
+    font-size: 14px;
+  }
+
+  .btn-custom {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .maintitle {
+    font-size: 36px;
+  }
+}

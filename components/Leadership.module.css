@@ -1,0 +1,267 @@
+.leadershipContainer {
+ background-color: rgba(29, 128, 160, 1);
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.headerSection {
+  margin-bottom: 40px;
+}
+
+.mainTitle {
+  font-size: 42px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.mainParagraph {
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family:'Gotham-Book';
+}
+
+.combinedSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.peopleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.peopleImages {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.imageWrapper1 {
+ background-image: url(/images/Isolation_Mode.png);
+    background-size: auto;
+    height: auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0% 15%;
+}
+.imageWrapper2{
+    height: auto;
+    position: relative;
+}
+.imageWrapper2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/Isolation_Mode.png');
+  background-size: auto; /* Adjust as needed: cover, contain, or specific size */
+  background-position: 0% 85%; /* Center the background image */
+  transform: rotate(180deg); /* Rotate only the background image */
+  z-index: 0; /* Place behind the person image */
+  background-repeat: no-repeat;
+}
+
+
+.personImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  position: relative; /* Ensure it stays above the background */
+  z-index: 1;
+}
+
+.yellowCollarLine {
+  width: 100%;
+  height: 0px;
+  border: 1px solid rgba(118, 175, 83, 1); /* Yellow color */
+  margin-bottom: -7px;
+}
+
+.contentItem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.textContent {
+  text-align: left;
+  max-width: 300px;
+  margin-top: 80px;
+}
+.textContentleft{
+padding-left: 55px;
+}
+.textContentright{
+padding-right: 55px;
+  
+}
+
+.name {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+   font-family: 'Gotham-Bold';
+   text-transform: uppercase;
+   line-height: 1.1;
+}
+
+.position {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.5;
+  font-family: 'Gotham-Book';
+}
+
+.buttonSection {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.videoButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.videoButton:hover {
+  background-color: #0056b3;
+}
+
+.languageDropdown {
+    cursor: pointer;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 3.40282e+38px;
+    height: 40px;
+    margin-top: 22px;
+    padding: 10px 20px;
+    font-family: gotham-medium;
+    font-size: 12px;
+    display: flex;
+    position: relative;
+    width: 140px;
+}
+.languageDropdown select {
+  width: 100%;
+  padding-right: 24px; /* Space for the arrow */
+}
+.arrowIcon {
+    width: 15px;
+    height: 10px;
+}
+.messagesSection {
+  display: none; /* Hidden on desktop */
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Media query for mobile devices (e.g., max-width: 768px) */
+@media (max-width: 768px) {
+  .leadershipContainer {
+    padding: 20px 5px; /* Further reduced padding for mobile */
+  }
+
+  .combinedSection {
+    gap: 5px; /* Minimal gap for mobile */
+  }
+
+  .peopleImages {
+    gap: 5px; /* Minimal gap for mobile */
+  }
+
+  .imageWrapper {
+    width: 80px; /* Further reduced width for mobile */
+    height: 100px; /* Further reduced height for mobile */
+  }
+
+  .yellowCollarLine {
+    width: 120px; /* Further reduced width for mobile */
+  }
+
+  .textContent {
+    max-width: 100%; /* Further reduced to fit side by side */
+    font-size: 0.75rem; /* Smaller text for mobile */
+  }
+
+  .name {
+    font-size: 10px; /* Adjusted for mobile */
+    margin-bottom: 2px;
+  }
+
+  .position {
+    font-size: 9px; /* Adjusted for mobile */
+  }
+
+  .message {
+    font-size: 0.7rem; /* Adjusted for mobile */
+    margin-bottom: 15px;
+  }
+
+  .buttonSection {
+    gap: 5px; /* Minimal gap for mobile */
+  }
+
+  .videoButton,
+  .languageDropdown {
+    padding: 6px 10px; /* Further reduced padding for mobile */
+    font-size: 0.8rem; /* Further reduced font for mobile */
+  }
+  .textContent .message {
+    display: none; /* Hide messages in textContent on mobile */
+  }
+
+  .messagesSection {
+    display: block; /* Show messages section on mobile */
+  }
+  .mainTitle {
+  font-size: 30px;
+}
+  .mainParagraph {
+  font-size: 14px;
+}
+}
+
+
+@media (max-width: 991px) {
+  .contentItem{
+    display: none;
+  }
+  .leadershipContainer {
+    background-size: contain !important; /* Apply contain for mobile */
+  }
+  .combinedSection {
+  margin-bottom: 18px;
+}
+  .name {
+    font-size: 18px; /* Adjusted for mobile */
+  }
+   .messagesSection {
+margin-top: 50px;
+  }
+   .peopleImages {
+margin-top: 56px;
+  }
+}

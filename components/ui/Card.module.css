@@ -1,0 +1,81 @@
+.card {
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+    left: 0;
+}
+
+.title {
+position: absolute;
+  bottom: 10px; /* Position at the bottom */
+  left: 10px;
+  right: 10px;
+  font-size: 22px;
+  font-family: Brogadier;
+  color: #fff; /* White text for contrast over image */
+  text-align: center;
+  padding: 8px 15px; /* Increased padding for button feel */
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+  border: none; /* Remove default button border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Indicate clickable */
+  margin: 0;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+.title:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
+
+.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media (min-width: 992px) {
+  .card {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .card {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .cardImage {
+    height: 200px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+}

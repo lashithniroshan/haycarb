@@ -1,5 +1,143 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'Brogadier';
+    src: url('/fonts/Brogadier.eot');
+    src: url('/fonts/Brogadier.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Brogadier.woff2') format('woff2'),
+        url('/fonts/Brogadier.woff') format('woff'),
+        url('/fonts/Brogadier.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Gotham-Black';
+    src: url('/fonts/Gotham-Black.eot');
+    src: url('/fonts/Gotham-Black.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Gotham-Black.otf') format('opentype'),
+         url('/fonts/Gotham-Black.woff2') format('woff2'),
+         url('/fonts/Gotham-Black.woff') format('woff'),
+         url('/fonts/Gotham-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('/fonts/Gotham-Bold.eot');
+    src: url('/fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+     url('/fonts/Gotham-Bold.otf') format('opentype'),
+        url('/fonts/Gotham-Bold.woff2') format('woff2'),
+        url('/fonts/Gotham-Bold.woff') format('woff'),
+        url('/fonts/Gotham-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('/fonts/Gotham-Book.eot');
+    src: url('/fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Gotham-Book.otf') format('opentype'),
+        url('/fonts/Gotham-Book.woff2') format('woff2'),
+        url('/fonts/Gotham-Book.woff') format('woff'),
+        url('/fonts/Gotham-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('/fonts/Gotham-Light.eot');
+    src: url('/fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Gotham-Light.otf') format('opentype'),
+        url('/fonts/Gotham-Light.woff2') format('woff2'),
+        url('/fonts/Gotham-Light.woff') format('woff'),
+        url('/fonts/Gotham-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gotham-LightItalic';
+    src: url('/fonts/Gotham-LightItalic.eot');
+    src: url('/fonts/Gotham-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Gotham-LightItalic.otf') format('opentype'),
+        url('/fonts/Gotham-LightItalic.woff2') format('woff2'),
+        url('/fonts/Gotham-LightItalic.woff') format('woff'),
+        url('/fonts/Gotham-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('/fonts/Gotham-Medium.eot');
+    src: url('/fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Gotham-Medium.otf') format('opentype'),
+        url('/fonts/Gotham-Medium.woff2') format('woff2'),
+        url('/fonts/Gotham-Medium.woff') format('woff'),
+        url('/fonts/Gotham-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gotham-MediumItalic';
+    src: url('/fonts/Gotham-MediumItalic.eot');
+    src: url('/fonts/Gotham-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/Gotham-MediumItalic.otf') format('opentype'),
+        url('/fonts/Gotham-MediumItalic.woff2') format('woff2'),
+        url('/fonts/Gotham-MediumItalic.woff') format('woff'),
+        url('/fonts/Gotham-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Killega';
+    src: url('/fonts/Killega.eot');
+    src: url('/fonts/Killega.eot?#iefix') format('embedded-opentype'),
+     url('/fonts/Killega.otf') format('opentype'),
+        url('/fonts/Killega.woff2') format('woff2'),
+        url('/fonts/Killega.woff') format('woff'),
+        url('/fonts/Killega.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Kingsbridge-Bold';
+    src: url('/fonts/KingsbridgeRg-Bold.eot');
+    src: url('/fonts/KingsbridgeRg-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/KingsbridgeRg-Bold.otf') format('opentype'),
+        url('/fonts/KingsbridgeRg-Bold.woff2') format('woff2'),
+        url('/fonts/KingsbridgeRg-Bold.woff') format('woff'),
+        url('/fonts/KingsbridgeRg-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Kingsbridge-Regular';
+    src: url('/fonts/KingsbridgeBk-Regular.eot');
+    src: url('/fonts/KingsbridgeBk-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/KingsbridgeBk-Regular.otf') format('opentype'),
+        url('/fonts/KingsbridgeBk-Regular.woff2') format('woff2'),
+        url('/fonts/KingsbridgeBk-Regular.woff') format('woff'),
+        url('/fonts/KingsbridgeBk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,9 +156,124 @@
     --foreground: #ededed;
   }
 }
+html, body {
+  /* margin: 0;
+  padding: 0; */
+  /* height: 100%; */
+  /* Removed overflow: hidden */
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+font-family: 'Gotham-Book';
+  max-width: 100%;
+  /* min-height: 100vh; */
+  overflow-x: hidden;
+  font-size: 16px;
+}
+h1, h2{
+  font-family:'Brogadier'
+}
+
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+.scrollednavbg {
+  background: linear-gradient(360deg, rgba(2, 39, 88, 0.15) 0%, rgba(17, 27, 31, 0.5) 100%);
+
+}
+button{
+  cursor: pointer;
+}
+ .wave-hover {
+          position: relative;
+          overflow: hidden;
+          transition: all 0.4s ease;
+          z-index: 1; /* Ensure button text stays above wave */
+        }
+     
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+}
+
+.btn-custom{
+  font-family: 'gotham-medium';
+  font-size: 12px;
+  border:2px solid #fff;
+   background-color: transparent;
+    color:#fff;
+    padding: 15px 25px;
+}
+.para{
+  font-family: 'gotham-book';
+  font-size: 15px;
+}
+.arrowIcon {
+    width: 15px;
+    height: 10px;
+}
+
+@media (max-width: 991px) {
+.btn-custom.btn-custom-mobile{
+font-size: 10px;
+padding: 15px 18px;
+}
 }
