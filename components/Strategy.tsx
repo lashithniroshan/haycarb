@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import style from './Strategy.module.css';
-import CountUp from "react-countup";
 
 const Strategy = () => {
   // Sample data for list items and slider cards
