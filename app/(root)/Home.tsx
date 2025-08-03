@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Navbar from 'components/Navbar';
 import Msgvideo from 'components/Msgvideo';
 import CircleSlider from 'components/CircleSlider';
@@ -10,7 +9,6 @@ import Management from 'components/Management';
 import Strategy from 'components/Strategy';
 import FinancialSlider from 'components/FinancialSlider';
 import TableofContent from 'components/TableofContent';
-import SustaiabilitySlider from 'components/SustaiabilitySlider';
 import { HomeFooter } from 'components/Footer';
 import Videoslider from 'components/Videoslider';
 
