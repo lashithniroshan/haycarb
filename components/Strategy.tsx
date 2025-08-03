@@ -129,7 +129,7 @@ const Strategy = () => {
       <div className={style.leftSection}>
         <div className="container w-full h-full flex mx-auto px-22 py-10">
           <div className={style.staticContent}>
-            <h2 className={style.title}>Strategy & Future Outlook test</h2>
+            <h2 className={style.title}>Strategy & Future Outlook</h2>
             <p className={style.description}>
               Our strategy aligns to guide decisions to overcome challenges and
               create value.
