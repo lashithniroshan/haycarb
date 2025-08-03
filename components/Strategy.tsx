@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "./Strategy.module.css";
+import Image from "next/image";
 
 const Strategy = () => {
   // Sample data for list items and slider cards
@@ -118,10 +119,10 @@ const Strategy = () => {
     <div
       className={style.StrategyContainer}
       style={{
-        backgroundImage: ` url('/images/wale.png'), url('/images/strategybg-2.png')`, // Gradient then image
+        backgroundImage: `url('/images/strategybg-2.png')`, // Only the background image
         backgroundSize: "auto auto",
-        backgroundPosition: "50% -85%, 50% 0%",
-        backgroundRepeat: "no-repeat, no-repeat",
+        backgroundPosition: "50% 0%",
+        backgroundRepeat: "no-repeat",
         position: "relative",
         zIndex: 0,
       }}
@@ -186,19 +187,17 @@ const Strategy = () => {
               </div>
             ))}
           </div>
-          {/* Fixed SVG overlay for active card */}
-          {/* <div
-                className={style.svgOverlay}
-              >
-                 <img
-                  src="/images/wale.png"
-                  alt="Overlay png"
-                  className={style.svg}
-                  width={300}
-                  height={200}
-                />
-              </div> */}
         </div>
+      </div>
+      {/* Whale overlay that comes up out of the card */}
+      <div className={style.svgOverlay}>
+        <Image
+          src="/images/wale.png"
+          alt="Whale overlay"
+          className={style.svg}
+          width={500}
+          height={375}
+        />
       </div>
     </div>
   );

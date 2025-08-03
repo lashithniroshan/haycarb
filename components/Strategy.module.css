@@ -1,5 +1,5 @@
 .StrategyContainer {
-width: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 40px 20px;
   display: flex;
@@ -8,14 +8,13 @@ width: 100%;
   position: relative;
   background-color: rgba(0, 80, 114, 1);
   overflow: visible;
-
 }
 
 .leftSection {
   flex: 2;
   padding-right: 20px;
   position: relative;
-  zIndex: 1;
+  zindex: 1;
 }
 
 .staticContent {
@@ -25,7 +24,6 @@ width: 100%;
 .title {
   font-size: 40px;
   color: rgba(73, 220, 248, 1);
-;
   margin-bottom: 10px;
 }
 
@@ -65,7 +63,7 @@ width: 100%;
 .sliderContainer {
   position: relative;
   width: 100%;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .sliderTrack {
@@ -95,49 +93,52 @@ width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: #fff;
   text-align: center;
-  overflow: hidden;
-   display: flex;
+  overflow: visible; /* Allow whale to extend outside the card */
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   z-index: 2;
-      opacity: 0.8;
+  opacity: 0.8;
 }
 
-.listContent{
-       width: 50%;
-    float: right;
-    text-align: left; 
+.listContent {
+  width: 50%;
+  float: right;
+  text-align: left;
 }
-.descriptionContent{
-    text-align: left;
-    padding: 10px;
+.descriptionContent {
+  text-align: left;
+  padding: 10px;
 }
-.listContent li{
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        padding-bottom: 10px;
+.listContent li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
 }
-.listContent li:last-child{
-    border-bottom: none;
+.listContent li:last-child {
+  border-bottom: none;
 }
-.listContent li h4{
-    font-size: 50px;
+.listContent li h4 {
+  font-size: 50px;
 }
-.listContent li p{
+.listContent li p {
 }
 
 .svgOverlay {
   position: absolute;
-  top: 0;
-  width: 300px;
-  height: 200px;
+  top: 67%; /* Move whale down a bit from middle */
+  right: 33%; /* Adjust to show head outside and middle body to tail inside */
+  width: 50%; /* Make whale bigger */
+  height: 85%;
   pointer-events: none;
-  transform: translateX(-50%); /* Center the SVG over the card */
+  transform: translateY(-50%); /* Center vertically */
+  z-index: 3; /* Ensure whale appears above the card */
 }
 
 .svg {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .cardTitle {
@@ -178,8 +179,9 @@ width: 100%;
   }
 
   .svgOverlay {
-    width: 200px; /* Smaller SVG on mobile */
-    height: 150px;
+    display: none !important; /* Hide whale on mobile screens with !important */
+    visibility: hidden !important; /* Additional hiding method */
+    opacity: 0 !important; /* Additional hiding method */
   }
 
   .title {
@@ -187,17 +189,34 @@ width: 100%;
   }
 }
 
+/* Additional mobile breakpoint for larger phones */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .svgOverlay {
+    display: block !important; /* Show whale on tablet screens */
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
 @media (max-width: 991px) {
-.StrategyContainer {
-        background-image: url(/images/strategybg-2.png) !important;
-}
-.list{
-  display: none;
-}
- .card {
+  .StrategyContainer {
+    background-image: url(/images/strategybg-2.png) !important;
+  }
+  .list {
+    display: none;
+  }
+  .card {
     height: 535px;
   }
-  .listContent h4{
+  .listContent h4 {
     font-size: 30px;
+  }
+  .svgOverlay {
+    display: block; /* Ensure whale shows on tablet */
+    top: 67%; /* Keep the same positioning as desktop */
+    right: 35%; /* Adjust for tablet - position it properly */
+    width: 45%; /* Make whale slightly smaller on tablet for better fit */
+    height: 80%; /* Slightly smaller height for tablet */
+    transform: translateY(-50%); /* Center vertically */
   }
 }
