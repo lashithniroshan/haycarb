@@ -10,6 +10,7 @@ const Strategy = () => {
       content: `
         <div>
           <div class="${style.descriptionContent}">
+            <p class="${style.onlyMobileTitle}">Market growth</p>
             <p>Strategic global expansion, product innovation and tech investment drive Haycarb’s market growth and value-added carbon leadership.</p>
           </div>
           <ul class="${style.listContent}">
@@ -27,12 +28,13 @@ const Strategy = () => {
       content: `
         <div>
           <div class="${style.descriptionContent}">
+            <p class="${style.onlyMobileTitle}">Innovation led growth</p>
             <p>Haycarb advanced its innovation efforts by enhancing R&D capabilities, fostering a learning culture, and applying data-driven insights to support future growth.</p>
           </div>
           <ul class="${style.listContent}">
             <li><h4>+16</h4><p>New products launched</p></li>
             <li><h4>+4</h4><p>New products in pipeline</p></li>
-            <li><h4>Rs. 209.3</h4><p>Mn Investment in R&D</p></li>
+            <li><h4>Rs.209.3</h4><p>Mn Investment in R&D</p></li>
           </ul>
         </div>
       `,
@@ -44,12 +46,13 @@ const Strategy = () => {
       content: `
         <div>
           <div class="${style.descriptionContent}">
+            <p class="${style.onlyMobileTitle}">Global supply chains</p>
             <p>Haycarb strengthened supply chain resilience through regional diversification, sustainable sourcing, and strategic partnerships across key raw material markets.</p>
           </div>
           <ul class="${style.listContent}">
             <li><h4>+248</h4><p>new suppliers</p></li>
-            <li><h4>Rs. 14.9</h4><p>Bn payments to raw material suppliers</p></li>
-            <li><h4>Rs. 20.6</h4><p>Mn for supplier capacity building</p></li>
+            <li><h4>Rs.14.9</h4><p>Bn payments to raw material suppliers</p></li>
+            <li><h4>Rs.20.6</h4><p>Mn for supplier capacity building</p></li>
           </ul>
         </div>
       `,
@@ -61,12 +64,13 @@ const Strategy = () => {
       content: `
         <div>
           <div class="${style.descriptionContent}">
+            <p class="${style.onlyMobileTitle}">Purpose driven and committed teams</p>
             <p>Teams are empowered through fair pay, wellbeing, and growth, fostering innovation, collaboration, and accountability to drive long-term value and ESG goals.</p>
           </div>
           <ul class="${style.listContent}">
             <li><h4>+91%</h4><p>Employee retention rate</p></li>
             <li><h4>+17.3</h4><p>Average training hours per employee</p></li>
-            <li><h4>+Rs. 9.6</h4><p>Mn Investment in T&D</p></li>
+            <li><h4>+Rs.9.6</h4><p>Mn Investment in T&D</p></li>
           </ul>
         </div>
       `,
@@ -78,12 +82,13 @@ const Strategy = () => {
       content: `
         <div>
           <div class="${style.descriptionContent}">
+            <p class="${style.onlyMobileTitle}">ESG Mindset</p>
             <p>Haycarb PLC’s ESG strategy focuses on sustainable innovation, and environmental stewardship across all operations and communities.</p>
           </div>
           <ul class="${style.listContent}">
             <li><h4>+75%</h4><p>Energy requirements fulfilled through renewable energy</p></li>
             <li><h4>+1,523</h4><p>MWh Total solar power generation</p></li>
-            <li><h4>+Rs. 81.8</h4><p>Mn Investment in Reverse Osmosis plant for water recycling</p></li>
+            <li><h4>+Rs.81.8</h4><p>Mn Investment in Reverse Osmosis plant for water recycling</p></li>
           </ul>
         </div>
       `,
@@ -129,13 +134,13 @@ const Strategy = () => {
   }, []); */
 
   // This effect handles the autoplay timer.
-  /* useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % strategyData.length);
     }, autoplayInterval);
     return () => clearInterval(timer);
   }, []);
- */
+
   // Here, we determine how much the slider should move based on the screen size.
   const slidePercentage =
     deviceType === "mobile" ? 100 : deviceType === "tablet" ? 95 : 96;
