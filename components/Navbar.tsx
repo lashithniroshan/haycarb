@@ -107,7 +107,7 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
       }`}
       style={{ paddingTop: '10px' }}
     >
-      <div className="container mx-auto px-4 py-7 flex items-center justify-between">
+      <div className="mx-auto px-5 py-7 flex items-center justify-between">
         {/* Hamburger Menu (Always Visible) */}
         {isContentVisible && (
           <div>
@@ -117,7 +117,7 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
               aria-label="Toggle menu"
             >
               <svg
-                className="w-8 h-8"
+                className="w-9 h-9"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -151,7 +151,7 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
 
         {/* Right Side: Search and User Profile */}
         {isContentVisible && (
-          <div className="flex space-x-4 relative">
+          <div className="flex space-x-8 relative">
             {/* Search Dropdown */}
             <div className="relative" style={{ display: 'flex' }} ref={dropdownRef}>
               <button
@@ -159,20 +159,9 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
                 className="focus:outline-none"
                 aria-label="Toggle search"
               >
-                <svg
-                  className="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+<path d="M19.375 19.375L27.125 27.125M12.9167 21.9583C7.92309 21.9583 3.875 17.9102 3.875 12.9167C3.875 7.92309 7.92309 3.875 12.9167 3.875C17.9102 3.875 21.9583 7.92309 21.9583 12.9167C21.9583 17.9102 17.9102 21.9583 12.9167 21.9583Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
               </button>
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-64 bg-white text-black rounded-md shadow-lg z-50" style={{
@@ -198,7 +187,7 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
                           className="p-2 hover:bg-blue-200 cursor-pointer"
                           onClick={() => handlePdfSelect(file)}
                         >
-                          {file}
+                         {file.replace(/\.pdf$/i, '').replace(/-/g, ' ')}
                         </li>
                       ))
                     ) : (
@@ -211,20 +200,9 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
 
             {/* User Profile Icon */}
             <button className="focus:outline-none" aria-label="User Profile">
-              <svg
-                className="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+<path d="M25.8327 27.125C25.8327 23.5582 21.2063 20.6667 15.4993 20.6667C9.79241 20.6667 5.16602 23.5582 5.16602 27.125M15.4993 16.7917C11.9325 16.7917 9.04102 13.9002 9.04102 10.3333C9.04102 6.76649 11.9325 3.875 15.4993 3.875C19.0662 3.875 21.9577 6.76649 21.9577 10.3333C21.9577 13.9002 19.0662 16.7917 15.4993 16.7917Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
             </button>
           </div>
         )}
@@ -241,7 +219,7 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
               onClick={toggleMenu}
               className="text-2xl mb-4 focus:outline-none text-white"
               aria-label="Toggle menu"
-              style={{ padding: '10px 0px 0px 20px' }}
+              style={{ padding: '30px 0px 0px 27px',fontSize:'35px' }}
             >
               ×
             </button>

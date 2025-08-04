@@ -48,13 +48,13 @@ const HomeFooter = () => {
           <div className={styles.column}>
             <h3>Connect With Us</h3>
             <div className={styles.socialRow}>
-              <a href="#"><Image src="/icons/linkdin.png" alt="Facebook" width={30} height={30} /></a>
-              <a href="#"><Image src="/icons/facebook.png" alt="Twitter" width={30} height={30} /></a>
-              <a href="#"><Image src="/icons/instagram.png" alt="Instagram" width={30} height={30} /></a>
+              <a href="#"><Image src="/icons/Likin.svg" alt="Facebook" width={30} height={30} /></a>
+              <a href="#"><Image src="/icons/Facebook.svg" alt="Twitter" width={30} height={30} /></a>
+              <a href="#"><Image src="/icons/insta.svg" alt="Instagram" width={30} height={30} /></a>
             </div>
             <div className={styles.socialRow}>
               <a href="#"><Image src="/icons/grok.png" alt="LinkedIn" width={30} height={30} /></a>
-              <a href="#"><Image src="/icons/youtube.png" alt="YouTube" width={30} height={30} /></a>
+              <a href="#"><Image src="/icons/youtube.svg" alt="YouTube" width={30} height={30} /></a>
             </div>
           </div>
         </div>

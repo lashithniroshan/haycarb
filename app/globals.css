@@ -256,7 +256,7 @@ button{
 
 .btn-custom{
   font-family: 'gotham-medium';
-  font-size: 12px;
+  font-size: 14px;
   border:2px solid #fff;
    background-color: transparent;
     color:#fff;
@@ -264,7 +264,7 @@ button{
 }
 .para{
   font-family: 'gotham-book';
-  font-size: 15px;
+  font-size: 16px;
 }
 .arrowIcon {
     width: 15px;

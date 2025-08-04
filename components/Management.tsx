@@ -5,54 +5,72 @@ function Management() {
   // Updated sample data for management staff
   const staff = [
     {
-      name: 'BRAHMAN BALARATNARAJAH',
-      title: 'Deputy Managing Director',
+      // name: 'BRAHMAN BALARATNARAJAH',
+       name:`<p class="${styles.name}">BRAHMAN <br />BALARATNARAJAH</p>`,
+      // title: 'Deputy Managing Director',
+        title: `<p class="${styles.title}">Deputy Managing Director</p>`,
       image: '/images/management/brahman.png',
     },
     {
-      name: 'SARATH GANEGODA',
-      title: 'Non-Executive Director',
+      // name: 'SARATH GANEGODA',
+        name:`<p class="${styles.name}">SARATH<br />GANEGODA</p>`,
+      // title: 'Non-Executive Director',
+       title: `<p class="${styles.title}">Non-Executive Director</p>`,
       image: '/images/management/sarath.png',
     },
     {
-      name: 'ARJUN SENARATNA',
-      title: 'Non-Executive Director',
+      // name: 'ARJUN SENARATNA',
+      name:`<p class="${styles.name}">ARJUN<br />SENARATNA</p>`,
+      // title: 'Non-Executive Director',
+        title: `<p class="${styles.title}">Non-Executive Director</p>`,
       image: '/images/management/arjun.png',
     },
     {
-      name: 'MS. JEEVANI ABEYRATNE',
-      title: 'Director – Finance & IT',
+      // name: 'MS. JEEVANI ABEYRATNE',
+         name:`<p class="${styles.name}">MS. JEEVANI<br />ABEYRATNE</p>`,
+      // title: 'Director – Finance & IT',
+       title: `<p class="${styles.title}">Director – Finance & IT</p>`,
       image: '/images/management/jeevani.png',
     },
     {
-      name: 'PRASANNA UDAYA KUMARA',
-      title: 'Director – Research & Development and Technical',
+      // name: 'PRASANNA UDAYA KUMARA',
+      name:`<p class="${styles.name}">PRASANNA <br />UDAYA KUMARA</p>`,
+      // title: 'Director – Research & Development and Technical',
+       title: `<p class="${styles.title}">Director – Research & <br />Development and Technical</p>`,
       image: '/images/management/prasanna.png',
     },
     {
-      name: 'ALI ASGAR MUNAVER CADERBHOY',
-      title: 'Director – Business Development',
+      // name: 'ALI ASGAR MUNAVER CADERBHOY',
+   name:`<p class="${styles.name}">ALI ASGAR<br />MUNAVER CADERBHOY</p>`,
+      // title: 'Director – Business Development',
+        title: `<p class="${styles.title}">Director – Business Development</p>`,
          image: '/images/management/arjun.png',
     },
     {
-      name: 'Davdfid Ledffe',
-      title: 'CIdfdfO',
+      // name: 'Davdfid Ledffe',
+       name:`<p class="${styles.name}">DAVID <br />NEON</p>`,
+      // title: 'STO',
+       title: `<p class="${styles.title}">STO</p>`,
         image: '/images/management/arjun.png',
     },
     {
-      name: 'dfd Ldfdvdfdee',
-      title: 'dfg',
+      // name: 'devid Ldfdvdfdee',
+        name:`<p class="${styles.name}">ARJUN<br />SENARATNA</p>`,
+      // title: 'Manager',
+       title: `<p class="${styles.title}">Manager</p>`,
         image: '/images/management/arjun.png',
     },
     {
-      name: 'dfd dfd',
-      title: 'dfdf',
+      // name: 'dfd dfd',
+        name:`<p class="${styles.name}">DAVID<br />JONE</p>`,
+      // title: 'Director',
+      title: `<p class="${styles.title}">Director</p>`,
          image: '/images/management/arjun.png',
     },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slidesToShow = 4; // Display 4 items at a time
+  const slidesToShow = 6; // Display 4 items at a time
   const totalSlides = staff.length - slidesToShow + 1; // Number of possible starting positions (6 for 9 items)
   const autoplayInterval = 3000; // 3 seconds
 
@@ -99,8 +117,10 @@ function Management() {
                   className={styles.personImage}
                 />
                 <div className={styles.personInfo}>
-                  <p className={styles.name}>{person.name}</p>
-                  <p className={styles.title}>{person.title}</p>
+                  {/* <p className={styles.name}>{person.name}</p>
+                  <p className={styles.title}>{person.title}</p> */}
+                 <div dangerouslySetInnerHTML={{ __html: person.name }}/>
+                   <div dangerouslySetInnerHTML={{ __html: person.title }}/>
                 </div>
               </div>
             ))}
@@ -129,7 +149,7 @@ function Management() {
           Management Team
         </button>
         <div>
-        < div className={`container w-full h-full flex mx-auto px-10 py-10 items-center justify-between items-end ${styles.customcol}`}>
+        < div className={`container w-full h-full flex mx-auto px-15 py-10 items-center justify-between items-end ${styles.customcol}`}>
         <div className={styles.governanceSection}>
             <h2 className={styles.governanceSectionh2}>The Corporate Governance</h2>
           <p className={styles.governanceSectionp}>We uphold strong corporate governance through transparency, accountability and ethical leadership,<br /> ensuring responsible decision making and long-term stakeholder trust.</p>

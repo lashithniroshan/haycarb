@@ -7,19 +7,19 @@ const CardSlider = () => {
   const slidesData = [
     {
       id: 1,
-      title: 'Out of Home',
+      title: 'Chart Generator',
       image: '/images/cardchartgenerator.png',
       alt: 'chart generator',
     },
     {
       id: 2,
-      title: 'Retail Networks',
+      title: 'Pinquest Game',
       image: '/images/cardpinquestgame.png',
       alt: 'pinquest game',
     },
     {
       id: 3,
-      title: 'The Fluke-Up Drive',
+      title: 'Uer Profiles',
       image: '/images/carduserprofiles.png',
       alt: 'uer profiles',
     },

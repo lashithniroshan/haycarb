@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
 import Navbar from 'components/Navbar';
 import Msgvideo from 'components/Msgvideo';
 import CircleSlider from 'components/CircleSlider';
@@ -117,7 +118,15 @@ const Home = () => {
         <div className="text-center">
           {isContentVisible ? (
             <div> 
-              <h1 className='text-8xl' style={{ fontFamily: 'Brogadier' }}>Boundless Impact</h1>
+            <motion.h1
+  className="text-8xl"
+  style={{ fontFamily: "Brogadier" }}
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, ease: "easeOut" }}
+>
+  Boundless Impact
+</motion.h1>
               <p className="mt-4 text-base" style={{ fontFamily: 'Gotham-Book, sans-serif' }}>
 Haycarb PLC I Annual Report 2024/25
 Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and explore a year of transformation.
@@ -141,8 +150,13 @@ Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and e
               style={{
                 pointerEvents: 'auto',
                 zIndex: 3,
+                paddingTop:'25%',
               }}
             >
+                <p className="mt-4 text-base" style={{ fontFamily: 'Gotham-Book, sans-serif' }}>
+Haycarb PLC I Annual Report 2024/25
+Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and explore a year of transformation.
+              </p>
               <button
                 className="mt-6 px-6 py-2 rounded-full hover:bg-gray-200 transition btn-custom"
                 onClick={clickHandler}
