@@ -175,7 +175,7 @@ const Strategy = () => {
         style={{
           backgroundImage: `url('/images/strategybg-2.png')`,
           backgroundSize: "auto auto",
-          backgroundPosition: "50% -85%, 50% 0%",
+          backgroundPosition: "46% -5%, 50% 0%",
           backgroundRepeat: "no-repeat, no-repeat",
           position: "relative",
           zIndex: 0,
