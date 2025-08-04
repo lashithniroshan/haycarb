@@ -145,6 +145,13 @@ const Strategy = () => {
   const slidePercentage =
     deviceType === "mobile" ? 100 : deviceType === "tablet" ? 95 : 96;
 
+  let backgroundPositionValue;
+  if (deviceType === "tablet") {
+    backgroundPositionValue = "38% -34%, 50% 0%"; // Example for tablet
+  } else {
+    backgroundPositionValue = "46% -5%, 50% 0%"; // Your original desktop value
+  }
+
   return (
     <>
       <div
@@ -175,7 +182,7 @@ const Strategy = () => {
         style={{
           backgroundImage: `url('/images/strategybg-2.png')`,
           backgroundSize: "auto auto",
-          backgroundPosition: "46% -5%, 50% 0%",
+          backgroundPosition: backgroundPositionValue,
           backgroundRepeat: "no-repeat, no-repeat",
           position: "relative",
           zIndex: 0,
