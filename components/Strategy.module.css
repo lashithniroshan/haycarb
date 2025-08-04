@@ -76,7 +76,7 @@
 
 .slide {
   /* Each slide now takes 85% of the space */
-  flex: 0 0 96%;
+  flex: 0 0 92%;
   box-sizing: border-box;
   padding: 0 15px;
   position: relative;

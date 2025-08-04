@@ -143,7 +143,7 @@ const Strategy = () => {
 
   // Here, we determine how much the slider should move based on the screen size.
   const slidePercentage =
-    deviceType === "mobile" ? 100 : deviceType === "tablet" ? 95 : 96;
+    deviceType === "mobile" ? 100 : deviceType === "tablet" ? 95 : 92;
 
   let backgroundPositionValue;
   if (deviceType === "tablet") {
