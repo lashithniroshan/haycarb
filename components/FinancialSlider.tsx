@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from './ui/Card';
 import styles from './CardSlider.module.css';
+import style from './FinancialSlider.module.css';
 
 const FinancialSlider = () => {
   const slidesData = [
@@ -55,6 +56,7 @@ const FinancialSlider = () => {
   };
 
  return (
+  <div className={style.sliderContainerfinancial}>
     <div className={styles.sliderContainer}>
       <div className={styles.cardWrapper}>
         {slidesData.map((slide, index) => {
@@ -91,6 +93,7 @@ const FinancialSlider = () => {
           ></span>
         ))}
       </div>
+    </div>
     </div>
   );
 };

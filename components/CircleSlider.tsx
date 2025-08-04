@@ -346,16 +346,23 @@ const CircleSlider = () => {
             startAutoplay();
           }}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
+         <svg xmlns="http://www.w3.org/2000/svg" width="37" height="29" viewBox="0 0 37 29" fill="none">
+<g filter="url(#filter0_d_1031_828)">
+<path d="M14.3175 19.0715L5.74609 10.5M5.74609 10.5L14.3175 1.86645M5.74609 10.5L33.6032 10.5" stroke="white" strokeOpacity="0.3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" shapeRendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_1031_828" x="0.746094" y="0.866455" width="37.8574" height="27.205" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1031_828"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1031_828" result="shape"/>
+</filter>
+</defs>
+</svg>
         </button>
         <button
           className={`${styles.circleNavBtn} ${styles.navNext}`}
@@ -364,16 +371,22 @@ const CircleSlider = () => {
             startAutoplay();
           }}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path d="M9 18l6-6-6-6" />
-          </svg>
+         <svg xmlns="http://www.w3.org/2000/svg" width="37" height="29" viewBox="0 0 37 29" fill="none">
+         <g filter="url(#filter0_d_1031_828)">
+<path d="M20.6825 19.0715L29.2539 10.5M29.2539 10.5L20.6825 1.86645M29.2539 10.5L1.39677 10.5" stroke="white" strokeOpacity="0.3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_d_1031_828" x="0.746094" y="0.866455" width="37.8574" height="27.205" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1031_828"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1031_828" result="shape"/>
+</filter>
+</defs></svg>
         </button>
       </div>
     </div>

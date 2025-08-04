@@ -10,9 +10,9 @@ const Videoslider = () => {
 
   // Slide data (videos and info)
   const slides = [
-    { id: 1, src: '/videos/oneMinuteNatureVideo.mp4', title: 'Bunker', subtitle: 'Innovating with purpose, shaping a greener future from day one.' },
-    { id: 2, src: '/videos/oneMinuteNatureVideo.mp4', title: 'Song 2', subtitle: 'Our sustainability journey is driven by commitment and action.' },
-    { id: 3, src: '/videos/oneMinuteNatureVideo.mp4', title: 'Falling Out', subtitle: 'We integrate eco-friendly practices.' },
+    { id: 1, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/videobg1.jpg', title: 'Bunker', subtitle: 'Innovating with purpose, shaping a greener future from day one.' },
+    { id: 2, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/videobg2.jpg', title: 'Song 2', subtitle: 'Our sustainability journey is driven by commitment and action.' },
+    { id: 3, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/videobg13.jpg', title: 'Falling Out', subtitle: 'We integrate eco-friendly practices.' },
   ];
 
   // Handle slide change
@@ -115,7 +115,6 @@ const Videoslider = () => {
               ref={(el) => { videoRefs.current[slide.id - 1] = el; }} // Store ref with 0-based index
               src={slide.src}
               className={style.video}
-              autoPlay
               muted
               loop={false}
             />
@@ -131,21 +130,20 @@ const Videoslider = () => {
               }}
             >
               <div
-                className="absolute inset-0"
-                style={{
-                  borderRadius: '50%',
-                  boxShadow: '0 0 0 8px rgba(255, 255, 255, 0.5), 0 0 0 16px rgba(255, 255, 255, 0.3)',
-                  animation: 'borderFadeIn 0.5s forwards',
-                }}
-              />
-                 <Image
-                                    src="/icons/play.png" // Replace with your play.png path
-                                    alt="Play"
-                                    width={48}
-                                    height={48}
-                                    className="w-12 h-12"
-                                    style={{ objectFit: 'contain' }} // Ensure proper scaling
-                                  />
+              /> <svg xmlns="http://www.w3.org/2000/svg" width="99" height="99" viewBox="0 0 99 99" fill="none">
+<g clipPath="url(#clip0_579_1246)">
+<path d="M68.9832 49.4988C69.0169 49.4771 69.0506 49.453 69.0819 49.4338H68.8821C62.8073 45.4224 49.1914 19.6473 36.0859 27.6628C42.9577 26.6154 44.6985 42.6246 52.5117 49.4964C44.6985 56.3681 42.9577 72.3773 36.0859 71.33C49.1914 79.3478 62.8097 53.5727 68.8821 49.559H69.0819C69.0482 49.5397 69.0145 49.5156 68.9832 49.494V49.4988Z" fill="white"/>
+<path d="M49.4991 86.0799C69.7023 86.0799 86.0803 69.702 86.0803 49.4987C86.0803 29.2955 69.7023 12.9176 49.4991 12.9176C29.2959 12.9176 12.918 29.2955 12.918 49.4987C12.918 69.702 29.2959 86.0799 49.4991 86.0799Z" stroke="white" strokeMiterlimit="10"/>
+<path d="M49.4995 92.1644C73.0631 92.1644 92.1651 73.0624 92.1651 49.4988C92.1651 25.9353 73.0631 6.83325 49.4995 6.83325C25.936 6.83325 6.83398 25.9353 6.83398 49.4988C6.83398 73.0624 25.936 92.1644 49.4995 92.1644Z" stroke="white" strokeOpacity="0.5" strokeWidth="0.5" strokeMiterlimit="10"/>
+<path d="M49.5 0.25C76.7 0.25 98.75 22.3 98.75 49.5C98.75 76.7 76.7 98.75 49.5 98.75C22.3 98.75 0.25 76.7 0.25 49.5C0.25 22.3 22.3 0.25 49.5 0.25Z" stroke="white" strokeOpacity="0.2" strokeWidth="0.5" strokeMiterlimit="10"/>
+</g>
+<defs>
+<clipPath id="clip0_579_1246">
+<rect width="99" height="99" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+               
                                   </div>
               </button>
             )}
