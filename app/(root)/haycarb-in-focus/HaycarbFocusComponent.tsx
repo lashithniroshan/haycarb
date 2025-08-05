@@ -1,17 +1,16 @@
 "use client";
+import { InnerPageFooter } from "components/Footer";
 import Banner from "components/innerpage/Banner";
 import Navbar from "components/Navbar";
 import React, { useState } from "react";
-import FinancialCapital from "./FinancialCapital";
-import FinancialSupplementary from "./FinancialSupplementary";
-import { DefaultFooter, InnerPageFooter } from "components/Footer";
+import ReportingLandscape from "./ReportingLandscape";
 
-const FinancialComponent = () => {
-  const [activatedTab, setActivatedTab] = useState("finance-capital");
+const HaycarbFocusComponent = () => {
+  const [activatedTab, setActivatedTab] = useState("reporting-landscape");
 
   const tabs = [
-    { value: "finance-capital", label: "Financial Capital" },
-    { value: "supplementary-information", label: "Supplementary Information" },
+    { value: "reporting-landscape", label: "Reporting Landscape" },
+    { value: "overview-of-haycarb", label: "Overview of Haycarb" },
   ];
 
   return (
@@ -25,7 +24,7 @@ const FinancialComponent = () => {
 
       {/* Banner section */}
       <Banner
-        title="Financial"
+        title="Haycarb in Focus"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi vitae arcu ultrices vehicula. Fusce dignissim pulvinar odio at ultricies. Suspendisse potenti. Phasellus et rutrum ipsum, quis dignissim odio. Donec consequat quam a prium sagittis. Etiam mollis tempus sit amet scelerisque ante."
         tabs={tabs}
         activeTab={activatedTab}
@@ -33,14 +32,11 @@ const FinancialComponent = () => {
       />
 
       {/* Financial Capital */}
-      {activatedTab === "finance-capital" ? (
-        <FinancialCapital />
-      ) : (
-        <FinancialSupplementary />
-      )}
+      {activatedTab === "reporting-landscape" ? <ReportingLandscape /> : <></>}
+
       <InnerPageFooter />
     </div>
   );
 };
 
-export default FinancialComponent;
+export default HaycarbFocusComponent;
