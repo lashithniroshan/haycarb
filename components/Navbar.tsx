@@ -5,11 +5,9 @@ import React, { useState, useEffect, useRef } from "react";
 const Navbar = ({
   isScrolled,
   isContentVisible,
-  isFromInnerPage = false,
 }: {
   isScrolled: boolean;
   isContentVisible: boolean;
-  isFromInnerPage?: boolean;
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -111,11 +109,7 @@ const Navbar = ({
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? isFromInnerPage
-            ? "innepagenavbg"
-            : "scrollednavbg text-white"
-          : "bg-transparent text-white"
+        isScrolled ? "scrollednavbg text-white" : "bg-transparent text-white"
       }`}
       style={{ paddingTop: "10px" }}
     >
