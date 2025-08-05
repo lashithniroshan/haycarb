@@ -438,3 +438,46 @@ button {
     padding: 15px 18px;
   }
 }
+
+.wave-btn {
+  background-color: transparent; /* Base color */
+  position: relative;
+  overflow: hidden;
+  font-family: "gotham-medium";
+  font-size: 14px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 15px 25px;
+  cursor: pointer;
+}
+
+.wave-btn:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 300%;
+  height: 100%;
+  background: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 30' preserveAspectRatio='none'>\
+  <path d='M0 20 Q30 0 60 20 T120 20 V30 H0 Z' fill='%23ffffff'/>\
+</svg>");
+  background-repeat: repeat-x;
+  background-size: 60% 100%;
+  opacity: 0.4; /* wave opacity */
+  transition: transform 0.4s ease;
+}
+
+.wave-btn:hover::before {
+  animation: wave-move 2s linear infinite;
+}
+
+@keyframes wave-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
