@@ -1,0 +1,68 @@
+.btnCustomInner {
+  font-family: "gotham-medium";
+  font-size: 14px;
+  border: 2px solid #005881;
+  background-color: transparent;
+  color: #005881;
+  padding: 15px 25px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  .btnCustomInner.btnCustomMobile {
+    font-size: 10px;
+    padding: 15px 18px;
+  }
+}
+
+.waveBtnInner {
+  background-color: transparent; /* Base color */
+  position: relative;
+  overflow: hidden;
+  font-family: "gotham-medium";
+  font-size: 14px;
+  border: 2px solid #005881;
+  background-color: transparent;
+  color: #005881;
+  padding: 15px 25px;
+  cursor: pointer;
+}
+
+.waveBtnInner:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200%;
+  width: 400%;
+  height: 100%;
+  background: url("data:image/svg+xml;utf8,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 30' preserveAspectRatio='none'>\
+      <defs>\
+        <linearGradient id='waveGradient' x1='0' y1='0' x2='1' y2='0'>\
+          <stop offset='0%' stop-color='%23005881' stop-opacity='0.6'/>\
+          <stop offset='50%' stop-color='%235E9EB4' stop-opacity='0.3'/>\
+          <stop offset='100%' stop-color='%23005881' stop-opacity='0.6'/>\
+        </linearGradient>\
+      </defs>\
+      <path d='M0 20 Q30 0 60 20 T120 20 V30 H0 Z' fill='url(%23waveGradient)' />\
+    </svg>");
+  background-repeat: repeat-x;
+  background-size: 50% 100%;
+  opacity: 1;
+  animation: waveSlide 6s linear infinite;
+  transition: none;
+  pointer-events: none;
+}
+
+.waveBtnInner:hover::before {
+  animation: wave-move 2s linear infinite;
+}
+
+@keyframes wave-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}

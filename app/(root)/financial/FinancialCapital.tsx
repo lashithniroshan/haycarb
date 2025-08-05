@@ -1,3 +1,4 @@
+import WaveButton from "components/innerpage/WaveButton";
 import Image from "next/image";
 import React, { JSX } from "react";
 
@@ -255,7 +256,10 @@ const FinancialCapital = () => {
       </div>
 
       {/* Download buttons */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32"></div>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-6 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-60">
+        <WaveButton title="Financial Highlights" />
+        <WaveButton title="Financial Statements" />
+      </div>
     </section>
   );
 };
