@@ -66,7 +66,7 @@ const CardSlider = () => {
             else if (index === slidesData.length - 1) translateX = -70 * activeIndex + 25; // Right card
             else translateX = -70 * activeIndex; // Middle card
             style = {
-              transform: `translateX(${translateX}%)`,
+              transform: `translateX(${translateX * 0.2}%)`,
               opacity: index === activeIndex ? 1 : 0.5,
             };
           }
@@ -106,10 +106,10 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
 </defs>
 <g className="parallax">
-<use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(29, 128, 160, 0.7)" />
-<use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(29, 128, 160, 0.5)" />
-<use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(29, 128, 160, 0.3)" />
-<use xlinkHref="#gentle-wave" x="48" y="7" fill="rgba(29, 128, 160, 1)" />
+<use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(21, 120, 151, 0.7)" />
+<use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(21, 120, 151, 0.5)" />
+<use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(21, 120, 151, 0.3)" />
+<use xlinkHref="#gentle-wave" x="48" y="7" fill="rgba(21, 120, 151, 1)" />
 </g>
 </svg>
 </div>

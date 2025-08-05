@@ -6,6 +6,8 @@ import FinancialCapital from "./FinancialCapital";
 
 const FinancialComponent = () => {
   const [activatedTab, setActivatedTab] = useState("finance-capital");
+  const [isScrolled, setIsScrolled] = useState(true);
+  const [isContentVisible, setIsContentVisible] = useState(true);
 
   const tabs = [
     { value: "finance-capital", label: "Financial Capital" },
@@ -16,8 +18,8 @@ const FinancialComponent = () => {
     <div className="max-w-full mx-auto" style={{ minHeight: "100vh" }}>
       {/* Ensure layout height */}
       <Navbar
-        isScrolled={true}
-        isContentVisible={true}
+        isScrolled={isScrolled}
+        isContentVisible={isContentVisible}
         isFromInnerPage={true}
       />
 

@@ -1,0 +1,153 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: transparent;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: 40px;
+}
+
+.topControls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent;
+  padding: 8px;
+}
+
+.topControls button {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.topControls button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.closeBtn {
+  margin-left: auto;
+  font-size: 1.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  color: #fff;
+}
+.contentWrapper{
+    height: 100%;
+        padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    text-align: left;
+    flex-direction: column;
+    background: rgba(30, 30, 30, 0.8);
+        border-bottom-right-radius: 40px;
+
+}
+.centercontent p{
+font-weight: bold;
+}
+.imageWrapper {
+  width: 50%;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textWrapper {
+  width: 50%;
+  padding: 0rem 2rem 0rem 0rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.textWrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.textWrapper p {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.bottomTitles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 45px;
+}
+.bottomTitles p{
+    font-weight: normal;
+    font-size: 12px;
+}
+.leftarrow{
+margin-left: 10px;
+cursor: pointer;
+}
+.rightarrow{
+    transform: rotate(180deg);
+    margin-left: 20px;
+    cursor: pointer;
+}
+.rightarrow:hover {
+  fill: red; /* Changes the fill color of the entire SVG to blue on hover */
+  stroke:red;
+}
+ .mobcontrol{
+        display: none;
+    }
+    .lgcontrol{
+         display: block;
+    }
+@media (max-width: 768px) {
+    .mobcontrol{
+        display: block;
+    }
+     .lgcontrol{
+         display: none;
+    }
+  .content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .imageWrapper, .textWrapper {
+    width: 100%;
+  }
+
+  .textWrapper {
+    padding: 0rem;
+  }
+}

@@ -1,4 +1,81 @@
 .sliderContainerfinancial{
-    padding: 50px 0 7px;
+    padding: 52px 0 7px;
     background-color: rgba(0, 80, 114, 1);
+}
+
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 10px 60px 0px;
+}
+
+.card {
+    width: 350px; /* Fixed width on desktop */
+    height: 400px;
+  }
+
+@media (min-width: 992px) {
+  .cardWrapper {
+    flex-direction: row;
+    gap:0px
+  }
+  .card {
+    width: 300px; /* Fixed width on desktop */
+    height: 350px;
+  }
+
+
+  .dotControls {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+ .cardWrapper {
+    flex-direction: row;
+    overflow-x: hidden;
+    padding: 0;
+    width: 117%;
+    position: relative;
+    justify-content: flex-start; /* Remove centering to eliminate gap */
+    gap: 0; /* Ensure no gap */
+  }
+
+  .card {
+    min-width: 100%; /* Full width to remove side space */
+    margin: 0; /* Remove extra margin */
+    flex-shrink: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .dotControls {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+
+  .activeDot {
+    background-color: #fff;
+  }
+  .cardWrapper {
+  gap: 0px;
+  padding: 0 0px 60px 0px;
+}
 }

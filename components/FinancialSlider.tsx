@@ -67,7 +67,7 @@ const FinancialSlider = () => {
             else if (index === slidesData.length - 1) translateX = -70 * activeIndex + 25; // Right card
             else translateX = -70 * activeIndex; // Middle card
             style = {
-              transform: `translateX(${translateX}%)`,
+                transform: `translateX(${translateX * 0.2}%)`,
               opacity: index === activeIndex ? 1 : 0.5,
             };
           }

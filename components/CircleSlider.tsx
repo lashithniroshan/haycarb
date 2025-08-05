@@ -243,7 +243,7 @@ const CircleSlider = () => {
                     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0">
                       <div style={{ marginBottom: "70px" }}>
                         <button
-                          className="mt-6 px-6 py-2 rounded-full hover:bg-gray-200 transition btn-custom btn-custom-mobile"
+                          className="mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn btn-custom-mobile"
                           onClick={() =>
                             window.open(
                               "https://www.haycarb.com/annual-report-2024-25",
@@ -256,7 +256,7 @@ const CircleSlider = () => {
                       </div>
                       <div>
                         <button
-                          className="mt-6 px-6 py-2 rounded-full hover:bg-gray-200 transition btn-custom btn-custom-mobile"
+                          className="mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn btn-custom-mobile"
                           onClick={() =>
                             window.open(
                               "https://www.haycarb.com/annual-report-2024-25",

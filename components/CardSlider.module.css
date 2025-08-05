@@ -37,17 +37,19 @@
 }
 
 @media (max-width: 991px) {
-  .cardWrapper {
+ .cardWrapper {
     flex-direction: row;
-    overflow-x: hidden; /* Controlled by inline transform */
-    padding: 0 0px;
-    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    width: 117%;
     position: relative;
+    justify-content: flex-start; /* Remove centering to eliminate gap */
+    gap: 0; /* Ensure no gap */
   }
 
   .card {
-    min-width: 100%; /* Middle card fully visible */
-    max-width: 100%;
+    min-width: 100%; /* Full width to remove side space */
+    margin: 0; /* Remove extra margin */
     flex-shrink: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
@@ -69,7 +71,7 @@
     background-color: #ccc;
     border-radius: 50%;
     cursor: pointer;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
   .activeDot {

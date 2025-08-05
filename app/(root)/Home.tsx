@@ -12,10 +12,13 @@ import FinancialSlider from 'components/FinancialSlider';
 import TableofContent from 'components/TableofContent';
 import { HomeFooter } from 'components/Footer';
 import Videoslider from 'components/Videoslider';
+import ModelWindow from 'components/ModelWindow';
+
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isContentVisible, setIsContentVisible] = useState(false);
+  const [showModal, setShowModal] = useState(false); // New state for modal delay
 
   useEffect(() => {
     // Force scroll to top and disable scroll immediately
@@ -38,7 +41,19 @@ const Home = () => {
     // Enable scroll only when content is visible
     document.body.style.overflow = isContentVisible ? 'auto' : 'hidden';
     document.documentElement.style.overflow = isContentVisible ? 'auto' : 'hidden';
+
+    // Show modal after 5 seconds if content is visible
+    let timer: NodeJS.Timeout;
+    if (isContentVisible) {
+      timer = setTimeout(() => setShowModal(true), 2000);
+    } else {
+      setShowModal(false);
+    }
+    return () => clearTimeout(timer);
+
   }, [isContentVisible]);
+
+
 
   const clickHandler = () => {
     setIsContentVisible(true);
@@ -48,6 +63,44 @@ const Home = () => {
   return (
     <div className="max-w-full mx-auto" style={{ minHeight: '100vh' }}> {/* Ensure layout height */}
       <Navbar isScrolled={isScrolled} isContentVisible={isContentVisible} />
+      {isContentVisible && (
+  <div className="fixed top-1/4 left-6 z-50 flex flex-col items-center space-y-1">
+    {[
+      { id: 'msgvideo', label: 'Msgvideo' },
+      { id: 'circleslider', label: 'CircleSlider' },
+      { id: 'cardslider', label: 'CardSlider' },
+      { id: 'leadership', label: 'Leadership' },
+      { id: 'management', label: 'Management' },
+      { id: 'strategy', label: 'Strategy' },
+      { id: 'financial', label: 'Financial' },
+      { id: 'tableofcontent', label: 'Table' },
+      { id: 'videoslider', label: 'Video' },
+    ].map((section, index, array) => (
+      <div key={section.id} className="flex flex-col items-center">
+        {/* Diamond Icon */}
+        <div
+          onClick={() => {
+            document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="w-4 h-4 transform rotate-45 cursor-pointer hover:bg-blue-400 transition"
+           style={{ border: '1px solid rgba(122, 149, 184, 1)' }}
+        />
+        {/* Vertical dashed line (skip after last icon) */}
+        {index < array.length - 1 && (
+          <div style={{
+               padding: '5px',
+               marginTop: '7px',
+               width:'25px',
+          }}>
+           <div className="border-b-1  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
+          <div className="border-b-1  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
+           <div className="border-b-1  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
+           </div>
+        )}
+      </div>
+    ))}
+  </div>
+)}
 
       {/* Sketchfab embed wrapper always visible on load */}
       <div className="sketchfab-embed-wrapper" 
@@ -123,26 +176,35 @@ const Home = () => {
   style={{ fontFamily: "Brogadier" }}
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, ease: "easeOut" }}
+  transition={{ duration: 1.2, ease: "easeOut" }}
 >
   Boundless Impact
 </motion.h1>
-              <p className="mt-4 text-base" style={{ fontFamily: 'Gotham-Book, sans-serif' }}>
-Haycarb PLC I Annual Report 2024/25
+  <motion.p
+  className="mt-4 text-base"
+  style={{ fontFamily: 'Gotham-Book, sans-serif' }}
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.2, ease: "easeOut" }}
+>
+  Haycarb PLC I Annual Report 2024/25
 Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and explore a year of transformation.
-              </p>
+</motion.p>
               <div
                 style={{
                   pointerEvents: 'auto',
                   zIndex: 3,
                 }}
               >
-                <button
-                  className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom wave-hover"
-                  onClick={() => window.open('/pdf/full-Annual-Report-2024-2025.pdf', '_blank')}
-                >
-                  Download full Annual Report 2024/25
-                </button>
+                  <motion.button
+  className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
+  onClick={() => window.open('/pdf/full-Annual-Report-2024-2025.pdf', '_blank')}
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.2, ease: "easeOut" }}
+>
+ Download full Annual Report 2024/25
+</motion.button>
               </div>
             </div>
           ) : (
@@ -158,7 +220,7 @@ Haycarb PLC I Annual Report 2024/25
 Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and explore a year of transformation.
               </p>
               <button
-                className="mt-6 px-6 py-2 rounded-full hover:bg-gray-200 transition btn-custom"
+                className="mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn"
                 onClick={clickHandler}
               >
                 Reveal our journey
@@ -167,24 +229,87 @@ Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and e
           )}
         </div>
       </section>
-
+{!isContentVisible && (
+  <motion.div
+    className="drag-indicator"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+    style={{
+      position: 'absolute',
+      top: '40%',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      zIndex: 3,
+      pointerEvents: 'none',
+    }}
+  >
+    <div
+      style={{
+        width: 80,
+        height: 80,
+        borderRadius: '50%',
+        border: '2px dashed rgba(255,255,255,0.7)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+      }}
+    >
+      <motion.div
+        style={{
+          width: 0,
+          height: 0,
+          borderTop: '8px solid transparent',
+          borderBottom: '8px solid transparent',
+          borderLeft: '12px solid white',
+          position: 'absolute',
+          right: -16,
+        }}
+        animate={{ x: [0, 10, 0] }}
+        transition={{ duration: 1.2, repeat: Infinity }}
+      />
+      <motion.div
+        style={{
+          width: 0,
+          height: 0,
+          borderTop: '8px solid transparent',
+          borderBottom: '8px solid transparent',
+          borderRight: '12px solid white',
+          position: 'absolute',
+          left: -16,
+        }}
+        animate={{ x: [0, -10, 0] }}
+        transition={{ duration: 1.2, repeat: Infinity }}
+      />
+    </div>
+    <p style={{
+      color: 'white',
+      fontSize: '14px',
+      marginTop: '8px',
+      textAlign: 'center',
+      fontFamily: 'Gotham-Book, sans-serif'
+    }}>
+      Drag to explore
+    </p>
+  </motion.div>
+)}
       {/* Additional content revealed on click */}
-      {isContentVisible && (
-        <>
-          <Msgvideo />
-          <CircleSlider />
-          <CardSlider />
-          <Leadership />
-          <Management />
-          <Strategy />
-          <FinancialSlider />
-          <TableofContent />
-          {/* <SustaiabilitySlider /> */}
-          <Videoslider />
-          {/* Render HomeFooter only when content is visible */}
-          <HomeFooter />
-        </>
-      )}
+     {isContentVisible && (
+  <>
+    <div id="msgvideo"><Msgvideo /></div>
+    <div id="circleslider"><CircleSlider /></div>
+    <div id="cardslider"><CardSlider /></div>
+    <div id="leadership"><Leadership /></div>
+    <div id="management"><Management /></div>
+    <div id="strategy"><Strategy /></div>
+    <div id="financial"><FinancialSlider /></div>
+    <div id="tableofcontent"><TableofContent /></div>
+    <div id="videoslider"><Videoslider /></div>
+    <HomeFooter />
+    {showModal && <ModelWindow />}
+  </>
+)}
     </div>
   );
 };

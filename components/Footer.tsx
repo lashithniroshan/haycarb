@@ -10,7 +10,7 @@ const HomeFooter = () => {
       <div className={styles.backgroundImage}>
         {/* Logo in the middle */}
         <div className={styles.logoContainer}>
-          <Image src="/images/logofooter.png" alt="Logo" width={200} height={100} />
+          <Image src="/images/logofooter.png" alt="Logo" width={200} height={100} style={{display:'none'}} />
         </div>
         {/* Four Columns */}
         <div className={styles.footerContent}>
@@ -68,6 +68,18 @@ const HomeFooter = () => {
             <li><a href="#">Sitemap</a></li>
         </ul>
       </div>
+        <div className="bubble bubble--1"></div>
+  <div className="bubble bubble--2"></div>
+  <div className="bubble bubble--3"></div>
+  <div className="bubble bubble--4"></div>
+  <div className="bubble bubble--5"></div>
+  <div className="bubble bubble--6"></div>
+  <div className="bubble bubble--7"></div>
+  <div className="bubble bubble--8"></div>
+  <div className="bubble bubble--9"></div>
+  <div className="bubble bubble--10"></div>
+  <div className="bubble bubble--11"></div>
+  <div className="bubble bubble--12"></div>
     </footer>
   );
 };
