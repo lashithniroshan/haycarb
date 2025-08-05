@@ -107,6 +107,14 @@ const FinancialCapital = () => {
 
       <div
         aria-hidden="true"
+        className="absolute top-85 -right-35 lg:w-80 lg:h-80 -rotate-45 scale-x-[-1] bg-no-repeat bg-contain z-40"
+        style={{
+          backgroundImage: "url(/images/innerpage/green-whale.png)",
+        }}
+      ></div>
+
+      <div
+        aria-hidden="true"
         className="absolute top-1/2 left-0 w-96 h-96 md:w-[600px] md:h-[600px] rotate-180 transform -translate-y-1/3 -translate-x-1/3 bg-no-repeat bg-contain"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
@@ -245,6 +253,9 @@ const FinancialCapital = () => {
           </div>
         </div>
       </div>
+
+      {/* Download buttons */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32"></div>
     </section>
   );
 };
