@@ -1,6 +1,7 @@
 // components/Navbar.tsx
 import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
+import { motion } from "framer-motion";
 
 const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isContentVisible: boolean }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -100,24 +101,29 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-600 ${
         isScrolled
-          ? 'scrollednavbg text-white'
-          : 'bg-transparent text-white'
+          ? 'scrollednavbg text-white py-5'
+          : 'bg-transparent text-white py-6'
       }`}
-      style={{ paddingTop: '10px' }}
+      // style={{ paddingTop: '10px' }}
     >
-      <div className="mx-auto px-5 py-7 flex items-center justify-between">
+       <div className={`mx-auto px-5 flex items-center justify-between transition-all duration-600
+       
+      `} >
         {/* Hamburger Menu (Always Visible) */}
         {isContentVisible && (
-          <div>
+          <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.2, ease: "easeOut" }}>
             <button
               onClick={toggleMenu}
               className="focus:outline-none"
               aria-label="Toggle menu"
             >
               <svg
-                className="w-9 h-9"
+               className={`transition-all duration-300 ${isScrolled ? 'w-6 h-6' : 'w-9 h-9'}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -135,23 +141,29 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
                 />
               </svg>
             </button>
-          </div>
+          </motion.div>
         )}
 
         {/* Brand Logo (Centered) */}
-        <div className="absolute left-1/2 transform -translate-x-1/2" style={{ top: '10px' }}>
+        <div className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-600" style={{ top: isScrolled ? '5px' : '10px' }}>
           <Image
             src="/haycarblogo.png"
             alt="Haycarb Logo"
-            width={226}
-            height={102}
-            className="h-20 w-auto"
+            width={isScrolled ? 80 : 226} // shrink logo smoothly
+        height={isScrolled ? 62 : 102}
+        className="transition-all duration-600 w-auto"
           />
         </div>
 
         {/* Right Side: Search and User Profile */}
         {isContentVisible && (
-          <div className="flex space-x-8 relative">
+     <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.2, ease: "easeOut" }}>
+
+  
+          <div className="flex space-x-4 md:space-x-8 relative">
             {/* Search Dropdown */}
             <div className="relative" style={{ display: 'flex' }} ref={dropdownRef}>
               <button
@@ -159,7 +171,7 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
                 className="focus:outline-none"
                 aria-label="Toggle search"
               >
-               <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+               <svg xmlns="http://www.w3.org/2000/svg" className={`transition-all duration-300 ${isScrolled ? 'w-6 h-6' : 'w-8 h-8'}`} viewBox="0 0 31 31" fill="none">
 <path d="M19.375 19.375L27.125 27.125M12.9167 21.9583C7.92309 21.9583 3.875 17.9102 3.875 12.9167C3.875 7.92309 7.92309 3.875 12.9167 3.875C17.9102 3.875 21.9583 7.92309 21.9583 12.9167C21.9583 17.9102 17.9102 21.9583 12.9167 21.9583Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
               </button>
@@ -200,11 +212,12 @@ const Navbar = ({ isScrolled, isContentVisible }: { isScrolled: boolean; isConte
 
             {/* User Profile Icon */}
             <button className="focus:outline-none" aria-label="User Profile">
-             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
+             <svg xmlns="http://www.w3.org/2000/svg"  className={`transition-all duration-300 ${isScrolled ? 'w-6 h-6' : 'w-8 h-8'}`} viewBox="0 0 31 31" fill="none">
 <path d="M25.8327 27.125C25.8327 23.5582 21.2063 20.6667 15.4993 20.6667C9.79241 20.6667 5.16602 23.5582 5.16602 27.125M15.4993 16.7917C11.9325 16.7917 9.04102 13.9002 9.04102 10.3333C9.04102 6.76649 11.9325 3.875 15.4993 3.875C19.0662 3.875 21.9577 6.76649 21.9577 10.3333C21.9577 13.9002 19.0662 16.7917 15.4993 16.7917Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
             </button>
           </div>
+</motion.div>
         )}
 
         {/* Mobile Menu */}

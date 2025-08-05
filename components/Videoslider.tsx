@@ -12,7 +12,7 @@ const Videoslider = () => {
   const slides = [
     { id: 1, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/videobg1.jpg', title: 'Bunker', subtitle: 'Innovating with purpose, shaping a greener future from day one.' },
     { id: 2, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/videobg2.jpg', title: 'Song 2', subtitle: 'Our sustainability journey is driven by commitment and action.' },
-    { id: 3, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/videobg13.jpg', title: 'Falling Out', subtitle: 'We integrate eco-friendly practices.' },
+    { id: 3, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/videobg3.jpg', title: 'Falling Out', subtitle: 'We integrate eco-friendly practices.' },
   ];
 
   // Handle slide change
@@ -99,38 +99,37 @@ const Videoslider = () => {
       </div>
 
       <div className={style.cards}>
-        {slides.map((slide) => (
-          <label
-            key={slide.id}
-            className={`${style.card} ${activeSlide === slide.id ? style.active : ''} ${style.debug}`} // Debug class
-            htmlFor={`item-${slide.id}`}
-            id={`song-${slide.id}`}
-            onClick={() => handleSlideChange(slide.id)}
-            style={{
-              ...getTransform(slide.id),
-              transition: 'transform 0.4s ease, opacity 0.4s ease',
-            }}
-          >
-            <video
-              ref={(el) => { videoRefs.current[slide.id - 1] = el; }} // Store ref with 0-based index
-              src={slide.src}
-              className={style.video}
-              muted
-              loop={false}
-            />
-            {activeSlide === slide.id && !isModalOpen && (
-              <button className={style.playButton} onClick={handlePlayPause}>
-                     <div
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
-              style={{
-                width: '120px',
-                height: '120px',
-                animation: 'fadeIn 0.5s forwards',
-                zIndex: 2,
-              }}
-            >
-              <div
-              /> <svg xmlns="http://www.w3.org/2000/svg" width="99" height="99" viewBox="0 0 99 99" fill="none">
+      {slides.map((slide) => (
+  <label
+    key={slide.id}
+    className={`${style.card} ${activeSlide === slide.id ? style.active : ''} ${style.debug}`}
+    htmlFor={`item-${slide.id}`}
+    id={`song-${slide.id}`}
+    onClick={() => handleSlideChange(slide.id)}
+    style={{
+      ...getTransform(slide.id),
+      transition: 'transform 0.4s ease, opacity 0.4s ease',
+    }}
+  >
+    {/* Thumbnail instead of video */}
+    <img 
+      src={slide.thumbnill} 
+      alt={slide.title} 
+      className={style.video} 
+    />
+
+    {activeSlide === slide.id && !isModalOpen && (
+      <button className={style.playButton} onClick={handlePlayPause}>
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
+          style={{
+            width: '120px',
+            height: '120px',
+            animation: 'fadeIn 0.5s forwards',
+            zIndex: 2,
+          }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="99" height="99" viewBox="0 0 99 99" fill="none">
 <g clipPath="url(#clip0_579_1246)">
 <path d="M68.9832 49.4988C69.0169 49.4771 69.0506 49.453 69.0819 49.4338H68.8821C62.8073 45.4224 49.1914 19.6473 36.0859 27.6628C42.9577 26.6154 44.6985 42.6246 52.5117 49.4964C44.6985 56.3681 42.9577 72.3773 36.0859 71.33C49.1914 79.3478 62.8097 53.5727 68.8821 49.559H69.0819C69.0482 49.5397 69.0145 49.5156 68.9832 49.494V49.4988Z" fill="white"/>
 <path d="M49.4991 86.0799C69.7023 86.0799 86.0803 69.702 86.0803 49.4987C86.0803 29.2955 69.7023 12.9176 49.4991 12.9176C29.2959 12.9176 12.918 29.2955 12.918 49.4987C12.918 69.702 29.2959 86.0799 49.4991 86.0799Z" stroke="white" strokeMiterlimit="10"/>
@@ -143,13 +142,14 @@ const Videoslider = () => {
 </clipPath>
 </defs>
 </svg>
-               
-                                  </div>
-              </button>
-            )}
-            <p className={style.subtitle}>{slide.subtitle}</p>
-          </label>
-        ))}
+        </div>
+      </button>
+    )}
+
+    <p className={style.subtitle}>{slide.subtitle}</p>
+  </label>
+))}
+
       </div>
 
       {/* Modal for Full-Screen Video */}

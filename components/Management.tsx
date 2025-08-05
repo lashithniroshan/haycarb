@@ -94,7 +94,7 @@ function Management() {
 
   return (
      <div className='container max-w-full mx-auto' style={{
-      backgroundColor: 'rgba(29, 128, 160, 1)',}}>
+      backgroundColor: 'rgba(21, 120, 151, 1)',}}>
     <div className={styles.managementContainer}>
       <h1 className={styles.mainTitle}>Board of Directors</h1>
       <div className={styles.sliderContainer}>
@@ -141,7 +141,7 @@ function Management() {
         ))}
       </div>
        <button
-          className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom"
+          className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
           onClick={() =>
             window.open('https://www.haycarb.com/annual-report-2024-25', '_blank')
           }
@@ -149,14 +149,14 @@ function Management() {
           Management Team
         </button>
         <div>
-        < div className={`container w-full h-full flex mx-auto px-15 py-10 items-center justify-between items-end ${styles.customcol}`}>
+        < div className={`container w-full h-full flex mx-auto px-10 md:px-15 py-10 items-center justify-between items-end ${styles.customcol}`}>
         <div className={styles.governanceSection}>
             <h2 className={styles.governanceSectionh2}>The Corporate Governance</h2>
           <p className={styles.governanceSectionp}>We uphold strong corporate governance through transparency, accountability and ethical leadership,<br /> ensuring responsible decision making and long-term stakeholder trust.</p>
         </div>
         <div className={styles.btngov}>
            <button
-          className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom"
+          className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
           onClick={() =>
             window.open('https://www.haycarb.com/annual-report-2024-25', '_blank')
           }
