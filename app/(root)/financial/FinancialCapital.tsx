@@ -167,7 +167,7 @@ const FinancialCapital = () => {
         {/* Right Column */}
         <div className="lg:col-span-4 flex justify-center items-start mt-8 lg:mt-0">
           <Image
-            src="/images/haycarbglance.png"
+            src="/images/innerpage/first-square.png"
             alt="banner"
             width={386}
             height={479}

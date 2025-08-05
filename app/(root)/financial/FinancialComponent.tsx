@@ -3,6 +3,8 @@ import Banner from "components/innerpage/Banner";
 import Navbar from "components/Navbar";
 import React, { useState } from "react";
 import FinancialCapital from "./FinancialCapital";
+import FinancialSupplementary from "./FinancialSupplementary";
+import { DefaultFooter, InnerPageFooter } from "components/Footer";
 
 const FinancialComponent = () => {
   const [activatedTab, setActivatedTab] = useState("finance-capital");
@@ -33,7 +35,12 @@ const FinancialComponent = () => {
       />
 
       {/* Financial Capital */}
-      <FinancialCapital />
+      {activatedTab === "finance-capital" ? (
+        <FinancialCapital />
+      ) : (
+        <FinancialSupplementary />
+      )}
+      <InnerPageFooter />
     </div>
   );
 };
