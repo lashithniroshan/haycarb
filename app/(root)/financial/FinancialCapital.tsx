@@ -115,7 +115,7 @@ const FinancialCapital = () => {
 
       <div
         aria-hidden="true"
-        className="absolute bottom-20 left-36 w-56 h-56 md:w-72 md:h-72 transform -translate-x-1/2 -translate-y-9/10 bg-no-repeat bg-contain"
+        className="absolute bottom-20 hidden sm:block left-36 w-56 h-56 md:w-72 md:h-72 transform -translate-x-1/2 -translate-y-9/10 bg-no-repeat bg-contain"
         style={{
           backgroundImage: "url(/images/vertical-fliped-light-green-whale.svg)",
         }}
@@ -227,10 +227,10 @@ const FinancialCapital = () => {
                         >
                           {item?.value && (
                             <div className="space-y-1 sm:space-y-2">
-                              <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800">
+                              <div className="text-lg sm:text-sm lg:text-sm font-semibold text-gray-800">
                                 {item.value}
                               </div>
-                              <div className="text-xs sm:text-sm lg:text-sm text-gray-600 leading-tight break-words">
+                              <div className="text-xs sm:text-sm lg:text-sm text-gray-600 font-medium leading-tight break-words">
                                 {formatLabel(item.label)}
                               </div>
                             </div>
