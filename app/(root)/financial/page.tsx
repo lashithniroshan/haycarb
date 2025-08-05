@@ -1,10 +1,10 @@
 import React from "react";
-import FinComp from "./FinComp";
+import FinancialComponent from "./FinancialComponent";
 
 const page = () => {
   return (
     <>
-      <FinComp />
+      <FinancialComponent />
     </>
   );
 };
