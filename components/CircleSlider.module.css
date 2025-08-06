@@ -21,6 +21,7 @@
   --contentWd: 750px;
   --progressPosition: 100px;
   display: flex;
+  flex-direction: row;
   gap: 180px;
   position: relative;
   padding: 50px 0;
@@ -299,6 +300,8 @@ font-size: 16px;
     --contentWd: 550px;
     gap: 50px;
     padding: 30px 0;
+            display: flex;
+        flex-direction: column;
   }
   .infoCard h4 {
     font-size: 26px;
@@ -312,7 +315,29 @@ font-size: 16px;
   }
   .circleSlider::before {
     border-width: 3px;
+    top:150%;
   }
+  .circleSlider{
+        margin: -60px;
+        top: 158%;
+        left: 0%;
+        height: 300px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+  }
+  .circleSlide {
+  top: 162%;
+  left: 52%;
+  }
+  .circleSlide.activeSlide {
+    left: 17%;
+    top: 12%;
+  }
+  .sliderControls{
+    top: 24%;
+    left: 43%;
+}
 }
 
 @media (max-width: 991px) {
@@ -329,15 +354,41 @@ font-size: 16px;
     order: initial;
   }
   .sliderCol {
-    flex-direction: column;
-    padding: 50px 30px;
+    display: flex;
+      flex-direction: column; 
+    align-items: center;
+    gap: 30px;
   }
-  .circleSlider {
+   .mobileFirst {
+    order: 1; /* Circle first */
+    width: 100%;
+  }
+
+  .mobileSecond {
+    order: 2; /* Info boxes second */
+    width: 100%;
+  }
+  /* .circleSlider {
     margin: 0;
     display: none;
-  }
-  .infoBoxes {
+  } */
+   .circleSlider {
+    margin: 0 auto;
+    display: block;
     width: 100%;
+    height: 240px;
+    margin-left: 0;
+    margin-bottom: 0px;
+    max-width: 100%; 
+        position: relative;
+    overflow: hidden;
+  }
+  /* .infoBoxes {
+    width: 100%;
+  } */
+   .infoBoxes {
+    width: 100%;
+    text-align: center;
   }
   .triggerTitle {
     display: block;
@@ -360,6 +411,28 @@ font-size: 16px;
   .infoContentCol {
     margin-top: 20px;
   }
+  .circleSlide.activeSlide .slideImage {
+  width: 100px; /* Adjust SVG size for active slide */
+  height: 100px;
+
+}
+ .circleSlide.activeSlide {
+    left: -38%;
+    top: 15%;
+  }
+  .titleSubtitleContainer{
+    display: none;
+  }
+  .circleSlide{
+    left: 43%;
+  }
+    .circleSlider::before {
+    top:144%;
+  }
+   .sliderControls{
+    top: 17%;
+    left: 40%;
+}
 }
 
 @media (max-width: 767px) {
@@ -403,12 +476,12 @@ font-size: 16px;
 }
 @media (max-width: 991px) {
   .circleSlider,.sliderControls {
-    display: none !important;
+    /* display: none !important; */
   }
-  .titleSubtitleContainer {
-    display: none; /* Hide text on smaller screens to avoid clutter */
+  /* .titleSubtitleContainer {
+    display: none; 
     text-align: center;
-  }
+  } */
   .infoContentCol .infoCardmainh2{
 font-size: 30px;
  line-height: 1;

@@ -150,4 +150,7 @@ cursor: pointer;
   .textWrapper {
     padding: 0rem;
   }
+  .modal {
+    height: 85%;
+  }
 }
