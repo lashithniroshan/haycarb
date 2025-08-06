@@ -194,32 +194,35 @@ const ReportingLandscape = () => {
       </div>
 
       {/* Digital evolution section */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-8 py-8">
-        <div className="lg:col-span-5">
-          <h1 className="text-[40px] text-[#005881] font-normal">
-            Evolution of Haycarb&apos;s Annual Report
-          </h1>
-          <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
-            &quot;Cognisant of the growing shift toward digital communication,
-            we continued to integrate technology into our corporate reporting
-            with an emphasis on providing a more interactive and engaging
-            experience to our stakeholders through a specialised web portal
-            offering interactive features enabling comprehensive as well as
-            customisable insights into information contained in our Annual
-            Report.&quot;
-          </p>
-          <WaveButton
-            title="Our Purpose Statement Video Version"
-            style={{ fontSize: "12px" }}
-          />
-        </div>
-        <div className="lg:col-span-6 flex items-center justify-center w-full">
-          <Image
-            src="/images/innerpage/digital-evolution.svg"
-            alt="banner"
-            width={701}
-            height={533}
-          />
+      <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 mx-auto">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8">
+          <div className="lg:col-span-5">
+            <h1 className="text-[40px] text-[#005881] font-normal">
+              Evolution of Haycarb&apos;s Annual Report
+            </h1>
+            <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
+              &quot;Cognisant of the growing shift toward digital communication,
+              we continued to integrate technology into our corporate reporting
+              with an emphasis on providing a more interactive and engaging
+              experience to our stakeholders through a specialised web portal
+              offering interactive features enabling comprehensive as well as
+              customisable insights into information contained in our Annual
+              Report.&quot;
+            </p>
+            <WaveButton
+              title="Our Purpose Statement Video Version"
+              style={{ fontSize: "12px" }}
+            />
+          </div>
+
+          <div className="lg:col-span-6 flex items-center justify-center w-full">
+            <Image
+              src="/images/innerpage/digital-evolution.svg"
+              alt="banner"
+              width={701}
+              height={533}
+            />
+          </div>
         </div>
       </div>
 
