@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import CapitalReport from "./CapitalReport";
 import Integration from "./Integration";
 import ValueCreation from "./ValueCreation";
+import { InnerPageFooter } from "components/Footer";
 
 const NonFinancialComponent = () => {
   const [activatedTab, setActivatedTab] = useState("capital-report");
@@ -40,6 +41,8 @@ const NonFinancialComponent = () => {
       ) : (
         <ValueCreation />
       )}
+
+      <InnerPageFooter />
     </div>
   );
 };

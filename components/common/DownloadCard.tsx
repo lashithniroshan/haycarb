@@ -1,7 +1,7 @@
 // components/DownloadCard.tsx
 import React from "react";
 import Image from "next/image";
-import WaveButton from "./innerpage/WaveButton";
+import WaveButton from "components/innerpage/WaveButton";
 
 interface DownloadCardProps {
   title: string;
