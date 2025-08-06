@@ -2,6 +2,7 @@ import React from "react";
 import NumberedFeatureItem from "components/NumberedFeatureItem";
 import WaveButton from "components/innerpage/WaveButton";
 import Image from "next/image";
+import DownloadCard from "components/DownloadCard";
 
 const ReportingLandscape = () => {
   const features = [
@@ -71,6 +72,38 @@ const ReportingLandscape = () => {
     },
   ];
 
+  const chart = [
+    {
+      id: 1,
+      title: "Activated carbon segment",
+      description:
+        "Our core segment, focused on producing high-performance activated carbon from coconut shells for global industries such as water and air purification, food, and energy. Growth in 2024/25 was supported by strong demand, regional capacity, and sustainability-led operations.",
+      value: "/images/innerpage/segmentation-review-1.svg",
+    },
+    {
+      id: 2,
+      title: "Environmental engineering solutions segment",
+      description:
+        "Delivers customised solutions for emission control and water treatment using activated carbon. The segment saw strong project growth in 2024/25, driven by repeat business and rising demand for clean industrial practices.",
+      value: "/images/innerpage/segmentation-review-2.svg",
+    },
+  ];
+
+  const cardData = [
+    {
+      title: "Our Approach to reporting",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
+    {
+      title: "Group Value Addition and Distribution",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
+    {
+      title: "Our value creation model",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
+  ];
+
   return (
     <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
       <div
@@ -103,16 +136,16 @@ const ReportingLandscape = () => {
                   hidden 
                   sm:block 
                   left-15 
-                  lg:top-3/4 
-                  xl:top-5/7 
-                  2xl:top-4/6
+                  lg:top-680 
+                  xl:top-660 
+                  2xl:top-610
                   w-56 h-56 
                   md:w-72 md:h-72
                   lg:w-50 lg:h-50  
-                  xl:w-72 xl:h-72
+                  xl:w-80 xl:h-80
                   transform scale-x-[-1] -rotate-20
                   -translate-x-1/2 -translate-y-9/10 
-                  bg-no-repeat bg-contain opacity-25"
+                  bg-no-repeat bg-contain opacity-25 z-10"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -188,6 +221,76 @@ const ReportingLandscape = () => {
             height={533}
           />
         </div>
+      </div>
+
+      {/* Segmental review */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
+        {/* Top or Left Line */}
+        <div
+          className="w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
+          style={{ background: "rgba(80, 205, 164, 0.5)" }}
+        ></div>
+
+        {/* Center Text */}
+        <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[30px] xl:text-[40px] text-[#005881]">
+          Segmental review analysis
+        </h1>
+
+        {/* Bottom or Right Line */}
+        <div
+          className="w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
+          style={{ background: "rgba(80, 205, 164, 0.5)" }}
+        ></div>
+      </div>
+      <div className="lg:px-53">
+        <p className="para text-center text-[#000000] text-[15px] font-medium">
+          To be the leading global provider of activated carbon and foremost
+          provider of water purification systems in Sri Lanka and the region,
+          renowned for technical excellence, customer centricity, innovation and
+          sustainable business practices.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+        {chart.map((ch, idx) => (
+          <div
+            key={ch.id}
+            className="border border-[#1D80A080] rounded-[30px] flex flex-col items-center justify-center w-full px-4 py-6 text-center bg-white z-30"
+          >
+            <h1 className="text-[#005881] text-[30px] text-center">
+              {ch.title}
+            </h1>
+            <p className="para text-[15px] text-[#005881] font-medium my-10">
+              {ch.description}
+            </p>
+
+            <Image
+              src={ch.value}
+              alt="banner"
+              width={408}
+              height={349}
+              className="mx-auto"
+            />
+          </div>
+        ))}
+      </div>
+      <div className="my-15 flex items-center justify-center ">
+        <WaveButton
+          title="Segmental Review and analysis"
+          style={{ fontSize: "12px" }}
+        />
+      </div>
+      <div className="lg:px-25 xl:px-30 mx-auto myt-12 mb-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-18 lg:gap-8">
+        {cardData.map((item, idx) => (
+          <DownloadCard key={idx} {...item} />
+        ))}
+      </div>
+      <div className="lg:px-53">
+        <p className="para text-center text-[#000000] text-[15px] font-medium">
+          To be the leading global provider of activated carbon and foremost
+          provider of water purification systems in Sri Lanka and the region,
+          renowned for technical excellence, customer centricity, innovation and
+          sustainable business practices.
+        </p>
       </div>
     </section>
   );
