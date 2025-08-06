@@ -1,3 +1,4 @@
+import DownloadCard from "components/DownloadCard";
 import WaveButton from "components/innerpage/WaveButton";
 import ProductCarousel from "components/ProductCarousel";
 import Image from "next/image";
@@ -34,6 +35,49 @@ const ReportingLandscape = () => {
   const chart = [
     { id: 1, value: "/images/innerpage/overview-chart-1.svg" },
     { id: 2, value: "/images/innerpage/overview-chart-2.svg" },
+  ];
+
+  const products = [
+    {
+      id: 1,
+      name: "Product Name",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
+    {
+      id: 2,
+      name: "Product Name",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
+    {
+      id: 3,
+      name: "Product Name",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
+    {
+      id: 4,
+      name: "Product Name",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
+    {
+      id: 5,
+      name: "Product Name",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
+  ];
+
+  const cardData = [
+    {
+      title: "Awards and Recognitions",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
+    {
+      title: "Milestones",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
+    {
+      title: "Our socio-economic impact",
+      image: "/images/innerpage/product-placeholder.svg",
+    },
   ];
 
   return (
@@ -249,7 +293,12 @@ const ReportingLandscape = () => {
         ></div>
       </div>
       <div className="px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-        <ProductCarousel />
+        <ProductCarousel products={products} />
+      </div>
+      <div className="lg:px-25 xl:px-50 mx-auto my-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-18 lg:gap-8">
+        {cardData.map((item, idx) => (
+          <DownloadCard key={idx} {...item} />
+        ))}
       </div>
     </section>
   );

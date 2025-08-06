@@ -3,35 +3,17 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import Image from "next/image";
 
-const products = [
-  {
-    id: 1,
-    name: "Product Name",
-    image: "/images/innerpage/product-placeholder.svg",
-  },
-  {
-    id: 2,
-    name: "Product Name",
-    image: "/images/innerpage/product-placeholder.svg",
-  },
-  {
-    id: 3,
-    name: "Product Name",
-    image: "/images/innerpage/product-placeholder.svg",
-  },
-  {
-    id: 4,
-    name: "Product Name",
-    image: "/images/innerpage/product-placeholder.svg",
-  },
-  {
-    id: 5,
-    name: "Product Name",
-    image: "/images/innerpage/product-placeholder.svg",
-  },
-];
+interface Product {
+  id: number;
+  name: string;
+  image: string;
+}
 
-const ProductCarousel = () => {
+interface ProductCarouselProps {
+  products: Product[];
+}
+
+const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     slides: { perView: 1, spacing: 12 }, // Default for mobile
