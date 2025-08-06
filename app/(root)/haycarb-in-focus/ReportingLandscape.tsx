@@ -29,6 +29,12 @@ const ReportingLandscape = () => {
       title: "Global market share",
     },
   ];
+
+  const chart = [
+    { id: 1, value: "/images/innerpage/overview-chart-1.svg" },
+    { id: 2, value: "/images/innerpage/overview-chart-2.svg" },
+  ];
+
   return (
     <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
       <div
@@ -86,7 +92,10 @@ const ReportingLandscape = () => {
       {/* Static Snapshot */}
       <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
         {/* Top or Left Line */}
-        <div className="w-3xs md:w-1/2 h-[1px] bg-[#CFD674] lg:w-1/4 lg:h-[1px]"></div>
+        <div
+          className="w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
+          style={{ background: "rgba(80, 205, 164, 0.5)" }}
+        ></div>
 
         {/* Center Text */}
         <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[40px] text-[#005881]">
@@ -94,7 +103,10 @@ const ReportingLandscape = () => {
         </h1>
 
         {/* Bottom or Right Line */}
-        <div className="w-3xs md:w-1/2 h-[1px] bg-[#CFD674] lg:w-1/4 lg:h-[1px]"></div>
+        <div
+          className="w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
+          style={{ background: "rgba(80, 205, 164, 0.5)" }}
+        ></div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-8 my-12 px-10 text-center">
@@ -117,7 +129,10 @@ const ReportingLandscape = () => {
       {/* Our vision */}
       <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
         {/* Top or Left Line */}
-        <div className="w-3xs md:w-1/2 h-[1px] bg-[#CFD674] lg:w-60 xl:w-100 2xl:w-152 lg:h-[1px]"></div>
+        <div
+          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-175 lg:h-[1px]"
+          style={{ background: "rgba(80, 205, 164, 0.5)" }}
+        ></div>
 
         {/* Center Text */}
         <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[40px] text-[#005881]">
@@ -125,7 +140,57 @@ const ReportingLandscape = () => {
         </h1>
 
         {/* Bottom or Right Line */}
-        <div className="w-3xs md:w-1/2 h-[1px] bg-[#CFD674] lg:w-60 xl:w-100 2xl:w-152 lg:h-[1px]"></div>
+        <div
+          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-175 lg:h-[1px]"
+          style={{ background: "rgba(80, 205, 164, 0.5)" }}
+        ></div>
+      </div>
+      <div className="lg:px-53">
+        <p className="para text-center text-[#000000] text-[15px] font-medium">
+          To be the leading global provider of activated carbon and foremost
+          provider of water purification systems in Sri Lanka and the region,
+          renowned for technical excellence, customer centricity, innovation and
+          sustainable business practices.
+        </p>
+      </div>
+      {/* Charts */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+        <div className="flex flex-col items-center justify-center w-full px-4 py-6 text-center">
+          {/* Top Paragraph */}
+          <p className="para text-[20px] text-[#005881] font-semibold mb-6">
+            A highly skilled, innovation focused talent pool
+          </p>
+
+          {/* Icon + Stats Side by Side */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div>
+              <Image
+                src="/images/innerpage/overview-icon.svg"
+                alt="icon"
+                width={103}
+                height={103}
+              />
+            </div>
+
+            <div>
+              <p className="text-[50px] font-extrabold text-[#005881]">2,046</p>
+              <div className="h-[1px] bg-[#8DC9CC] w-1/2 lg:w-2/3 mx-auto my-1"></div>
+              <p className="text-[20px] font-medium text-[#005881]">
+                Employees across <br />
+                <span className="font-semibold">7 countries</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {chart.map((ch, idx) => (
+          <div
+            key={ch.id}
+            className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full"
+          >
+            <Image src={ch.value} alt="banner" width={386} height={479} />
+          </div>
+        ))}
       </div>
     </section>
   );
