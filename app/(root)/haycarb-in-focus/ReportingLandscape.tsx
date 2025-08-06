@@ -154,7 +154,7 @@ const ReportingLandscape = () => {
         </p>
       </div>
       {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 my-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         <div className="flex flex-col items-center justify-center w-full px-4 py-6 text-center">
           {/* Top Paragraph */}
           <p className="para text-[20px] text-[#005881] font-semibold mb-6">
@@ -191,6 +191,41 @@ const ReportingLandscape = () => {
             <Image src={ch.value} alt="banner" width={386} height={479} />
           </div>
         ))}
+      </div>
+
+      {/* Our global presence */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
+        {/* Top or Left Line */}
+        <div
+          className="w-3xs md:w-1/2 h-[1px] lg:w-1/6 xl:w-1/4 lg:h-[1px]"
+          style={{ background: "rgba(80, 205, 164, 0.5)" }}
+        ></div>
+
+        {/* Center Text */}
+        <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[40px] text-[#005881]">
+          Our Global Presence
+        </h1>
+
+        {/* Bottom or Right Line */}
+        <div
+          className="w-3xs md:w-1/2 h-[1px] lg:w-1/6 xl:w-1/4 lg:h-[1px]"
+          style={{ background: "rgba(80, 205, 164, 0.5)" }}
+        ></div>
+      </div>
+      <div className="lg:px-53">
+        <p className="para text-center text-[#000000] text-[15px] font-medium mb-6">
+          To be the leading global provider of activated carbon and foremost
+          provider of water purification systems in Sri Lanka and the region,
+          renowned for technical excellence, customer centricity, innovation and
+          sustainable business practices.
+        </p>
+        <Image
+          src="/images/innerpage/world-map.svg"
+          alt="icon"
+          width={996}
+          height={504}
+          className="mx-auto block"
+        />
       </div>
     </section>
   );
