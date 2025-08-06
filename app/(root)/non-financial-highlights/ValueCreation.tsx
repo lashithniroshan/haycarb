@@ -1,3 +1,4 @@
+import InfoCard from "components/common/InfoCard";
 import WaveButton from "components/innerpage/WaveButton";
 import Image from "next/image";
 import React from "react";
@@ -10,6 +11,27 @@ const ValueCreation = () => {
         className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
+        }}
+      ></div>
+
+      <div
+        aria-hidden="true"
+        className="absolute
+                  hidden 
+                  sm:block 
+                  left-15 
+                  lg:top-680 
+                  xl:top-660 
+                  2xl:top-610
+                  w-56 h-56 
+                  md:w-72 md:h-72
+                  lg:w-50 lg:h-50  
+                  xl:w-80 xl:h-80
+                  transform scale-x-[-1] -rotate-20
+                  -translate-x-1/2 -translate-y-9/10 
+                  bg-no-repeat bg-contain opacity-25 z-10"
+        style={{
+          backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
       ></div>
 
@@ -102,6 +124,23 @@ const ValueCreation = () => {
             />
           </div>
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:px-8">
+        <InfoCard
+          title="Operating Environment"
+          description="This section summarizes the impact from external factors including political shifts, economic volatility, climate risks, social expectations, evolving technologies, and regulatory pressures that influence Haycarb’s business decisions and sustainability priorities."
+          buttonTitle="Operating Environment"
+          image="/images/innerpage/product-placeholder.svg"
+          onButtonClick={() => console.log("ss")}
+        />
+        <InfoCard
+          title="Listening to Our Stakeholders"
+          description="Highlights how Haycarb engages with key stakeholder groupsincluding employees, customers, suppliers, communities, and regulators, to understand their concerns, expectations, and priorities in shaping strategies and responsible decision-making."
+          buttonTitle="Listening to Our Stakeholders"
+          image="/images/innerpage/product-placeholder.svg"
+          onButtonClick={() => console.log("ss")}
+        />
       </div>
     </section>
   );
