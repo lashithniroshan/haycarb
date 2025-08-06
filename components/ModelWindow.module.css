@@ -121,10 +121,7 @@ cursor: pointer;
     margin-left: 20px;
     cursor: pointer;
 }
-.rightarrow:hover {
-  fill: red; /* Changes the fill color of the entire SVG to blue on hover */
-  stroke:red;
-}
+
  .mobcontrol{
         display: none;
     }
@@ -152,9 +149,13 @@ cursor: pointer;
   }
   .modal {
     height: 80%;
-    width: 70%;
+    width: 80%;
   }
   .contentWrapper{
     padding: 1rem;
   }
+  .bottomTitles {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 }
