@@ -151,6 +151,10 @@ cursor: pointer;
     padding: 0rem;
   }
   .modal {
-    height: 85%;
+    height: 80%;
+    width: 70%;
+  }
+  .contentWrapper{
+    padding: 1rem;
   }
 }
