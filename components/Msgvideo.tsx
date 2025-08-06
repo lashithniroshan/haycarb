@@ -45,9 +45,9 @@ const Msgvideo = () => {
           zIndex: 0, // Behind the content
         }}
       />
-      <section className="container w-full flex flex-col md:flex-row mx-auto px-4 py-6 md:py-10 items-center justify-between relative z-10">
+      <section className="container w-full flex flex-col lg:flex-row mx-auto px-4 py-6 md:py-10 items-center justify-between relative z-10">
         {/* Left Side: Paragraph and Button */}
-        <div className="w-full md:w-1/3 p-4 md:p-8 text-white text-center md:text-left">
+        <div className="w-full lg:w-1/3 p-4 lg:p-8 text-white text-center lg:text-left">
           <h1 className={styles.maintitle}>Haycarb 2024/25: Impact in Brief</h1>
           <p className="mt-4 text-base md:text-lg para">
             At Haycarb, we lead with expertise, global reach, and purpose. Like strength beneath waves, our deep innovation fuels sustainable manufacturing, ethical leadership, and lasting impact. We deliver value beyond carbon to industries worldwide. Here&apos;s a brief about our impact during 2024/25.
@@ -60,7 +60,7 @@ const Msgvideo = () => {
           </button>
         </div>
         {/* Right Side: Video */}
-        <div className="w-full md:w-2/3 h-auto mt-6 md:mt-0">
+        <div className="w-full lg:w-2/3 h-auto mt-6 lg:mt-0">
           <div
             className="relative"
             onMouseEnter={() => setShowIcons(true)}

@@ -13,6 +13,7 @@ import TableofContent from 'components/TableofContent';
 import { HomeFooter } from 'components/Footer';
 import Videoslider from 'components/Videoslider';
 import ModelWindow from 'components/ModelWindow';
+import FloatingButtons from 'components/ui/FloatingButtons';
 
 
 const Home = () => {
@@ -90,11 +91,11 @@ const Home = () => {
           <div style={{
                padding: '5px',
                marginTop: '7px',
-               width:'25px',
+               width:'17px',
           }}>
-           <div className="border-b-1  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
-          <div className="border-b-1  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
-           <div className="border-b-1  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
+           <div className="border-b-0  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
+          <div className="border-b-0  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
+           <div className="border-b-0  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
            </div>
         )}
       </div>
@@ -172,7 +173,7 @@ const Home = () => {
           {isContentVisible ? (
             <div> 
             <motion.h1
-  className="text-8xl"
+  className="text-7xl md:text-8xl"
   style={{ fontFamily: "Brogadier" }}
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
@@ -307,6 +308,7 @@ Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and e
     <div id="tableofcontent"><TableofContent /></div>
     <div id="videoslider"><Videoslider /></div>
     <HomeFooter />
+    <FloatingButtons />
     {showModal && <ModelWindow />}
   </>
 )}
