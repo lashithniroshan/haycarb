@@ -19,7 +19,7 @@ const Integration = () => {
                 hidden lg:block
                 top-170 right-90
                 lg:top-78 lg:-right-35
-                xl:top-280 xl:-right-18
+                xl:top-160 xl:-right-18
                 2xl:top-130 2xl:-right-35
                 w-56 h-56 
                 md:w-72 md:h-72
