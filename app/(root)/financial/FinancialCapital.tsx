@@ -108,7 +108,18 @@ const FinancialCapital = () => {
 
       <div
         aria-hidden="true"
-        className="absolute top-85 -right-35 lg:w-80 lg:h-80 -rotate-45 scale-x-[-1] bg-no-repeat bg-contain z-40"
+        className="absolute 
+                  top-85 -right-35 
+                  lg:top-65 lg:-right-35
+                  xl:top-85 xl:-right-35
+                  2xl:top-85 2xl:-right-35
+                  lg:w-80 lg:h-80 
+                  xl:w-80 xl:h-80 
+                  2xl:w-100 2xl:h-90 
+                  -rotate-45 
+                  scale-x-[-1]
+                  bg-no-repeat 
+                  bg-contain z-40"
         style={{
           backgroundImage: "url(/images/innerpage/green-whale.png)",
         }}
