@@ -4,6 +4,7 @@ import Banner from "components/innerpage/Banner";
 import Navbar from "components/Navbar";
 import React, { useState } from "react";
 import OverviewofHaycarb from "./OverviewofHaycarb";
+import ReportingLandscape from "./ReportingLandscape";
 
 const HaycarbFocusComponent = () => {
   const [activatedTab, setActivatedTab] = useState("reporting-landscape");
@@ -33,7 +34,7 @@ const HaycarbFocusComponent = () => {
 
       {/* Financial Capital */}
       {activatedTab === "reporting-landscape" ? (
-        <OverviewofHaycarb />
+        <ReportingLandscape />
       ) : (
         <OverviewofHaycarb />
       )}
