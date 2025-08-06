@@ -1,8 +1,8 @@
-import DownloadCard from "components/DownloadCard";
 import WaveButton from "components/innerpage/WaveButton";
-import ProductCarousel from "components/ProductCarousel";
+import ProductCarousel from "components/common/ProductCarousel";
 import Image from "next/image";
 import React from "react";
+import DownloadCard from "components/common/DownloadCard";
 
 const OverviewofHaycarb = () => {
   const statsData = [

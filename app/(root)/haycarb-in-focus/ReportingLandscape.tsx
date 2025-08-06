@@ -1,8 +1,8 @@
 import React from "react";
-import NumberedFeatureItem from "components/NumberedFeatureItem";
+import NumberedFeatureItem from "components/common/NumberedFeatureItem";
 import WaveButton from "components/innerpage/WaveButton";
 import Image from "next/image";
-import DownloadCard from "components/DownloadCard";
+import DownloadCard from "components/common/DownloadCard";
 
 const ReportingLandscape = () => {
   const features = [
