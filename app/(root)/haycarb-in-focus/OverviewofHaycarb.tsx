@@ -4,7 +4,7 @@ import ProductCarousel from "components/ProductCarousel";
 import Image from "next/image";
 import React from "react";
 
-const ReportingLandscape = () => {
+const OverviewofHaycarb = () => {
   const statsData = [
     {
       id: 1,
@@ -102,6 +102,56 @@ const ReportingLandscape = () => {
                 bg-no-repeat bg-contain z-40"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
+        }}
+      ></div>
+
+      <div
+        aria-hidden="true"
+        className="absolute
+                  top-450 left-25 
+                  lg:top-300 
+                  xl:top-250 
+                  2xl:top-250
+                  w-96 h-96 
+                  md:w-[600px] md:h-[600px] 
+                  rotate-180 
+                  transform 
+                  -translate-y-1/3 -translate-x-1/3 
+                  bg-no-repeat bg-contain"
+        style={{
+          backgroundImage: "url(/images/water-spread.svg)",
+        }}
+      ></div>
+
+      <div
+        aria-hidden="true"
+        className="absolute
+                  hidden 
+                  sm:block 
+                  left-15 
+                  lg:top-3/4 
+                  xl:top-5/7 
+                  2xl:top-4/6
+                  w-56 h-56 
+                  md:w-72 md:h-72
+                  lg:w-50 lg:h-50  
+                  xl:w-72 xl:h-72
+                  transform scale-x-[-1] -rotate-20
+                  -translate-x-1/2 -translate-y-9/10 
+                  bg-no-repeat bg-contain opacity-25"
+        style={{
+          backgroundImage: "url(/images/innerpage/blue-whale.png)",
+        }}
+      ></div>
+
+      <div
+        aria-hidden="true"
+        className="absolute 
+                  top-6/7 -right-30 
+                  lg:w-200 lg:h-200 
+                  bg-no-repeat bg-contain"
+        style={{
+          backgroundImage: "url(/images/water-spread.svg)",
         }}
       ></div>
 
@@ -295,13 +345,21 @@ const ReportingLandscape = () => {
       <div className="px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         <ProductCarousel products={products} />
       </div>
-      <div className="lg:px-25 xl:px-50 mx-auto my-12 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-18 lg:gap-8">
+      <div className="lg:px-25 xl:px-50 mx-auto myt-12 mb-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-18 lg:gap-8">
         {cardData.map((item, idx) => (
           <DownloadCard key={idx} {...item} />
         ))}
+      </div>
+      <div className="lg:px-53">
+        <p className="para text-center text-[#000000] text-[15px] font-medium">
+          To be the leading global provider of activated carbon and foremost
+          provider of water purification systems in Sri Lanka and the region,
+          renowned for technical excellence, customer centricity, innovation and
+          sustainable business practices.
+        </p>
       </div>
     </section>
   );
 };
 
-export default ReportingLandscape;
+export default OverviewofHaycarb;

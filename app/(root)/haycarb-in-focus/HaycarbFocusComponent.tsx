@@ -3,7 +3,7 @@ import { InnerPageFooter } from "components/Footer";
 import Banner from "components/innerpage/Banner";
 import Navbar from "components/Navbar";
 import React, { useState } from "react";
-import ReportingLandscape from "./ReportingLandscape";
+import OverviewofHaycarb from "./OverviewofHaycarb";
 
 const HaycarbFocusComponent = () => {
   const [activatedTab, setActivatedTab] = useState("reporting-landscape");
@@ -32,7 +32,11 @@ const HaycarbFocusComponent = () => {
       />
 
       {/* Financial Capital */}
-      {activatedTab === "reporting-landscape" ? <ReportingLandscape /> : <></>}
+      {activatedTab === "reporting-landscape" ? (
+        <OverviewofHaycarb />
+      ) : (
+        <OverviewofHaycarb />
+      )}
 
       <InnerPageFooter />
     </div>
