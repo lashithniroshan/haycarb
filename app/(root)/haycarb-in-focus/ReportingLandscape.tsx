@@ -1,4 +1,5 @@
 import WaveButton from "components/innerpage/WaveButton";
+import ProductCarousel from "components/ProductCarousel";
 import Image from "next/image";
 import React from "react";
 
@@ -212,7 +213,7 @@ const ReportingLandscape = () => {
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
-      <div className="lg:px-53">
+      <div className="lg:px-53 mb-12">
         <p className="para text-center text-[#000000] text-[15px] font-medium mb-6">
           To be the leading global provider of activated carbon and foremost
           provider of water purification systems in Sri Lanka and the region,
@@ -226,6 +227,29 @@ const ReportingLandscape = () => {
           height={504}
           className="mx-auto block"
         />
+      </div>
+
+      {/* Our product */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
+        {/* Top or Left Line */}
+        <div
+          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-175 lg:h-[1px]"
+          style={{ background: "rgba(80, 205, 164, 0.5)" }}
+        ></div>
+
+        {/* Center Text */}
+        <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[40px] text-[#005881]">
+          Our Products
+        </h1>
+
+        {/* Bottom or Right Line */}
+        <div
+          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-175 lg:h-[1px]"
+          style={{ background: "rgba(80, 205, 164, 0.5)" }}
+        ></div>
+      </div>
+      <div className="px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+        <ProductCarousel />
       </div>
     </section>
   );
