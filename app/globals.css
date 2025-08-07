@@ -478,3 +478,56 @@ button {
     transform: translateX(50%);
   }
 }
+
+@layer components {
+  .chart-wave-button {
+    @apply bg-black relative;
+  }
+
+  .chart-wave {
+    @apply absolute block w-full h-full bg-white;
+    content: "";
+    transition: transform 0.5s ease;
+    z-index: 1;
+  }
+
+  .chart-wave-top {
+    @apply top-0 left-0 h-0.5 w-full;
+    transform: translateX(-100%);
+  }
+
+  .chart-wave-right {
+    @apply top-0 right-0 w-0.5 h-full;
+    transform: translateY(-100%);
+  }
+
+  .chart-wave-bottom {
+    @apply bottom-0 right-0 h-0.5 w-full;
+    transform: translateX(100%);
+  }
+
+  .chart-wave-left {
+    @apply bottom-0 left-0 w-0.5 h-full;
+    transform: translateY(100%);
+  }
+
+  .chart-wave-button:hover .chart-wave-top {
+    transform: translateX(0);
+    transition-delay: 0s;
+  }
+
+  .chart-wave-button:hover .chart-wave-right {
+    transform: translateY(0);
+    transition-delay: 0.15s;
+  }
+
+  .chart-wave-button:hover .chart-wave-bottom {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+
+  .chart-wave-button:hover .chart-wave-left {
+    transform: translateY(0);
+    transition-delay: 0.45s;
+  }
+}
