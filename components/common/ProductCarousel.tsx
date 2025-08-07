@@ -53,13 +53,13 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
       {/* Arrows */}
       <button
         onClick={() => instanceRef.current?.prev()}
-        className="absolute top-1/2 left-0 -translate-y-1/2 bg-[#e4e4e4] hover:bg-[#ccc] w-8 h-8 rounded-full flex items-center justify-center z-10"
+        className="absolute top-[130] lg:top-[80] xl:top-[110] 2xl:top-[150] left-0 -translate-y-1/2 bg-[#e4e4e4] hover:bg-[#ccc] w-8 h-8 rounded-full flex items-center justify-center z-10"
       >
         <span className="text-xl text-white rotate-180">❯</span>
       </button>
       <button
         onClick={() => instanceRef.current?.next()}
-        className="absolute top-1/2 right-0 -translate-y-1/2 bg-[#e4e4e4] hover:bg-[#ccc] w-8 h-8 rounded-full flex items-center justify-center z-10"
+        className="absolute op-[130] lg:top-[80] xl:top-[110] 2xl:top-[150] right-0 -translate-y-1/2 bg-[#e4e4e4] hover:bg-[#ccc] w-8 h-8 rounded-full flex items-center justify-center z-10"
       >
         <span className="text-xl text-white">❯</span>
       </button>
