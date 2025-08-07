@@ -424,7 +424,7 @@ font-size: 16px;
     display: none;
   }
   .circleSlide{
-    left: 43%;
+    left: 50%;
   }
     .circleSlider::before {
     top:144%;
@@ -448,6 +448,7 @@ font-size: 16px;
   .sliderCol {
     padding: 0px 30px;
   }
+
 }
 
 @media (max-width: 575px) {
@@ -500,4 +501,11 @@ text-align: center;
 .infoContentCol .infoContentColdes{
 text-align: center;
 }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+ .circleSlide.activeSlide {
+    left: 12%;
+    top: 15%;
+  }
 }
