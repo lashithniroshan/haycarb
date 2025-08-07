@@ -7,7 +7,7 @@
 }
 
 .backgroundImage {
-  background: url('/images/Footerbg.png') no-repeat center center/cover;
+  background: url("/images/Footerbg.png") no-repeat center center/cover;
   min-height: 300px;
   position: relative;
 }
