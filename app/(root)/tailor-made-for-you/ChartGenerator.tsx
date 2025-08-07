@@ -36,12 +36,14 @@ const ChartGenerator = () => {
             paddingLeft: 40,
             paddingRight: 40,
           }}
+          isActive={activatedBtn === "financial"}
           onBtnClick={() => setActivatedBtn("financial")}
         />
         <WaveButton
           title="Non Financial"
           style={{ paddingTop: 10, paddingBottom: 10 }}
           onBtnClick={() => setActivatedBtn("non-financial")}
+          isActive={activatedBtn === "non-financial"}
         />
       </div>
       <div className="px-4 sm:px-6 md:px-10 lg:px-20 py-6 space-y-8">
