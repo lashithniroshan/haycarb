@@ -3,6 +3,7 @@ import ProductCarousel from "components/common/ProductCarousel";
 import Image from "next/image";
 import React from "react";
 import DownloadCard from "components/common/DownloadCard";
+import { useAnimatedNumberText } from "utils/useSpeedCounter";
 
 const OverviewofHaycarb = () => {
   const statsData = [
@@ -208,7 +209,7 @@ const OverviewofHaycarb = () => {
         {statsData.map((stat, index) => (
           <div key={index}>
             <p className="text-[50px] font-extrabold text-[#005881]">
-              {stat.worth}
+              {useAnimatedNumberText(stat.worth)}
             </p>
             <div className="h-[1px] bg-[#1D80A0] w-1/2 lg:w-2/3 mx-auto my-1"></div>
             <p className="text-[20px] font-medium text-[#005881]">
@@ -268,7 +269,9 @@ const OverviewofHaycarb = () => {
             </div>
 
             <div>
-              <p className="text-[50px] font-extrabold text-[#005881]">2,046</p>
+              <p className="text-[50px] font-extrabold text-[#005881]">
+                {useAnimatedNumberText("2,046")}
+              </p>
               <div className="h-[1px] bg-[#8DC9CC] w-1/2 lg:w-2/3 mx-auto my-1"></div>
               <p className="text-[20px] font-medium text-[#005881]">
                 Employees across <br />
