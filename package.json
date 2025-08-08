@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@amcharts/amcharts5": "^5.13.5",
     "file-saver": "^2.0.5",
     "framer-motion": "^12.23.12",
     "keen-slider": "^6.8.6",

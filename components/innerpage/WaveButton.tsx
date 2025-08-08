@@ -6,6 +6,7 @@ interface WaveButtonProps {
   onBtnClick?: () => void;
   style?: React.CSSProperties;
   className?: string;
+  isActive?: boolean;
 }
 
 const WaveButton = ({
@@ -13,10 +14,13 @@ const WaveButton = ({
   onBtnClick,
   style = {},
   className,
+  isActive = false,
 }: WaveButtonProps) => {
   return (
     <button
-      className={`rounded-full transition ${styles.btnCustomInner} ${styles.waveBtnInner} btn-custom-mobile ${className}`}
+      className={`rounded-full transition ${styles.btnCustomInner} ${
+        styles.waveBtnInner
+      } ${isActive ? styles.active : ""} btn-custom-mobile ${className}`}
       onClick={onBtnClick}
       style={style}
     >

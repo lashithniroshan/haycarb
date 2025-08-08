@@ -1,6 +1,7 @@
 import WaveButton from "components/innerpage/WaveButton";
 import Image from "next/image";
 import React, { JSX } from "react";
+import { useAnimatedNumberText } from "utils/useSpeedCounter";
 
 interface FinancialItem {
   value: string | null;
@@ -161,7 +162,7 @@ const FinancialCapital = () => {
             {statsData.map((stat, index) => (
               <div key={index}>
                 <p className="text-[50px] font-extrabold text-[#369E93]">
-                  {stat.worth}
+                  {useAnimatedNumberText(stat.worth)}
                 </p>
                 <div className="h-[1px] bg-[#CFD674] w-1/2 lg:w-2/3 mx-auto my-1"></div>
                 <p className="text-[20px] font-medium text-[#369E93]">

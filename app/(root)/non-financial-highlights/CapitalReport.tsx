@@ -2,6 +2,7 @@ import React from "react";
 import { AccordionData } from "components/types/types";
 import CommonAccordion from "components/common/CommonAccordion";
 import Image from "next/image";
+import { useAnimatedNumberText } from "utils/useSpeedCounter";
 
 const CapitalReport = () => {
   const accordionItems: AccordionData[] = [
@@ -19,15 +20,21 @@ const CapitalReport = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">43,202</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("43,202")}
+              </p>
               <p className="text-base">Revenue (Rs. Mn)</p>
             </div>
             <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">5,517</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("5,517")}
+              </p>
               <p className="text-base">Profit Before Tax (Rs. Mn)</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">4,271</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("4,271")}
+              </p>
               <p className="text-base">Profit After Tax (Rs. Mn)</p>
             </div>
           </div>
@@ -64,17 +71,23 @@ const CapitalReport = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">44,554</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("44,554")}
+              </p>
               <p className="text-base">
                 Carbol Footprint (tCO<sub>2</sub>e)
               </p>
             </div>
             <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">10,366</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("10,366")}
+              </p>
               <p className="text-base">Sea Tutrle Hatchlings</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">&gt;75,000</p>
+              <p className="text-[40px] font-bold">
+                &gt;{useAnimatedNumberText("75,000")}
+              </p>
               <p className="text-base">Trees Planted</p>
             </div>
           </div>
@@ -113,15 +126,21 @@ const CapitalReport = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">32</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText(32)}
+              </p>
               <p className="text-base">Certifications</p>
             </div>
             <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">&gt;1,500</p>
+              <p className="text-[40px] font-bold">
+                &gt;{useAnimatedNumberText("1,500")}
+              </p>
               <p className="text-base">Activated Carbol Products</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">&gt;100</p>
+              <p className="text-[40px] font-bold">
+                &gt;{useAnimatedNumberText(100)}
+              </p>
               <p className="text-base">
                 Environmental Engineering Products & Solutions
               </p>
@@ -195,15 +214,21 @@ const CapitalReport = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">&gt;600</p>
+              <p className="text-[40px] font-bold">
+                &gt;{useAnimatedNumberText(600)}
+              </p>
               <p className="text-base">Customers</p>
             </div>
             <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">&gt;500</p>
+              <p className="text-[40px] font-bold">
+                &gt;{useAnimatedNumberText(500)}
+              </p>
               <p className="text-base">Coconut Shell and Charcoal Suppliers</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">&gt;71,500</p>
+              <p className="text-[40px] font-bold">
+                &gt;{useAnimatedNumberText("71,500")}
+              </p>
               <p className="text-base">CSR Beneficiaries</p>
             </div>
           </div>
@@ -242,17 +267,23 @@ const CapitalReport = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">7</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText(7)}
+              </p>
               <p className="text-base">
                 Production Facilities across 3 Countries
               </p>
             </div>
             <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">Rs.6.9 Bn</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("Rs.6.9 Bn")}
+              </p>
               <p className="text-base">Asset Base (PPE) Local</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">Rs.5.8 Bn</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("Rs.5.8 Bn")}
+              </p>
               <p className="text-base">Asset Base (PPE) Overseas</p>
             </div>
           </div>
@@ -275,15 +306,21 @@ const CapitalReport = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">&gt;50,600</p>
+              <p className="text-[40px] font-bold">
+                &gt;{useAnimatedNumberText("50,600")}
+              </p>
               <p className="text-base">Users Visited the Website</p>
             </div>
             <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">Rs.6.1 Mn</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("Rs.6.1 Mn")}
+              </p>
               <p className="text-base">Digital Marketing Spend</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">Rs.31.1 Mn</p>
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("Rs.31.1 Mn")}
+              </p>
               <p className="text-base">
                 Invested in IT i=Infrastructure & Systems
               </p>

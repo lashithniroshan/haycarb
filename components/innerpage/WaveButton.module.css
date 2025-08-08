@@ -58,6 +58,11 @@
   animation: wave-move 2s linear infinite;
 }
 
+.active {
+  background: #005881;
+  color: #ffffff;
+}
+
 @keyframes wave-move {
   0% {
     transform: translateX(0);
