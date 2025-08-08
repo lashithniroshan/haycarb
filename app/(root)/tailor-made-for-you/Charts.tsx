@@ -380,167 +380,278 @@ export function KeyRatiosChart() {
 
 export function EnvironmentalPerformance() {
   useEffect(() => {
-    let root = am5.Root.new("chartdiv");
-
-    // Set themes
+    const root = am5.Root.new("envperformancechartdiv");
     root.setThemes([am5themes_Animated.new(root)]);
 
-    // Create chart
     let chart = root.container.children.push(
       am5xy.XYChart.new(root, {
         panX: false,
         panY: false,
-        wheelX: "panX",
-        wheelY: "zoomX",
+        wheelX: "none",
+        wheelY: "none",
+        layout: root.horizontalLayout,
         paddingLeft: 0,
-        layout: root.verticalLayout,
       })
     );
 
-    // Add legend
+    let legendData: any[] = [];
     let legend = chart.children.push(
       am5.Legend.new(root, {
-        centerX: am5.p50,
-        x: am5.p50,
+        nameField: "name",
+        fillField: "color",
+        strokeField: "color",
+        marginLeft: 20,
+        y: 20,
+        layout: root.verticalLayout,
+        clickTarget: "none",
       })
     );
 
-    // ✅ Your Environmental Data
-    let data = [
+    const data = [
+      { year: "2023", cate: "Renewable Energy (GJ)", val: 942301 },
       {
         year: "2023",
-        renewable: 942301,
-        wastewater: 196918,
-        emissions: 28396,
-        solidWaste: 6589,
-        rawMaterial: 158885,
-        electricity: 3656,
+        cate: "Waste Water Treated (Litres '000)",
+        val: 196918,
       },
+      { year: "2023", cate: "Carbon Emissions (tCO2e)", val: 28396 },
+      { year: "2023", cate: "Solid Waste (MT)", val: 6589 },
+      { year: "2023", cate: "Renewable Raw Material (MT)", val: 158885 },
+      { year: "2023", cate: "Electricity to Grid (GJ)", val: 3656 },
+
+      { year: "2024", cate: "Renewable Energy (GJ)", val: 885612 },
       {
         year: "2024",
-        renewable: 885612,
-        wastewater: 241465,
-        emissions: 26696,
-        solidWaste: 5503,
-        rawMaterial: 152221,
-        electricity: 2889,
+        cate: "Waste Water Treated (Litres '000)",
+        val: 241465,
       },
+      { year: "2024", cate: "Carbon Emissions (tCO2e)", val: 26696 },
+      { year: "2024", cate: "Solid Waste (MT)", val: 5503 },
+      { year: "2024", cate: "Renewable Raw Material (MT)", val: 152221 },
+      { year: "2024", cate: "Electricity to Grid (GJ)", val: 2889 },
+
+      { year: "2025", cate: "Renewable Energy (GJ)", val: 850874 },
       {
         year: "2025",
-        renewable: 850874,
-        wastewater: 321433,
-        emissions: 44554,
-        solidWaste: 5112,
-        rawMaterial: 146563,
-        electricity: 4390,
+        cate: "Waste Water Treated (Litres '000)",
+        val: 321433,
       },
+      { year: "2025", cate: "Carbon Emissions (tCO2e)", val: 44554 },
+      { year: "2025", cate: "Solid Waste (MT)", val: 5112 },
+      { year: "2025", cate: "Renewable Raw Material (MT)", val: 146563 },
+      { year: "2025", cate: "Electricity to Grid (GJ)", val: 4390 },
     ];
 
-    // Create axes
+    // Group by year and create hierarchical structure with UNIQUE identifiers
+    const years = ["2023", "2024", "2025"]; // Correct order: oldest to newest
+    const categories = [
+      "Renewable Energy (GJ)",
+      "Waste Water Treated (Litres '000)",
+      "Carbon Emissions (tCO2e)",
+      "Solid Waste (MT)",
+      "Renewable Raw Material (MT)",
+      "Electricity to Grid (GJ)",
+    ];
+
+    const processedData: any[] = [];
+
+    years.forEach((year, yearIndex) => {
+      // Add categories for this year first
+      categories.forEach((category, catIndex) => {
+        const dataPoint = data.find(
+          (d) => d.year === year && d.cate === category
+        );
+        if (dataPoint) {
+          processedData.push({
+            ...dataPoint,
+            // Create UNIQUE category identifier combining year and category
+            uniqueCategory: `${year}_${category}`,
+            displayName: `  ${category}`, // Indent category names
+            yearGroup: year,
+            isYearHeader: false,
+            sortOrder: yearIndex * 100 + catIndex, // Categories get lower sort order
+          });
+        }
+      });
+
+      // Then add year header AFTER categories (higher sort order = appears above)
+      processedData.push({
+        year: year,
+        cate: "",
+        val: 0,
+        uniqueCategory: `${year}_HEADER`,
+        displayName: year,
+        yearGroup: year,
+        isYearHeader: true,
+        sortOrder: yearIndex * 100 + categories.length, // Year header gets higher sort order
+      });
+    });
+
     let yAxis = chart.yAxes.push(
       am5xy.CategoryAxis.new(root, {
-        categoryField: "year",
+        categoryField: "uniqueCategory", // Use unique identifier to prevent overlap
         renderer: am5xy.AxisRendererY.new(root, {
-          inversed: true,
-          cellStartLocation: 0.1,
-          cellEndLocation: 0.9,
-          minorGridEnabled: true,
+          minGridDistance: 15,
+          minorGridEnabled: false,
         }),
+        tooltip: am5.Tooltip.new(root, {}),
       })
     );
-    yAxis.data.setAll(data);
+
+    // Customize Y-axis labels to show only category names (not the unique identifier)
+    yAxis.get("renderer").labels.template.setAll({
+      fontSize: 10,
+      location: 0.5,
+    });
+
+    // Style year headers and category labels differently
+    yAxis
+      .get("renderer")
+      .labels.template.adapters.add("text", function (text, target) {
+        if (target.dataItem) {
+          const dataContext = target.dataItem.dataContext as {
+            displayName?: string;
+          };
+          return dataContext?.displayName || text;
+        }
+        return text;
+      });
+
+    yAxis
+      .get("renderer")
+      .labels.template.adapters.add(
+        "fontWeight",
+        function (fontWeight, target) {
+          if (target.dataItem) {
+            const dataContext = target.dataItem.dataContext as {
+              isYearHeader?: boolean;
+            };
+            return dataContext?.isYearHeader ? "bold" : "normal";
+          }
+          return fontWeight;
+        }
+      );
+
+    yAxis
+      .get("renderer")
+      .labels.template.adapters.add("fontSize", function (fontSize, target) {
+        if (target.dataItem) {
+          const dataContext = target.dataItem.dataContext as {
+            isYearHeader?: boolean;
+          };
+          return dataContext?.isYearHeader ? 14 : 10;
+        }
+        return fontSize;
+      });
+
+    yAxis
+      .get("renderer")
+      .labels.template.adapters.add("fill", function (fill, target) {
+        if (target.dataItem) {
+          const dataContext = target.dataItem.dataContext as {
+            isYearHeader?: boolean;
+            year?: string;
+          };
+          if (dataContext?.isYearHeader) {
+            switch (dataContext?.year) {
+              case "2023":
+                return chart?.get("colors")?.getIndex(0);
+              case "2024":
+                return chart?.get("colors")?.getIndex(1);
+              case "2025":
+                return chart?.get("colors")?.getIndex(2);
+              default:
+                return am5.color("#666666");
+            }
+          }
+          return am5.color("#333333");
+        }
+        return fill;
+      });
+
+    yAxis.data.setAll(processedData);
 
     let xAxis = chart.xAxes.push(
       am5xy.ValueAxis.new(root, {
-        renderer: am5xy.AxisRendererX.new(root, {
-          strokeOpacity: 0.1,
-          minGridDistance: 50,
+        renderer: am5xy.AxisRendererX.new(root, {}),
+        tooltip: am5.Tooltip.new(root, {}),
+      })
+    );
+
+    let series = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueXField: "val",
+        categoryYField: "uniqueCategory", // Use unique identifier
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
         }),
-        min: 0,
       })
     );
 
-    // Create series for each metric
-    function createSeries(field: string, name: string) {
-      let series = chart.series.push(
-        am5xy.ColumnSeries.new(root, {
-          name: name,
-          xAxis: xAxis,
-          yAxis: yAxis,
-          valueXField: field,
-          categoryYField: "year",
-          sequencedInterpolation: true,
-          tooltip: am5.Tooltip.new(root, {
-            pointerOrientation: "horizontal",
-            labelText: "[bold]{name}[/]\n{categoryY}: {valueX}",
-          }),
-        })
-      );
+    series.columns.template.setAll({
+      tooltipText: "{yearGroup}: {displayName} - [bold]{valueX}[/]",
+      width: am5.percent(70),
+      strokeOpacity: 0,
+    });
 
-      series.columns.template.setAll({
-        height: am5.p100,
-        strokeOpacity: 0,
-      });
+    // Hide bars for year header rows
+    series.columns.template.adapters.add("visible", function (visible, target) {
+      if (target.dataItem) {
+        const dataContext = target.dataItem.dataContext as {
+          isYearHeader?: boolean;
+        };
+        return !dataContext?.isYearHeader;
+      }
+      return visible;
+    });
 
-      series.bullets.push(function () {
-        return am5.Bullet.new(root, {
-          locationX: 1,
-          locationY: 0.5,
-          sprite: am5.Label.new(root, {
-            centerY: am5.p50,
-            text: "{valueX}",
-            populateText: true,
-          }),
-        });
-      });
+    series.columns.template.adapters.add("fill", function (fill, target) {
+      if (target.dataItem) {
+        const dataItem = target.dataItem;
+        const dataContext = dataItem?.dataContext as {
+          year?: string;
+          isYearHeader?: boolean;
+        };
 
-      series.bullets.push(function () {
-        return am5.Bullet.new(root, {
-          locationX: 1,
-          locationY: 0.5,
-          sprite: am5.Label.new(root, {
-            centerX: am5.p100,
-            centerY: am5.p50,
-            text: "{name}",
-            fill: am5.color(0xffffff),
-            populateText: true,
-          }),
-        });
-      });
+        // Year headers are already hidden by visible adapter, so we don't need to return anything for them
 
-      series.data.setAll(data);
-      series.appear();
-      return series;
-    }
+        switch (dataContext?.year) {
+          case "2023":
+            return chart?.get("colors")?.getIndex(0);
+          case "2024":
+            return chart?.get("colors")?.getIndex(1);
+          case "2025":
+            return chart?.get("colors")?.getIndex(2);
+          default:
+            return fill;
+        }
+      }
+      return fill;
+    });
 
-    // Add all your metrics
-    createSeries("renewable", "Renewable Energy (GJ)");
-    createSeries("wastewater", "Waste Water Treated (Litres '000)");
-    createSeries("emissions", "Carbon Emissions (tCO2e)");
-    createSeries("solidWaste", "Solid Waste (MT)");
-    createSeries("rawMaterial", "Renewable Raw Material (MT)");
-    createSeries("electricity", "Electricity to Grid (GJ)");
+    series.data.setAll(processedData);
 
-    // Add legend
-    let legend2 = chart.children.push(
-      am5.Legend.new(root, {
-        centerX: am5.p50,
-        x: am5.p50,
-      })
-    );
-    legend2.data.setAll(chart.series.values);
+    // Remove the old range creation code since we now have year headers in the data
+    // Years are now properly positioned as headers in the Y-axis
 
-    // Add cursor
+    // Add legend data for years
+    legendData.push({ name: "2023", color: chart?.get("colors")?.getIndex(0) });
+    legendData.push({ name: "2024", color: chart?.get("colors")?.getIndex(1) });
+    legendData.push({ name: "2025", color: chart?.get("colors")?.getIndex(2) });
+
+    legend.data.setAll(legendData);
+
     let cursor = chart.set(
       "cursor",
       am5xy.XYCursor.new(root, {
-        behavior: "zoomY",
+        xAxis: xAxis,
+        yAxis: yAxis,
       })
     );
-    cursor.lineY.set("forceHidden", true);
-    cursor.lineX.set("forceHidden", true);
 
-    // Animate chart
+    series.appear();
     chart.appear(1000, 100);
 
     return () => {
@@ -548,7 +659,12 @@ export function EnvironmentalPerformance() {
     };
   }, []);
 
-  return <div id="chartdiv" style={{ width: "100%", height: "500px" }} />;
+  return (
+    <div
+      id="envperformancechartdiv"
+      style={{ width: "100%", height: "600px" }}
+    ></div>
+  );
 }
 
 export function SocialPerformanceChart() {
