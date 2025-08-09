@@ -8,6 +8,22 @@ import am5themes_Responsive from "@amcharts/amcharts5/themes/Responsive";
 
 am5.addLicense("AM5C-0771-7551-3415-0172");
 
+interface LegendItem {
+  name: string;
+  color?: am5.Color;
+}
+
+interface ProcessedDataItem {
+  year: string;
+  cate: string;
+  val: number;
+  uniqueCategory: string;
+  displayName: string;
+  yearGroup: string;
+  isYearHeader: boolean;
+  sortOrder: number;
+}
+
 export function ProfitablityAndFinancialBar() {
   const chartRef = useRef<HTMLDivElement>(null);
 
@@ -394,7 +410,7 @@ export function EnvironmentalPerformance() {
       })
     );
 
-    const legendData: any[] = [];
+    const legendData: LegendItem[] = [];
     const legend = chart.children.push(
       am5.Legend.new(root, {
         nameField: "name",
@@ -453,7 +469,7 @@ export function EnvironmentalPerformance() {
       "Electricity to Grid (GJ)",
     ];
 
-    const processedData: any[] = [];
+    const processedData: ProcessedDataItem[] = [];
 
     years.forEach((year, yearIndex) => {
       // Add categories for this year first
@@ -637,9 +653,18 @@ export function EnvironmentalPerformance() {
     // Years are now properly positioned as headers in the Y-axis
 
     // Add legend data for years
-    legendData.push({ name: "2023", color: chart?.get("colors")?.getIndex(0) });
-    legendData.push({ name: "2024", color: chart?.get("colors")?.getIndex(1) });
-    legendData.push({ name: "2025", color: chart?.get("colors")?.getIndex(2) });
+    legendData.push({
+      name: "2023",
+      color: chart?.get("colors")?.getIndex(0) ?? am5.color("#000000"),
+    });
+    legendData.push({
+      name: "2024",
+      color: chart?.get("colors")?.getIndex(1) ?? am5.color("#000000"),
+    });
+    legendData.push({
+      name: "2025",
+      color: chart?.get("colors")?.getIndex(2) ?? am5.color("#000000"),
+    });
 
     legend.data.setAll(legendData);
 
