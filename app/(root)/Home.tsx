@@ -326,6 +326,7 @@ Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and e
     <HomeFooter />
     <FloatingButtons />
     {showModal && <ModelWindow />}
+    {/* model window */}
   </>
 )}
     </div>
