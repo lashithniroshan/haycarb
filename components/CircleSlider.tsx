@@ -408,7 +408,7 @@ const CircleSlider = () => {
       {showOverlay && (
         <div className={styles.overlay}>
           <div className={styles.videoContainer}>
-            <video src="/videos/V2WhaleGeneralVideo.mp4" controls autoPlay />
+            <video src="/videos/oneMinuteNatureVideo.mp4" controls autoPlay />
             <button className={styles.closeButton} onClick={handleClose}>✕</button>
           </div>
         </div>
@@ -416,7 +416,7 @@ const CircleSlider = () => {
        {showOverlay2 && (
         <div className={styles.overlay}>
           <div className={styles.videoContainer}>
-            <video src="/videos/ARThemeVideo-EchoesofTheDeepVideo.mp4" controls autoPlay />
+            <video src="/videos/oneMinuteNatureVideo.mp4" controls autoPlay />
             <button className={styles.closeButton} onClick={handleClose2}>✕</button>
           </div>
         </div>

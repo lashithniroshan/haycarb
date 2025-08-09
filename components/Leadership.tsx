@@ -278,7 +278,7 @@ const pdfUrls: Record<string, string> = {
                 ref={videoRef}
                 className={styles.modalVideo}
                 controls
-                src="/videos/ChairmananDirectorMessage.mp4"
+                src="/videos/oneMinuteNatureVideo.mp4"
               >
                 Your browser does not support the video tag.
               </video>
