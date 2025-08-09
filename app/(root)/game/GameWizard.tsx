@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from "next/image";
-import WaveButton from "components/innerpage/WaveButton";
 
 function GameWizard() {
   return (
