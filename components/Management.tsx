@@ -143,7 +143,7 @@ function Management() {
        <button
           className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
           onClick={() =>
-            window.open('https://www.haycarb.com/annual-report-2024-25', '_blank')
+            window.open('pdf/Board-of-Directors.pdf', '_blank')
           }
         >
           Management Team
@@ -158,7 +158,7 @@ function Management() {
            <button
           className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
           onClick={() =>
-            window.open('https://www.haycarb.com/annual-report-2024-25', '_blank')
+            window.open('pdf/CorporateGovernance.pdf', '_blank')
           }
         >
           View Our Governance

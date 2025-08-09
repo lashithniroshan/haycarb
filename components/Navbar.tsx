@@ -1,15 +1,20 @@
 // components/Navbar.tsx
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
+import Link from 'next/link';
 import { motion } from "framer-motion";
+import { usePathname, useRouter } from 'next/navigation';
+
 
 const Navbar = ({
   isScrolled,
   isContentVisible,
+  setIsContentVisible,
   isFromInnerPage = false,
 }: {
   isScrolled: boolean;
   isContentVisible: boolean;
+  setIsContentVisible?:(value: boolean) => void;
   isFromInnerPage?: boolean;
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +22,8 @@ const Navbar = ({
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [pdfFiles, setPdfFiles] = useState<string[]>([]);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -36,7 +43,7 @@ const Navbar = ({
             // Fallback to hardcoded list if API fails
             setPdfFiles([
               "full-Annual-Report-2024.pdf",
-              "full-Annual-Report-2024-2025.pdf",
+              "Haycarb-PLC-Annual-Report-2024-25.pdf",
               "Haycarb-Glance.pdf",
               "Our-Approach-to-Reporting.pdf",
               "Our-Products.pdf",
@@ -142,7 +149,7 @@ const Navbar = ({
                   isScrolled ? "w-6 h-6" : "w-9 h-9"
                 }`}
                 fill="none"
-                stroke="currentColor"
+                stroke="#fff"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -294,45 +301,97 @@ const Navbar = ({
             </button>
             <ul className="space-y-4">
               <li
-                className="p-8 hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
-                <a href="#home" className="" onClick={toggleMenu}>
+                <Link href={isFromInnerPage ? { pathname: "/", query: { show: "true" } } : "/"} className="" onClick={() => {
+      if (pathname === "/") {
+        // Already on Home — reveal content
+        setIsContentVisible?.(true);
+      } else {
+        // Navigate to Home
+        router.push("/");
+        // Delay setting isContentVisible to allow transition
+        setTimeout(() => {
+          setIsContentVisible?.(true);
+        }, 100); // Optional: Add delay after route transition
+      }
+      toggleMenu(); // Close mobile menu
+    }}>
                   Home
-                </a>
+                </Link>
               </li>
               <li
-                className="p-8 hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
-                <a
-                  href="#haycarb-in-focus"
-                  className="block w-full p-2"
+                <Link
+                  href="/haycarb-in-focus"
                   onClick={toggleMenu}
                 >
                   Haycarb in Focus
-                </a>
+                </Link>
               </li>
-              <li
-                className="p-8 hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                 <li
+                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
-                <a href="#non-financial" className="" onClick={toggleMenu}>
-                  Non-financial
-                </a>
+                <Link href="/financial" className="" onClick={toggleMenu}>
+                  Financial Highlights
+                </Link>
               </li>
               <li
-                className="p-8 hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
-                <a href="#climate-resilience" className="" onClick={toggleMenu}>
-                  Assessing climate resilience
-                </a>
+                <Link href="/non-financial-highlights" className="" onClick={toggleMenu}>
+                  Non-Financial Highlights
+                </Link>
               </li>
-              <li className="p-8 hover:bg-[rgba(73,220,248,0.1)] block w-full">
-                <a href="#contact" className="" onClick={toggleMenu}>
-                  Contact Us
-                </a>
+               <li
+                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+              >
+                <Link href="/tailor-made-for-you" className="" onClick={toggleMenu}>
+                  Chart Generator
+                </Link>
+              </li>
+              <li
+                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+              >
+                <Link href="/tailor-made-for-you" className="" onClick={toggleMenu}>
+                  Create Your Own Report
+                </Link>
+              </li>
+               <li
+                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+              >
+                <Link href="#finquest" className="" onClick={toggleMenu}>
+                 Finquest
+                </Link>
+              </li>
+              <li
+                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+              >
+                <Link href="#user-profiles" className="" onClick={toggleMenu}>
+                 User Profiles
+                </Link>
+              </li>
+              <li
+                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+              >
+                <Link href="#synopsis" className="" onClick={toggleMenu}>
+                  Synopsis
+                </Link>
+              </li>
+              <li className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full">
+                <Link href="#faqs" className="" onClick={toggleMenu}>
+                  FAQs
+                </Link>
               </li>
             </ul>
           </div>

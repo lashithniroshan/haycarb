@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Card from './ui/Card';
 import styles from './CardSlider.module.css';
 import style from './FinancialSlider.module.css';
@@ -10,23 +11,27 @@ const FinancialSlider = () => {
       title: 'Haycarb at a Glance',
       image: '/images/haycarbglance.png',
       alt: 'Haycarb at a Glance',
+      route: '/haycarb-in-focus',
     },
     {
       id: 2,
       title: 'Financial Highlights',
       image: '/images/financialhighlights.png',
       alt: 'Financial Highlights',
+      route: '/financial',
     },
     {
       id: 3,
       title: 'Non-Financial Highlights',
       image: '/images/nonfinancialhighlights.png',
       alt: 'Non-Financial Highlights',
+      route: '/non-financial-highlights',
     },
   ];
 
   const [activeIndex, setActiveIndex] = useState(1); // Start with middle card (index 1)
   const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter();
 
   // Detect screen size and toggle sliding behavior
   useEffect(() => {
@@ -51,9 +56,9 @@ const FinancialSlider = () => {
   const handleDotClick = (index: number) => {
     if (isMobile) setActiveIndex(index); // Only allow dot clicks on mobile
   };
-    const handleTitleClick = (title: string) => {
-    alert(`Clicked: ${title}`); // Placeholder action; replace with your logic (e.g., navigation)
-  };
+  const handleTitleClick = (route: string) => {
+  router.push(route);
+};
 
  return (
   <div className={style.sliderContainerfinancial}>
@@ -79,7 +84,7 @@ const FinancialSlider = () => {
               alt={slide.alt}
               isActive={index === activeIndex && isMobile}
               style={style}
-              onTitleClick={() => handleTitleClick(slide.title)}
+              onTitleClick={() => handleTitleClick(slide.route)}
             />
           );
         })}
