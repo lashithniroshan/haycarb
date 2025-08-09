@@ -383,7 +383,7 @@ export function EnvironmentalPerformance() {
     const root = am5.Root.new("envperformancechartdiv");
     root.setThemes([am5themes_Animated.new(root)]);
 
-    let chart = root.container.children.push(
+    const chart = root.container.children.push(
       am5xy.XYChart.new(root, {
         panX: false,
         panY: false,
@@ -394,8 +394,8 @@ export function EnvironmentalPerformance() {
       })
     );
 
-    let legendData: any[] = [];
-    let legend = chart.children.push(
+    const legendData: any[] = [];
+    const legend = chart.children.push(
       am5.Legend.new(root, {
         nameField: "name",
         fillField: "color",
@@ -487,7 +487,7 @@ export function EnvironmentalPerformance() {
       });
     });
 
-    let yAxis = chart.yAxes.push(
+    const yAxis = chart.yAxes.push(
       am5xy.CategoryAxis.new(root, {
         categoryField: "uniqueCategory", // Use unique identifier to prevent overlap
         renderer: am5xy.AxisRendererY.new(root, {
@@ -571,14 +571,14 @@ export function EnvironmentalPerformance() {
 
     yAxis.data.setAll(processedData);
 
-    let xAxis = chart.xAxes.push(
+    const xAxis = chart.xAxes.push(
       am5xy.ValueAxis.new(root, {
         renderer: am5xy.AxisRendererX.new(root, {}),
         tooltip: am5.Tooltip.new(root, {}),
       })
     );
 
-    let series = chart.series.push(
+    const series = chart.series.push(
       am5xy.ColumnSeries.new(root, {
         xAxis: xAxis,
         yAxis: yAxis,
@@ -643,7 +643,7 @@ export function EnvironmentalPerformance() {
 
     legend.data.setAll(legendData);
 
-    let cursor = chart.set(
+    const cursor = chart.set(
       "cursor",
       am5xy.XYCursor.new(root, {
         xAxis: xAxis,
