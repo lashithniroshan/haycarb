@@ -254,7 +254,7 @@ const ReportingLandscape = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-        {chart.map((ch, idx) => (
+        {chart.map((ch) => (
           <div
             key={ch.id}
             className="border border-[#1D80A080] rounded-[30px] flex flex-col items-center justify-center w-full px-4 py-6 text-center bg-white z-30"

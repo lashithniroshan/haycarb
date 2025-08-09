@@ -9,25 +9,25 @@ const OverviewofHaycarb = () => {
   const statsData = [
     {
       id: 1,
-      worth: "Rs. 43.2 Bn",
+      worth: useAnimatedNumberText("Rs. 43.2 Bn"),
       currency: "(US$ 145.2 Mn)",
       title: "Revenue",
     },
     {
       id: 2,
-      worth: "Rs. 4.3 Bn",
+      worth: useAnimatedNumberText("Rs. 4.3 Bn"),
       currency: "(US$ 14.4 Mn)",
       title: "Profit after tax",
     },
     {
       id: 3,
-      worth: "Rs. 45.9 Bn",
+      worth: useAnimatedNumberText("Rs. 45.9 Bn"),
       currency: "US$ 154.9 Mn",
       title: "Total assets",
     },
     {
       id: 4,
-      worth: "16%",
+      worth: useAnimatedNumberText("16%"),
       currency: "",
       title: "Global market share",
     },
@@ -209,7 +209,7 @@ const OverviewofHaycarb = () => {
         {statsData.map((stat, index) => (
           <div key={index}>
             <p className="text-[50px] font-extrabold text-[#005881]">
-              {useAnimatedNumberText(stat.worth)}
+              {stat.worth}
             </p>
             <div className="h-[1px] bg-[#1D80A0] w-1/2 lg:w-2/3 mx-auto my-1"></div>
             <p className="text-[20px] font-medium text-[#005881]">
@@ -281,7 +281,7 @@ const OverviewofHaycarb = () => {
           </div>
         </div>
 
-        {chart.map((ch, idx) => (
+        {chart.map((ch) => (
           <div
             key={ch.id}
             className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full"

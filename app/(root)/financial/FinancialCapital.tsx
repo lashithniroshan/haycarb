@@ -24,17 +24,17 @@ interface Category {
 const FinancialCapital = () => {
   const statsData = [
     {
-      worth: "43,202",
+      worth: useAnimatedNumberText("43,202"),
       title: "Revenue",
       currency: "(Rs. Mn)",
     },
     {
-      worth: "5,517",
+      worth: useAnimatedNumberText("5,517"),
       title: "Profit Before Tax",
       currency: "(Rs. Mn)",
     },
     {
-      worth: "4,271",
+      worth: useAnimatedNumberText("4,271"),
       title: "Profit After Tax",
       currency: "(Rs. Mn)",
     },
@@ -162,7 +162,7 @@ const FinancialCapital = () => {
             {statsData.map((stat, index) => (
               <div key={index}>
                 <p className="text-[50px] font-extrabold text-[#369E93]">
-                  {useAnimatedNumberText(stat.worth)}
+                  {stat.worth}
                 </p>
                 <div className="h-[1px] bg-[#CFD674] w-1/2 lg:w-2/3 mx-auto my-1"></div>
                 <p className="text-[20px] font-medium text-[#369E93]">
@@ -189,7 +189,7 @@ const FinancialCapital = () => {
 
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-        {chart.map((ch, idx) => (
+        {chart.map((ch) => (
           <div
             key={ch.id}
             className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full"
