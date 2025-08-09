@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import style from "./Strategy.module.css";
 import Image from "next/image";
+import { useAnimatedNumberText } from "utils/useSpeedCounter";
 
 const Strategy = () => {
   const strategyData = [
@@ -14,9 +15,13 @@ const Strategy = () => {
             <p>Strategic global expansion, product innovation and tech investment drive Haycarb’s market growth and value-added carbon leadership.</p>
           </div>
           <ul class="${style.listContent}">
-            <li><h4>+43.2</h4><p>Bn Revenue</p></li>
-            <li><h4>+5.5</h4><p>Bn Profit before tax</p></li>
-            <li><h4>+16</h4><p>Global market share</p></li>
+            <li><h4>${useAnimatedNumberText("+43.2")}</h4><p>Bn Revenue</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+5.5"
+            )}</h4><p>Bn Profit before tax</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+16"
+            )}</h4><p>Global market share</p></li>
           </ul>
         </div>
       `,
@@ -32,9 +37,15 @@ const Strategy = () => {
             <p>Haycarb advanced its innovation efforts by enhancing R&D capabilities, fostering a learning culture, and applying data-driven insights to support future growth.</p>
           </div>
           <ul class="${style.listContent}">
-            <li><h4>+16</h4><p>New products launched</p></li>
-            <li><h4>+4</h4><p>New products in pipeline</p></li>
-            <li><h4>Rs.209.3</h4><p>Mn Investment in R&D</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+16"
+            )}</h4><p>New products launched</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+4"
+            )}</h4><p>New products in pipeline</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "Rs.209.3"
+            )}</h4><p>Mn Investment in R&D</p></li>
           </ul>
         </div>
       `,
@@ -50,9 +61,15 @@ const Strategy = () => {
             <p>Haycarb strengthened supply chain resilience through regional diversification, sustainable sourcing, and strategic partnerships across key raw material markets.</p>
           </div>
           <ul class="${style.listContent}">
-            <li><h4>+248</h4><p>new suppliers</p></li>
-            <li><h4>Rs.14.9</h4><p>Bn payments to raw material suppliers</p></li>
-            <li><h4>Rs.20.6</h4><p>Mn for supplier capacity building</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+248"
+            )}</h4><p>new suppliers</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "Rs.14.9"
+            )}</h4><p>Bn payments to raw material suppliers</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "Rs.20.6"
+            )}</h4><p>Mn for supplier capacity building</p></li>
           </ul>
         </div>
       `,
@@ -64,13 +81,21 @@ const Strategy = () => {
       content: `
         <div>
           <div class="${style.descriptionContent}">
-            <p class="${style.onlyMobileTitle}">Purpose driven and committed teams</p>
+            <p class="${
+              style.onlyMobileTitle
+            }">Purpose driven and committed teams</p>
             <p>Teams are empowered through fair pay, wellbeing, and growth, fostering innovation, collaboration, and accountability to drive long-term value and ESG goals.</p>
           </div>
           <ul class="${style.listContent}">
-            <li><h4>+91%</h4><p>Employee retention rate</p></li>
-            <li><h4>+17.3</h4><p>Average training hours per employee</p></li>
-            <li><h4>+Rs.9.6</h4><p>Mn Investment in T&D</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+91%"
+            )}</h4><p>Employee retention rate</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+17.3"
+            )}</h4><p>Average training hours per employee</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+Rs.9.6"
+            )}</h4><p>Mn Investment in T&D</p></li>
           </ul>
         </div>
       `,
@@ -86,9 +111,15 @@ const Strategy = () => {
             <p>Haycarb PLC’s ESG strategy focuses on sustainable innovation, and environmental stewardship across all operations and communities.</p>
           </div>
           <ul class="${style.listContent}">
-            <li><h4>+75%</h4><p>Energy requirements fulfilled through renewable energy</p></li>
-            <li><h4>+1,523</h4><p>MWh Total solar power generation</p></li>
-            <li><h4>+Rs.81.8</h4><p>Mn Investment in Reverse Osmosis plant for water recycling</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+75%"
+            )}</h4><p>Energy requirements fulfilled through renewable energy</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+1,523"
+            )}</h4><p>MWh Total solar power generation</p></li>
+            <li><h4>${useAnimatedNumberText(
+              "+Rs.81.8"
+            )}</h4><p>Mn Investment in Reverse Osmosis plant for water recycling</p></li>
           </ul>
         </div>
       `,
@@ -168,7 +199,7 @@ const Strategy = () => {
             className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom"
             onClick={() =>
               window.open(
-                "https://www.haycarb.com/annual-report-2024-25",
+                "pdf/tbc/Strategy and Resource Allocation.pdf",
                 "_blank"
               )
             }
@@ -203,7 +234,7 @@ const Strategy = () => {
                 className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom"
                 onClick={() =>
                   window.open(
-                    "https://www.haycarb.com/annual-report-2024-25",
+                    "pdf/tbc/Strategy and Resource Allocation.pdf",
                     "_blank"
                   )
                 }
