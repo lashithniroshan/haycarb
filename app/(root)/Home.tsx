@@ -1,5 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import { useSearchParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Navbar from 'components/Navbar';
 import Msgvideo from 'components/Msgvideo';
@@ -17,9 +18,24 @@ import FloatingButtons from 'components/ui/FloatingButtons';
 
 
 const Home = () => {
+  const searchParams = useSearchParams();
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isContentVisible, setIsContentVisible] = useState(false);
   const [showModal, setShowModal] = useState(false); // New state for modal delay
+
+
+  useEffect(() => {
+    const show = searchParams.get("show");
+    if (show === "true") {
+      setShowModal(false);
+      setIsContentVisible(true);
+      // Optional: clean up the URL
+      router.replace("/");
+    }
+  }, [searchParams]);
+
+
 
   useEffect(() => {
     // Force scroll to top and disable scroll immediately
@@ -63,7 +79,7 @@ const Home = () => {
 
   return (
     <div className="max-w-full mx-auto" style={{ minHeight: '100vh' }}> {/* Ensure layout height */}
-      <Navbar isScrolled={isScrolled} isContentVisible={isContentVisible} />
+      <Navbar isScrolled={isScrolled} isContentVisible={isContentVisible} setIsContentVisible={setIsContentVisible} />
       {isContentVisible && (
   <div className="fixed top-1/4 left-6 z-50 flex flex-col items-center space-y-1">
     {[
@@ -199,7 +215,7 @@ Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and e
               >
                   <motion.button
   className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
-  onClick={() => window.open('/pdf/full-Annual-Report-2024-2025.pdf', '_blank')}
+  onClick={() => window.open('/pdf/Haycarb-PLC-Annual-Report-2024-25.pdf', '_blank')}
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1.2, ease: "easeOut" }}
@@ -310,6 +326,7 @@ Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and e
     <HomeFooter />
     <FloatingButtons />
     {showModal && <ModelWindow />}
+    {/* model window */}
   </>
 )}
     </div>

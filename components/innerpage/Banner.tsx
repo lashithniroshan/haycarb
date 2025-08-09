@@ -9,7 +9,7 @@ interface BannerProps {
   title: string;
   description: string;
   tabs?: Tabs[]; // e.g., ['Financial Capital', 'Supplementary Information']
-  activeTab: string;
+  activeTab?: string;
   onTabChange?: (tab: string) => void;
 }
 

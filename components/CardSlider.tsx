@@ -1,32 +1,39 @@
+"use client";
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Card from './ui/Card';
 import styles from './CardSlider.module.css';
 
 
 const CardSlider = () => {
+
   const slidesData = [
     {
       id: 1,
       title: 'Chart Generator',
       image: '/images/cardchartgenerator.png',
       alt: 'chart generator',
+       route: '/tailor-made-for-you',
     },
     {
       id: 2,
       title: 'Pinquest Game',
       image: '/images/cardpinquestgame.png',
       alt: 'pinquest game',
+       route: '/game',
     },
     {
       id: 3,
       title: 'Uer Profiles',
       image: '/images/carduserprofiles.png',
       alt: 'uer profiles',
+       route: '/uerprofiles',
     },
   ];
 
   const [activeIndex, setActiveIndex] = useState(1); // Start with middle card (index 1)
   const [isMobile, setIsMobile] = useState(false);
+ const router = useRouter();
 
   // Detect screen size and toggle sliding behavior
   useEffect(() => {
@@ -51,9 +58,11 @@ const CardSlider = () => {
   const handleDotClick = (index: number) => {
     if (isMobile) setActiveIndex(index); // Only allow dot clicks on mobile
   };
-    const handleTitleClick = (title: string) => {
-    alert(`Clicked: ${title}`); // Placeholder action; replace with your logic (e.g., navigation)
-  };
+
+
+const handleTitleClick = (route: string) => {
+  router.push(route);
+};
 
  return (
     <div className={styles.sliderContainer}>
@@ -78,7 +87,7 @@ const CardSlider = () => {
               alt={slide.alt}
               isActive={index === activeIndex && isMobile}
               style={style}
-              onTitleClick={() => handleTitleClick(slide.title)}
+              onTitleClick={() => handleTitleClick(slide.route)}
             />
           );
         })}
