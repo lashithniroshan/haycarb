@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Navbar from 'components/Navbar';
@@ -15,26 +15,13 @@ import { HomeFooter } from 'components/Footer';
 import Videoslider from 'components/Videoslider';
 import ModelWindow from 'components/ModelWindow';
 import FloatingButtons from 'components/ui/FloatingButtons';
+import SearchParamsHandler from 'components/SearchParamsHandler';
 
 
 const Home = () => {
-  const searchParams = useSearchParams();
-  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isContentVisible, setIsContentVisible] = useState(false);
   const [showModal, setShowModal] = useState(false); // New state for modal delay
-
-
-  useEffect(() => {
-    const show = searchParams.get("show");
-    if (show === "true") {
-      setShowModal(false);
-      setIsContentVisible(true);
-      // Optional: clean up the URL
-      router.replace("/");
-    }
-  }, [searchParams]);
-
 
 
   useEffect(() => {
@@ -79,6 +66,9 @@ const Home = () => {
 
   return (
     <div className="max-w-full mx-auto" style={{ minHeight: '100vh' }}> {/* Ensure layout height */}
+     <Suspense fallback={<div>Loading...</div>}>
+        <SearchParamsHandler setIsContentVisible={setIsContentVisible} setShowModal={setShowModal} />
+      </Suspense>
       <Navbar isScrolled={isScrolled} isContentVisible={isContentVisible} setIsContentVisible={setIsContentVisible} />
       {isContentVisible && (
   <div className="fixed top-1/4 left-6 z-50 flex flex-col items-center space-y-1">

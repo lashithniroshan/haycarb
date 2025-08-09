@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { InnerPageFooter } from "components/Footer";
 import Banner from "components/innerpage/Banner";
 import Navbar from "components/Navbar";
