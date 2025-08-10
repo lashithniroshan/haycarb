@@ -10,10 +10,16 @@ type StakeholderKey =
 
 type MatricsType = { worth: string; title: string };
 
+type ChairmanAndDirector = {
+  title: string;
+  message: string;
+  image: string;
+};
+
 type Content = {
   short_description: string;
   matrics: MatricsType[];
-  chairman_and_director?: string;
+  chairman_and_director: ChairmanAndDirector;
   stratergy_and_performance?: React.ReactNode;
 };
 
@@ -26,7 +32,7 @@ type Stakeholder = {
 const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
   shareholders: {
     title: "Shareholders",
-    icon: "/icons/user-profile/shareholder.gif",
+    icon: "/icons/user-profile/shareholders.gif",
     content: {
       short_description:
         "As the guiding current beneath our journey, you steer Haycarb’s course. Dive into a clear view of our performance, strategy, and sustainable growth.",
@@ -40,11 +46,17 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         { worth: "4.6%", title: "Dividends Yield" },
         { worth: "14.9%", title: "ROCE" },
       ],
+      chairman_and_director: {
+        title: "Chairman's and Managing Director's Joint Message",
+        message:
+          "Haycarb recorded a Profit Before Tax of Rs.5.52 Bn for the year ending 31st March 2025, a moderation of 10% in comparison to the previous year. This decline is primarily attributed to the increase in raw material prices and the appreciation of the Sri Lankan Rupee. The tax expense decreased by 31% to Rs.1.2 Bn, owing to enhanced capital allowances on new investments. The effective tax rate decreased from 30% to 23%, resulting in a Profit After Tax of Rs.4.27 Bn, only 1% below the previous year's Post-Tax Profit of Rs.4.30 Bn. Furthermore, in USD terms, the Profit After Tax amounted to USD 14.35 Mn, reflecting a 6% increase.",
+        image: "",
+      },
     },
   },
   employees: {
     title: "Employees",
-    icon: "/icons/employees.svg",
+    icon: "/icons/user-profile/employees.gif",
     content: {
       short_description:
         "You are the power behind the wave. See how your commitment fuels our mission as we navigate new depths of innovation and impact together.",
@@ -58,11 +70,17 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         { worth: "Rs. 4.9 Bn", title: "Payments to Employees" },
         { worth: "Rs. 70 Mn", title: "Investment in Health and Safety" },
       ],
+      chairman_and_director: {
+        title: "Chairman's and Managing Director's Joint Message",
+        message:
+          "We initiated one-on-one engagement at all levels to understand employee issues and adopt corrective action to drive increased motivation and employee well-being. Ongoing investment in training resulted in total training hours per employee increasing by 43%. The learning platforms on digital media were given high priority, encouraging specific functions to upgrade the knowledge base in line with the higher pace of ubiquitous technological advancements. As an innovative company, team dynamics are invaluable, and we will continue focusing on maintaining strong teams to drive sustainable growth through product and process innovation.",
+        image: "",
+      },
     },
   },
   customers: {
     title: "Customers",
-    icon: "/icons/customers.svg",
+    icon: "/icons/user-profile/customers.gif",
     content: {
       short_description:
         "With you, we will go farther and deeper. Discover how Haycarb delivers consistency, quality, and sustainability, like the steady movement of a whale through changing seas.",
@@ -76,11 +94,17 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         { worth: "4", title: "Products in Pipeline" },
         { worth: "Rs. 209.3 Mn", title: "Investment in R&D" },
       ],
+      chairman_and_director: {
+        title: "Chairman's and Managing Director's Joint Message",
+        message:
+          "Haycarb continues to invest in the advancement of its technology to be a cutting-edge innovative coconut carbon company that offers best in- class products and solutions and enhances customer experience. Our newly developed range of carbons tailored for silicon anodes has gained market share. Concurrently, we are in the process of securing patents for our hard-carbon products for Sodium-ion batteries. The ongoing global shift toward renewable energy continues to present significant growth Opportunities and in anticipation of this demand, we have invested Rs. 1.23Bn to expand our manufacturing capacity for the Energy Storage Carbon portfolio during the year ended 31 March 2025.",
+        image: "",
+      },
     },
   },
   suppliers: {
     title: "Suppliers",
-    icon: "/icons/suppliers.svg",
+    icon: "/icons/user-profile/suppliers.gif",
     content: {
       short_description:
         "Strong partnerships keep our ecosystem thriving. Join us in building resilient, responsible supply chains that move as one - like pods working in harmony.",
@@ -103,11 +127,17 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           title: "% of spending on coconut shell and charcoal suppliers",
         },
       ],
+      chairman_and_director: {
+        title: "Chairman's and Managing Director's Joint Message",
+        message:
+          "Our value chain commences with coconut shells, a by-product of the coconut industry. Our manufacturing facilities are strategically located in Sri Lanka, Thailand, and Indonesia, providing direct access to our main raw material, coconut shell-based charcoal in these countries. Our raw material procurement network also extends to other major coconut growing countries in Asia, including the Philippines, India, and Vietnam. This extensive network has enabled us to gain valuable insights into the production and availability of raw materials, allowing us to effectively manage the cyclical volatility in demand and supply across all coconut-producing countries in Asia.",
+        image: "",
+      },
     },
   },
   generalUser: {
     title: "General User",
-    icon: "/icons/general-user.svg",
+    icon: "/icons/user-profile/general_user.gif",
     content: {
       short_description:
         "As the guiding current beneath our journey, you steer Haycarb’s course. Dive into a clear view of our performance, strategy, and sustainable growth.",
@@ -122,6 +152,12 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         { worth: "Rs. 209.3 Mn", title: "Investment in R&D" },
         { worth: "50.4", title: "Investment in CSR (Rs. Mn)" },
       ],
+      chairman_and_director: {
+        title: "Chairman's and Managing Director's Joint Message",
+        message:
+          "Haycarb recorded a Profit Before Tax of Rs.5.52 Bn for the year ending 31st March 2025, a moderation of 10% in comparison to the previous year. This decline is primarily attributed to the increase in raw material prices and the appreciation of the Sri Lankan Rupee. The tax expense decreased by 31% to Rs.1.2 Bn, owing to enhanced capital allowances on new investments. The effective tax rate decreased from 30% to 23%, resulting in a Profit After Tax of Rs.4.27 Bn, only 1% below the previous year's Post-Tax Profit of Rs.4.30 Bn. Furthermore, in USD terms, the Profit After Tax amounted to USD 14.35 Mn, reflecting a 6% increase.",
+        image: "",
+      },
     },
   },
 };
@@ -228,6 +264,62 @@ const ContentPage = () => {
               </div>
             );
           })}
+        </div>
+
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8">
+          <div className="lg:col-span-5">
+            <h1 className="text-[40px] text-[#005881] font-normal">
+              {
+                stakeholdersData[activeKey].content?.chairman_and_director
+                  ?.title
+              }
+            </h1>
+            <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
+              {
+                stakeholdersData[activeKey].content?.chairman_and_director
+                  ?.message
+              }
+            </p>
+          </div>
+
+          <div className="lg:col-span-6 flex items-center justify-center w-full relative py-8 overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
+              <Image
+                src="/images/leaderpersonbg.png"
+                alt="Background"
+                width={1200}
+                height={800}
+                className="w-full h-auto max-w-[1400px] opacity-90"
+              />
+            </div>
+
+            {/* Two People - Always side by side */}
+            <div className="relative flex flex-row items-center justify-center gap-4 md:gap-16 z-10">
+              {/* Left Person */}
+              <div className="flex justify-center w-full md:w-auto">
+                <Image
+                  src="/images/person01.png"
+                  alt="Left Person"
+                  width={500}
+                  height={700}
+                  className="h-auto object-contain"
+                />
+              </div>
+
+              {/* Right Person */}
+              <div className="flex justify-center w-full md:w-auto">
+                <Image
+                  src="/images/person02.png"
+                  alt="Right Person"
+                  width={500}
+                  height={700}
+                  className="h-auto object-contain"
+                />
+              </div>
+              <div className="absolute left-6 right-6 bottom-0 h-[1px] bg-[#76AF53] z-20" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
