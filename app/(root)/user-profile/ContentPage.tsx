@@ -266,7 +266,7 @@ const ContentPage = () => {
           })}
         </div>
 
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8 my-10">
           <div className="lg:col-span-5">
             <h1 className="text-[40px] text-[#005881] font-normal">
               {
@@ -281,6 +281,9 @@ const ContentPage = () => {
               }
             </p>
           </div>
+
+          {/* Empty column for spacing on desktop */}
+          <div className="hidden lg:block lg:col-span-1"></div>
 
           <div className="lg:col-span-6 flex items-center justify-center w-full relative py-8 overflow-hidden">
             {/* Background Image */}
