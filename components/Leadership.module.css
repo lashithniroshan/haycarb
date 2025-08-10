@@ -260,6 +260,12 @@ padding-right: 55px;
 
   .buttonSection {
     gap: 5px; /* Minimal gap for mobile */
+    display: flex;
+        flex-direction: column;
+        width: 86%;
+        align-content: center;
+        align-items: center;
+        margin-left: 25px;
   }
 
   .videoButton,
@@ -325,7 +331,15 @@ margin-top: 56px;
 @media (max-width: 430px) {
   .peopleImages {
     margin-top: 100px;
+            background-image: radial-gradient(50% 50%, rgba(9, 226, 255, 0.2) 0%, rgba(2, 39, 88, 0) 100%), url(/images/leaderpersonbg.png);
+        background-size: auto;
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: center;
   }
+  .leadershipContainer {
+  background-image: none !important;
+}
 }
 
 /* Slightly larger phones */
