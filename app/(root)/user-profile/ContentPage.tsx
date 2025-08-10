@@ -167,7 +167,7 @@ const ContentPage = () => {
   const [activeKey, setActiveKey] = useState(stakeholderKeys[0]);
 
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-20 overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
@@ -238,11 +238,12 @@ const ContentPage = () => {
           })}
         </div>
 
-        {/* Tab Content */}
+        {/* Short description section */}
         <p className="mt-10 py-4 lg:px-20 para text-center text-lg font-semibold text-[#005881]">
           {stakeholdersData[activeKey].content.short_description}
         </p>
 
+        {/* Matrics section */}
         <div className="flex flex-wrap justify-center items-center gap-y-8 mt-18 text-center">
           {stakeholdersData[activeKey].content?.matrics?.map((item, idx) => {
             const totalItems =
@@ -266,6 +267,7 @@ const ContentPage = () => {
           })}
         </div>
 
+        {/* Chairman and director message section */}
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8 my-10">
           <div className="lg:col-span-5">
             <h1 className="text-[40px] text-[#005881] font-normal">
@@ -322,6 +324,80 @@ const ContentPage = () => {
               </div>
               <div className="absolute left-6 right-6 bottom-0 h-[1px] bg-[#76AF53] z-20" />
             </div>
+          </div>
+        </div>
+      </div>
+      {/* Key features unveiled section */}
+      <div className="bg-[#157897] py-60">
+        <div className="relative -mt-60 z-30 bg-[#ffffff] transform -scale-y-100 w-full">
+          <div className="wave-wrapper rotate-180 w-full pointer-events-none">
+            <svg
+              className="waves-inner w-full h-16 sm:h-20 md:h-24"
+              viewBox="0 24 150 28"
+              preserveAspectRatio="none"
+              shapeRendering="auto"
+            >
+              <defs>
+                <path
+                  id="gentle-wave"
+                  d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+                />
+              </defs>
+              <g className="parallax">
+                <use
+                  xlinkHref="#gentle-wave"
+                  x="48"
+                  y="0"
+                  fill="rgba(21, 120, 151, 0.7)"
+                />
+                <use
+                  xlinkHref="#gentle-wave"
+                  x="48"
+                  y="3"
+                  fill="rgba(21, 120, 151, 0.5)"
+                />
+                <use
+                  xlinkHref="#gentle-wave"
+                  x="48"
+                  y="5"
+                  fill="rgba(21, 120, 151, 0.3)"
+                />
+                <use
+                  xlinkHref="#gentle-wave"
+                  x="48"
+                  y="7"
+                  fill="rgba(21, 120, 151, 1)"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="">
+            <Image
+              src="/images/innerpage/kfu_book.svg"
+              alt="kfu image"
+              width={619}
+              height={477}
+              className="lg:absolute lg:top-3/4 lg:left-20"
+            />
+          </div>
+          <div className="text-white py-10">
+            <h1 className="text-[40px] font-normal">Key Features Unveiled</h1>
+            <ul>
+              <li>Improvements to SLFRS S1 & S2 </li>
+              <li>Inclusion of a Digital Capital Report </li>
+              <li>Segmental performance review</li>
+              <li>
+                Key highlights available in multiple languages and wider
+                accessibility
+              </li>
+              <li>
+                New features in the digital annual report including immersive
+                experience, new accessibility feature, AI assistant, Chart
+                Generator, FinQuest (Game based learning) and User profiling
+              </li>
+            </ul>
           </div>
         </div>
       </div>
