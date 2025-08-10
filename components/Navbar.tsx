@@ -389,7 +389,7 @@ const Navbar = ({
                 </Link>
               </li>
               <li className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full">
-                <Link href="#faqs" className="" onClick={toggleMenu}>
+                <Link href="pdf/tbc/Independent Auditors Report.pdf" target="_blank"  className="" onClick={toggleMenu}>
                   FAQs
                 </Link>
               </li>
