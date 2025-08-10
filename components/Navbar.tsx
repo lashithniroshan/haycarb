@@ -368,7 +368,7 @@ const Navbar = ({
                 className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
-                <Link href="#finquest" className="" onClick={toggleMenu}>
+                <Link href="/game" className="" onClick={toggleMenu}>
                  Finquest
                 </Link>
               </li>
