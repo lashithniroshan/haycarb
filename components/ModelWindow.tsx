@@ -10,8 +10,6 @@ interface Slide {
   image: string;
   title: string;
   description: string;
-  subtitle1: string;
-  subtitle2: string;
 }
 
 const slides: Slide[] = [
@@ -20,27 +18,63 @@ const slides: Slide[] = [
     image: '/images/modelwindowimage1.png',
     title: 'Sustainability at Haycarb',
     description:
-      '“Lorem ipsum dolor sit amet consectetur. Placerat ac neque consectetur molestie pretium. Purus in facilisi magna cursus nec neque.”',
-    subtitle1: 'Nimal',
-    subtitle2: 'Machine Operator',
+      'Five years of integrated reporting at Haycarb have evolved into a strategic narrative, reflecting deeper ESG insights, transparent governance, and stakeholder-focused value creation',
   },
   {
     id: 2,
    image: '/images/modelwindowimage1.png',
     title: 'Innovation in Action',
    description:
-      '“Placerat ac neque consectetur molestie pretium. Purus in facilisi magna cursus nec neque.”',
-    subtitle1: 'Sunil',
-    subtitle2: 'Clean Operator',
+      'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
   },
   {
     id: 3,
     image: '/images/modelwindowimage1.png',
     title: 'Global Presence',
    description:
-      '“Purus in facilisi magna cursus nec neque.Lorem ipsum dolor sit amet consectetur. Placerat ac neque consectetur molestie pretium. ”',
-    subtitle1: 'Sarath',
-    subtitle2: 'Transport Operator',
+      'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
+  },
+  {
+    id: 4,
+    image: '/images/modelwindowimage1.png',
+    title: 'Global Presence',
+   description:
+      'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
+  },
+  {
+    id: 5,
+    image: '/images/modelwindowimage1.png',
+    title: 'Global Presence',
+   description:
+      'The Chairman’s and Managing Director’s joint message is presented in Sinhala, Tamil, and other foreign languages to broaden stakeholder reach and engagement',
+  },
+  {
+    id: 6,
+    image: '/images/modelwindowimage1.png',
+    title: 'Global Presence',
+   description:
+      'Haycarb’s digital report features a chart generator enabling stakeholders to create, customize, and download interactive performance visualizations.',
+  },
+  {
+    id: 7,
+    image: '/images/modelwindowimage1.png',
+    title: 'Global Presence',
+   description:
+      'FinQuest introduces game-based learning in Haycarb’s digital report, engaging stakeholders through interactive quizzes on strategy, performance, and ESG.',
+  },
+  {
+    id: 8,
+    image: '/images/modelwindowimage1.png',
+    title: 'Global Presence',
+   description:
+      'Haycarb’s digital report offers user profile-based dashboards, enabling personalized data views tailored to stakeholder roles and interests',
+  },
+  {
+    id: 9,
+    image: '/images/modelwindowimage1.png',
+    title: 'Global Presence',
+   description:
+      'The summarized version fo the Haycarb 2024/25 annual report highlights global leadership, resilient performance, ESG impact, and digital transformation through integrated, accessible reporting.',
   },
 ];
 
@@ -140,10 +174,6 @@ const ModelWindow: React.FC = () => {
                  <p>{slide.description}</p>
                  </div>
           
-            <div className={styles.bottomTitles}>
-              <h5>{slide.subtitle1}</h5>
-              <p>{slide.subtitle2}</p>
-            </div>
          </div>
         </div>
         </div>

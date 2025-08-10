@@ -531,3 +531,21 @@ button {
     transition-delay: 0.45s;
   }
 }
+
+@media (max-width: 430px) {
+  .btnrow{
+         flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 86%;
+        margin-left: 25px;
+        display: flex; 
+}
+.btnfirstcol{
+  margin-bottom: 0px !important;
+}
+ .ulmenu{
+    padding-bottom: 10px;
+  }
+}

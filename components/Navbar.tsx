@@ -299,9 +299,9 @@ const Navbar = ({
             >
               ×
             </button>
-            <ul className="space-y-4">
+            <ul className="space-y-4 ulmenu">
               <li
-                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
                 <Link href={isFromInnerPage ? { pathname: "/", query: { show: "true" } } : "/"} className="" onClick={() => {
@@ -322,7 +322,7 @@ const Navbar = ({
                 </Link>
               </li>
               <li
-                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
                 <Link
@@ -333,7 +333,7 @@ const Navbar = ({
                 </Link>
               </li>
                  <li
-                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
                 <Link href="/financial" className="" onClick={toggleMenu}>
@@ -341,7 +341,7 @@ const Navbar = ({
                 </Link>
               </li>
               <li
-                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
                 <Link href="/non-financial-highlights" className="" onClick={toggleMenu}>
@@ -349,7 +349,7 @@ const Navbar = ({
                 </Link>
               </li>
                <li
-                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
                 <Link href="/tailor-made-for-you" className="" onClick={toggleMenu}>
@@ -357,7 +357,7 @@ const Navbar = ({
                 </Link>
               </li>
               <li
-                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
                 <Link href="/tailor-made-for-you" className="" onClick={toggleMenu}>
@@ -365,15 +365,15 @@ const Navbar = ({
                 </Link>
               </li>
                <li
-                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
-                <Link href="#finquest" className="" onClick={toggleMenu}>
+                <Link href="/game" className="" onClick={toggleMenu}>
                  Finquest
                 </Link>
               </li>
               <li
-                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
                 <Link href="#user-profiles" className="" onClick={toggleMenu}>
@@ -381,15 +381,15 @@ const Navbar = ({
                 </Link>
               </li>
               <li
-                className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
                 style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
               >
                 <Link href="#synopsis" className="" onClick={toggleMenu}>
                   Synopsis
                 </Link>
               </li>
-              <li className="px-5 py-3 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full">
-                <Link href="#faqs" className="" onClick={toggleMenu}>
+              <li className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full">
+                <Link href="pdf/tbc/Independent Auditors Report.pdf" target="_blank"  className="" onClick={toggleMenu}>
                   FAQs
                 </Link>
               </li>

@@ -362,8 +362,8 @@ const CircleSlider = () => {
                     accident; it is strategic, powerful, and far-reaching.
                   </p>
                   <div>
-                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0">
-                      <div style={{ marginBottom: "70px" }}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0 btnrow">
+                      <div className="btnfirstcol" style={{ marginBottom: "70px" }}>
                         <button
                           className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full flex transition btn-custom wave-btn videoButton btn-custom-mobile"
                          onClick={handleOpenVideo}
