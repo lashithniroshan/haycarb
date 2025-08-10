@@ -1,6 +1,7 @@
 // components/Footer.tsx
 import React from "react";
 import Image from "next/image";
+import Link from 'next/link';
 import styles from "./Footer.module.css";
 
 const HomeFooter = () => {
@@ -35,13 +36,15 @@ const HomeFooter = () => {
               <h3>Quick Links</h3>
               <ul>
                 <li>
-                  <a href="#">About Us</a>
+                    <Link href="/haycarb-in-focus" className="" >
+                  Haycarb in Focus
+                </Link>
                 </li>
                 <li>
-                  <a href="#">Services</a>
+                  <Link href="/financial">Financial Highlights</Link>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <Link href="/non-financial-highlights">Non-Financial Highlights</Link>
                 </li>
               </ul>
             </div>
@@ -51,13 +54,13 @@ const HomeFooter = () => {
               <h3>Explore</h3>
               <ul>
                 <li>
-                  <a href="#">Products</a>
+                  <Link href="/tailor-made-for-you">Chart Generator</Link>
                 </li>
                 <li>
-                  <a href="#">Careers</a>
+                  <Link href="/tailor-made-for-you">Create Your Own Report</Link>
                 </li>
                 <li>
-                  <a href="#">Sustainability</a>
+                  <Link href="/game">Finquest</Link>
                 </li>
               </ul>
             </div>
@@ -66,41 +69,23 @@ const HomeFooter = () => {
             <div className={styles.column}>
               <h3>Connect With Us</h3>
               <div className={styles.socialRow}>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/haycarbplc/" target="_blank">
                   <Image
                     src="/icons/Likin.svg"
+                    alt="Linkin"
+                    width={30}
+                    height={30}
+                  />
+                </a>
+                <a href="https://web.facebook.com/haycarbplcofficial" target="_blank">
+                  <Image
+                    src="/icons/Facebook.svg"
                     alt="Facebook"
                     width={30}
                     height={30}
                   />
                 </a>
-                <a href="#">
-                  <Image
-                    src="/icons/Facebook.svg"
-                    alt="Twitter"
-                    width={30}
-                    height={30}
-                  />
-                </a>
-                <a href="#">
-                  <Image
-                    src="/icons/insta.svg"
-                    alt="Instagram"
-                    width={30}
-                    height={30}
-                  />
-                </a>
-              </div>
-              <div className={styles.socialRow}>
-                <a href="#">
-                  <Image
-                    src="/icons/grok.png"
-                    alt="LinkedIn"
-                    width={30}
-                    height={30}
-                  />
-                </a>
-                <a href="#">
+                <a href="https://youtube.com/@haycarbplc" target="_blank">
                   <Image
                     src="/icons/youtube.svg"
                     alt="YouTube"
@@ -109,6 +94,7 @@ const HomeFooter = () => {
                   />
                 </a>
               </div>
+              
             </div>
           </div>
         </div>
@@ -175,14 +161,14 @@ const InnerPageFooter = () => {
             <div className={styles.column}>
               <h3>Quick Links</h3>
               <ul>
+                 <Link href="/haycarb-in-focus" className="" >
+                  Haycarb in Focus
+                </Link>
                 <li>
-                  <a href="#">About Us</a>
+                  <Link href="/financial">Financial Highlights</Link>
                 </li>
                 <li>
-                  <a href="#">Services</a>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
+                  <Link href="/non-financial-highlights">Non-Financial Highlights</Link>
                 </li>
               </ul>
             </div>
@@ -191,14 +177,14 @@ const InnerPageFooter = () => {
             <div className={styles.column}>
               <h3>Explore</h3>
               <ul>
-                <li>
-                  <a href="#">Products</a>
+               <li>
+                  <Link href="/tailor-made-for-you">Chart Generator</Link>
                 </li>
                 <li>
-                  <a href="#">Careers</a>
+                  <Link href="/tailor-made-for-you">Create Your Own Report</Link>
                 </li>
                 <li>
-                  <a href="#">Sustainability</a>
+                  <Link href="/game">Finquest</Link>
                 </li>
               </ul>
             </div>
@@ -207,7 +193,7 @@ const InnerPageFooter = () => {
             <div className={styles.column}>
               <h3>Connect With Us</h3>
               <div className={styles.socialRow}>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/haycarbplc/" target="_blank">
                   <Image
                     src="/icons/Likin.svg"
                     alt="Facebook"
@@ -215,7 +201,7 @@ const InnerPageFooter = () => {
                     height={30}
                   />
                 </a>
-                <a href="#">
+                <a href="https://web.facebook.com/haycarbplcofficial" target="_blank">
                   <Image
                     src="/icons/Facebook.svg"
                     alt="Twitter"
@@ -223,25 +209,7 @@ const InnerPageFooter = () => {
                     height={30}
                   />
                 </a>
-                <a href="#">
-                  <Image
-                    src="/icons/insta.svg"
-                    alt="Instagram"
-                    width={30}
-                    height={30}
-                  />
-                </a>
-              </div>
-              <div className={styles.socialRow}>
-                <a href="#">
-                  <Image
-                    src="/icons/grok.png"
-                    alt="LinkedIn"
-                    width={30}
-                    height={30}
-                  />
-                </a>
-                <a href="#">
+                 <a href="https://youtube.com/@haycarbplc" target="_blank">
                   <Image
                     src="/icons/youtube.svg"
                     alt="YouTube"
@@ -250,6 +218,7 @@ const InnerPageFooter = () => {
                   />
                 </a>
               </div>
+              
             </div>
           </div>
         </div>
