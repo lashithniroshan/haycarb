@@ -71,7 +71,7 @@ const Home = () => {
       </Suspense>
       <Navbar isScrolled={isScrolled} isContentVisible={isContentVisible} setIsContentVisible={setIsContentVisible} />
       {isContentVisible && (
-  <div className="fixed top-1/4 left-6 z-50 flex flex-col items-center space-y-1">
+  <div className="fixed top-1/4 left-6 z-50 flex flex-col items-center space-y-1 menuforitems">
     {[
       { id: 'msgvideo', label: 'Msgvideo' },
       { id: 'circleslider', label: 'CircleSlider' },

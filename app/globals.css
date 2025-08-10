@@ -548,4 +548,7 @@ button {
  .ulmenu{
     padding-bottom: 10px;
   }
+  .menuforitems{
+    display: none;
+  }
 }
