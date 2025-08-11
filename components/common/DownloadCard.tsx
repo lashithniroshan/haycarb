@@ -24,6 +24,13 @@ const DownloadCard: React.FC<DownloadCardProps> = ({
           className="object-cover opacity-80"
         />
       </div>
+      <div
+        className="absolute inset-0 rounded-xl"
+        style={{
+          background:
+            "rgba(0,0,0,0) linear-gradient(0deg, rgb(0,0,0) 0%, rgba(0,0,0,0.4) 23%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 68%, rgba(0,0,0,0) 81%, rgba(0,0,0,0) 92%, rgba(0,0,0,0) 100%) repeat scroll 0 0",
+        }}
+      ></div>
 
       <div className="absolute bottom-10 text-white font-medium text-lg px-4 z-10">
         {title}
