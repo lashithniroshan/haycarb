@@ -618,7 +618,12 @@ const ContentPage = () => {
             Haycarb’s dedication to responsible and transparent governance
             across its global operations.
           </p>
-          <WaveButton title="More details" />
+          <WaveButton
+            title="More details"
+            onBtnClick={() =>
+              window.open("pdf/innerpage/Corporate Governance.pdf", "_blank")
+            }
+          />
         </div>
         <div className="lg:pl-20 lg:border-l-1 lg:border-[#1D80A0]">
           <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left">

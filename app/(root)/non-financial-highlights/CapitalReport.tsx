@@ -8,7 +8,7 @@ const CapitalReport = () => {
   const accordionItems: AccordionData[] = [
     {
       title: "Financial Capital",
-      downloadLink: "#",
+      downloadLink: "pdf/innerpage/financial_capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] space-y-4">
           <p className="para">
@@ -69,7 +69,7 @@ const CapitalReport = () => {
     },
     {
       title: "Natural Capital",
-      downloadLink: "#",
+      downloadLink: "pdf/innerpage/Natural Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] space-y-4">
           <p className="para">
@@ -122,7 +122,7 @@ const CapitalReport = () => {
     },
     {
       title: "Intellectual Capital",
-      downloadLink: "#",
+      downloadLink: "pdf/innerpage/Intellectual Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] space-y-4">
           <p className="para">
@@ -177,7 +177,7 @@ const CapitalReport = () => {
     },
     {
       title: "Human Capital",
-      downloadLink: "#",
+      downloadLink: "pdf/innerpage/Human Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] space-y-4">
           <p className="para">
@@ -211,7 +211,7 @@ const CapitalReport = () => {
     },
     {
       title: "Social and Relationship Capital",
-      downloadLink: "#",
+      downloadLink: "pdf/innerpage/Social and Relationship Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] space-y-4">
           <p className="para">
@@ -263,7 +263,7 @@ const CapitalReport = () => {
     },
     {
       title: "Manufactured Capital",
-      downloadLink: "#",
+      downloadLink: "pdf/innerpage/Manufactured Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] space-y-4">
           <p className="para">
@@ -300,7 +300,7 @@ const CapitalReport = () => {
     },
     {
       title: "Digital Capital",
-      downloadLink: "#",
+      downloadLink: "pdf/innerpage/Digital Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] space-y-4">
           <p className="para">

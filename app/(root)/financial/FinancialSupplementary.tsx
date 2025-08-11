@@ -43,33 +43,81 @@ const FinancialSupplementary = () => {
             <WaveButton
               title="Statement of Group Value Added"
               style={{ fontSize: "14px" }}
+              onBtnClick={() =>
+                window.open(
+                  "pdf/innerpage/Statement of Group Value Added.pdf",
+                  "_blank"
+                )
+              }
             />
             <WaveButton
               title="History of Dividends and Scrip Issues"
               style={{ fontSize: "14px" }}
+              onBtnClick={() =>
+                window.open(
+                  "pdf/innerpage/History of Dividends and Scrip Issues.pdf",
+                  "_blank"
+                )
+              }
             />
             <WaveButton
               title="Ten Year Financial Review"
               style={{ fontSize: "14px" }}
+              onBtnClick={() =>
+                window.open(
+                  "pdf/innerpage/Ten Year Financial Review.pdf",
+                  "_blank"
+                )
+              }
             />
             <WaveButton
               title="Indicative US Dollar Financial Statements"
               style={{ fontSize: "14px" }}
+              onBtnClick={() =>
+                window.open(
+                  "pdf/innerpage/Indicative US Dollar Financial Statements.pdf",
+                  "_blank"
+                )
+              }
             />
             <WaveButton
               title="Statement of Profit or Loss - Horizontal and Vertical Analysis"
               style={{ fontSize: "14px" }}
+              onBtnClick={() =>
+                window.open(
+                  "pdf/innerpage/Statement of Profit or Loss -Horizontal and Vertical Analysis.pdf",
+                  "_blank"
+                )
+              }
             />
             <WaveButton
               title="Investor Information"
               style={{ fontSize: "14px" }}
+              onBtnClick={() =>
+                window.open("pdf/innerpage/Investor Information.pdf", "_blank")
+              }
             />
             <WaveButton
               title="Quarterly Analysis"
               style={{ fontSize: "14px" }}
+              onBtnClick={() =>
+                window.open("pdf/innerpage/Quarterly Analysis.pdf", "_blank")
+              }
             />
-            <WaveButton title="Group Profile" style={{ fontSize: "14px" }} />
-            <WaveButton title="Country Report" style={{ fontSize: "14px" }} />
+            <WaveButton
+              title="Group Profile"
+              style={{ fontSize: "14px" }}
+              onBtnClick={() =>
+                window.open("pdf/innerpage/Group Profile.pdf", "_blank")
+              }
+            />
+            <WaveButton
+              title="Country Report"
+              style={{ fontSize: "14px" }}
+              onBtnClick={() =>
+                window.open("pdf/innerpage/Country Report.pdf", "_blank")
+              }
+            />
           </div>
         </div>
         <div className="lg:col-span-6 h-full flex items-stretch justify-center mt-8 lg:mt-0">

@@ -116,7 +116,13 @@ const Integration = () => {
             GRI, and SASB.
           </p>
 
-          <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
+          <WaveButton
+            title="Explore More"
+            style={{ fontSize: "12px" }}
+            onBtnClick={() =>
+              window.open("pdf/innerpage/ESG governance.pdf", "_blank")
+            }
+          />
         </div>
         <div className="lg:col-span-6">
           <Image
@@ -154,11 +160,23 @@ const Integration = () => {
             title="Explore More"
             style={{ fontSize: "12px" }}
             className="mb-5"
+            onBtnClick={() =>
+              window.open(
+                "pdf/innerpage/ESG strategies,metrics and targets.pdf",
+                "_blank"
+              )
+            }
           />
           <br />
           <WaveButton
             title="Activate - ESG Roadmap 2030"
             style={{ fontSize: "12px" }}
+            onBtnClick={() =>
+              window.open(
+                "pdf/innerpage/Activate ESG roadmap 2030.pdf",
+                "_blank"
+              )
+            }
           />
         </div>
       </div>
@@ -176,7 +194,16 @@ const Integration = () => {
             performance metrics, aligning with IFRS S1 and S2 standards.
           </p>
 
-          <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
+          <WaveButton
+            title="Explore More"
+            style={{ fontSize: "12px" }}
+            onBtnClick={() =>
+              window.open(
+                "pdf/innerpage/Managing Risks & Opportunities.pdf",
+                "_blank"
+              )
+            }
+          />
         </div>
         <div className="lg:col-span-6">
           <Image
@@ -212,7 +239,16 @@ const Integration = () => {
             business model.
           </p>
 
-          <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
+          <WaveButton
+            title="Explore More"
+            style={{ fontSize: "12px" }}
+            onBtnClick={() =>
+              window.open(
+                "pdf/innerpage/Assessing Climate Resilience.pdf",
+                "_blank"
+              )
+            }
+          />
         </div>
       </div>
     </section>

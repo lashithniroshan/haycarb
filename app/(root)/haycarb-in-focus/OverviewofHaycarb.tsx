@@ -70,14 +70,19 @@ const OverviewofHaycarb = () => {
     {
       title: "Awards and Recognitions",
       image: "/images/innerpage/haycarb/awards.jpg",
+      onDownload: () =>
+        window.open("pdf/innerpage/Awards and Recognitions.pdf", "_blank"),
     },
     {
       title: "Milestones",
       image: "/images/innerpage/haycarb/logo.png",
+      onDownload: () => window.open("pdf/innerpage/Milestones.pdf", "_blank"),
     },
     {
       title: "Our Socio-Economic Impact",
       image: "/images/innerpage/haycarb/socio-eco.png",
+      onDownload: () =>
+        window.open("pdf/innerpage/Our Socio-Economic Impact.pdf", "_blank"),
     },
   ];
 

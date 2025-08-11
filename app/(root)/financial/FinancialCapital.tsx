@@ -278,8 +278,18 @@ const FinancialCapital = () => {
 
       {/* Download buttons */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-6 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-60">
-        <WaveButton title="Financial Highlights" />
-        <WaveButton title="Financial Statements" />
+        <WaveButton
+          title="Financial Highlights"
+          onBtnClick={() =>
+            window.open("pdf/innerpage/financial_capital.pdf", "_blank")
+          }
+        />
+        <WaveButton
+          title="Financial Statements"
+          onBtnClick={() =>
+            window.open("pdf/innerpage/financial_statement.pdf", "_blank")
+          }
+        />
       </div>
     </section>
   );
