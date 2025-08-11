@@ -110,19 +110,20 @@ const FinancialCapital = () => {
       <div
         aria-hidden="true"
         className="absolute 
+                  hidden lg:block
                   top-85 -right-35 
-                  lg:top-65 lg:-right-35
-                  xl:top-85 xl:-right-35
-                  2xl:top-85 2xl:-right-35
+                  lg:top-65 lg:-right-25
+                  xl:top-95 xl:-right-25
+                  2xl:top-85 2xl:-right-25
                   lg:w-80 lg:h-80 
                   xl:w-80 xl:h-80 
                   2xl:w-100 2xl:h-90 
-                  -rotate-45 
+                  -rotate-30 
                   scale-x-[-1]
                   bg-no-repeat 
                   bg-contain z-40"
         style={{
-          backgroundImage: "url(/images/innerpage/green-whale.png)",
+          backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
       ></div>
 
@@ -136,9 +137,17 @@ const FinancialCapital = () => {
 
       <div
         aria-hidden="true"
-        className="absolute bottom-20 hidden sm:block left-36 w-56 h-56 md:w-72 md:h-72 transform -translate-x-1/2 -translate-y-9/10 bg-no-repeat bg-contain"
+        className="absolute 
+                  bottom-20 
+                  hidden lg:block 
+                  top-2/3 -left-30
+                  w-56 h-56 
+                  md:w-72 md:h-72 
+                  -rotate-15
+                  transform -scale-x-90
+                  bg-no-repeat bg-contain opacity-25"
         style={{
-          backgroundImage: "url(/images/vertical-fliped-light-green-whale.svg)",
+          backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
       ></div>
 

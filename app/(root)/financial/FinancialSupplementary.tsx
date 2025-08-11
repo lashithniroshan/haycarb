@@ -21,10 +21,10 @@ const FinancialSupplementary = () => {
                 xl:top-170 xl:right-90
                 2xl:top-155 2xl:right-160
                 lg:w-[480px] lg:h-[480px]
-                rotate-2 scale-x-[-1] 
+                rotate-20 scale-x-[-1] 
                 bg-no-repeat bg-contain z-40"
         style={{
-          backgroundImage: "url(/images/innerpage/green-whale.png)",
+          backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
       ></div>
 

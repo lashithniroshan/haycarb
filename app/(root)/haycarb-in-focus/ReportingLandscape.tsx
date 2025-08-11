@@ -63,7 +63,7 @@ const ReportingLandscape = () => {
     {
       content: (
         <>
-          New features and improvements <br /> to the{" "}
+          New features and improvements to the{" "}
           <span className="text-[#008DA8] font-semibold">
             digital annual report
           </span>
@@ -75,14 +75,14 @@ const ReportingLandscape = () => {
   const chart = [
     {
       id: 1,
-      title: "Activated carbon segment",
+      title: "ACTIVATED CARBON SEGMENT",
       description:
         "Our core segment, focused on producing high-performance activated carbon from coconut shells for global industries such as water and air purification, food, and energy. Growth in 2024/25 was supported by strong demand, regional capacity, and sustainability-led operations.",
       value: "/images/innerpage/segmentation-review-1.svg",
     },
     {
       id: 2,
-      title: "Environmental engineering solutions segment",
+      title: "ENVIRONMENTAL ENGINEERING SOLUTIONS SEGMENT",
       description:
         "Delivers customised solutions for emission control and water treatment using activated carbon. The segment saw strong project growth in 2024/25, driven by repeat business and rising demand for clean industrial practices.",
       value: "/images/innerpage/segmentation-review-2.svg",
@@ -163,7 +163,14 @@ const ReportingLandscape = () => {
 
       {/* Description section */}
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-8 py-8">
-        <div className="lg:col-span-6 flex items-center justify-center  w-full"></div>
+        <div className="lg:col-span-6 flex items-center justify-center w-full">
+          <Image
+            src="/images/innerpage/haycarb/books.png"
+            alt="Books"
+            width={677}
+            height={477}
+          />
+        </div>
         <div className="lg:col-span-5">
           <h1 className="text-[40px] text-[#005881] font-normal">
             Evolution of Haycarb&apos;s Annual Report
@@ -198,7 +205,7 @@ const ReportingLandscape = () => {
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8">
           <div className="lg:col-span-5">
             <h1 className="text-[40px] text-[#005881] font-normal">
-              Evolution of Haycarb&apos;s Annual Report
+              Digital evolution in reporting
             </h1>
             <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
               &quot;Cognisant of the growing shift toward digital communication,
@@ -210,7 +217,7 @@ const ReportingLandscape = () => {
               Report.&quot;
             </p>
             <WaveButton
-              title="Our Purpose Statement Video Version"
+              title="Digital evolution in reporting"
               style={{ fontSize: "12px" }}
             />
           </div>
@@ -236,7 +243,7 @@ const ReportingLandscape = () => {
 
         {/* Center Text */}
         <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[30px] xl:text-[40px] text-[#005881]">
-          Segmental review analysis
+          Segmental Review Analysis
         </h1>
 
         {/* Bottom or Right Line */}

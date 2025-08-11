@@ -21,7 +21,7 @@ const NumberedFeatureItem: React.FC<NumberedFeatureItemProps> = ({
       <div className="flex-shrink-0 w-10 h-10 md:w-15 md:h-15 rounded-full bg-[#008DA8] text-white flex items-center justify-center font-bold md:text-4xl">
         {number}
       </div>
-      <div className="text-[#333] text-[15px] leading-[1.6]">{content}</div>
+      <div className="text-[#333] text-base leading-[1.6]">{content}</div>
     </div>
   );
 };

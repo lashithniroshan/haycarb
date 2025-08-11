@@ -15,7 +15,7 @@ const DownloadCard: React.FC<DownloadCardProps> = ({
   onDownload,
 }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md flex flex-col justify-end items-center w-full max-w-[400px] text-center relative aspect-[4/3] mx-auto">
+    <div className="bg-white rounded-xl shadow-md flex flex-col justify-end items-center w-full max-w-[400px] 2xl:max-w-none text-center relative aspect-[4/3] mx-auto">
       <div className="absolute inset-0 rounded-[10px] overflow-hidden">
         <Image
           src={image}

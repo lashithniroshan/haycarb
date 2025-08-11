@@ -22,7 +22,7 @@ const OverviewofHaycarb = () => {
     {
       id: 3,
       worth: useAnimatedNumberText("Rs. 45.9 Bn"),
-      currency: "US$ 154.9 Mn",
+      currency: "(US$ 154.9 Mn)",
       title: "Total assets",
     },
     {
@@ -348,7 +348,7 @@ const OverviewofHaycarb = () => {
       <div className="px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         <ProductCarousel products={products} />
       </div>
-      <div className="lg:px-25 xl:px-50 mx-auto mt-12 mb-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-18 lg:gap-8">
+      <div className="lg:px-25 xl:px-50 mx-auto mt-12 mb-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-18 lg:gap-8 xl:gap-8">
         {cardData.map((item, idx) => (
           <DownloadCard key={idx} {...item} />
         ))}
