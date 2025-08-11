@@ -49,7 +49,7 @@ const Banner: React.FC<BannerProps> = ({
       </section>
 
       {/* Wave positioned outside the banner to overlap next section */}
-      <div className="relative -mt-16 z-30 bg-[#ffffff]">
+      <div className="relative -mt-20 z-30 bg-[#ffffff]">
         <div className="wave-wrapper rotate-180 w-full pointer-events-none">
           <svg
             className="waves-inner w-full h-16 sm:h-20 md:h-24"

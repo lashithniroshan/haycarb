@@ -277,7 +277,7 @@ const ContentPage = () => {
         className="absolute
                 hidden lg:block
                 top-170 right-90
-                lg:top-78 lg:-right-35
+                lg:top-78 lg:-right-10
                 xl:top-40 xl:-right-35
                 2xl:top-40 2xl:-right-35
                 md:w-100 md:h-100
@@ -290,12 +290,20 @@ const ContentPage = () => {
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
       ></div>
+
       <div
         aria-hidden="true"
-        className="absolute 
-                  top-300 -left-40
-                  lg:w-200 lg:h-200 
-                  scale-x-[-1]
+        className="absolute
+                  hidden lg:block
+                  top-450 left-10 
+                  lg:top-210 
+                  xl:top-180 
+                  2xl:top-190
+                  w-96 h-96 
+                  md:w-[600px] md:h-[600px] 
+                  rotate-180 
+                  transform 
+                  -translate-y-1/3 -translate-x-1/3 
                   bg-no-repeat bg-contain"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
@@ -365,15 +373,15 @@ const ContentPage = () => {
         </div>
 
         {/* Chairman and director message section */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8 my-10">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 py-8 my-10">
           <div className="lg:col-span-5">
-            <h1 className="text-[40px] text-[#005881] font-normal">
+            <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left">
               {
                 stakeholdersData[activeKey].content?.chairman_and_director
                   ?.title
               }
             </h1>
-            <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
+            <p className="para text-base font-medium text-[#000] text-center lg:text-left mt-3 mb-10">
               {
                 stakeholdersData[activeKey].content?.chairman_and_director
                   ?.message
@@ -499,7 +507,7 @@ const ContentPage = () => {
 
                 {/* Right Column - Content */}
                 <div className="order-2 xl:order-2 text-white px-4 lg:px-10 xl:px-4">
-                  <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-normal mb-8 lg:mb-12 leading-tight">
+                  <h1 className="text-3xl sm:text-4xl lg:text-[40px] text-center lg:text-left font-normal mb-8 lg:mb-12 leading-tight">
                     Key Features Unveiled
                   </h1>
                   <ul className="text-base list-disc leading-loose">
@@ -533,14 +541,13 @@ const ContentPage = () => {
             />
           </div>
         </div>
-
         {/* White space below to accommodate the extended image */}
         {/* <div className="hidden xl:block h-40 bg-white"></div> */}
       </div>
 
       {/* Leadershipt Governance and Strategy section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 lg:py-8 lg:my-10 mx-10 lg:mx-30">
-        <div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:py-8 lg:my-10 mx-10 lg:mx-30">
+        <div className="text-center lg:text-left">
           <h1 className="text-[40px] text-[#005881] font-normal">
             Leadership & Governance
           </h1>
@@ -556,7 +563,7 @@ const ContentPage = () => {
           <WaveButton title="View Our Governance" />
         </div>
         <div className="lg:pl-20 lg:border-l-1 lg:border-[#1D80A0]">
-          <h1 className="text-[40px] text-[#005881] font-normal">
+          <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left">
             Strategy and Performance
           </h1>
           <ul className="text-base list-disc leading-loose">
