@@ -750,32 +750,32 @@ export function SocialPerformanceChart() {
       {
         year: "2023",
         avg_training_hours: 8.9,
-        female_employees_percent: 14,
+        // female_employees_percent: 14,
         new_products: 16,
         r_and_d_investment: 187,
         csr_investment: 40.2,
         payments_to_suppliers: 23730,
-        customer_satisfaction_index: 85,
+        // customer_satisfaction_index: 85,
       },
       {
         year: "2024",
         avg_training_hours: 12.1,
-        female_employees_percent: 14,
+        // female_employees_percent: 14,
         new_products: 14,
         r_and_d_investment: 231,
         csr_investment: 40.8,
         payments_to_suppliers: 18303,
-        customer_satisfaction_index: 90,
+        // customer_satisfaction_index: 90,
       },
       {
         year: "2025",
         avg_training_hours: 17.3,
-        female_employees_percent: 15,
+        // female_employees_percent: 15,
         new_products: 16,
         r_and_d_investment: 209,
         csr_investment: 50.4,
         payments_to_suppliers: 22228,
-        customer_satisfaction_index: 90,
+        // customer_satisfaction_index: 90,
       },
     ];
 
@@ -849,15 +849,15 @@ export function SocialPerformanceChart() {
       "Average Training Hours per Employee (No.)",
       "avg_training_hours"
     );
-    makeSeries("Female Employees % of Total", "female_employees_percent");
+    // makeSeries("Female Employees % of Total", "female_employees_percent");
     makeSeries("New Products Developed (No.)", "new_products");
     makeSeries("Investment in R&D (Rs. Mn)", "r_and_d_investment");
     makeSeries("Investment in CSR (Rs. Mn)", "csr_investment");
     makeSeries("Payments to Suppliers (Rs. Mn)", "payments_to_suppliers");
-    makeSeries(
-      "Customer Satisfaction Index (%)",
-      "customer_satisfaction_index"
-    );
+    // makeSeries(
+    //   "Customer Satisfaction Index (%)",
+    //   "customer_satisfaction_index"
+    // );
 
     // Animate chart
     chart.appear(1000, 100);

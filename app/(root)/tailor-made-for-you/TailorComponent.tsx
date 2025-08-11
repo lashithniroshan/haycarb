@@ -28,7 +28,7 @@ const TailorComponent = () => {
       {/* Banner section */}
       <Banner
         title="Tailor Made for You"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi vitae arcu ultrices vehicula. Fusce dignissim pulvinar odio at ultricies. Suspendisse potenti. Phasellus et rutrum ipsum, quis dignissim odio. Donec consequat quam a prium sagittis. Etiam mollis tempus sit amet scelerisque ante."
+        description="Offers users a dynamic and personalized way to engage with Haycarb PLC’s Annual Report. By selecting specific sections of interest users can generate tailored reports that suit their needs. The chart generator complements this by allowing users to visualize key performance metrics across multiple years using interactive graphs. Together, these tools enhance transparency, accessibility, and stakeholder engagement through a flexible, user-friendly digital experience."
         tabs={tabs}
         activeTab={activatedTab}
         onTabChange={(val) => setActivatedTab(val)}

@@ -31,15 +31,15 @@ const FinancialSupplementary = () => {
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-8 py-8">
         {/* Left column */}
         <div className="lg:col-span-6 lg:pt-20">
-          <p className="para text-[18px] text-[#606060] font-semibold">
+          {/* <p className="para text-[18px] text-[#606060] font-semibold">
             These supplementary materials including financial-related additional
             disclosures, our group profile, and country- specific overviews are
             designed to support a deeper exploration of our performance. We
             invite stakeholders to engage with these resources to gain a
             well-rounded understanding of our strategic direction, regional
             presence, and overall results.
-          </p>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 text-center">
+          </p> */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
             <WaveButton
               title="Statement of Group Value Added"
               style={{ fontSize: "14px" }}

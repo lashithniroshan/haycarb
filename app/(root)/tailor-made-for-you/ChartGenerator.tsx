@@ -77,11 +77,13 @@ const ChartGenerator = () => {
           Nurturing our resources-Our Capitals report
         </h1>
         <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
-          This report outlines how Haycarb creates and sustains value across
-          capitals by integrating them into our strategy, operations, and
-          stakeholder engagement. It reflects our commitment to transparency and
-          long-term sustainability through a balanced view of performance,
-          risks, and opportunities.
+          You can visually explore Haycarb PLC’s performance data through
+          customizable, interactive charts. Designed to enhance stakeholder
+          understanding, this tool allows users to select key metrics and
+          timeframes relating to both financial and non-financial information
+          and instantly generate dynamic visuals. Integrated within the
+          microsite’s responsive design, the chart generator complements
+          Haycarb’s commitment to digital innovation and transparent reporting.
         </p>
       </div>
 
@@ -113,12 +115,12 @@ const ChartGenerator = () => {
               </h1>
               <ProfitablityAndFinancialBar />
             </div>
-            <div className="w-full">
+            {/* <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
                 Financial Ratios
               </h1>
               <KeyRatiosChart />
-            </div>
+            </div> */}
           </>
         ) : (
           <>

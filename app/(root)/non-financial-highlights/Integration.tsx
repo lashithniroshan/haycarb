@@ -91,11 +91,8 @@ const Integration = () => {
           Understanding our value creation and its impact
         </h1>
         <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
-          This report outlines how Haycarb creates and sustains value across
-          capitals by integrating them into our strategy, operations, and
-          stakeholder engagement. It reflects our commitment to transparency and
-          long-term sustainability through a balanced view of performance,
-          risks, and opportunities.
+          Haycarb PLC has adopted IFRS S1 and S2 standards to strengthen its
+          sustainability and climate-related reporting.
         </p>
       </div>
 

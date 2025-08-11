@@ -15,10 +15,7 @@ const UserProfileComponent = () => {
       />
 
       {/* Banner section */}
-      <Banner
-        title="Pick Your Desired Category"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi vitae arcu ultrices vehicula. Fusce dignissim pulvinar odio at ultricies. Suspendisse potenti. Phasellus et rutrum ipsum, quis dignissim odio. Donec consequat quam a prium sagittis. Etiam mollis tempus sit amet scelerisque ante."
-      />
+      <Banner title="Pick Your Desired Category" description="" />
 
       <ContentPage />
     </div>

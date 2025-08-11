@@ -89,7 +89,7 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           title: "No. of Employees",
         },
         { worth: "91%", title: "Retention rate" },
-        { worth: "17.3 h / Emp", title: "Average Training hours" },
+        { worth: "35,129", title: "Total Training hours" },
         { worth: "Rs. 4.9 Bn", title: "Payments to Employees" },
         { worth: "Rs. 70 Mn", title: "Investment in Health and Safety" },
       ],
@@ -222,7 +222,6 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           title: "Revenue",
         },
         { worth: "13.6%", title: "ROE" },
-        { worth: "2,026", title: "No. of Employees" },
         { worth: "16", title: "New Products Launched" },
         { worth: "Rs. 209.3 Mn", title: "Investment in R&D" },
         { worth: "50.4", title: "Investment in CSR (Rs. Mn)" },
@@ -619,7 +618,7 @@ const ContentPage = () => {
             Haycarb’s dedication to responsible and transparent governance
             across its global operations.
           </p>
-          <WaveButton title="View Our Governance" />
+          <WaveButton title="More details" />
         </div>
         <div className="lg:pl-20 lg:border-l-1 lg:border-[#1D80A0]">
           <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left">

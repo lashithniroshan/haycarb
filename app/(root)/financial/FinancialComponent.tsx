@@ -26,7 +26,7 @@ const FinancialComponent = () => {
       {/* Banner section */}
       <Banner
         title="Financial Highlights"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi vitae arcu ultrices vehicula. Fusce dignissim pulvinar odio at ultricies. Suspendisse potenti. Phasellus et rutrum ipsum, quis dignissim odio. Donec consequat quam a prium sagittis. Etiam mollis tempus sit amet scelerisque ante."
+        description="The Financials section presents a clear and reliable overview of Haycarb PLC’s performance and value creation for the year, supported by independent assurances and aligned with global reporting standards. It offers key insights into the Group’s financial health, capital efficiency, and strategic direction, all within an interactive and accessible digital experience."
         tabs={tabs}
         activeTab={activatedTab}
         onTabChange={(val) => setActivatedTab(val)}
