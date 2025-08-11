@@ -71,7 +71,6 @@ const slides: Slide[] = [
     title: 'Multilingual accessibility',
    description:
       'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
-      buttontag:'',
   },
   {
     id: 5,
@@ -79,7 +78,7 @@ const slides: Slide[] = [
     title: 'Chart Generator',
    description:
       'The Chairman’s and Managing Director’s joint message is presented in Sinhala, Tamil, and other foreign languages to broaden stakeholder reach and engagement',
-      buttontag:'',
+
   },
   {
     id: 6,
@@ -87,7 +86,6 @@ const slides: Slide[] = [
     title: 'FinQuest- Game based learning',
    description:
       'Haycarb’s digital report features a chart generator enabling stakeholders to create, customize, and download interactive performance visualizations.',
-      buttontag:'',
   },
   {
     id: 7,
