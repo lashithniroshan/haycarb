@@ -90,6 +90,7 @@
 .categoryItem.active {
   color: #fff;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .title {

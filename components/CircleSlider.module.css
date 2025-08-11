@@ -78,8 +78,8 @@
   background-color: transparent;
   border: none;
   z-index: 10;
-  width: auto; /* Allow width to adjust based on content */
-  height: auto; /* Allow height to adjust based on content */
+  width: 150px; /* Allow width to adjust based on content */
+  height: 150px; /* Allow height to adjust based on content */
 }
 
 .slideImage {
@@ -91,10 +91,12 @@
 
 .circleSlide.activeSlide .slideImage {
   border-radius: 0;
-  width: 200px; /* Adjust SVG size for active slide */
-  height: 200px;
+  width: 300px; /* Adjust SVG size for active slide */
+  height: 300px;
   border: none;
   background-color: transparent;
+  margin-top: 50px;
+  margin-left: -10px;
 }
 
 .circleSlide span {
@@ -449,8 +451,8 @@ font-size: 16px;
     margin-top: 20px;
   }
   .circleSlide.activeSlide .slideImage {
-  width: 100px; /* Adjust SVG size for active slide */
-  height: 100px;
+  width: 130px; /* Adjust SVG size for active slide */
+  height: 130px;
 
 }
  .circleSlide.activeSlide {

@@ -24,50 +24,52 @@ const HomeFooter = () => {
           <div className={styles.columns}>
             {/* Column 1: Address */}
             <div className={styles.column}>
-              <h3>Address</h3>
               <p>No: 400, Deans Road, Colombo 10,</p>
               <p>Sri Lanka</p>
-              <p>Tel: 011 2 627 000</p>
-              <p>Email: info@cau.hayleys.com</p>
+              <p>Tel: +94 112 627 000</p>
+              <p>Email: inquiries@haycarb.com</p>
             </div>
 
             {/* Column 2: Links 1 */}
             <div className={styles.column}>
-              <h3>Quick Links</h3>
               <ul>
                 <li>
-                    <Link href="/haycarb-in-focus" className="" >
-                  Haycarb in Focus
+                    <Link href="/" className="" >
+                  Performance Highlights
                 </Link>
                 </li>
                 <li>
-                  <Link href="/financial">Financial Highlights</Link>
+                  <Link href="/">Financial Statements</Link>
                 </li>
                 <li>
-                  <Link href="/non-financial-highlights">Non-Financial Highlights</Link>
+                  <Link href="/">Leadership Message</Link>
+                </li>
+                 <li>
+                  <Link href="/">Our Strategy</Link>
                 </li>
               </ul>
             </div>
 
             {/* Column 3: Links 2 */}
             <div className={styles.column}>
-              <h3>Explore</h3>
               <ul>
                 <li>
-                  <Link href="/tailor-made-for-you">Chart Generator</Link>
+                  <Link href="/">Segmental Review</Link>
                 </li>
                 <li>
-                  <Link href="/tailor-made-for-you">Create Your Own Report</Link>
+                  <Link href="/">ESG Integration</Link>
                 </li>
                 <li>
-                  <Link href="/game">Finquest</Link>
+                  <Link href="/">Corporate Governance</Link>
+                </li>
+                 <li>
+                  <Link href="/">FAQs</Link>
                 </li>
               </ul>
             </div>
 
             {/* Column 4: Social Media */}
             <div className={styles.column}>
-              <h3>Connect With Us</h3>
               <div className={styles.socialRow}>
                 <a href="https://www.linkedin.com/company/haycarbplc/" target="_blank">
                   <Image
@@ -150,48 +152,52 @@ const InnerPageFooter = () => {
           <div className={styles.columns}>
             {/* Column 1: Address */}
             <div className={styles.column}>
-              <h3>Address</h3>
               <p>No: 400, Deans Road, Colombo 10,</p>
               <p>Sri Lanka</p>
-              <p>Tel: 011 2 627 000</p>
-              <p>Email: info@cau.hayleys.com</p>
+              <p>Tel: +94 112 627 000</p>
+              <p>Email: inquiries@haycarb.com</p>
             </div>
 
             {/* Column 2: Links 1 */}
             <div className={styles.column}>
-              <h3>Quick Links</h3>
               <ul>
-                 <Link href="/haycarb-in-focus" className="" >
-                  Haycarb in Focus
-                </Link>
                 <li>
-                  <Link href="/financial">Financial Highlights</Link>
+                    <Link href="/" className="" >
+                  Performance Highlights
+                </Link>
                 </li>
                 <li>
-                  <Link href="/non-financial-highlights">Non-Financial Highlights</Link>
+                  <Link href="/">Financial Statements</Link>
+                </li>
+                <li>
+                  <Link href="/">Leadership Message</Link>
+                </li>
+                 <li>
+                  <Link href="/">Our Strategy</Link>
                 </li>
               </ul>
             </div>
 
             {/* Column 3: Links 2 */}
             <div className={styles.column}>
-              <h3>Explore</h3>
               <ul>
-               <li>
-                  <Link href="/tailor-made-for-you">Chart Generator</Link>
+                <li>
+                  <Link href="/">Segmental Review</Link>
                 </li>
                 <li>
-                  <Link href="/tailor-made-for-you">Create Your Own Report</Link>
+                  <Link href="/">ESG Integration</Link>
                 </li>
                 <li>
-                  <Link href="/game">Finquest</Link>
+                  <Link href="/">Corporate Governance</Link>
+                </li>
+                 <li>
+                  <Link href="/">FAQs</Link>
                 </li>
               </ul>
             </div>
 
             {/* Column 4: Social Media */}
             <div className={styles.column}>
-              <h3>Connect With Us</h3>
               <div className={styles.socialRow}>
                 <a href="https://www.linkedin.com/company/haycarbplc/" target="_blank">
                   <Image

@@ -15,12 +15,12 @@ const Strategy = () => {
             <p>Strategic global expansion, product innovation and tech investment drive Haycarb’s market growth and value-added carbon leadership.</p>
           </div>
           <ul class="${style.listContent}">
-            <li><h4>${useAnimatedNumberText("+43.2")}</h4><p>Bn Revenue</p></li>
+            <li><h4>+Rs.${useAnimatedNumberText("43.2")} Bn</h4><p>Revenue</p></li>
+            <li><h4>+Rs.${useAnimatedNumberText(
+              "5.5"
+            )} Bn</h4><p>Profit before tax</p></li>
             <li><h4>${useAnimatedNumberText(
-              "+5.5"
-            )}</h4><p>Bn Profit before tax</p></li>
-            <li><h4>${useAnimatedNumberText(
-              "+16"
+              "+16%"
             )}</h4><p>Global market share</p></li>
           </ul>
         </div>
@@ -43,9 +43,9 @@ const Strategy = () => {
             <li><h4>${useAnimatedNumberText(
               "+4"
             )}</h4><p>New products in pipeline</p></li>
-            <li><h4>${useAnimatedNumberText(
-              "Rs.209.3"
-            )}</h4><p>Mn Investment in R&D</p></li>
+            <li><h4>+Rs.${useAnimatedNumberText(
+              "209.3"
+            )} Mn</h4><p>Investment in R&D</p></li>
           </ul>
         </div>
       `,
@@ -63,13 +63,13 @@ const Strategy = () => {
           <ul class="${style.listContent}">
             <li><h4>${useAnimatedNumberText(
               "+248"
-            )}</h4><p>new suppliers</p></li>
-            <li><h4>${useAnimatedNumberText(
-              "Rs.14.9"
-            )}</h4><p>Bn payments to raw material suppliers</p></li>
-            <li><h4>${useAnimatedNumberText(
-              "Rs.20.6"
-            )}</h4><p>Mn for supplier capacity building</p></li>
+            )}</h4><p>New suppliers</p></li>
+            <li><h4>+Rs.${useAnimatedNumberText(
+              "14.9"
+            )} Bn</h4><p>payments to raw material suppliers</p></li>
+            <li><h4>+Rs.${useAnimatedNumberText(
+              "20.6"
+            )} Mn</h4><p>for supplier capacity building</p></li>
           </ul>
         </div>
       `,
@@ -93,9 +93,9 @@ const Strategy = () => {
             <li><h4>${useAnimatedNumberText(
               "+17.3"
             )}</h4><p>Average training hours per employee</p></li>
-            <li><h4>${useAnimatedNumberText(
-              "+Rs.9.6"
-            )}</h4><p>Mn Investment in T&D</p></li>
+            <li><h4>+Rs.${useAnimatedNumberText(
+              "9.6"
+            )} Mn</h4><p>Investment in T&D</p></li>
           </ul>
         </div>
       `,
@@ -116,10 +116,10 @@ const Strategy = () => {
             )}</h4><p>Energy requirements fulfilled through renewable energy</p></li>
             <li><h4>${useAnimatedNumberText(
               "+1,523"
-            )}</h4><p>MWh Total solar power generation</p></li>
+            )}</h4><p>Total solar power generation</p></li>
             <li><h4>${useAnimatedNumberText(
               "+Rs.81.8"
-            )}</h4><p>Mn Investment in Reverse Osmosis plant for water recycling</p></li>
+            )} Mn</h4><p>Investment in Reverse Osmosis plant for water recycling</p></li>
           </ul>
         </div>
       `,

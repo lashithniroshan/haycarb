@@ -15,7 +15,7 @@ const contentData = {
     { title: 'Board of Directors', pdf: 'pdf/tbc/Board of Directors.pdf' },
     { title: 'Management Team', pdf: 'pdf/tbc/Management Team.pdf' },
   ],
-  'Our value Proposition on ESG': [
+  'Our Value Proposition on ESG': [
     { title: 'Our Value Creation Model', pdf: 'pdf/tbc/Our Value Creation Model.pdf' },
     { title: 'Our Socio-Economic Impact', pdf: 'pdf/tbc/Our Socio-Economic Impact.pdf' },
     { title: 'A Decade of Puritas Sath Diyawara', pdf: 'pdf/tbc/A Decade of Puritas Sath Diyawara.pdf' },
@@ -81,9 +81,6 @@ const contentData = {
     { title: 'Group Profile', pdf: 'pdf/tbc/Group Profile.pdf' },
     { title: 'Country Report', pdf: 'pdf/tbc/Country Report.pdf' },
     { title: 'Corporate Information', pdf: 'pdf/tbc/Corporate Information.pdf' },
-    { title: 'Notice of Annual General Meeting', pdf: 'pdf/tbc/Notice of Annual General Meeting.pdf' },
-    { title: 'Form of Request for a Printed Copy of The Annual Report 2024_25', pdf: 'pdf/tbc/Form of Request for a Printed Copy of The Annual Report 2024_25.pdf' },
-    { title: 'Form of Proxy', pdf: 'pdf/tbc/Form of Proxy.pdf' },
   ],
 } as const;
 

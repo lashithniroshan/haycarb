@@ -57,6 +57,7 @@
   flex-direction: row;
   height: 60vh;
   color: #fff;
+  justify-content: center;
 }
 .contentWrapper{
     height: 100%;
@@ -74,13 +75,14 @@
 font-weight: bold;
 }
 .imageWrapper {
-  width: 50%;
+  width: 40%;
 }
 
 .imageWrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-top-left-radius: 40px;
 }
 
 .textWrapper {

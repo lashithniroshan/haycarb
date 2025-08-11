@@ -15,6 +15,7 @@ const Card: React.FC<CardProps> = ({ title, image, alt, isActive = false, style,
     <div className={`${styles.card} ${isActive ? styles.active : ''}`} style={style}>
       <div className={styles.cardImage}>
         <img src={image} alt={alt} />
+         <div className={styles.bottomgradient}></div>
       </div>
     <button className={styles.title} onClick={onTitleClick}>
         {title}

@@ -195,7 +195,7 @@ const Navbar = ({
             <Image
               src="/haycarblogo.png"
               alt="Haycarb Logo"
-              width={isScrolled ? 120 : 230} // shrink logo smoothly
+              width={isScrolled ? 120 : 200} // shrink logo smoothly
               height={isScrolled ? 72 : 100}
               className="transition-all duration-600"
             />
