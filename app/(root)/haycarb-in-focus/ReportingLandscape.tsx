@@ -75,17 +75,17 @@ const ReportingLandscape = () => {
   const chart = [
     {
       id: 1,
-      title: "ACTIVATED CARBON SEGMENT",
+      title: "Activated Carbon",
       description:
         "Our core segment, focused on producing high-performance activated carbon from coconut shells for global industries such as water and air purification, food, and energy. Growth in 2024/25 was supported by strong demand, regional capacity, and sustainability-led operations.",
-      value: "/images/innerpage/segmentation-review-1.svg",
+      value: "/images/innerpage/haycarb/activated_carbon.jpg",
     },
     {
       id: 2,
-      title: "ENVIRONMENTAL ENGINEERING SOLUTIONS SEGMENT",
+      title: "Environmental Engineering Solutions",
       description:
         "Delivers customised solutions for emission control and water treatment using activated carbon. The segment saw strong project growth in 2024/25, driven by repeat business and rising demand for clean industrial practices.",
-      value: "/images/innerpage/segmentation-review-2.svg",
+      value: "/images/innerpage/haycarb/environmental.jpg",
     },
   ];
 

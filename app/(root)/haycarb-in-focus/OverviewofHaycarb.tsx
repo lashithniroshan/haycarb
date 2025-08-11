@@ -34,8 +34,8 @@ const OverviewofHaycarb = () => {
   ];
 
   const chart = [
-    { id: 1, value: "/images/innerpage/overview-chart-1.svg" },
-    { id: 2, value: "/images/innerpage/overview-chart-2.svg" },
+    { id: 1, value: "/images/innerpage/haycarb/key_markets.jpg" },
+    { id: 2, value: "/images/innerpage/haycarb/manufacturing.jpg" },
   ];
 
   const products = [
@@ -284,7 +284,7 @@ const OverviewofHaycarb = () => {
         {chart.map((ch) => (
           <div
             key={ch.id}
-            className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full"
+            className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-4"
           >
             <Image src={ch.value} alt="banner" width={386} height={479} />
           </div>
