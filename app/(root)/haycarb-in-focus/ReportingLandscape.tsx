@@ -92,13 +92,13 @@ const ReportingLandscape = () => {
   const cardData = [
     {
       title: "Our Approach to Reporting",
-      image: "/images/innerpage/product-placeholder.svg",
+      image: "/images/innerpage/haycarb/our_approach_to_reporting.jpg",
       onDownload: () =>
         window.open("pdf/innerpage/Our Approach to Reporting.pdf", "_blank"),
     },
     {
       title: "Group Value Addition and Distribution",
-      image: "/images/innerpage/product-placeholder.svg",
+      image: "/images/innerpage/haycarb/Group value addition.jpg",
       onDownload: () =>
         window.open(
           "pdf/innerpage/Group Value Addition and Distribution.pdf",
@@ -107,7 +107,7 @@ const ReportingLandscape = () => {
     },
     {
       title: "Our Value Creation Model",
-      image: "/images/innerpage/product-placeholder.svg",
+      image: "/images/innerpage/haycarb/Value creation.jpg",
       onDownload: () =>
         window.open("pdf/innerpage/Our Value Creation Model.pdf", "_blank"),
     },

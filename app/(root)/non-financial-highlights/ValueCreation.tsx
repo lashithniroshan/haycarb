@@ -143,7 +143,7 @@ const ValueCreation = () => {
           title="Operating Environment"
           description="This section summarizes the impact from external factors including political shifts, economic volatility, climate risks, social expectations, evolving technologies, and regulatory pressures that influence Haycarb’s business decisions and sustainability priorities."
           buttonTitle="Explore More"
-          image="/images/innerpage/product-placeholder.svg"
+          image="/images/innerpage/non-financial-highlights/Operating Environment.jpg"
           onButtonClick={() =>
             window.open("pdf/innerpage/Operating Environment.pdf", "_blank")
           }
@@ -152,7 +152,7 @@ const ValueCreation = () => {
           title="Listening to Our Stakeholders"
           description="Highlights how Haycarb engages with key stakeholder groupsincluding employees, customers, suppliers, communities, and regulators, to understand their concerns, expectations, and priorities in shaping strategies and responsible decision-making."
           buttonTitle="Explore More"
-          image="/images/innerpage/product-placeholder.svg"
+          image="/images/innerpage/non-financial-highlights/Listening to Our Stakeholders.jpg"
           onButtonClick={() =>
             window.open(
               "pdf/innerpage/Listening to Our Stakeholders.pdf",

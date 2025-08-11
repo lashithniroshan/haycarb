@@ -187,12 +187,17 @@ const FinancialCapital = () => {
 
         {/* Right Column */}
         <div className="lg:col-span-4 flex justify-center items-start mt-8 lg:mt-0">
-          <Image
-            src="/images/innerpage/first-square.png"
-            alt="banner"
-            width={386}
-            height={479}
-          />
+          <div className="bg-white rounded-xl shadow-md flex flex-col justify-end items-center w-full max-w-[400px] 2xl:max-w-none text-center relative aspect-[3/4] mx-auto">
+            <div className="absolute inset-0 rounded-[10px] overflow-hidden">
+              <Image
+                // src="/images/innerpage/first-square.png"
+                src="/images/innerpage/financial/main.jpg"
+                alt="banner"
+                fill
+                className="rounded-2xl"
+              />
+            </div>
+          </div>
         </div>
       </div>
 

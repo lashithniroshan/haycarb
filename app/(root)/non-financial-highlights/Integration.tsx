@@ -207,11 +207,11 @@ const Integration = () => {
         </div>
         <div className="lg:col-span-6">
           <Image
-            src="/images/innerpage/integration-placeholder.svg"
+            src="/images/innerpage/non-financial-highlights/Sustainability.jpg"
             alt="banner"
             width={650}
             height={480}
-            className="mx-auto"
+            className="mx-auto rounded-2xl"
           />
         </div>
       </div>
