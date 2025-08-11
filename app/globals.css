@@ -434,7 +434,7 @@ button {
 
 @media (max-width: 991px) {
   .btn-custom.btn-custom-mobile {
-    font-size: 10px;
+    font-size: 14px;
     padding: 15px 18px;
   }
 }

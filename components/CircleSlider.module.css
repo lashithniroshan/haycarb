@@ -59,7 +59,7 @@
   position: absolute;
   cursor: pointer;
   top: 50%;
-  left: 50%;
+  left: 53%;
   margin: -35px;
   background-color: transparent;
   color: var(--primary);
@@ -116,7 +116,8 @@
     position: absolute;
     display: flex;
     width: 100px;
-    top: 33%;
+    top: 30%;
+    left: 2%;
 }
 .titleSubtitleContainer {
   /* display: flex;
@@ -138,6 +139,7 @@
     color: rgba(141, 201, 204, 1);
     font-family: Brogadier;
     /* font-size: 24px; */
+    display: none;
 
 }
 .activeTitle {

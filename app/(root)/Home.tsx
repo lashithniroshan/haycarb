@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState, Suspense } from 'react';
-import { useSearchParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Navbar from 'components/Navbar';
 import Msgvideo from 'components/Msgvideo';
@@ -71,7 +70,7 @@ const Home = () => {
       </Suspense>
       <Navbar isScrolled={isScrolled} isContentVisible={isContentVisible} setIsContentVisible={setIsContentVisible} />
       {isContentVisible && (
-  <div className="fixed top-1/4 left-6 z-50 flex flex-col items-center space-y-1 menuforitems">
+  <div className="fixed top-1/4 left-2 z-50 flex flex-col items-center space-y-1 menuforitems">
     {[
       { id: 'msgvideo', label: 'Msgvideo' },
       { id: 'circleslider', label: 'CircleSlider' },
@@ -99,9 +98,9 @@ const Home = () => {
                marginTop: '7px',
                width:'17px',
           }}>
-           <div className="border-b-0  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
-          <div className="border-b-0  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
-           <div className="border-b-0  w-full my-1" style={{ border: '1px solid rgba(122, 149, 184, 1)' }}></div>
+           <div className="border-b-0  w-full " style={{ border: '1px solid rgba(122, 149, 184, 1)',marginBottom:'1px' }}></div>
+          <div className="border-b-0  w-full " style={{ border: '1px solid rgba(122, 149, 184, 1)',marginBottom:'1px' }}></div>
+           <div className="border-b-0  w-full " style={{ border: '1px solid rgba(122, 149, 184, 1)',marginBottom:'1px' }}></div>
            </div>
         )}
       </div>
@@ -179,7 +178,7 @@ const Home = () => {
           {isContentVisible ? (
             <div> 
             <motion.h1
-  className="text-7xl md:text-8xl"
+  className="text-7xl md:text-7xl"
   style={{ fontFamily: "Brogadier" }}
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
@@ -210,7 +209,7 @@ Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and e
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1.2, ease: "easeOut" }}
 >
- Download full Annual Report 2024/25
+ Download Full Annual Report 2024/25
 </motion.button>
               </div>
             </div>
@@ -230,7 +229,7 @@ Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and e
                 className="mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn"
                 onClick={clickHandler}
               >
-                Reveal our journey
+                Reveal Our Journey
               </button>
             </div>
           )}
@@ -244,8 +243,8 @@ Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and e
     transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
     style={{
       position: 'absolute',
-      top: '40%',
-      left: '50%',
+      top: '6%',
+      right: '4%',
       transform: 'translateX(-50%)',
       zIndex: 3,
       pointerEvents: 'none',

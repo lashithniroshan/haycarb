@@ -171,15 +171,31 @@ const Navbar = ({
         {/* Brand Logo (Centered) */}
         <div
           className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-600"
-          style={{ top: isScrolled ? "5px" : "10px" }}
+          style={{ top: isScrolled ? "10px" : "10px" }}
         >
-          <Image
+           <Link href={isFromInnerPage ? { pathname: "/", query: { show: "true" } } : "/"} className="" onClick={() => {
+      if (pathname === "/") {
+        // Already on Home — reveal content
+        setIsContentVisible?.(true);
+      } else {
+        // Navigate to Home
+        router.push("/");
+        // Delay setting isContentVisible to allow transition
+        setTimeout(() => {
+          setIsContentVisible?.(true);
+        }, 100); // Optional: Add delay after route transition
+      }
+ // Close mobile menu
+    }}>
+                 <Image
             src="/haycarblogo.png"
             alt="Haycarb Logo"
-            width={isScrolled ? 80 : 226} // shrink logo smoothly
-            height={isScrolled ? 62 : 102}
-            className="transition-all duration-600 w-auto"
+            width={isScrolled ? 120 : 230} // shrink logo smoothly
+            height={isScrolled ? 72 : 100}
+            className="transition-all duration-600"
           />
+                </Link>
+        
         </div>
 
         {/* Right Side: Search and User Profile */}
@@ -299,10 +315,10 @@ const Navbar = ({
             >
               ×
             </button>
-            <ul className="space-y-4 ulmenu">
+            <ul className="space-y-0 ulmenu">
               <li
                 className="px-5 py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'15px', paddingTop:'15px' }}
               >
                 <Link href={isFromInnerPage ? { pathname: "/", query: { show: "true" } } : "/"} className="" onClick={() => {
       if (pathname === "/") {
@@ -323,7 +339,7 @@ const Navbar = ({
               </li>
               <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px'}}
               >
                 <Link
                   href="/haycarb-in-focus"
@@ -334,7 +350,7 @@ const Navbar = ({
               </li>
                  <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}
               >
                 <Link href="/financial" className="" onClick={toggleMenu}>
                   Financial Highlights
@@ -342,7 +358,7 @@ const Navbar = ({
               </li>
               <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}
               >
                 <Link href="/non-financial-highlights" className="" onClick={toggleMenu}>
                   Non-Financial Highlights
@@ -350,7 +366,7 @@ const Navbar = ({
               </li>
                <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}
               >
                 <Link href="/tailor-made-for-you" className="" onClick={toggleMenu}>
                   Chart Generator
@@ -358,7 +374,7 @@ const Navbar = ({
               </li>
               <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}
               >
                 <Link href="/tailor-made-for-you" className="" onClick={toggleMenu}>
                   Create Your Own Report
@@ -366,7 +382,7 @@ const Navbar = ({
               </li>
                <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px'}}
               >
                 <Link href="/game" className="" onClick={toggleMenu}>
                  Finquest
@@ -374,7 +390,7 @@ const Navbar = ({
               </li>
               <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" , paddingBottom:'14px', paddingTop:'14px'}}
               >
                 <Link href="#user-profiles" className="" onClick={toggleMenu}>
                  User Profiles
@@ -382,13 +398,14 @@ const Navbar = ({
               </li>
               <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" }}
+                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}
               >
                 <Link href="#synopsis" className="" onClick={toggleMenu}>
                   Synopsis
                 </Link>
               </li>
-              <li className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full">
+              <li className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+              style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}>
                 <Link href="pdf/tbc/Independent Auditors Report.pdf" target="_blank"  className="" onClick={toggleMenu}>
                   FAQs
                 </Link>

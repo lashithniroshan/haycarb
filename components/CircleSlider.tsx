@@ -24,8 +24,8 @@ const slidesData: Slide[] = [
     description:
       "When whales surface to breathe, their spout signals presence and strength with clarity. Similarly, Haycarb rises with purpose; transparency is our core. Strong performance and lasting impact drives us forward, powered by a relentless commitment to sustainable innovation and high standards.",
     image: "/images/WalesEllipse-1.png",
-    activeimage: "/images/waleanim.gif",
-    selectedimage: "/images/waleanim.gif",
+    activeimage: "/images/weleanim.webm",
+    selectedimage: "/images/weleanim.webm",
     alt: "Wallscape",
   },
   {
@@ -35,8 +35,8 @@ const slidesData: Slide[] = [
     description:
       "A spy hop is when a whale rises vertically to observe its surroundings - signaling awareness and clarity. At Haycarb, we stay attuned to global trends, enabling swift, strategic responses that turn insight into action with agility, precision, and forward-thinking purpose.",
     image: "/images/WalesEllipse-2.png",
-    activeimage: "/images/waleanim.gif",
-    selectedimage: "/images/waleanim.gif",
+    activeimage: "/images/weleanim.webm",
+    selectedimage: "/images/weleanim.webm",
     alt: "Stores",
   },
   {
@@ -46,8 +46,8 @@ const slidesData: Slide[] = [
     description:
       "The iconic fluke-up dive signals the whales deep, deliberate descent into the ocean’s deaths. As we dive deep into every challenge, uncovering insights, optimising processes, and creating value at every level, Haycarb navigates complexity with focus and intent, emerging stronger, smarter, and more resilient.",
     image: "/images/WalesEllipse-1.png",
-    activeimage: "/images/waleanim.gif",
-    selectedimage: "/images/waleanim.gif",
+    activeimage: "/images/weleanim.webm",
+    selectedimage: "/images/weleanim.webm",
     alt: "wayfinders",
   },
   {
@@ -57,8 +57,8 @@ const slidesData: Slide[] = [
     description:
       "A whale’s tail slap sends ripples across the ocean, a bold signal of strength and intent. Haycarb’s technical excellence and stakeholder-focused innovation create similar ripples across industries, uniting partners through clear communication, ethical leadership, and purpose-driven collaboration.",
     image: "/images/WalesEllipse-2.png",
-    activeimage: "/images/waleanim.gif",
-    selectedimage: "/images/waleanim.gif",
+    activeimage: "/images/weleanim.webm",
+    selectedimage: "/images/weleanim.webm",
     alt: "trains",
   },
   {
@@ -68,8 +68,8 @@ const slidesData: Slide[] = [
     description:
       "A whale’s head lunge is a swift, forceful strike; precision and power combined to capture its target. Likewise, Haycarb advances with intent, leveraging R&D and clean tech to break barriers and lead sustainable innovation. Our bold actions are focused, powerful, and purpose-driven.",
     image: "/images/WalesEllipse-1.png",
-    activeimage: "/images/waleanim.gif",
-    selectedimage: "/images/waleanim.gif",
+    activeimage: "/images/weleanim.webm",
+    selectedimage: "/images/weleanim.webm",
     alt: "Venues",
   },
   {
@@ -79,8 +79,8 @@ const slidesData: Slide[] = [
     description:
       "Few sights inspire like a whale breaching rising with strength and purpose. Haycarb’s breakthroughs soar just as boldly: transformative leaps that redefine sustainable manufacturing and drive impact for people, planet, and future generations with unwavering purpose. 'Driving Value, Changing Lives'.",
     image: "/images/WalesEllipse-2.png",
-    activeimage: "/images/waleanim.gif",
-    selectedimage: "/images/waleanim.gif",
+    activeimage: "/images/weleanim.webm",
+    selectedimage: "/images/weleanim.webm",
     alt: "Wallscape",
   },
 ];
@@ -236,7 +236,7 @@ const CircleSlider = () => {
                   }`,
                 }}
               >
-                <div className={styles.titleSubtitleContainer}>
+                {/* <div className={styles.titleSubtitleContainer}>
                   {index === getPreviousIndex() && (
                     <div className={styles.previousTitle}>
                       {slide.title}
@@ -263,7 +263,47 @@ const CircleSlider = () => {
                       }`
                     )
                   }
-                />
+                /> */}
+                <div className={styles.titleSubtitleContainer}>
+          {index === getPreviousIndex() && (
+            <div className={styles.previousTitle}>{slide.title}</div>
+          )}
+        </div>
+        {index === activeIndex ? (
+          <video
+            src={slide.activeimage}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={styles.slideImage}
+            onLoadedData={() =>
+              console.log(`Loaded video for slide ${slide.id}: ${slide.activeimage}`)
+            }
+            onError={() =>
+              console.error(
+                `Failed to load video for slide ${slide.id}: ${slide.activeimage}`
+              )
+            }
+            style={{ width: 80, height: 80, objectFit: "cover" }}
+          />
+        ) : (
+          <Image
+            src={slide.image}
+            alt={slide.alt}
+            width={80}
+            height={80}
+            className={styles.slideImage}
+            onLoad={() =>
+              console.log(`Loaded image for slide ${slide.id}: ${slide.image}`)
+            }
+            onError={() =>
+              console.error(
+                `Failed to load image for slide ${slide.id}: ${slide.image}`
+              )
+            }
+          />
+        )}
               </div>
             </div>
           ))}

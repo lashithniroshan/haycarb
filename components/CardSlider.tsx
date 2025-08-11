@@ -17,16 +17,16 @@ const CardSlider = () => {
     },
     {
       id: 2,
-      title: 'Pinquest Game',
+      title: 'Finquest Game',
       image: '/images/cardpinquestgame.png',
-      alt: 'pinquest game',
+      alt: 'Finquest game',
        route: '/game',
     },
     {
       id: 3,
-      title: 'Uer Profiles',
+      title: 'User Profiles',
       image: '/images/carduserprofiles.png',
-      alt: 'uer profiles',
+      alt: 'user profiles',
        route: '/uerprofiles',
     },
   ];
