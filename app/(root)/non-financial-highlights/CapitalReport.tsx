@@ -38,18 +38,26 @@ const CapitalReport = () => {
               <p className="text-base">Profit After Tax (Rs. Mn)</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-20">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
-                src="/images/innerpage/overview-chart-1.svg"
+                src="/images/innerpage/financial/financial_cap_1.jpg"
                 alt="banner"
                 width={491}
                 height={420}
               />
             </div>
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
-                src="/images/innerpage/overview-chart-2.svg"
+                src="/images/innerpage/financial/financial_cap_2.jpg"
+                alt="banner"
+                width={491}
+                height={420}
+              />
+            </div>
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
+              <Image
+                src="/images/innerpage/financial/financial_cap_3.jpg"
                 alt="banner"
                 width={491}
                 height={420}
@@ -92,17 +100,17 @@ const CapitalReport = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
-                src="/images/innerpage/overview-chart-1.svg"
+                src="/images/innerpage/non-financial-highlights/natural_cap_1.jpg"
                 alt="banner"
                 width={491}
                 height={420}
               />
             </div>
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
-                src="/images/innerpage/overview-chart-2.svg"
+                src="/images/innerpage/non-financial-highlights/natural_cap_2.jpg"
                 alt="banner"
                 width={491}
                 height={420}
@@ -147,17 +155,17 @@ const CapitalReport = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
-                src="/images/innerpage/overview-chart-1.svg"
+                src="/images/innerpage/non-financial-highlights/intellectual_1.jpg"
                 alt="banner"
                 width={491}
                 height={420}
               />
             </div>
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
-                src="/images/innerpage/overview-chart-2.svg"
+                src="/images/innerpage/non-financial-highlights/intellectual_2.jpg"
                 alt="banner"
                 width={491}
                 height={420}
@@ -181,17 +189,17 @@ const CapitalReport = () => {
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
-                src="/images/innerpage/overview-chart-1.svg"
+                src="/images/innerpage/non-financial-highlights/human_cap_1.jpg"
                 alt="banner"
                 width={491}
                 height={420}
               />
             </div>
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
-                src="/images/innerpage/overview-chart-2.svg"
+                src="/images/innerpage/non-financial-highlights/human_cap_2.jpg"
                 alt="banner"
                 width={491}
                 height={420}
@@ -233,17 +241,17 @@ const CapitalReport = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
-                src="/images/innerpage/overview-chart-1.svg"
+                src="/images/innerpage/non-financial-highlights/social_1.jpg"
                 alt="banner"
                 width={491}
                 height={420}
               />
             </div>
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
-                src="/images/innerpage/overview-chart-2.svg"
+                src="/images/innerpage/non-financial-highlights/social_2.jpg"
                 alt="banner"
                 width={491}
                 height={420}
