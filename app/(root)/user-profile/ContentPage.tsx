@@ -1,3 +1,4 @@
+import WaveButton from "components/innerpage/WaveButton";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -20,7 +21,7 @@ type Content = {
   short_description: string;
   matrics: MatricsType[];
   chairman_and_director: ChairmanAndDirector;
-  stratergy_and_performance?: React.ReactNode;
+  stratergy_and_performance: React.ReactNode;
 };
 
 type Stakeholder = {
@@ -52,6 +53,28 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           "Haycarb recorded a Profit Before Tax of Rs.5.52 Bn for the year ending 31st March 2025, a moderation of 10% in comparison to the previous year. This decline is primarily attributed to the increase in raw material prices and the appreciation of the Sri Lankan Rupee. The tax expense decreased by 31% to Rs.1.2 Bn, owing to enhanced capital allowances on new investments. The effective tax rate decreased from 30% to 23%, resulting in a Profit After Tax of Rs.4.27 Bn, only 1% below the previous year's Post-Tax Profit of Rs.4.30 Bn. Furthermore, in USD terms, the Profit After Tax amounted to USD 14.35 Mn, reflecting a 6% increase.",
         image: "",
       },
+      stratergy_and_performance: (
+        <>
+          <li>
+            Strategic interventions to secure adequate supplies of raw material
+            to support stable volumes. Revised prices upward to support margin
+            management.
+          </li>
+          <li>
+            Pursued strategic expansion in growth markets. Ongoing emphasis on
+            innovation and expansion of the value-added product portfolio to
+            strengthen margins
+          </li>
+          <li>
+            Drove progress on expanding our manufacturing footprint to the
+            Philippines.
+          </li>
+          <li>
+            Robust risk management to identify and respond to risks and
+            opportunities including climate related risks.
+          </li>
+        </>
+      ),
     },
   },
   employees: {
@@ -76,6 +99,25 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           "We initiated one-on-one engagement at all levels to understand employee issues and adopt corrective action to drive increased motivation and employee well-being. Ongoing investment in training resulted in total training hours per employee increasing by 43%. The learning platforms on digital media were given high priority, encouraging specific functions to upgrade the knowledge base in line with the higher pace of ubiquitous technological advancements. As an innovative company, team dynamics are invaluable, and we will continue focusing on maintaining strong teams to drive sustainable growth through product and process innovation.",
         image: "",
       },
+      stratergy_and_performance: (
+        <>
+          <li>
+            Goal setting and Performance Appraisals with fair and equitable
+            remuneration for all employees based on skills, competencies and
+            performance.
+          </li>
+          <li>Strengthened the safety culture within the Group.</li>
+          <li>
+            Continuous learning with investment of Rs. 9.6 million and launching
+            digital learning platform.
+          </li>
+          <li>
+            Introduced a post onboarding review system to support the
+            integration of new recruits.
+          </li>
+          <li>Fostered a diverse and inclusive work environment.</li>
+        </>
+      ),
     },
   },
   customers: {
@@ -100,6 +142,25 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           "Haycarb continues to invest in the advancement of its technology to be a cutting-edge innovative coconut carbon company that offers best in- class products and solutions and enhances customer experience. Our newly developed range of carbons tailored for silicon anodes has gained market share. Concurrently, we are in the process of securing patents for our hard-carbon products for Sodium-ion batteries. The ongoing global shift toward renewable energy continues to present significant growth Opportunities and in anticipation of this demand, we have invested Rs. 1.23Bn to expand our manufacturing capacity for the Energy Storage Carbon portfolio during the year ended 31 March 2025.",
         image: "",
       },
+      stratergy_and_performance: (
+        <>
+          <li>
+            New product development through R&D to deliver tailored solutions
+            that fulfill specific customer needs.
+          </li>
+          <li>
+            Numerous initiatives to source adequate supplies of raw materials
+            are procured from all countries in supply chain.
+          </li>
+          <li>Capacity enhancement.</li>
+          <li>Delivered on several ESG goals outlined in ”Activate“.</li>
+          <li>
+            Robust manufacturing and quality assurance systems along with
+            numerous certifications such as ISO and GMP to ensure consistent
+            product quality.
+          </li>
+        </>
+      ),
     },
   },
   suppliers: {
@@ -133,6 +194,20 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           "Our value chain commences with coconut shells, a by-product of the coconut industry. Our manufacturing facilities are strategically located in Sri Lanka, Thailand, and Indonesia, providing direct access to our main raw material, coconut shell-based charcoal in these countries. Our raw material procurement network also extends to other major coconut growing countries in Asia, including the Philippines, India, and Vietnam. This extensive network has enabled us to gain valuable insights into the production and availability of raw materials, allowing us to effectively manage the cyclical volatility in demand and supply across all coconut-producing countries in Asia.",
         image: "",
       },
+      stratergy_and_performance: (
+        <>
+          <li>Strengthened our supplier value proposition.</li>
+          <li>
+            Maintained emphasis on ethical procurement practices and timely
+            payments.
+          </li>
+          <li>
+            Engaged in capacity building through supplier audits and other
+            initiatives.
+          </li>
+          <li>Propagated green charcoaling practices among suppliers.</li>
+        </>
+      ),
     },
   },
   generalUser: {
@@ -158,6 +233,28 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           "Haycarb recorded a Profit Before Tax of Rs.5.52 Bn for the year ending 31st March 2025, a moderation of 10% in comparison to the previous year. This decline is primarily attributed to the increase in raw material prices and the appreciation of the Sri Lankan Rupee. The tax expense decreased by 31% to Rs.1.2 Bn, owing to enhanced capital allowances on new investments. The effective tax rate decreased from 30% to 23%, resulting in a Profit After Tax of Rs.4.27 Bn, only 1% below the previous year's Post-Tax Profit of Rs.4.30 Bn. Furthermore, in USD terms, the Profit After Tax amounted to USD 14.35 Mn, reflecting a 6% increase.",
         image: "",
       },
+      stratergy_and_performance: (
+        <>
+          <li>
+            Strategic interventions to secure adequate supplies of raw material
+            to support stable volumes.
+          </li>
+          <li>Revised prices upward to support margin management.</li>
+          <li>Pursued strategic expansion in growth markets.</li>
+          <li>
+            Ongoing emphasis on innovation and expansion of the value-added
+            product portfolio to strengthen margins.
+          </li>
+          <li>
+            Drove progress on expanding our manufacturing footprint to the
+            Philippines.
+          </li>
+          <li>
+            Robust risk management to identify and respond to risks and
+            opportunities including climate related risks.
+          </li>
+        </>
+      ),
     },
   },
 };
@@ -329,7 +426,7 @@ const ContentPage = () => {
       </div>
 
       {/* Key features unveiled section */}
-      <div className="relative my-50">
+      <div className="relative mt-50 mb-10 lg:my-50">
         {/* Wave Section */}
         <div className="relative -mt-60 z-30 bg-[#ffffff] transform -scale-y-100 w-full">
           <div className="wave-wrapper rotate-180 w-full pointer-events-none">
@@ -439,6 +536,33 @@ const ContentPage = () => {
 
         {/* White space below to accommodate the extended image */}
         {/* <div className="hidden xl:block h-40 bg-white"></div> */}
+      </div>
+
+      {/* Leadershipt Governance and Strategy section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-8 lg:py-8 lg:my-10 mx-10 lg:mx-30">
+        <div>
+          <h1 className="text-[40px] text-[#005881] font-normal">
+            Leadership & Governance
+          </h1>
+          <p className="para text-base font-medium text-[#000] mt-3 mb-10">
+            Haycarb PLC treats corporate governance as a central pillar of its
+            strategy and leadership. The company prioritizes ethical
+            decision-making and strong oversight to safeguard stakeholder
+            interests and support sustainable growth. Leadership roles,
+            committee functions, and alignment with broader ESG goals reflect
+            Haycarb’s dedication to responsible and transparent governance
+            across its global operations.
+          </p>
+          <WaveButton title="View Our Governance" />
+        </div>
+        <div className="lg:pl-20 lg:border-l-1 lg:border-[#1D80A0]">
+          <h1 className="text-[40px] text-[#005881] font-normal">
+            Strategy and Performance
+          </h1>
+          <ul className="text-base list-disc leading-loose">
+            {stakeholdersData[activeKey].content?.stratergy_and_performance}
+          </ul>
+        </div>
       </div>
     </section>
   );
