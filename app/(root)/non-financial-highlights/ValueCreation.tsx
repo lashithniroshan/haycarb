@@ -126,7 +126,7 @@ const ValueCreation = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:px-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:px-8 2xl:px-30">
         <InfoCard
           title="Operating Environment"
           description="This section summarizes the impact from external factors including political shifts, economic volatility, climate risks, social expectations, evolving technologies, and regulatory pressures that influence Haycarb’s business decisions and sustainability priorities."
