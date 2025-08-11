@@ -176,11 +176,7 @@ const Integration = () => {
             performance metrics, aligning with IFRS S1 and S2 standards.
           </p>
 
-          <WaveButton
-            title="Explore More"
-            style={{ fontSize: "12px" }}
-            className="w-full"
-          />
+          <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
         </div>
         <div className="lg:col-span-6">
           <Image

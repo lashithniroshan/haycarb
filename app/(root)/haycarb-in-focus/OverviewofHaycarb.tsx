@@ -224,7 +224,7 @@ const OverviewofHaycarb = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
         {/* Top or Left Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-155 lg:h-[1px]"
+          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
 
@@ -235,7 +235,7 @@ const OverviewofHaycarb = () => {
 
         {/* Bottom or Right Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-155 lg:h-[1px]"
+          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
@@ -328,7 +328,7 @@ const OverviewofHaycarb = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
         {/* Top or Left Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-175 lg:h-[1px]"
+          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
 
@@ -339,7 +339,7 @@ const OverviewofHaycarb = () => {
 
         {/* Bottom or Right Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-175 lg:h-[1px]"
+          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
