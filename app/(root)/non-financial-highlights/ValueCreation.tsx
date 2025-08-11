@@ -87,10 +87,7 @@ const ValueCreation = () => {
         className="mx-auto block"
       />
       <div className="my-15 flex items-center justify-center">
-        <WaveButton
-          title="Determining Material Issues"
-          style={{ fontSize: "12px" }}
-        />
+        <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
       </div>
 
       {/* Digital evolution section */}
@@ -109,10 +106,7 @@ const ValueCreation = () => {
               operations, with a strong focus on sustainability and
               adaptability.
             </p>
-            <WaveButton
-              title="Managing Business Risks & Opportunities"
-              style={{ fontSize: "12px" }}
-            />
+            <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
           </div>
 
           <div className="lg:col-span-6 flex items-center justify-center lg:justify-end w-full">
@@ -130,14 +124,14 @@ const ValueCreation = () => {
         <InfoCard
           title="Operating Environment"
           description="This section summarizes the impact from external factors including political shifts, economic volatility, climate risks, social expectations, evolving technologies, and regulatory pressures that influence Haycarb’s business decisions and sustainability priorities."
-          buttonTitle="Operating Environment"
+          buttonTitle="Explore More"
           image="/images/innerpage/product-placeholder.svg"
           onButtonClick={() => console.log("ss")}
         />
         <InfoCard
           title="Listening to Our Stakeholders"
           description="Highlights how Haycarb engages with key stakeholder groupsincluding employees, customers, suppliers, communities, and regulators, to understand their concerns, expectations, and priorities in shaping strategies and responsible decision-making."
-          buttonTitle="Listening to Our Stakeholders"
+          buttonTitle="Explore More"
           image="/images/innerpage/product-placeholder.svg"
           onButtonClick={() => console.log("ss")}
         />

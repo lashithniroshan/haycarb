@@ -216,10 +216,7 @@ const ReportingLandscape = () => {
               customisable insights into information contained in our Annual
               Report.&quot;
             </p>
-            <WaveButton
-              title="Digital evolution in reporting"
-              style={{ fontSize: "12px" }}
-            />
+            <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
           </div>
 
           <div className="lg:col-span-6 flex items-center justify-center w-full">
@@ -284,10 +281,7 @@ const ReportingLandscape = () => {
         ))}
       </div>
       <div className="my-15 flex items-center justify-center ">
-        <WaveButton
-          title="Segmental Review and analysis"
-          style={{ fontSize: "12px" }}
-        />
+        <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
       </div>
       <div className="lg:px-25 xl:px-30 mx-auto myt-12 mb-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-18 lg:gap-8">
         {cardData.map((item, idx) => (

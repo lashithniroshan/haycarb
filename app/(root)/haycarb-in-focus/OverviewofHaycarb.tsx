@@ -178,7 +178,7 @@ const OverviewofHaycarb = () => {
           </p>
           <div className="my-10 flex items-center justify-center ">
             <WaveButton
-              title="Our Purpose Statement Video Version"
+              title="Watch the Statement"
               style={{ fontSize: "12px" }}
             />
           </div>

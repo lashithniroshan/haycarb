@@ -119,7 +119,7 @@ const Integration = () => {
             GRI, and SASB.
           </p>
 
-          <WaveButton title="ESG governance" style={{ fontSize: "12px" }} />
+          <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
         </div>
         <div className="lg:col-span-6">
           <Image
@@ -154,13 +154,13 @@ const Integration = () => {
           </p>
 
           <WaveButton
-            title="ESG strategies, metrics and targets"
+            title="Explore More"
             style={{ fontSize: "12px" }}
             className="mb-5"
           />
           <br />
           <WaveButton
-            title="Activate-ESG roadmap 2030"
+            title="Activate - ESG Roadmap 2030"
             style={{ fontSize: "12px" }}
           />
         </div>
@@ -180,7 +180,7 @@ const Integration = () => {
           </p>
 
           <WaveButton
-            title="Sustainability and Climate related risks and opportunities"
+            title="Explore More"
             style={{ fontSize: "12px" }}
             className="w-full"
           />
@@ -219,10 +219,7 @@ const Integration = () => {
             business model.
           </p>
 
-          <WaveButton
-            title="Assessing Climate Resilience"
-            style={{ fontSize: "12px" }}
-          />
+          <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
         </div>
       </div>
     </section>
