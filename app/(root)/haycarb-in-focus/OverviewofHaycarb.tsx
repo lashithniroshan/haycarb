@@ -1,11 +1,23 @@
 import WaveButton from "components/innerpage/WaveButton";
 import ProductCarousel from "components/common/ProductCarousel";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import DownloadCard from "components/common/DownloadCard";
 import { useAnimatedNumberText } from "utils/useSpeedCounter";
 
+import styles from "./OverviewofHaycarb.module.css";
+
 const OverviewofHaycarb = () => {
+  const [showOverlay, setShowOverlay] = useState(false);
+
+  const handleOpenVideo = () => {
+    setShowOverlay(true);
+  };
+
+  const handleClose = () => {
+    setShowOverlay(false);
+  };
+
   const statsData = [
     {
       id: 1,
@@ -198,6 +210,7 @@ const OverviewofHaycarb = () => {
                   />
                 </svg>
               }
+              onBtnClick={handleOpenVideo}
             />
           </div>
         </div>
@@ -380,6 +393,26 @@ const OverviewofHaycarb = () => {
           responsibility, and relentless pursuit of sustainable impact.
         </p>
       </div>
+
+      {showOverlay && (
+        <div className={styles.overlay}>
+          <div className={styles.videoContainer}>
+            <iframe
+              className={styles.modalVideo}
+              width="100%"
+              height="450"
+              src="https://www.youtube.com/embed/3rddCQXO_8A?si=faaVvqe-ArYvgkXM"
+              title="YouTube video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <button className={styles.closeButton} onClick={handleClose}>
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
