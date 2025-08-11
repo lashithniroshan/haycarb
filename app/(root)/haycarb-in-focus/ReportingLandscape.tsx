@@ -91,7 +91,7 @@ const ReportingLandscape = () => {
 
   const cardData = [
     {
-      title: "Our Approach to reporting",
+      title: "Our Approach to Reporting",
       image: "/images/innerpage/product-placeholder.svg",
     },
     {
@@ -99,7 +99,7 @@ const ReportingLandscape = () => {
       image: "/images/innerpage/product-placeholder.svg",
     },
     {
-      title: "Our value creation model",
+      title: "Our Value Creation Model",
       image: "/images/innerpage/product-placeholder.svg",
     },
   ];
@@ -208,13 +208,13 @@ const ReportingLandscape = () => {
               Digital evolution in reporting
             </h1>
             <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
-              &quot;Cognisant of the growing shift toward digital communication,
-              we continued to integrate technology into our corporate reporting
+              Cognisant of the growing shift toward digital communication, we
+              continued to integrate technology into our corporate reporting
               with an emphasis on providing a more interactive and engaging
               experience to our stakeholders through a specialised web portal
               offering interactive features enabling comprehensive as well as
               customisable insights into information contained in our Annual
-              Report.&quot;
+              Report.
             </p>
             <WaveButton title="Explore More" style={{ fontSize: "12px" }} />
           </div>
@@ -249,24 +249,19 @@ const ReportingLandscape = () => {
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
-      <div className="lg:px-53">
-        <p className="para text-center text-[#000000] text-[15px] font-medium">
-          To be the leading global provider of activated carbon and foremost
-          provider of water purification systems in Sri Lanka and the region,
-          renowned for technical excellence, customer centricity, innovation and
-          sustainable business practices.
-        </p>
-      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         {chart.map((ch) => (
           <div
             key={ch.id}
-            className="border border-[#1D80A080] rounded-[30px] flex flex-col items-center justify-center w-full px-4 py-6 text-center bg-white z-30"
+            className={`border border-[#1D80A080] rounded-[30px] flex flex-col items-center justify-center w-full px-4 ${
+              ch.id == 1 ? "py-10" : ""
+            } text-center bg-white z-30`}
           >
             <h1 className="text-[#005881] text-[30px] text-center">
               {ch.title}
             </h1>
-            <p className="para text-[15px] text-[#005881] font-medium my-10">
+            <p className="para text-base text-[#005881] font-medium my-4">
               {ch.description}
             </p>
 
@@ -290,10 +285,10 @@ const ReportingLandscape = () => {
       </div>
       <div className="lg:px-53">
         <p className="para text-center text-[#000000] text-[15px] font-medium">
-          To be the leading global provider of activated carbon and foremost
-          provider of water purification systems in Sri Lanka and the region,
-          renowned for technical excellence, customer centricity, innovation and
-          sustainable business practices.
+          At Haycarb, reporting is not just a reflection of performance, it is a
+          declaration of purpose. Through transparency, innovation, and
+          inclusive storytelling, we illuminate our journey of value creation
+          and invite every stakeholder to walk it with us.
         </p>
       </div>
     </section>

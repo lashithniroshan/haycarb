@@ -26,7 +26,7 @@ const HaycarbFocusComponent = () => {
       {/* Banner section */}
       <Banner
         title="Haycarb in Focus"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi vitae arcu ultrices vehicula. Fusce dignissim pulvinar odio at ultricies. Suspendisse potenti. Phasellus et rutrum ipsum, quis dignissim odio. Donec consequat quam a prium sagittis. Etiam mollis tempus sit amet scelerisque ante."
+        description="Haycarb PLC, a Sri Lankan multinational, leads in coconut shell-based activated carbon with 1,500+ solutions across seven countries. Its fifth Integrated Annual Report reflects transparency and global standards, while also pioneered digital reporting innovations, including AI-generated visuals, multilingual accessibility, and Braille integration, reinforcing its leadership in governance, sustainability, and digital transformation."
         tabs={tabs}
         activeTab={activatedTab}
         onTabChange={(val) => setActivatedTab(val)}

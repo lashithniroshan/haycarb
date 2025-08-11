@@ -69,15 +69,15 @@ const OverviewofHaycarb = () => {
   const cardData = [
     {
       title: "Awards and Recognitions",
-      image: "/images/innerpage/product-placeholder.svg",
+      image: "/images/innerpage/haycarb/awards.jpg",
     },
     {
       title: "Milestones",
-      image: "/images/innerpage/product-placeholder.svg",
+      image: "/images/innerpage/haycarb/logo.png",
     },
     {
-      title: "Our socio-economic impact",
-      image: "/images/innerpage/product-placeholder.svg",
+      title: "Our Socio-Economic Impact",
+      image: "/images/innerpage/haycarb/socio-eco.png",
     },
   ];
 
@@ -168,13 +168,11 @@ const OverviewofHaycarb = () => {
         </div>
         <div className="lg:col-span-6 lg:pr-30">
           <p className="para text-center text-[18px] text-[#005881] font-semibold">
-            Haycarb PLC is a world leader in the coconut shell activated carbon
-            industry, with Our customers span over 50 countries. Our product
-            portfolio of over 1,500 products empowers a growing environmentally
-            conscious world by providing solutions vital to decarbonisation and
-            building a sustainable future.Our culture of collaborative
-            innovation fosters long-term partnerships with B2B customers,
-            enabling the delivery of customised, value-added solutions.
+            At Haycarb, our purpose - Driving Value, Changing Lives ; guides us
+            to envision a future where we are a catalyst in purification and
+            energy storage solutions, empower our people with skills, autonomy,
+            and world-class processes, and enrich lives through
+            customer-centric, innovative, and sustainable value creation.
           </p>
           <div className="my-10 flex items-center justify-center ">
             <WaveButton
@@ -241,14 +239,14 @@ const OverviewofHaycarb = () => {
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
-      <div className="lg:px-53">
+      {/* <div className="lg:px-53">
         <p className="para text-center text-[#000000] text-[15px] font-medium">
           To be the leading global provider of activated carbon and foremost
           provider of water purification systems in Sri Lanka and the region,
           renowned for technical excellence, customer centricity, innovation and
           sustainable business practices.
         </p>
-      </div>
+      </div> */}
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 my-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         <div className="flex flex-col items-center justify-center w-full px-4 py-6 text-center">
@@ -270,7 +268,7 @@ const OverviewofHaycarb = () => {
 
             <div>
               <p className="text-[50px] font-extrabold text-[#005881]">
-                {useAnimatedNumberText("2,046")}
+                {useAnimatedNumberText("2,026")}
               </p>
               <div className="h-[1px] bg-[#8DC9CC] w-1/2 lg:w-2/3 mx-auto my-1"></div>
               <p className="text-[20px] font-medium text-[#005881]">
@@ -311,12 +309,12 @@ const OverviewofHaycarb = () => {
         ></div>
       </div>
       <div className="lg:px-53 mb-12">
-        <p className="para text-center text-[#000000] text-[15px] font-medium mb-6">
+        {/* <p className="para text-center text-[#000000] text-[15px] font-medium mb-6">
           To be the leading global provider of activated carbon and foremost
           provider of water purification systems in Sri Lanka and the region,
           renowned for technical excellence, customer centricity, innovation and
           sustainable business practices.
-        </p>
+        </p> */}
         <Image
           src="/images/innerpage/world-map.svg"
           alt="icon"
@@ -355,10 +353,11 @@ const OverviewofHaycarb = () => {
       </div>
       <div className="lg:px-53">
         <p className="para text-center text-[#000000] text-[15px] font-medium">
-          To be the leading global provider of activated carbon and foremost
-          provider of water purification systems in Sri Lanka and the region,
-          renowned for technical excellence, customer centricity, innovation and
-          sustainable business practices.
+          Haycarb is more than a manufacturer, it is a movement of
+          purpose-driven innovation. With roots in Sri Lanka and reach across
+          the globe, we transform coconut shells into solutions that purify,
+          protect, and empower. Our journey is one of resilience,
+          responsibility, and relentless pursuit of sustainable impact.
         </p>
       </div>
     </section>

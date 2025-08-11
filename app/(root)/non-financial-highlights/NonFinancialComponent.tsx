@@ -12,7 +12,7 @@ const NonFinancialComponent = () => {
 
   const tabs = [
     { value: "capital-report", label: "Capitals Report" },
-    { value: "integration", label: "SLFRS S1 & S2 integration" },
+    { value: "integration", label: "SLFRS S1 & S2 Integration" },
     { value: "value-creation", label: "Value Creation" },
   ];
 
