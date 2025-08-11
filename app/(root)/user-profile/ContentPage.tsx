@@ -327,8 +327,10 @@ const ContentPage = () => {
           </div>
         </div>
       </div>
+
       {/* Key features unveiled section */}
-      <div className="bg-[#157897] py-60">
+      <div className="relative my-50">
+        {/* Wave Section */}
         <div className="relative -mt-60 z-30 bg-[#ffffff] transform -scale-y-100 w-full">
           <div className="wave-wrapper rotate-180 w-full pointer-events-none">
             <svg
@@ -372,34 +374,71 @@ const ContentPage = () => {
             </svg>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="">
+
+        {/* Main Content Wrapper */}
+        <div className="relative">
+          {/* Blue Background Section */}
+          <div className="bg-[#157897] relative overflow-visible">
+            <div className="container mx-auto px-4 py-16 lg:py-10">
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 xl:gap-16">
+                {/* Left Column - Image Area (Desktop) / Top (Mobile) */}
+                <div className="order-1 xl:order-1 flex justify-center xl:justify-start xl:relative">
+                  {/* Mobile/Tablet Image - Inside blue section */}
+                  <div className="xl:hidden">
+                    <Image
+                      src="/images/innerpage/kfu_book.svg"
+                      alt="kfu image"
+                      width={619}
+                      height={477}
+                      className="w-full max-w-sm mx-auto"
+                    />
+                  </div>
+
+                  {/* Desktop - Empty space, image positioned absolutely */}
+                  <div className="hidden xl:block w-full h-64">
+                    {/* This creates space for the absolutely positioned image */}
+                  </div>
+                </div>
+
+                {/* Right Column - Content */}
+                <div className="order-2 xl:order-2 text-white px-4 lg:px-10 xl:px-4">
+                  <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-normal mb-8 lg:mb-12 leading-tight">
+                    Key Features Unveiled
+                  </h1>
+                  <ul className="text-base list-disc leading-loose">
+                    <li>Improvements to SLFRS S1 & S2</li>
+                    <li>Inclusion of a Digital Capital Report</li>
+                    <li>Segmental performance review</li>
+                    <li>
+                      Key highlights available in multiple languages and wider
+                      accessibility
+                    </li>
+                    <li>
+                      New features in the digital annual report including
+                      immersive experience, new accessibility feature, AI
+                      assistant, Chart Generator, FinQuest (Game based learning)
+                      and User profiling
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Absolutely Positioned Desktop Image - Extends below blue section */}
+          <div className="hidden xl:block absolute top-1/5 left-4 xl:left-16 2xl:left-24 z-20">
             <Image
               src="/images/innerpage/kfu_book.svg"
               alt="kfu image"
-              width={619}
-              height={477}
-              className="lg:absolute lg:top-3/4 lg:left-20"
+              width={650}
+              height={500}
+              className="w-auto h-auto max-w-none"
             />
           </div>
-          <div className="text-white py-10">
-            <h1 className="text-[40px] font-normal">Key Features Unveiled</h1>
-            <ul>
-              <li>Improvements to SLFRS S1 & S2 </li>
-              <li>Inclusion of a Digital Capital Report </li>
-              <li>Segmental performance review</li>
-              <li>
-                Key highlights available in multiple languages and wider
-                accessibility
-              </li>
-              <li>
-                New features in the digital annual report including immersive
-                experience, new accessibility feature, AI assistant, Chart
-                Generator, FinQuest (Game based learning) and User profiling
-              </li>
-            </ul>
-          </div>
         </div>
+
+        {/* White space below to accommodate the extended image */}
+        {/* <div className="hidden xl:block h-40 bg-white"></div> */}
       </div>
     </section>
   );
