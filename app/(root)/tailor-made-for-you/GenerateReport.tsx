@@ -183,7 +183,7 @@ const GenerateReport = () => {
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 lg:px-20 my-10 py-8">
         {Object.entries(categories).map(([category, files]) => (
           <div key={category} className="space-y-4">
-            <h3 className="text-xl text-[#005881] font-semibold mb-2">
+            <h3 className="text-xl text-[#005881] font-semibold mb-2" style={{fontFamily: "Brogadier", fontSize:'30px', fontWeight:'normal'}}>
               {category}
             </h3>
             {files.map((file) => (
@@ -194,7 +194,7 @@ const GenerateReport = () => {
                   onChange={() => toggleFile(file)}
                   className="mr-2"
                 />
-                {file.split("/").pop()}
+                {file.split("/").pop()?.replace(".pdf", "")}
               </label>
             ))}
           </div>

@@ -7,7 +7,7 @@ const Strategy = () => {
   const strategyData = [
     {
       id: 1,
-      title: "Market growth",
+      title: "Market Growth",
       content: `
         <div>
           <div class="${style.descriptionContent}">
@@ -29,7 +29,7 @@ const Strategy = () => {
     },
     {
       id: 2,
-      title: "Innovation led growth",
+      title: "Innovation Led Growth",
       content: `
         <div>
           <div class="${style.descriptionContent}">
@@ -53,7 +53,7 @@ const Strategy = () => {
     },
     {
       id: 3,
-      title: "Global supply chains",
+      title: "Global Supply Chains",
       content: `
         <div>
           <div class="${style.descriptionContent}">
@@ -77,7 +77,7 @@ const Strategy = () => {
     },
     {
       id: 4,
-      title: "Purpose driven and committed teams",
+      title: "Purpose Driven and Committed Teams",
       content: `
         <div>
           <div class="${style.descriptionContent}">
@@ -190,13 +190,13 @@ const Strategy = () => {
         style={{ backgroundColor: "#005072" }}
       >
         <div className={`mt-10 ${style.staticContent}`}>
-          <h2 className={style.title}>Strategy & Future Outlook</h2>
+          <h2 className={style.title}>Our strategy</h2>
           <p className={style.description}>
             Our strategy aligns to guide decisions to overcome challenges and
             create value.
           </p>
           <button
-            className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom"
+            className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom wave-btn"
             onClick={() =>
               window.open(
                 "pdf/tbc/Strategy and Resource Allocation.pdf",
@@ -225,13 +225,13 @@ const Strategy = () => {
             className={`container w-full h-full flex mx-auto px-22 ${style.strategyDesktop}`}
           >
             <div className={style.staticContent}>
-              <h2 className={style.title}>Strategy & Future Outlook</h2>
+              <h2 className={style.title}>Our Strategy</h2>
               <p className={style.description}>
                 Our strategy aligns to guide decisions to overcome challenges
                 and create value.
               </p>
               <button
-                className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom"
+                className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom wave-btn"
                 onClick={() =>
                   window.open(
                     "pdf/tbc/Strategy and Resource Allocation.pdf",

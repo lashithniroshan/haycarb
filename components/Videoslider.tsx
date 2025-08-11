@@ -10,9 +10,10 @@ const Videoslider = () => {
 
   // Slide data (videos and info)
   const slides = [
-    { id: 1, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/videobg1.jpg', title: 'Bunker', subtitle: 'Innovating with purpose, shaping a greener future from day one.' },
-    { id: 2, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/videobg2.jpg', title: 'Song 2', subtitle: 'Our sustainability journey is driven by commitment and action.' },
-    { id: 3, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/videobg3.jpg', title: 'Falling Out', subtitle: 'We integrate eco-friendly practices.' },
+    { id: 1, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/Behold the Turtle.jpg', title: 'Bunker', subtitle: 'Safeguarding marine biodiversity through conservation, habitat restoration and awareness effort.' },
+    { id: 2, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/Haritha Angara.jpg', title: 'Song 2', subtitle: 'Our sustainability journey is driven by commitment and action. We integrate eco-friendly practices, reduce our footprint, and foster social responsibility to create lasting value for the planet, people, and future generations.' },
+    { id: 3, src: '/videos/oneMinuteNatureVideo.mp4', thumbnill:'/videos/Puritas Sath Diyawara - Going Beyond.jpg', title: 'Falling Out', subtitle: 'Transforming lives by delivering safe drinking water and supporting education in underprivileged communities.' },
+  
   ];
 
   // Handle slide change

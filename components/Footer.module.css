@@ -110,6 +110,7 @@
   color: rgba(96, 96, 96, 1);
   padding: 7px 0;
   text-align: center;
+  display: none;
 }
 
 .footerBottom ul {
