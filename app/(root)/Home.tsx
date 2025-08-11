@@ -193,8 +193,8 @@ const Home = () => {
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 1.2, ease: "easeOut" }}
 >
-  Haycarb PLC I Annual Report 2024/25
-Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and explore a year of transformation.
+  Haycarb PLC I Annual Report 2024/25<br  />
+Dive in and explore a year of transformation.
 </motion.p>
               <div
                 style={{
@@ -222,8 +222,8 @@ Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and e
               }}
             >
                 <p className="mt-4 text-base" style={{ fontFamily: 'Gotham-Book, sans-serif' }}>
-Haycarb PLC I Annual Report 2024/25
-Our report surfaces like a whale clear, bold, and powerful.<br  /> Dive in and explore a year of transformation.
+  Haycarb PLC I Annual Report 2024/25<br  />
+Dive in and explore a year of transformation.
               </p>
               <button
                 className="mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn"
