@@ -267,7 +267,7 @@ const ContentPage = () => {
     <section className="relative bg-white text-[#606060] pt-16 pb-20 overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
+        className="absolute top-0 -right-25 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -277,7 +277,7 @@ const ContentPage = () => {
         className="absolute
                 hidden lg:block
                 top-170 right-90
-                lg:top-78 lg:-right-10
+                lg:top-78 lg:-right-15
                 xl:top-40 xl:-right-35
                 2xl:top-40 2xl:-right-35
                 md:w-100 md:h-100
@@ -307,6 +307,65 @@ const ContentPage = () => {
                   bg-no-repeat bg-contain"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
+        }}
+      ></div>
+
+      <div
+        aria-hidden="true"
+        className="
+                absolute 
+                hidden lg:block
+                top-0 -right-20 
+                lg:top-3/5 lg:-right-60 
+                xl:top-3/5 xl:-right-60 
+                2xl:top-0 2xl:-right-20 
+                lg:w-200 lg:h-200 
+                xl:w-[800px] xl:h-[800px]
+                bg-no-repeat bg-contain opacity-25"
+        style={{
+          backgroundImage: "url(/images/innerpage/water-full=spread.png)",
+        }}
+      ></div>
+
+      <div
+        aria-hidden="true"
+        className="absolute
+                  hidden lg:block
+                  top-450 left-10 
+                  lg:top-7/8 lg:-left-10
+                  xl:top-7/8 xl:left-0
+                  2xl:top-7/8 2xl:left-0
+                  w-96 h-96 
+                  lg:w-[800px] lg:h-[800px] 
+                  xl:w-[700px] xl:h-[700px] 
+                  2xl:w-[850px] 2xl:h-[850px] 
+                  rotate-180 
+                  transform 
+                  -translate-y-1/3 -translate-x-1/3 
+                  bg-no-repeat bg-contain opacity-25"
+        style={{
+          backgroundImage: "url(/images/innerpage/water-full=spread.png)",
+        }}
+      ></div>
+
+      <div
+        aria-hidden="true"
+        className="absolute
+                  hidden 
+                  sm:block 
+                  left-15 
+                  lg:top-800 
+                  xl:top-600 
+                  2xl:top-640
+                  w-56 h-56 
+                  md:w-72 md:h-72
+                  lg:w-75 lg:h-75  
+                  xl:w-80 xl:h-80
+                  transform scale-x-[-1] -rotate-20
+                  -translate-x-1/2 -translate-y-9/10 
+                  bg-no-repeat bg-contain opacity-25 z-10"
+        style={{
+          backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
       ></div>
 
