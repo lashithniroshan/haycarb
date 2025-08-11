@@ -10,22 +10,22 @@ const CardSlider = () => {
   const slidesData = [
     {
       id: 1,
-      title: 'Chart Generator',
+      title: 'Charts & Reports Generator',
       image: '/images/cardchartgenerator.png',
       alt: 'chart generator',
        route: '/tailor-made-for-you',
     },
     {
       id: 2,
-      title: 'Finquest Game',
-      image: '/images/cardpinquestgame.png',
+      title: 'FinQuest Game',
+      image: '/images/cardpinquestgame.jpg',
       alt: 'Finquest game',
        route: '/game',
     },
     {
       id: 3,
-      title: 'User Profiles',
-      image: '/images/carduserprofiles.png',
+      title: 'User Dashboards',
+      image: '/images/carduserprofiles.jpg',
       alt: 'user profiles',
        route: '/uerprofiles',
     },

@@ -23,9 +23,9 @@ const slidesData: Slide[] = [
     subtitle: "Signalling Clarity and Intent",
     description:
       "When whales surface to breathe, their spout signals presence and strength with clarity. Similarly, Haycarb rises with purpose; transparency is our core. Strong performance and lasting impact drives us forward, powered by a relentless commitment to sustainable innovation and high standards.",
-    image: "/images/WalesEllipse-1.png",
-    activeimage: "/images/weleanim.webm",
-    selectedimage: "/images/weleanim.webm",
+    image: "/images/fish/1.webm",
+    activeimage: "/images/fish/1.webm",
+    selectedimage: "/images/fish/1.webm",
     alt: "Wallscape",
   },
   {
@@ -34,9 +34,9 @@ const slidesData: Slide[] = [
     subtitle: "Staying Informed and Aware",
     description:
       "A spy hop is when a whale rises vertically to observe its surroundings - signaling awareness and clarity. At Haycarb, we stay attuned to global trends, enabling swift, strategic responses that turn insight into action with agility, precision, and forward-thinking purpose.",
-    image: "/images/WalesEllipse-2.png",
-    activeimage: "/images/weleanim.webm",
-    selectedimage: "/images/weleanim.webm",
+    image: "/images/fish/2.webm",
+    activeimage: "/images/fish/2.webm",
+    selectedimage: "/images/fish/2.webm",
     alt: "Stores",
   },
   {
@@ -45,9 +45,9 @@ const slidesData: Slide[] = [
     subtitle: "Diving Deep to Make an Impacttle",
     description:
       "The iconic fluke-up dive signals the whales deep, deliberate descent into the ocean’s deaths. As we dive deep into every challenge, uncovering insights, optimising processes, and creating value at every level, Haycarb navigates complexity with focus and intent, emerging stronger, smarter, and more resilient.",
-    image: "/images/WalesEllipse-1.png",
-    activeimage: "/images/weleanim.webm",
-    selectedimage: "/images/weleanim.webm",
+    image: "/images/fish/3.webm",
+    activeimage: "/images/fish/3.webm",
+    selectedimage: "/images/fish/3.webm",
     alt: "wayfinders",
   },
   {
@@ -56,9 +56,9 @@ const slidesData: Slide[] = [
     subtitle: "Making a Statement",
     description:
       "A whale’s tail slap sends ripples across the ocean, a bold signal of strength and intent. Haycarb’s technical excellence and stakeholder-focused innovation create similar ripples across industries, uniting partners through clear communication, ethical leadership, and purpose-driven collaboration.",
-    image: "/images/WalesEllipse-2.png",
-    activeimage: "/images/weleanim.webm",
-    selectedimage: "/images/weleanim.webm",
+    image: "/images/fish/4.webm",
+    activeimage: "/images/fish/4.webm",
+    selectedimage: "/images/fish/4.webm",
     alt: "trains",
   },
   {
@@ -67,9 +67,9 @@ const slidesData: Slide[] = [
     subtitle: "Moving with Force and Direction",
     description:
       "A whale’s head lunge is a swift, forceful strike; precision and power combined to capture its target. Likewise, Haycarb advances with intent, leveraging R&D and clean tech to break barriers and lead sustainable innovation. Our bold actions are focused, powerful, and purpose-driven.",
-    image: "/images/WalesEllipse-1.png",
-    activeimage: "/images/weleanim.webm",
-    selectedimage: "/images/weleanim.webm",
+    image: "/images/fish/5.webm",
+    activeimage: "/images/fish/5.webm",
+    selectedimage: "/images/fish/5.webm",
     alt: "Venues",
   },
   {
@@ -78,9 +78,9 @@ const slidesData: Slide[] = [
     subtitle: "Rising Above and Beyond",
     description:
       "Few sights inspire like a whale breaching rising with strength and purpose. Haycarb’s breakthroughs soar just as boldly: transformative leaps that redefine sustainable manufacturing and drive impact for people, planet, and future generations with unwavering purpose. 'Driving Value, Changing Lives'.",
-    image: "/images/WalesEllipse-2.png",
-    activeimage: "/images/weleanim.webm",
-    selectedimage: "/images/weleanim.webm",
+    image: "/images/fish/6.webm",
+    activeimage: "/images/fish/6.webm",
+    selectedimage: "/images/fish/6.webm",
     alt: "Wallscape",
   },
 ];
@@ -285,23 +285,25 @@ const CircleSlider = () => {
                 `Failed to load video for slide ${slide.id}: ${slide.activeimage}`
               )
             }
-            style={{ width: 80, height: 80, objectFit: "cover" }}
+            style={{ width: 130, height: 130, objectFit: "cover" }}
           />
         ) : (
-          <Image
+           <video
             src={slide.image}
-            alt={slide.alt}
-            width={80}
-            height={80}
-            className={styles.slideImage}
-            onLoad={() =>
-              console.log(`Loaded image for slide ${slide.id}: ${slide.image}`)
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={styles.image}
+            onLoadedData={() =>
+              console.log(`Loaded video for slide ${slide.id}: ${slide.activeimage}`)
             }
             onError={() =>
               console.error(
-                `Failed to load image for slide ${slide.id}: ${slide.image}`
+                `Failed to load video for slide ${slide.id}: ${slide.activeimage}`
               )
             }
+            style={{ width: 100, height: 100, objectFit: "cover" }}
           />
         )}
               </div>
@@ -448,7 +450,16 @@ const CircleSlider = () => {
       {showOverlay && (
         <div className={styles.overlay}>
           <div className={styles.videoContainer}>
-            <video src="/videos/oneMinuteNatureVideo.mp4" controls autoPlay />
+           <iframe
+              className={styles.modalVideo}
+              width="100%"
+              height="450"
+              src="https://www.youtube.com/embed/SpYtLJjxeKw?si=pHiM05lPcQyCV4mW"
+              title="YouTube video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
             <button className={styles.closeButton} onClick={handleClose}>✕</button>
           </div>
         </div>
@@ -456,7 +467,16 @@ const CircleSlider = () => {
        {showOverlay2 && (
         <div className={styles.overlay}>
           <div className={styles.videoContainer}>
-            <video src="/videos/oneMinuteNatureVideo.mp4" controls autoPlay />
+             <iframe
+              className={styles.modalVideo}
+              width="100%"
+              height="450"
+              src="https://www.youtube.com/embed/SpYtLJjxeKw?si=pHiM05lPcQyCV4mW"
+              title="YouTube video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
             <button className={styles.closeButton} onClick={handleClose2}>✕</button>
           </div>
         </div>

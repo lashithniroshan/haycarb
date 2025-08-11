@@ -72,25 +72,31 @@ const Home = () => {
       {isContentVisible && (
   <div className="fixed top-1/4 left-2 z-50 flex flex-col items-center space-y-1 menuforitems">
     {[
-      { id: 'msgvideo', label: 'Msgvideo' },
-      { id: 'circleslider', label: 'CircleSlider' },
-      { id: 'cardslider', label: 'CardSlider' },
-      { id: 'leadership', label: 'Leadership' },
-      { id: 'management', label: 'Management' },
-      { id: 'strategy', label: 'Strategy' },
-      { id: 'financial', label: 'Financial' },
-      { id: 'tableofcontent', label: 'Table' },
-      { id: 'videoslider', label: 'Video' },
+      { id: 'msgvideo', label: 'Msgvideo',title:'Impact in Brief' },
+      { id: 'circleslider', label: 'CircleSlider',title:'Annual Report Theme' },
+      { id: 'cardslider', label: 'CardSlider',title:'Key Features' },
+      { id: 'leadership', label: 'Leadership',title:'Leadership & Corporate Governance' },
+      { id: 'strategy', label: 'Strategy',title:'Strategy' },
+      { id: 'financial', label: 'Financial',title:'Key Highlights' },
+      { id: 'tableofcontent', label: 'Table',title:'Navigation Summary' },
+      { id: 'videoslider', label: 'Video',title:'Sustainability Journey' },
     ].map((section, index, array) => (
-      <div key={section.id} className="flex flex-col items-center">
+      <div key={section.id} className="flex flex-col items-center relative group">
         {/* Diamond Icon */}
         <div
           onClick={() => {
             document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="w-4 h-4 transform rotate-45 cursor-pointer hover:bg-blue-400 transition"
+          className="w-3 h-3 transform rotate-45 cursor-pointer hover:bg-blue-400 transition diamondicon"
            style={{ border: '1px solid rgba(122, 149, 184, 1)' }}
         />
+         {/* Tooltip */}
+          <span
+            className="absolute left-6 top-1/2 transform -translate-y-1/2 text-white text-xs font-semibold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none menuhovertext"
+            style={{ fontFamily: 'Gotham-Book, sans-serif', whiteSpace: 'nowrap',color: '#fff',...(index === array.length - 1 ? { marginTop: '-1px' } : {marginTop:'-13px'}),}}
+          >
+            {section.title}
+          </span>
         {/* Vertical dashed line (skip after last icon) */}
         {index < array.length - 1 && (
           <div style={{
@@ -194,7 +200,7 @@ const Home = () => {
   transition={{ duration: 1.2, ease: "easeOut" }}
 >
   Haycarb PLC I Annual Report 2024/25<br  />
-Dive in and explore a year of transformation.
+Dive in and explore a year of transformation
 </motion.p>
               <div
                 style={{
@@ -223,7 +229,7 @@ Dive in and explore a year of transformation.
             >
                 <p className="mt-4 text-base" style={{ fontFamily: 'Gotham-Book, sans-serif' }}>
   Haycarb PLC I Annual Report 2024/25<br  />
-Dive in and explore a year of transformation.
+Dive in and explore a year of transformation
               </p>
               <button
                 className="mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn"
@@ -294,9 +300,20 @@ Dive in and explore a year of transformation.
       fontSize: '14px',
       marginTop: '8px',
       textAlign: 'center',
-      fontFamily: 'Gotham-Book, sans-serif'
+      fontFamily: 'Gotham-Book, sans-serif',
+      marginLeft:'-15px',
     }}>
       Drag to explore
+    </p>
+     <p style={{
+      color: 'white',
+      fontSize: '14px',
+      marginTop: '8px',
+      textAlign: 'center',
+      fontFamily: 'Gotham-Book, sans-serif',
+      marginLeft:'-15px',
+    }}>
+     Stay immersed
     </p>
   </motion.div>
 )}

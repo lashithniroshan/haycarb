@@ -18,7 +18,7 @@ const GameComponent = () => {
 
       {/* Banner section */}
       <Banner
-        title="Pinquest Game"
+        title="FinQuest"
         description=""
       />
       <GameWizard />

@@ -143,7 +143,7 @@ const pdfUrls: Record<string, string> = {
  
   const [selectedLanguage, setSelectedLanguage] = useState<Language>('english');
   const { person1, person2 } = messages[selectedLanguage];
-  const [isModalOpen, setIsModalOpen] = useState(false);
+    const [showOverlay, setShowOverlay] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -168,23 +168,14 @@ const pdfUrls: Record<string, string> = {
     );
   };
 
-   const handleVideoClick = () => {
-    setIsModalOpen(true);
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play();
-      }
-    }, 100); 
+
+ const handleOpenVideo = () => {
+    setShowOverlay(true);
   };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
+  const handleClose = () => {
+    setShowOverlay(false);
   };
-
   return (
        <div className='container max-w-full mx-auto'>
     <div className={styles.leadershipContainer} 
@@ -244,7 +235,7 @@ const pdfUrls: Record<string, string> = {
 
       {/* Buttons below the combined section */}
       <div className={styles.buttonSection}>
-        <button className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full flex transition btn-custom wave-btn videoButton" onClick={handleVideoClick}>
+        <button className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full flex transition btn-custom wave-btn videoButton" onClick={handleOpenVideo}>
            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 68 68" fill="none" style={{marginRight:'10px',marginTop:'-3px'}}>
 <path d="M34.1098 0.759766C27.4643 0.759766 20.9681 2.73037 15.4426 6.42239C9.91713 10.1144 5.61053 15.362 3.06743 21.5016C0.524324 27.6412 -0.141068 34.397 1.1554 40.9148C2.45186 47.4326 5.65195 53.4195 10.351 58.1186C15.05 62.8176 21.037 66.0177 27.5547 67.3142C34.0725 68.6106 40.8283 67.9452 46.9679 65.4021C53.1075 62.859 58.3551 58.5524 62.0472 53.0269C65.7392 47.5014 67.7098 41.0052 67.7098 34.3598C67.7098 29.9474 66.8407 25.5781 65.1521 21.5016C63.4636 17.4251 60.9886 13.721 57.8686 10.601C54.7485 7.48093 51.0445 5.00597 46.9679 3.31741C42.8914 1.62886 38.5222 0.759766 34.1098 0.759766ZM27.3898 49.4798V19.2398L47.5498 34.3598L27.3898 49.4798Z" fill="white"/>
 </svg>
@@ -271,7 +262,7 @@ const pdfUrls: Record<string, string> = {
       </div>
 
       {/* Modal for Video */}
-        {isModalOpen && (
+        {/* {isModalOpen && (
           <div className={styles.modalOverlay} onClick={handleCloseModal}>
             <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
               <video
@@ -287,7 +278,24 @@ const pdfUrls: Record<string, string> = {
               </button>
             </div>
           </div>
-        )}
+        )} */}
+         {showOverlay && (
+        <div className={styles.overlay}>
+          <div className={styles.videoContainer}>
+           <iframe
+              className={styles.modalVideo}
+              width="100%"
+              height="450"
+              src="https://www.youtube.com/embed/SpYtLJjxeKw?si=pHiM05lPcQyCV4mW"
+              title="YouTube video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <button className={styles.closeButton} onClick={handleClose}>✕</button>
+          </div>
+        </div>
+      )}
 
     </div>
     </div>

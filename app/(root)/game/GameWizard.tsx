@@ -54,7 +54,7 @@ function GameWizard() {
       {/* Description section */}
       <div className="lg:px-53 text-center">
         <h1 className="text-[#005881] text-[40px] font-normal">
-          Pinquest Comming Soon...
+          Comming Soon...
         </h1>
         
       </div>

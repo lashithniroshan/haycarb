@@ -6,66 +6,101 @@ function Management() {
   const staff = [
     {
       // name: 'BRAHMAN BALARATNARAJAH',
-       name:`<p class="${styles.name}">BRAHMAN <br />BALARATNARAJAH</p>`,
+       name:`<p class="${styles.name}">MOHAN<br />PANDITHAGE</p>`,
       // title: 'Deputy Managing Director',
-        title: `<p class="${styles.title}">Deputy Managing Director</p>`,
-      image: '/images/management/brahman.png',
+        title: `<p class="${styles.title}">Chairman</p>`,
+      image: '/images/management/1.png',
     },
     {
       // name: 'SARATH GANEGODA',
-        name:`<p class="${styles.name}">SARATH<br />GANEGODA</p>`,
+        name:`<p class="${styles.name}">RAJITHA<br />KARIYAWASAN</p>`,
       // title: 'Non-Executive Director',
-       title: `<p class="${styles.title}">Non-Executive Director</p>`,
-      image: '/images/management/sarath.png',
+       title: `<p class="${styles.title}">Managing Director</p>`,
+      image: '/images/management/2.png',
     },
     {
       // name: 'ARJUN SENARATNA',
-      name:`<p class="${styles.name}">ARJUN<br />SENARATNA</p>`,
+      name:`<p class="${styles.name}">BRAHMAN<br />BALARATNARAJAH</p>`,
       // title: 'Non-Executive Director',
-        title: `<p class="${styles.title}">Non-Executive Director</p>`,
-      image: '/images/management/arjun.png',
+        title: `<p class="${styles.title}">Deputy Managing Director</p>`,
+      image: '/images/management/3.png',
     },
     {
       // name: 'MS. JEEVANI ABEYRATNE',
-         name:`<p class="${styles.name}">MS. JEEVANI<br />ABEYRATNE</p>`,
+         name:`<p class="${styles.name}">SARATH<br />GANEGODA</p>`,
       // title: 'Director – Finance & IT',
-       title: `<p class="${styles.title}">Director – Finance & IT</p>`,
-      image: '/images/management/jeevani.png',
+       title: `<p class="${styles.title}">Non-Executive Director</p>`,
+      image: '/images/management/4.png',
+    },
+      {
+      // name: 'MS. JEEVANI ABEYRATNE',
+         name:`<p class="${styles.name}">ARJUN<br />SENARATNA</p>`,
+      // title: 'Director – Finance & IT',
+       title: `<p class="${styles.title}">Non-Executive Director</p>`,
+      image: '/images/management/4.png',
     },
     {
       // name: 'PRASANNA UDAYA KUMARA',
-      name:`<p class="${styles.name}">PRASANNA <br />UDAYA KUMARA</p>`,
+      name:`<p class="${styles.name}">MS.JEEVANI<br />ABEYRATNE</p>`,
       // title: 'Director – Research & Development and Technical',
-       title: `<p class="${styles.title}">Director – Research & <br />Development and Technical</p>`,
-      image: '/images/management/prasanna.png',
+       title: `<p class="${styles.title}">Director – Finance & IT</p>`,
+      image: '/images/management/5.png',
     },
     {
       // name: 'ALI ASGAR MUNAVER CADERBHOY',
-   name:`<p class="${styles.name}">ALI ASGAR<br />MUNAVER CADERBHOY</p>`,
+   name:`<p class="${styles.name}">PRASANNA<br />UDAYA KUMARA</p>`,
       // title: 'Director – Business Development',
-        title: `<p class="${styles.title}">Director – Business Development</p>`,
-         image: '/images/management/arjun.png',
+        title: `<p class="${styles.title}">Director – Research &<br />Development and Technical</p>`,
+         image: '/images/management/6.png',
     },
     {
       // name: 'Davdfid Ledffe',
-       name:`<p class="${styles.name}">DAVID <br />NEON</p>`,
+       name:`<p class="${styles.name}">ALI ASGAR<br />MUNAVER CADERBHOY</p>`,
       // title: 'STO',
-       title: `<p class="${styles.title}">STO</p>`,
-        image: '/images/management/arjun.png',
+       title: `<p class="${styles.title}">Director – Business<br />Development</p>`,
+        image: '/images/management/7.png',
     },
     {
       // name: 'devid Ldfdvdfdee',
-        name:`<p class="${styles.name}">ARJUN<br />SENARATNA</p>`,
+        name:`<p class="${styles.name}">MS. SHAMALIE<br />GUNAWARDANA</p>`,
       // title: 'Manager',
-       title: `<p class="${styles.title}">Manager</p>`,
-        image: '/images/management/arjun.png',
+       title: `<p class="${styles.title}">Independent Non-Executive<br />Director</p>`,
+        image: '/images/management/8.png',
     },
     {
       // name: 'dfd dfd',
-        name:`<p class="${styles.name}">DAVID<br />JONE</p>`,
+        name:`<p class="${styles.name}">MS. BRINDHIINI<br />PERERA</p>`,
       // title: 'Director',
-      title: `<p class="${styles.title}">Director</p>`,
-         image: '/images/management/arjun.png',
+      title: `<p class="${styles.title}">Non-Executive Director</p>`,
+         image: '/images/management/9.png',
+    },
+     {
+      // name: 'dfd dfd',
+        name:`<p class="${styles.name}">NANDA<br />FERNANDO</p>`,
+      // title: 'Director',
+      title: `<p class="${styles.title}">Independent Non-Executive<br />Director</p>`,
+         image: '/images/management/10.png',
+    },
+     {
+      // name: 'dfd dfd',
+        name:`<p class="${styles.name}">MS. ANOMI<br />WANIGASEKERA</p>`,
+      // title: 'Director',
+      title: `<p class="${styles.title}">Independent Non-Executive<br />Director</p>`,
+         image: '/images/management/11.png',
+    },
+     {
+      // name: 'dfd dfd',
+        name:`<p class="${styles.name}">YOHAN<br />PERERA</p>`,
+      // title: 'Director',
+      title: `<p class="${styles.title}">Independent Non-Executive<br />Director</p>`,
+         image: '/images/management/12.png',
+    },
+     {
+      // name: 'dfd dfd',
+        name:`<p class="${styles.name}">TIMOTHY<br />SPELDEWINDE</p>`,
+      // title: 'Director',
+      title: `<p class="${styles.title}">Independent Non-Executive<br />Director</p>`,
+         image: '/images/management/13.png',
     },
   ];
 
@@ -140,14 +175,32 @@ function Management() {
           ></span>
         ))}
       </div>
-       <button
-          className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
+      
+   <div className='directorbtn'>
+         <div className="flex transition">
+          <button
+          className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
+          onClick={() =>
+            window.open('pdf/Board-of-Directors.pdf', '_blank')
+          }
+        >
+          Director Profiles
+        </button>
+   
+        </div>
+         <div className=" transition languageDropdown flex items-center relative">
+
+           <button
+          className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
           onClick={() =>
             window.open('pdf/tbc/Management Team.pdf', '_blank')
           }
         >
           Management Team
         </button>
+
+        </div>
+        </div>
         <div>
         < div className={`container w-full h-full flex mx-auto px-10 md:px-15 py-10 items-center justify-between items-end ${styles.customcol}`}>
         <div className={styles.governanceSection}>

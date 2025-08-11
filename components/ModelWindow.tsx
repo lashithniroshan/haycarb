@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, JSX } from 'react';
 import styles from './ModelWindow.module.css';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,71 +10,101 @@ interface Slide {
   image: string;
   title: string;
   description: string;
+  button?: () => JSX.Element;
 }
 
 const slides: Slide[] = [
   {
     id: 1,
-    image: '/images/modelwindowimage1.png',
-    title: 'Sustainability at Haycarb',
+    image: '/images/popup/1.jpg',
+    title: 'Evolution of Annual reporting',
     description:
       'Five years of integrated reporting at Haycarb have evolved into a strategic narrative, reflecting deeper ESG insights, transparent governance, and stakeholder-focused value creation',
+      button: () => (
+      <div>
+        <button
+          className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
+          onClick={() => window.open('pdf/tbc/Management Team.pdf', '_blank')}
+        >
+          Annual reporting
+        </button>
+      </div>
+    ),
   },
   {
     id: 2,
-   image: '/images/modelwindowimage1.png',
-    title: 'Innovation in Action',
+  image: '/images/popup/2.jpg',
+    title: 'Evolution of Annual reporting',
    description:
       'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
+         button: () => (
+      <div>
+        <button
+          className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
+          onClick={() => window.open('pdf/tbc/Management Team.pdf', '_blank')}
+        >
+          Annual reporting
+        </button>
+      </div>
+    ),
   },
   {
     id: 3,
-    image: '/images/modelwindowimage1.png',
-    title: 'Global Presence',
+    image: '/images/popup/3.jpg',
+    title: 'What’s new in digital reporting',
    description:
       'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
+         button: () => (
+      <div>
+        <button
+          className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
+          onClick={() => window.open('pdf/tbc/Management Team.pdf', '_blank')}
+        >
+          Annual reporting
+        </button>
+      </div>
+    ),
   },
   {
     id: 4,
-    image: '/images/modelwindowimage1.png',
-    title: 'Global Presence',
+    image: '/images/popup/4.jpg',
+    title: 'Multilingual accessibility',
    description:
       'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
+      buttontag:'',
   },
   {
     id: 5,
-    image: '/images/modelwindowimage1.png',
-    title: 'Global Presence',
+    image: '/images/popup/5.jpg',
+    title: 'Chart Generator',
    description:
       'The Chairman’s and Managing Director’s joint message is presented in Sinhala, Tamil, and other foreign languages to broaden stakeholder reach and engagement',
+      buttontag:'',
   },
   {
     id: 6,
-    image: '/images/modelwindowimage1.png',
-    title: 'Global Presence',
+    image: '/images/popup/6.jpg',
+    title: 'FinQuest- Game based learning',
    description:
       'Haycarb’s digital report features a chart generator enabling stakeholders to create, customize, and download interactive performance visualizations.',
+      buttontag:'',
   },
   {
     id: 7,
-    image: '/images/modelwindowimage1.png',
-    title: 'Global Presence',
+    image: '/images/popup/7.jpg',
+    title: 'User profiles-based dashboards',
    description:
       'FinQuest introduces game-based learning in Haycarb’s digital report, engaging stakeholders through interactive quizzes on strategy, performance, and ESG.',
-  },
-  {
-    id: 8,
-    image: '/images/modelwindowimage1.png',
-    title: 'Global Presence',
-   description:
-      'Haycarb’s digital report offers user profile-based dashboards, enabling personalized data views tailored to stakeholder roles and interests',
-  },
-  {
-    id: 9,
-    image: '/images/modelwindowimage1.png',
-    title: 'Global Presence',
-   description:
-      'The summarized version fo the Haycarb 2024/25 annual report highlights global leadership, resilient performance, ESG impact, and digital transformation through integrated, accessible reporting.',
+           button: () => (
+      <div>
+        <button
+          className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
+          onClick={() => window.open('pdf/tbc/Management Team.pdf', '_blank')}
+        >
+          Annual reporting
+        </button>
+      </div>
+    ),
   },
 ];
 
@@ -172,6 +202,7 @@ const ModelWindow: React.FC = () => {
         <div className={styles.contentWrapper}>
              <div className={styles.centercontent}> 
                  <p>{slide.description}</p>
+                  {slide.button && <div className="mt-6">{slide.button()}</div>}
                  </div>
           
          </div>
