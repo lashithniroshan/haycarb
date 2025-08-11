@@ -41,9 +41,9 @@ const FinancialCapital = () => {
   ];
 
   const chart = [
-    { id: 1, value: "/images/innerpage/sample-chart.svg" },
-    { id: 2, value: "/images/innerpage/sample-chart.svg" },
-    { id: 3, value: "/images/innerpage/sample-chart.svg" },
+    { id: 1, value: "/images/innerpage/financial/financial_cap_1.jpg" },
+    { id: 2, value: "/images/innerpage/financial/financial_cap_2.jpg" },
+    { id: 3, value: "/images/innerpage/financial/financial_cap_3.jpg" },
   ];
 
   const financialData: FinancialData = {
@@ -201,7 +201,7 @@ const FinancialCapital = () => {
         {chart.map((ch) => (
           <div
             key={ch.id}
-            className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full"
+            className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-5"
           >
             <Image src={ch.value} alt="banner" width={386} height={479} />
           </div>
