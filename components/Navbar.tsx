@@ -1,10 +1,9 @@
 // components/Navbar.tsx
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
-import Link from 'next/link';
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { usePathname, useRouter } from 'next/navigation';
-
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = ({
   isScrolled,
@@ -14,7 +13,7 @@ const Navbar = ({
 }: {
   isScrolled: boolean;
   isContentVisible: boolean;
-  setIsContentVisible?:(value: boolean) => void;
+  setIsContentVisible?: (value: boolean) => void;
   isFromInnerPage?: boolean;
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -173,29 +172,34 @@ const Navbar = ({
           className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-600"
           style={{ top: isScrolled ? "10px" : "10px" }}
         >
-           <Link href={isFromInnerPage ? { pathname: "/", query: { show: "true" } } : "/"} className="" onClick={() => {
-      if (pathname === "/") {
-        // Already on Home — reveal content
-        setIsContentVisible?.(true);
-      } else {
-        // Navigate to Home
-        router.push("/");
-        // Delay setting isContentVisible to allow transition
-        setTimeout(() => {
-          setIsContentVisible?.(true);
-        }, 100); // Optional: Add delay after route transition
-      }
- // Close mobile menu
-    }}>
-                 <Image
-            src="/haycarblogo.png"
-            alt="Haycarb Logo"
-            width={isScrolled ? 120 : 230} // shrink logo smoothly
-            height={isScrolled ? 72 : 100}
-            className="transition-all duration-600"
-          />
-                </Link>
-        
+          <Link
+            href={
+              isFromInnerPage ? { pathname: "/", query: { show: "true" } } : "/"
+            }
+            className=""
+            onClick={() => {
+              if (pathname === "/") {
+                // Already on Home — reveal content
+                setIsContentVisible?.(true);
+              } else {
+                // Navigate to Home
+                router.push("/");
+                // Delay setting isContentVisible to allow transition
+                setTimeout(() => {
+                  setIsContentVisible?.(true);
+                }, 100); // Optional: Add delay after route transition
+              }
+              // Close mobile menu
+            }}
+          >
+            <Image
+              src="/haycarblogo.png"
+              alt="Haycarb Logo"
+              width={isScrolled ? 120 : 230} // shrink logo smoothly
+              height={isScrolled ? 72 : 100}
+              className="transition-all duration-600"
+            />
+          </Link>
         </div>
 
         {/* Right Side: Search and User Profile */}
@@ -318,39 +322,56 @@ const Navbar = ({
             <ul className="space-y-0 ulmenu">
               <li
                 className="px-5 py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'15px', paddingTop:'15px' }}
+                style={{
+                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
+                  paddingBottom: "15px",
+                  paddingTop: "15px",
+                }}
               >
-                <Link href={isFromInnerPage ? { pathname: "/", query: { show: "true" } } : "/"} className="" onClick={() => {
-      if (pathname === "/") {
-        // Already on Home — reveal content
-        setIsContentVisible?.(true);
-      } else {
-        // Navigate to Home
-        router.push("/");
-        // Delay setting isContentVisible to allow transition
-        setTimeout(() => {
-          setIsContentVisible?.(true);
-        }, 100); // Optional: Add delay after route transition
-      }
-      toggleMenu(); // Close mobile menu
-    }}>
+                <Link
+                  href={
+                    isFromInnerPage
+                      ? { pathname: "/", query: { show: "true" } }
+                      : "/"
+                  }
+                  className=""
+                  onClick={() => {
+                    if (pathname === "/") {
+                      // Already on Home — reveal content
+                      setIsContentVisible?.(true);
+                    } else {
+                      // Navigate to Home
+                      router.push("/");
+                      // Delay setting isContentVisible to allow transition
+                      setTimeout(() => {
+                        setIsContentVisible?.(true);
+                      }, 100); // Optional: Add delay after route transition
+                    }
+                    toggleMenu(); // Close mobile menu
+                  }}
+                >
                   Home
                 </Link>
               </li>
               <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px'}}
+                style={{
+                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
+                  paddingBottom: "14px",
+                  paddingTop: "14px",
+                }}
               >
-                <Link
-                  href="/haycarb-in-focus"
-                  onClick={toggleMenu}
-                >
+                <Link href="/haycarb-in-focus" onClick={toggleMenu}>
                   Haycarb in Focus
                 </Link>
               </li>
-                 <li
+              <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}
+                style={{
+                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
+                  paddingBottom: "14px",
+                  paddingTop: "14px",
+                }}
               >
                 <Link href="/financial" className="" onClick={toggleMenu}>
                   Financial Highlights
@@ -358,55 +379,102 @@ const Navbar = ({
               </li>
               <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}
+                style={{
+                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
+                  paddingBottom: "14px",
+                  paddingTop: "14px",
+                }}
               >
-                <Link href="/non-financial-highlights" className="" onClick={toggleMenu}>
+                <Link
+                  href="/non-financial-highlights"
+                  className=""
+                  onClick={toggleMenu}
+                >
                   Non-Financial Highlights
                 </Link>
               </li>
-               <li
+              <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}
+                style={{
+                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
+                  paddingBottom: "14px",
+                  paddingTop: "14px",
+                }}
               >
-                <Link href="/tailor-made-for-you" className="" onClick={toggleMenu}>
+                <Link
+                  href="/tailor-made-for-you"
+                  className=""
+                  onClick={toggleMenu}
+                >
                   Chart Generator
                 </Link>
               </li>
               <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}
+                style={{
+                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
+                  paddingBottom: "14px",
+                  paddingTop: "14px",
+                }}
               >
-                <Link href="/tailor-made-for-you" className="" onClick={toggleMenu}>
+                <Link
+                  href="/tailor-made-for-you"
+                  className=""
+                  onClick={toggleMenu}
+                >
                   Create Your Own Report
                 </Link>
               </li>
-               <li
+              <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px'}}
+                style={{
+                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
+                  paddingBottom: "14px",
+                  paddingTop: "14px",
+                }}
               >
                 <Link href="/game" className="" onClick={toggleMenu}>
-                 Finquest
+                  Finquest
                 </Link>
               </li>
               <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)" , paddingBottom:'14px', paddingTop:'14px'}}
+                style={{
+                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
+                  paddingBottom: "14px",
+                  paddingTop: "14px",
+                }}
               >
-                <Link href="#user-profiles" className="" onClick={toggleMenu}>
-                 User Profiles
+                <Link href="/user-profile" className="" onClick={toggleMenu}>
+                  User Profiles
                 </Link>
               </li>
               <li
                 className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}
+                style={{
+                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
+                  paddingBottom: "14px",
+                  paddingTop: "14px",
+                }}
               >
                 <Link href="#synopsis" className="" onClick={toggleMenu}>
                   Synopsis
                 </Link>
               </li>
-              <li className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-              style={{ borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)", paddingBottom:'14px', paddingTop:'14px' }}>
-                <Link href="pdf/tbc/Independent Auditors Report.pdf" target="_blank"  className="" onClick={toggleMenu}>
+              <li
+                className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
+                style={{
+                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
+                  paddingBottom: "14px",
+                  paddingTop: "14px",
+                }}
+              >
+                <Link
+                  href="pdf/tbc/Independent Auditors Report.pdf"
+                  target="_blank"
+                  className=""
+                  onClick={toggleMenu}
+                >
                   FAQs
                 </Link>
               </li>
