@@ -72,7 +72,7 @@ const Videoslider = () => {
       <h2 className={style.maintitle}>Our Sustainability Journey</h2>
       <div className="container w-full h-full flex mx-auto md:px-22 sm:px-10 pb-5">
         <p className={style.introText}>
-          Like the whale, which is majestic, resilient, and precise, Haycarb moves with intention. Every decision is deliberate. Every innovation is impactful. Each strategy mirrors a purposeful move in nature, building a future through intelligence, strength, and foresight.
+          Our sustainability journey is driven by commitment and action. We integrate eco-friendly practices, reduce our footprint, and foster social responsibility to create lasting value for the planet, people, and future generations.
         </p>
       </div>
       <div className={style.radioInputs}>
