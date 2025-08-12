@@ -10,13 +10,15 @@ const Navbar = ({
   isContentVisible,
   setIsContentVisible,
   isFromInnerPage = false,
+  setIsMenuOpen
 }: {
   isScrolled: boolean;
   isContentVisible: boolean;
   setIsContentVisible?: (value: boolean) => void;
   isFromInnerPage?: boolean;
+  setIsMenuOpen?: (value: boolean) => void;
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpenLocal] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [pdfFiles, setPdfFiles] = useState<string[]>([]);
@@ -25,7 +27,8 @@ const Navbar = ({
   const router = useRouter();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+     setIsMenuOpenLocal(!isMenuOpen);
+    setIsMenuOpen?.(!isMenuOpen);
   };
 
   // Fetch PDF files from API route
@@ -257,7 +260,7 @@ const Navbar = ({
                       placeholder="Search PDFs..."
                       className="w-full p-1 border-b focus:outline-none"
                     />
-                    <ul className="max-h-40 overflow-y-auto">
+                    <ul className="max-h-40 overflow-y-auto custom-scrollbar">
                       {filteredPdfs.length > 0 ? (
                         filteredPdfs.map((file, index) => (
                           <li
@@ -277,7 +280,25 @@ const Navbar = ({
               </div>
 
               {/* User Profile Icon */}
-              <button className="focus:outline-none" aria-label="User Profile">
+               <Link href="/user-profile">
+                  <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`transition-all duration-300 ${
+                    isScrolled ? "w-6 h-6" : "w-8 h-8"
+                  }`}
+                  viewBox="0 0 31 31"
+                  fill="none"
+                >
+                  <path
+                    d="M25.8327 27.125C25.8327 23.5582 21.2063 20.6667 15.4993 20.6667C9.79241 20.6667 5.16602 23.5582 5.16602 27.125M15.4993 16.7917C11.9325 16.7917 9.04102 13.9002 9.04102 10.3333C9.04102 6.76649 11.9325 3.875 15.4993 3.875C19.0662 3.875 21.9577 6.76649 21.9577 10.3333C21.9577 13.9002 19.0662 16.7917 15.4993 16.7917Z"
+                    stroke="white"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                </Link>
+              {/* <button className="focus:outline-none" aria-label="User Profile">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={`transition-all duration-300 ${
@@ -294,7 +315,7 @@ const Navbar = ({
                     strokeLinejoin="round"
                   />
                 </svg>
-              </button>
+              </button> */}
             </div>
           </motion.div>
         )}

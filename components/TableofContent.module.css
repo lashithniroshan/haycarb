@@ -50,7 +50,9 @@
 .contentColumn > * {
   direction: ltr;
 }
-
+.contentList{
+  border-left: 1px solid #fff;
+}
 /* Scrollbar styling */
 .contentColumn::-webkit-scrollbar {
   width: 3px;
@@ -124,7 +126,7 @@
 }
 
 /* ✅ Responsive Styles */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .innerWrapper {
     flex-direction: column; /* stack category and content */
     height: auto;
@@ -172,6 +174,7 @@
     text-align: center;
     margin: 20px 0;
   }
+
 }
 
 @media (max-width: 480px) {
@@ -190,4 +193,13 @@
   .card {
     font-size: 14px;
   }
+  .contentList{
+  border-left: 0px solid #fff;
+}
+}
+
+@media (max-width: 991px) {
+  .contentList{
+  border-left: 0px solid #fff;
+}
 }

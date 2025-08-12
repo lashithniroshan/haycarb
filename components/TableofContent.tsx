@@ -109,7 +109,7 @@ const contentData = {
 
       {/* Right 2/3 for category + content */}
       <div className={style.rightSection}>
-            <h2 className={style.title}>Table of Contents</h2>
+            <h2 className={style.title}> Navigation Summary</h2>
         {/* Inner split: category + content */}
         <div className={style.innerWrapper}>
           {/* Category List */}

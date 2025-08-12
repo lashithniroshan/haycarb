@@ -56,6 +56,7 @@
 .listItem:hover,
 .listItem.active {
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .rightSection {
