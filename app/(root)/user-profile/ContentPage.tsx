@@ -22,6 +22,10 @@ type Content = {
   matrics: MatricsType[];
   chairman_and_director: ChairmanAndDirector;
   stratergy_and_performance: React.ReactNode;
+  related_chart_image?: {
+    title: string;
+    image: string;
+  };
 };
 
 type Stakeholder = {
@@ -75,6 +79,10 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           </li>
         </>
       ),
+      related_chart_image: {
+        title: "Investor Ratios",
+        image: "/images/innerpage/user-profile/investor_ratio.jpg",
+      },
     },
   },
   employees: {
@@ -118,6 +126,10 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           <li>Fostered a diverse and inclusive work environment.</li>
         </>
       ),
+      related_chart_image: {
+        title: "Our HR Strategy",
+        image: "/images/innerpage/user-profile/our_hr_strategy.jpg",
+      },
     },
   },
   customers: {
@@ -161,6 +173,11 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           </li>
         </>
       ),
+      related_chart_image: {
+        title: "Our Customer Value Proposition",
+        image:
+          "/images/innerpage/user-profile/our_customer_value_proposition.jpg",
+      },
     },
   },
   suppliers: {
@@ -208,6 +225,11 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           <li>Propagated green charcoaling practices among suppliers.</li>
         </>
       ),
+      related_chart_image: {
+        title: "Our Supplier Value Proposition",
+        image:
+          "/images/innerpage/user-profile/our_supplier_value_proposition.jpg",
+      },
     },
   },
   generalUser: {
@@ -254,6 +276,10 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           </li>
         </>
       ),
+      related_chart_image: {
+        title: "Our Strategic Levers for Sutainable Growth",
+        image: "/images/innerpage/user-profile/our_strategic_level_growth.jpg",
+      },
     },
   },
 };
@@ -633,6 +659,26 @@ const ContentPage = () => {
             {stakeholdersData[activeKey].content?.stratergy_and_performance}
           </ul>
         </div>
+      </div>
+
+      {/* Grpahs */}
+      <div className="mb-12">
+        <h1 className="text-[#005881] text-[40px] font-normal text-center mb-10">
+          {stakeholdersData[activeKey].content?.related_chart_image?.title}
+        </h1>
+        <Image
+          src={
+            stakeholdersData[activeKey].content?.related_chart_image?.image ||
+            ""
+          }
+          alt={
+            stakeholdersData[activeKey].content?.related_chart_image?.title ||
+            "chart"
+          }
+          width={1500}
+          height={800}
+          className="mx-auto block"
+        />
       </div>
     </section>
   );
