@@ -37,10 +37,10 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
             <div className="rounded-xl overflow-hidden shadow-sm flex flex-col items-center">
               <Image
                 src={product.image}
-                alt="product image"
+                alt={product.name}
                 width={300}
                 height={180}
-                className="object-contain w-full"
+                className="object-contain w-full rounded-xl"
               />
               <p className="text-[#005881] text-lg font-medium mt-2 mb-3">
                 {product.name}

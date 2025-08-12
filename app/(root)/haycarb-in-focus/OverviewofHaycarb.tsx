@@ -53,28 +53,39 @@ const OverviewofHaycarb = () => {
   const products = [
     {
       id: 1,
-      name: "Product Name",
-      image: "/images/innerpage/product-placeholder.svg",
+      name: "Air and Gas",
+      image: "/images/innerpage/haycarb/products/Air and Gas.jpg",
     },
     {
       id: 2,
-      name: "Product Name",
-      image: "/images/innerpage/product-placeholder.svg",
+      name: "Energy",
+      image: "/images/innerpage/haycarb/products/Energy.jpg",
     },
     {
       id: 3,
-      name: "Product Name",
-      image: "/images/innerpage/product-placeholder.svg",
+      name: "Food and Beverage",
+      image: "/images/innerpage/haycarb/products/Food and Beverage.jpg",
     },
     {
       id: 4,
-      name: "Product Name",
-      image: "/images/innerpage/product-placeholder.svg",
+      name: "Gold",
+      image: "/images/innerpage/haycarb/products/Gold.jpg",
     },
     {
       id: 5,
-      name: "Product Name",
-      image: "/images/innerpage/product-placeholder.svg",
+      name: "Pharmaceutical & Cosmetics",
+      image:
+        "/images/innerpage/haycarb/products/Pharmaceutical & Cosmetics.jpg",
+    },
+    {
+      id: 6,
+      name: "Speciality",
+      image: "/images/innerpage/haycarb/products/Speciality.jpg",
+    },
+    {
+      id: 7,
+      name: "Water",
+      image: "/images/innerpage/haycarb/products/Water.jpg",
     },
   ];
 
