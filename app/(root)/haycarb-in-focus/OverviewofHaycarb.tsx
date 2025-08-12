@@ -193,7 +193,7 @@ const OverviewofHaycarb = () => {
           </p>
           <div className="my-10 flex items-center justify-center ">
             <WaveButton
-              title="Watch the Statement"
+              title="Video version"
               style={{ fontSize: "12px" }}
               icon={
                 <svg

@@ -17,8 +17,8 @@ const FinancialSupplementary = () => {
         className="absolute
                 hidden lg:block
                 top-170 right-90
-                lg:top-195 lg:right-50
-                xl:top-170 xl:right-90
+                lg:top-165 lg:right-80
+                xl:top-160 xl:right-90
                 2xl:top-155 2xl:right-160
                 lg:w-[480px] lg:h-[480px]
                 rotate-20 scale-x-[-1] 
@@ -123,7 +123,7 @@ const FinancialSupplementary = () => {
         <div className="lg:col-span-6 h-full flex items-stretch justify-center mt-8 lg:mt-0">
           <div className="h-full flex items-stretch">
             <Image
-              src="/images/innerpage/second-rectangle.png"
+              src="/images/innerpage/financial/suplementary_main.jpg"
               alt="banner"
               width={407}
               height={664}
