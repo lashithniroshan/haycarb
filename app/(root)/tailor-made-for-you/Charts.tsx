@@ -24,6 +24,11 @@ interface ProcessedDataItem {
   sortOrder: number;
 }
 
+interface HoverableDataContext {
+  hover: () => void;
+  unhover: () => void;
+}
+
 export function ProfitablityAndFinancialBar() {
   const chartRef = useRef<HTMLDivElement>(null);
 
@@ -1002,4 +1007,1171 @@ export function GovernanceChart() {
   }, []);
 
   return <div id="governancechart" className="w-full h-[500px]" />;
+}
+
+// usable charts
+
+export function ProfitablityChart() {
+  const chartRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Root element
+    const root = am5.Root.new(chartRef.current!);
+
+    const responsive = am5themes_Responsive.new(root);
+
+    responsive.addRule({
+      relevant: am5themes_Responsive.widthM,
+      applying: function () {
+        chart.set("layout", root.verticalLayout);
+        legend.setAll({
+          y: null,
+          centerY: undefined,
+          x: am5.p0,
+          centerX: am5.p0,
+        });
+      },
+      removing: function () {
+        chart.set("layout", root.horizontalLayout);
+        legend.setAll({
+          y: am5.p50,
+          centerY: am5.p50,
+          x: null,
+          centerX: undefined,
+        });
+      },
+    });
+
+    // Theme
+    root.setThemes([am5themes_Animated.new(root), responsive]);
+
+    // Chart
+    const chart = root.container.children.push(
+      am5xy.XYChart.new(root, {
+        panX: false,
+        panY: false,
+        paddingLeft: 0,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        layout: root.verticalLayout,
+      })
+    );
+
+    // Legend
+    const legend = chart.children.push(
+      am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50,
+      })
+    );
+
+    const data = [
+      {
+        year: "2021",
+        group_turnover: 25,
+        profit_before_tax: 4,
+        group_tax: 1,
+        profit_after_tax: 4,
+        profit_attr: 3,
+        dividends: 1,
+      },
+      {
+        year: "2022",
+        group_turnover: 33,
+        profit_before_tax: 5,
+        group_tax: 1,
+        profit_after_tax: 4,
+        profit_attr: 3,
+        dividends: 1,
+      },
+      {
+        year: "2023",
+        group_turnover: 61,
+        profit_before_tax: 8,
+        group_tax: 2,
+        profit_after_tax: 7,
+        profit_attr: 6,
+        dividends: 2,
+      },
+      {
+        year: "2024",
+        group_turnover: 43,
+        profit_before_tax: 6,
+        group_tax: 2,
+        profit_after_tax: 4,
+        profit_attr: 4,
+        dividends: 2,
+      },
+      {
+        year: "2025",
+        group_turnover: 43,
+        profit_before_tax: 6,
+        group_tax: 1,
+        profit_after_tax: 4,
+        profit_attr: 4,
+        dividends: 1,
+      },
+    ];
+
+    // Axes
+    const xRenderer = am5xy.AxisRendererX.new(root, {
+      cellStartLocation: 0.1,
+      cellEndLocation: 0.9,
+      minorGridEnabled: true,
+    });
+
+    const xAxis = chart.xAxes.push(
+      am5xy.CategoryAxis.new(root, {
+        categoryField: "year",
+        renderer: xRenderer,
+        tooltip: am5.Tooltip.new(root, {}),
+      })
+    );
+
+    xRenderer.grid.template.setAll({ location: 1 });
+    xAxis.data.setAll(data);
+
+    const yAxis = chart.yAxes.push(
+      am5xy.ValueAxis.new(root, {
+        renderer: am5xy.AxisRendererY.new(root, {
+          strokeOpacity: 0.1,
+        }),
+      })
+    );
+
+    // Series creation function
+    function makeSeries(name: string, fieldName: string) {
+      const series = chart.series.push(
+        am5xy.ColumnSeries.new(root, {
+          name,
+          xAxis,
+          yAxis,
+          valueYField: fieldName,
+          categoryXField: "year",
+        })
+      );
+
+      series.columns.template.setAll({
+        tooltipText: "{name}, {categoryX}: {valueY}",
+        width: am5.percent(90),
+        tooltipY: 0,
+        strokeOpacity: 0,
+      });
+
+      series.data.setAll(data);
+
+      series.appear();
+
+      series.bullets.push(() =>
+        am5.Bullet.new(root, {
+          locationY: 0,
+          sprite: am5.Label.new(root, {
+            text: "{valueY}",
+            fill: root.interfaceColors.get("alternativeText"),
+            centerY: 0,
+            centerX: am5.p50,
+            populateText: true,
+          }),
+        })
+      );
+
+      legend.data.push(series);
+    }
+
+    // Add all series
+    makeSeries("Group Turnover", "group_turnover");
+    makeSeries("Profit before taxation", "profit_before_tax");
+    makeSeries("Group taxation", "group_tax");
+    makeSeries("Profit after tax", "profit_after_tax");
+    makeSeries(
+      "Profit attributable to equity holders of the parent",
+      "profit_attr"
+    );
+    makeSeries("Dividends", "dividends");
+
+    // Animate chart
+    chart.appear(1000, 100);
+
+    return () => {
+      root.dispose();
+    };
+  }, []);
+
+  return (
+    <div
+      ref={chartRef}
+      id="chartdiv"
+      className="w-full h-[500px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
+    />
+  );
+}
+
+export function FinancialPositionChart() {
+  const chartRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Root element
+    const root = am5.Root.new(chartRef.current!);
+
+    const responsive = am5themes_Responsive.new(root);
+
+    responsive.addRule({
+      relevant: am5themes_Responsive.widthM,
+      applying: function () {
+        chart.set("layout", root.verticalLayout);
+        legend.setAll({
+          y: null,
+          centerY: undefined,
+          x: am5.p0,
+          centerX: am5.p0,
+        });
+      },
+      removing: function () {
+        chart.set("layout", root.horizontalLayout);
+        legend.setAll({
+          y: am5.p50,
+          centerY: am5.p50,
+          x: null,
+          centerX: undefined,
+        });
+      },
+    });
+
+    // Theme
+    root.setThemes([am5themes_Animated.new(root), responsive]);
+
+    // Chart
+    const chart = root.container.children.push(
+      am5xy.XYChart.new(root, {
+        panX: true,
+        panY: true,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        layout: root.verticalLayout,
+        pinchZoomX: true,
+      })
+    );
+
+    const data = [
+      {
+        year: "2021",
+        total_assets: 25,
+        share_capital: 0,
+        revenue_reserves: 12,
+        equity: 15,
+        current_assets: 16,
+        current_liabilities: 9,
+      },
+      {
+        year: "2022",
+        total_assets: 40,
+        share_capital: 0,
+        revenue_reserves: 17,
+        equity: 21,
+        current_assets: 29,
+        current_liabilities: 17,
+      },
+      {
+        year: "2023",
+        total_assets: 40,
+        share_capital: 0,
+        revenue_reserves: 21,
+        equity: 25,
+        current_assets: 27,
+        current_liabilities: 13,
+      },
+      {
+        year: "2024",
+        total_assets: 40,
+        share_capital: 0,
+        revenue_reserves: 22,
+        equity: 26,
+        current_assets: 26,
+        current_liabilities: 12,
+      },
+      {
+        year: "2025",
+        total_assets: 46,
+        share_capital: 0,
+        revenue_reserves: 25,
+        equity: 30,
+        current_assets: 28,
+        current_liabilities: 11,
+      },
+    ];
+
+    // Axes
+    const xRenderer = am5xy.AxisRendererX.new(root, {
+      minorGridEnabled: true,
+    });
+    xRenderer.grid.template.set("location", 0.5);
+    xRenderer.labels.template.setAll({
+      location: 0.5,
+      multiLocation: 0.5,
+    });
+
+    const xAxis = chart.xAxes.push(
+      am5xy.CategoryAxis.new(root, {
+        categoryField: "year",
+        renderer: xRenderer,
+        tooltip: am5.Tooltip.new(root, {}),
+        snapTooltip: true,
+      })
+    );
+
+    xAxis.data.setAll(data);
+
+    const yAxis = chart.yAxes.push(
+      am5xy.ValueAxis.new(root, {
+        maxPrecision: 0,
+        renderer: am5xy.AxisRendererY.new(root, {
+          inversed: true,
+        }),
+      })
+    );
+
+    const cursor = chart.set(
+      "cursor",
+      am5xy.XYCursor.new(root, {
+        alwaysShow: true,
+        xAxis: xAxis,
+        positionX: 1,
+      })
+    );
+
+    cursor.lineY.set("visible", false);
+    cursor.lineX.set("focusable", true);
+
+    function createSeries(name: string, field: string) {
+      const series = chart.series.push(
+        am5xy.LineSeries.new(root, {
+          name: name,
+          xAxis: xAxis,
+          yAxis: yAxis,
+          valueYField: field,
+          categoryXField: "year",
+          tooltip: am5.Tooltip.new(root, {
+            pointerOrientation: "horizontal",
+            labelText: "[bold]{name}[/]\n{categoryX}: {valueY}",
+          }),
+        })
+      );
+
+      series.bullets.push(function () {
+        return am5.Bullet.new(root, {
+          sprite: am5.Circle.new(root, {
+            radius: 5,
+            fill: series.get("fill"),
+          }),
+        });
+      });
+      series.set("setStateOnChildren", true);
+      series.states.create("hover", {});
+
+      series.mainContainer.set("setStateOnChildren", true);
+      series.mainContainer.states.create("hover", {});
+
+      series.strokes.template.states.create("hover", {
+        strokeWidth: 4,
+      });
+
+      series.data.setAll(data);
+      series.appear(1000);
+    }
+
+    // Add all series
+    createSeries("Total Assets", "total_assets");
+    createSeries("Share Capital", "share_capital");
+    createSeries("Revenue Reserves", "revenue_reserves");
+    createSeries("Equity", "equity");
+    createSeries("Current Assets", "current_assets");
+    createSeries("Current Liabilities", "current_liabilities");
+
+    chart.set(
+      "scrollbarX",
+      am5.Scrollbar.new(root, {
+        orientation: "horizontal",
+        marginBottom: 20,
+      })
+    );
+
+    const legend = chart.children.push(
+      am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50,
+      })
+    );
+
+    legend.itemContainers.template.states.create("hover", {});
+
+    legend.itemContainers.template.events.on("pointerover", function (e) {
+      const dataContext = e.target.dataItem?.dataContext as
+        | HoverableDataContext
+        | undefined;
+      dataContext?.hover();
+    });
+    legend.itemContainers.template.events.on("pointerout", function (e) {
+      const dataContext = e.target.dataItem?.dataContext as
+        | HoverableDataContext
+        | undefined;
+      dataContext?.unhover();
+    });
+
+    legend.data.setAll(chart.series.values);
+
+    chart.plotContainer.events.on("pointerout", function () {
+      cursor.set("positionX", 1);
+    });
+
+    chart.plotContainer.events.on("pointerover", function () {
+      cursor.set("positionX", undefined);
+    });
+
+    // Animate chart
+    chart.appear(1000, 100);
+
+    return () => {
+      root.dispose();
+    };
+  }, []);
+
+  return (
+    <div
+      ref={chartRef}
+      id="financialpositionchart"
+      className="w-full h-[500px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
+    />
+  );
+}
+
+export function EmissionsEnergyChart() {
+  const chartRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const root = am5.Root.new(chartRef.current!);
+
+    const responsive = am5themes_Responsive.new(root);
+
+    responsive.addRule({
+      relevant: am5themes_Responsive.widthM,
+      applying: function () {
+        chart.set("layout", root.verticalLayout);
+        legend.setAll({
+          y: null,
+          centerY: undefined,
+          x: am5.p0,
+          centerX: am5.p0,
+        });
+      },
+      removing: function () {
+        chart.set("layout", root.horizontalLayout);
+        legend.setAll({
+          y: am5.p50,
+          centerY: am5.p50,
+          x: null,
+          centerX: undefined,
+        });
+      },
+    });
+
+    // Theme
+    root.setThemes([am5themes_Animated.new(root), responsive]);
+
+    const chart = root.container.children.push(
+      am5xy.XYChart.new(root, {
+        panX: false,
+        panY: false,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        paddingLeft: 0,
+        layout: root.verticalLayout,
+      })
+    );
+
+    chart.set(
+      "scrollbarX",
+      am5.Scrollbar.new(root, {
+        orientation: "horizontal",
+      })
+    );
+
+    const data = [
+      {
+        year: "2023",
+        renewable_energy: 942301,
+        electricity_supplied: 3656,
+        total_carbon_emission: 28396,
+        scope_1_emission: 12622,
+        scope_2_emission: 13330,
+        scope_3_emission: 2444,
+      },
+      {
+        year: "2024",
+        renewable_energy: 885612,
+        electricity_supplied: 2889,
+        total_carbon_emission: 26696,
+        scope_1_emission: 10903,
+        scope_2_emission: 13485,
+        scope_3_emission: 2308,
+      },
+      {
+        year: "2025",
+        renewable_energy: 850874,
+        electricity_supplied: 4390,
+        total_carbon_emission: 44554,
+        scope_1_emission: 13741,
+        scope_2_emission: 14356,
+        scope_3_emission: 16457,
+      },
+    ];
+
+    // Create axes
+    const xRenderer = am5xy.AxisRendererX.new(root, {
+      minorGridEnabled: true,
+      minGridDistance: 60,
+    });
+    const xAxis = chart.xAxes.push(
+      am5xy.CategoryAxis.new(root, {
+        categoryField: "year",
+        renderer: xRenderer,
+        tooltip: am5.Tooltip.new(root, {}),
+      })
+    );
+    xRenderer.grid.template.setAll({
+      location: 1,
+    });
+
+    xAxis.data.setAll(data);
+
+    const yAxis = chart.yAxes.push(
+      am5xy.ValueAxis.new(root, {
+        min: 0,
+        extraMax: 0.1,
+        renderer: am5xy.AxisRendererY.new(root, {
+          strokeOpacity: 0.1,
+        }),
+      })
+    );
+
+    // Add series
+
+    // bar
+    const series1 = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Total Carbon emissions (tCO2e)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "total_carbon_emission",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series1.columns.template.setAll({
+      tooltipY: am5.percent(10),
+      templateField: "columnSettings",
+    });
+
+    series1.data.setAll(data);
+
+    const series2 = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Scope 1 emission",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "scope_1_emission",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series2.columns.template.setAll({
+      tooltipY: am5.percent(10),
+      templateField: "columnSettings",
+    });
+
+    series2.data.setAll(data);
+
+    const series3 = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Scope 2 emission",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "scope_2_emission",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series3.columns.template.setAll({
+      tooltipY: am5.percent(10),
+      templateField: "columnSettings",
+    });
+
+    series3.data.setAll(data);
+
+    const series4 = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Scope 3 emission",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "scope_3_emission",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series4.columns.template.setAll({
+      tooltipY: am5.percent(10),
+      templateField: "columnSettings",
+    });
+
+    series4.data.setAll(data);
+
+    // lines
+
+    const series5 = chart.series.push(
+      am5xy.LineSeries.new(root, {
+        name: "Renewable energy consumption (GJ)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "renewable_energy",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series5.strokes.template.setAll({
+      strokeWidth: 3,
+      templateField: "strokeSettings",
+    });
+
+    series5.data.setAll(data);
+
+    series5.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        sprite: am5.Circle.new(root, {
+          strokeWidth: 3,
+          stroke: series5.get("stroke"),
+          radius: 5,
+          fill: root.interfaceColors.get("background"),
+        }),
+      });
+    });
+
+    const series6 = chart.series.push(
+      am5xy.LineSeries.new(root, {
+        name: "Electricity supplied to national grid (GJ)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "electricity_supplied",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series6.strokes.template.setAll({
+      strokeWidth: 3,
+      templateField: "strokeSettings",
+    });
+
+    series6.data.setAll(data);
+
+    series6.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        sprite: am5.Circle.new(root, {
+          strokeWidth: 3,
+          stroke: series6.get("stroke"),
+          radius: 5,
+          fill: root.interfaceColors.get("background"),
+        }),
+      });
+    });
+
+    chart.set("cursor", am5xy.XYCursor.new(root, {}));
+
+    const legend = chart.children.push(
+      am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50,
+      })
+    );
+    legend.data.setAll(chart.series.values);
+
+    chart.appear(1000, 100);
+    series1.appear();
+
+    return () => {
+      root.dispose();
+    };
+  }, []);
+
+  return (
+    <div
+      ref={chartRef}
+      id="emissionchart"
+      className="w-full h-[500px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
+    />
+  );
+}
+
+export function MaterialWaterChart() {
+  const chartRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Root element
+    const root = am5.Root.new(chartRef.current!);
+
+    const responsive = am5themes_Responsive.new(root);
+
+    responsive.addRule({
+      relevant: am5themes_Responsive.widthM,
+      applying: function () {
+        chart.set("layout", root.verticalLayout);
+        legend.setAll({
+          y: null,
+          centerY: undefined,
+          x: am5.p0,
+          centerX: am5.p0,
+        });
+      },
+      removing: function () {
+        chart.set("layout", root.horizontalLayout);
+        legend.setAll({
+          y: am5.p50,
+          centerY: am5.p50,
+          x: null,
+          centerX: undefined,
+        });
+      },
+    });
+
+    // Theme
+    root.setThemes([am5themes_Animated.new(root), responsive]);
+
+    // Chart
+    const chart = root.container.children.push(
+      am5xy.XYChart.new(root, {
+        panX: true,
+        panY: true,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        layout: root.verticalLayout,
+        pinchZoomX: true,
+      })
+    );
+
+    const data = [
+      {
+        year: "2023",
+        waste_water: 40,
+        water_consumption: 0,
+        solid_waste_gen: 21,
+        renewable_raw_material: 25,
+      },
+      {
+        year: "2024",
+        waste_water: 40,
+        water_consumption: 0,
+        solid_waste_gen: 22,
+        renewable_raw_material: 26,
+      },
+      {
+        year: "2025",
+        waste_water: 46,
+        water_consumption: 0,
+        solid_waste_gen: 25,
+        renewable_raw_material: 30,
+      },
+    ];
+
+    // Axes
+    const xRenderer = am5xy.AxisRendererX.new(root, {
+      minorGridEnabled: true,
+    });
+    xRenderer.grid.template.set("location", 0.5);
+    xRenderer.labels.template.setAll({
+      location: 0.5,
+      multiLocation: 0.5,
+    });
+
+    const xAxis = chart.xAxes.push(
+      am5xy.CategoryAxis.new(root, {
+        categoryField: "year",
+        renderer: xRenderer,
+        tooltip: am5.Tooltip.new(root, {}),
+        snapTooltip: true,
+      })
+    );
+
+    xAxis.data.setAll(data);
+
+    const yAxis = chart.yAxes.push(
+      am5xy.ValueAxis.new(root, {
+        maxPrecision: 0,
+        renderer: am5xy.AxisRendererY.new(root, {
+          inversed: true,
+        }),
+      })
+    );
+
+    const cursor = chart.set(
+      "cursor",
+      am5xy.XYCursor.new(root, {
+        alwaysShow: true,
+        xAxis: xAxis,
+        positionX: 1,
+      })
+    );
+
+    cursor.lineY.set("visible", false);
+    cursor.lineX.set("focusable", true);
+
+    function createSeries(name: string, field: string) {
+      const series = chart.series.push(
+        am5xy.LineSeries.new(root, {
+          name: name,
+          xAxis: xAxis,
+          yAxis: yAxis,
+          valueYField: field,
+          categoryXField: "year",
+          tooltip: am5.Tooltip.new(root, {
+            pointerOrientation: "horizontal",
+            labelText: "[bold]{name}[/]\n{categoryX}: {valueY}",
+          }),
+        })
+      );
+
+      series.bullets.push(function () {
+        return am5.Bullet.new(root, {
+          sprite: am5.Circle.new(root, {
+            radius: 5,
+            fill: series.get("fill"),
+          }),
+        });
+      });
+      series.set("setStateOnChildren", true);
+      series.states.create("hover", {});
+
+      series.mainContainer.set("setStateOnChildren", true);
+      series.mainContainer.states.create("hover", {});
+
+      series.strokes.template.states.create("hover", {
+        strokeWidth: 4,
+      });
+
+      series.data.setAll(data);
+      series.appear(1000);
+    }
+
+    // Add all series
+    createSeries(
+      "Waste water treated through treatment plants (m3)",
+      "waste_water"
+    );
+    createSeries("Water consumption", "water_consumption");
+    createSeries("Solid waste generated (MT)", "solid_waste_gen");
+    createSeries(
+      "Renewable raw material consumption (MT)",
+      "renewable_raw_material"
+    );
+
+    chart.set(
+      "scrollbarX",
+      am5.Scrollbar.new(root, {
+        orientation: "horizontal",
+        marginBottom: 20,
+      })
+    );
+
+    const legend = chart.children.push(
+      am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50,
+      })
+    );
+
+    legend.itemContainers.template.states.create("hover", {});
+
+    legend.itemContainers.template.events.on("pointerover", function (e) {
+      const dataContext = e.target.dataItem?.dataContext as
+        | HoverableDataContext
+        | undefined;
+      dataContext?.hover();
+    });
+    legend.itemContainers.template.events.on("pointerout", function (e) {
+      const dataContext = e.target.dataItem?.dataContext as
+        | HoverableDataContext
+        | undefined;
+      dataContext?.unhover();
+    });
+
+    legend.data.setAll(chart.series.values);
+
+    chart.plotContainer.events.on("pointerout", function () {
+      cursor.set("positionX", 1);
+    });
+
+    chart.plotContainer.events.on("pointerover", function () {
+      cursor.set("positionX", undefined);
+    });
+
+    // Animate chart
+    chart.appear(1000, 100);
+
+    return () => {
+      root.dispose();
+    };
+  }, []);
+
+  return (
+    <div
+      ref={chartRef}
+      id="materialandwaterchart"
+      className="w-full h-[500px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
+    />
+  );
+}
+
+export function SocialGovernanceChart() {
+  const chartRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const root = am5.Root.new(chartRef.current!);
+
+    const responsive = am5themes_Responsive.new(root);
+
+    responsive.addRule({
+      relevant: am5themes_Responsive.widthM,
+      applying: function () {
+        chart.set("layout", root.verticalLayout);
+        legend.setAll({
+          y: null,
+          centerY: undefined,
+          x: am5.p0,
+          centerX: am5.p0,
+        });
+      },
+      removing: function () {
+        chart.set("layout", root.horizontalLayout);
+        legend.setAll({
+          y: am5.p50,
+          centerY: am5.p50,
+          x: null,
+          centerX: undefined,
+        });
+      },
+    });
+
+    root.setThemes([am5themes_Animated.new(root), responsive]);
+
+    const chart = root.container.children.push(
+      am5xy.XYChart.new(root, {
+        panX: false,
+        panY: false,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        paddingLeft: 0,
+        layout: root.verticalLayout,
+      })
+    );
+
+    chart.set(
+      "scrollbarX",
+      am5.Scrollbar.new(root, {
+        orientation: "horizontal",
+      })
+    );
+
+    // Updated data from your image (2021-2023 with matching metrics)
+    const data = [
+      {
+        year: "2021",
+        avg_training_hours: 8.9,
+        new_products: 16,
+        investment_rd: 187,
+        investment_csr: 40.2,
+        investment_suppliers: 6.0,
+        total_audits: 55,
+        env_non_compliance: 0,
+      },
+      {
+        year: "2022",
+        avg_training_hours: 12.1,
+        new_products: 14,
+        investment_rd: 231,
+        investment_csr: 40.8,
+        investment_suppliers: 2.5,
+        total_audits: 59,
+        env_non_compliance: 0,
+      },
+      {
+        year: "2023",
+        avg_training_hours: 17.3,
+        new_products: 16,
+        investment_rd: 209,
+        investment_csr: 50.4,
+        investment_suppliers: 20.6,
+        total_audits: 108,
+        env_non_compliance: 0,
+      },
+    ];
+
+    // Axes
+    const xRenderer = am5xy.AxisRendererX.new(root, {
+      minorGridEnabled: true,
+      minGridDistance: 50,
+    });
+    const xAxis = chart.xAxes.push(
+      am5xy.CategoryAxis.new(root, {
+        categoryField: "year",
+        renderer: xRenderer,
+        tooltip: am5.Tooltip.new(root, {}),
+      })
+    );
+    xRenderer.grid.template.setAll({
+      location: 0.5,
+    });
+    xAxis.data.setAll(data);
+
+    const yAxis = chart.yAxes.push(
+      am5xy.ValueAxis.new(root, {
+        min: 0,
+        extraMax: 0.2,
+        renderer: am5xy.AxisRendererY.new(root, {
+          strokeOpacity: 0.1,
+        }),
+      })
+    );
+
+    // Helper to create bar series with color
+    function createBarSeries(name: string, field: string, color: string) {
+      const series = chart.series.push(
+        am5xy.ColumnSeries.new(root, {
+          name: name,
+          xAxis: xAxis,
+          yAxis: yAxis,
+          valueYField: field,
+          categoryXField: "year",
+          tooltip: am5.Tooltip.new(root, {
+            pointerOrientation: "horizontal",
+            labelText: "{name} in {categoryX}: {valueY}",
+          }),
+        })
+      );
+      series.columns.template.setAll({
+        tooltipY: am5.percent(10),
+        fill: am5.color(color),
+        stroke: am5.color(color),
+      });
+      series.data.setAll(data);
+      return series;
+    }
+
+    // Helper to create line series with color and bullets
+    function createLineSeries(name: string, field: string, color: string) {
+      const series = chart.series.push(
+        am5xy.LineSeries.new(root, {
+          name: name,
+          xAxis: xAxis,
+          yAxis: yAxis,
+          valueYField: field,
+          categoryXField: "year",
+          tooltip: am5.Tooltip.new(root, {
+            pointerOrientation: "horizontal",
+            labelText: "{name} in {categoryX}: {valueY}",
+          }),
+        })
+      );
+      series.strokes.template.setAll({
+        strokeWidth: 3,
+        stroke: am5.color(color),
+      });
+      series.data.setAll(data);
+
+      series.bullets.push(() =>
+        am5.Bullet.new(root, {
+          sprite: am5.Circle.new(root, {
+            radius: 5,
+            fill: am5.color(color),
+            strokeWidth: 3,
+            stroke: am5.color(color),
+          }),
+        })
+      );
+
+      return series;
+    }
+
+    // Bar series (Investment and counts)
+    createBarSeries("Investment in R&D (Rs. Mn)", "investment_rd", "#a5a5a5");
+    createBarSeries("Investment in CSR (Rs. Mn)", "investment_csr", "#ffbf00");
+    createBarSeries(
+      "Investment in suppliers (Rs. Mn)",
+      "investment_suppliers",
+      "#4472c4"
+    );
+    createBarSeries(
+      "Total audits conducted on management systems (No.)",
+      "total_audits",
+      "#71ad47"
+    );
+
+    // Line series (hours, new products, environmental non-compliance)
+    createLineSeries(
+      "Average training hours per employee (No.)",
+      "avg_training_hours",
+      "#5b9cd5"
+    );
+    createLineSeries("New products developed (No.)", "new_products", "#ee7d30");
+    createLineSeries(
+      "Instances of environmental non-compliance (No.)",
+      "env_non_compliance",
+      "#5b9cd5"
+    );
+
+    // Cursor and legend
+    chart.set("cursor", am5xy.XYCursor.new(root, {}));
+
+    const legend = chart.children.push(
+      am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50,
+      })
+    );
+    legend.data.setAll(chart.series.values);
+
+    chart.appear(1000, 100);
+    // Appear animations for each series could be added if you want
+
+    return () => {
+      root.dispose();
+    };
+  }, []);
+
+  return (
+    <div
+      ref={chartRef}
+      id="socialGovernanceChart"
+      className="w-full h-[500px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
+    />
+  );
 }

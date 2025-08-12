@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import WaveButton from "components/innerpage/WaveButton";
 import {
-  ProfitablityAndFinancialBar,
-  KeyRatiosChart,
-  EnvironmentalPerformance,
-  SocialPerformanceChart,
-  GovernanceChart,
+  ProfitablityChart,
+  FinancialPositionChart,
+  EmissionsEnergyChart,
+  MaterialWaterChart,
+  SocialGovernanceChart,
 } from "./Charts";
 
 const ChartGenerator = () => {
@@ -108,36 +108,36 @@ const ChartGenerator = () => {
           <>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Profitability & Financial Position
+                Profitability (Rs.Bn)
               </h1>
-              <ProfitablityAndFinancialBar />
+              <ProfitablityChart />
             </div>
-            {/* <div className="w-full">
+            <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Financial Ratios
+                Financial Position (Rs.Bn)
               </h1>
-              <KeyRatiosChart />
-            </div> */}
+              <FinancialPositionChart />
+            </div>
           </>
         ) : (
           <>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Environmental Performance
+                Emissions and Energy Consumption
               </h1>
-              <EnvironmentalPerformance />
+              <EmissionsEnergyChart />
             </div>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Social Performance
+                Materials and Water Management
               </h1>
-              <SocialPerformanceChart />
+              <MaterialWaterChart />
             </div>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Governance
+                Social and Governance Performance
               </h1>
-              <GovernanceChart />
+              <SocialGovernanceChart />
             </div>
           </>
         )}
