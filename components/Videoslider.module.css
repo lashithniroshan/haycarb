@@ -198,10 +198,7 @@
   }
 }
 
-/* Ensure body doesn't restrict the overlay */
-body {
-  overflow: visible !important;
-}
+
 
 @media (max-width: 480px) {
   .cards {
