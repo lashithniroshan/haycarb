@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState, Suspense } from 'react';
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Navbar from 'components/Navbar';
 import Msgvideo from 'components/Msgvideo';
 import CircleSlider from 'components/CircleSlider';
@@ -21,7 +21,7 @@ const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isContentVisible, setIsContentVisible] = useState(false);
   const [showModal, setShowModal] = useState(false); // New state for modal delay
-
+const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     // Force scroll to top and disable scroll immediately
@@ -61,16 +61,24 @@ const Home = () => {
   const clickHandler = () => {
     setIsContentVisible(true);
   };
-
+ // Animation variants for menuforitems
+  const menuVariants:(Variants) =  {
+    visible: { opacity: 1, x: 0, transition: { duration: 0.3, ease: "easeInOut" } },
+    hidden: { opacity: 0, x: -50, transition: { duration: 0.3, ease: "easeInOut" } },
+  };
 
   return (
     <div className="max-w-full mx-auto" style={{ minHeight: '100vh' }}> {/* Ensure layout height */}
      <Suspense fallback={<div>Loading...</div>}>
         <SearchParamsHandler setIsContentVisible={setIsContentVisible} setShowModal={setShowModal} />
       </Suspense>
-      <Navbar isScrolled={isScrolled} isContentVisible={isContentVisible} setIsContentVisible={setIsContentVisible} />
+      <Navbar isScrolled={isScrolled} isContentVisible={isContentVisible} setIsContentVisible={setIsContentVisible} setIsMenuOpen={setIsMenuOpen} />
       {isContentVisible && (
-  <div className="fixed top-1/4 left-2 z-50 flex flex-col items-center space-y-1 menuforitems">
+  <motion.div className="fixed top-1/4 left-2 z-50 flex flex-col items-center space-y-1 menuforitems"
+   initial="visible"
+          animate={isMenuOpen ? "hidden" : "visible"}
+          variants={menuVariants}
+          >
     {[
       { id: 'msgvideo', label: 'Msgvideo',title:'Impact in Brief' },
       { id: 'circleslider', label: 'CircleSlider',title:'Annual Report Theme' },
@@ -111,7 +119,7 @@ const Home = () => {
         )}
       </div>
     ))}
-  </div>
+  </motion.div>
 )}
 
       {/* Sketchfab embed wrapper always visible on load */}

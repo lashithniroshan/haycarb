@@ -14,7 +14,7 @@
 .modal {
   background: transparent;
   width: 90%;
-  max-width: 1000px;
+  max-width: 900px;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
@@ -55,7 +55,7 @@
 .content {
   display: flex;
   flex-direction: row;
-  height: 60vh;
+  height: 50vh;
   color: #fff;
   justify-content: center;
 }
@@ -151,10 +151,12 @@ cursor: pointer;
   }
   .modal {
     height: 80%;
-    width: 80%;
+    width: 70%;
   }
   .contentWrapper{
     padding: 1rem;
+            height: auto;
+        display: block;
   }
   .bottomTitles {
   margin-top: 30px;

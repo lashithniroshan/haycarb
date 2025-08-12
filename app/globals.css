@@ -258,6 +258,36 @@ button {
     justify-content: center;
     gap: 20px;
 }
+
+nav{
+  z-index: 50;
+}
+/* Custom Scrollbar for the dropdown */
+.custom-scrollbar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: rgba(0, 141, 168, 1) rgba(255, 255, 255, 1); /* For Firefox */
+}
+
+/* WebKit-based browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+ background: #f1f1f1; /* Track background */
+  border-radius: 4px; /* Rounded track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+   background: rgba(0, 141, 168, 1); /* Thumb color */
+  border-radius: 4px; /* Rounded thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 141, 168, 0.7); /* Thumb color on hover */
+}
+
+
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
@@ -565,5 +595,9 @@ button {
         flex-direction: column;
         align-content: center;
         align-items: center;
+  }
+  .drag-indicator{
+        top: 10% !important;
+    right: 0% !important;
   }
 }

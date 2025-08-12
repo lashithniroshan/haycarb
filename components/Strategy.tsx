@@ -116,7 +116,7 @@ const Strategy = () => {
             )}</h4><p>Energy requirements fulfilled through renewable energy</p></li>
             <li><h4>${useAnimatedNumberText(
               "+1,523"
-            )}</h4><p>Total solar power generation</p></li>
+            )}MWh</h4><p>Total solar power generation</p></li>
             <li><h4>${useAnimatedNumberText(
               "+Rs.81.8"
             )} Mn</h4><p>Investment in Reverse Osmosis plant for water recycling</p></li>
@@ -129,7 +129,7 @@ const Strategy = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const autoplayInterval = 3000;
+  const autoplayInterval = 8000;
 
   // Define a state to hold the device type string
   const [deviceType, setDeviceType] = useState("desktop");

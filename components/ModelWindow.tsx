@@ -24,9 +24,9 @@ const slides: Slide[] = [
       <div>
         <button
           className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
-          onClick={() => window.open('pdf/tbc/Management Team.pdf', '_blank')}
+          onClick={() => window.open('pdf/Our-Approach-to-Reporting.pdf', '_blank')}
         >
-          Annual reporting
+          Explore More
         </button>
       </div>
     ),
@@ -34,23 +34,6 @@ const slides: Slide[] = [
   {
     id: 2,
   image: '/images/popup/2.jpg',
-    title: 'Evolution of Annual reporting',
-   description:
-      'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
-         button: () => (
-      <div>
-        <button
-          className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
-          onClick={() => window.open('pdf/tbc/Management Team.pdf', '_blank')}
-        >
-          Annual reporting
-        </button>
-      </div>
-    ),
-  },
-  {
-    id: 3,
-    image: '/images/popup/3.jpg',
     title: 'What’s new in digital reporting',
    description:
       'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
@@ -58,41 +41,79 @@ const slides: Slide[] = [
       <div>
         <button
           className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
-          onClick={() => window.open('pdf/tbc/Management Team.pdf', '_blank')}
+          onClick={() => window.open('pdf/Our-Approach-to-Reporting.pdf', '_blank')}
         >
-          Annual reporting
+          Learn More
         </button>
       </div>
     ),
   },
   {
-    id: 4,
-    image: '/images/popup/4.jpg',
+    id: 3,
+    image: '/images/popup/3.jpg',
     title: 'Multilingual accessibility',
-   description:
-      'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
-  },
-  {
-    id: 5,
-    image: '/images/popup/5.jpg',
-    title: 'Chart Generator',
    description:
       'The Chairman’s and Managing Director’s joint message is presented in Sinhala, Tamil, and other foreign languages to broaden stakeholder reach and engagement',
 
   },
   {
-    id: 6,
-    image: '/images/popup/6.jpg',
+    id: 4,
+    image: '/images/popup/4.jpg',
+    title: 'Chart Generator',
+    description:
+      'Haycarb’s digital report features a chart generator enabling stakeholders to create, customize, and download interactive performance visualizations.',
+         button: () => (
+      <div>
+        <button
+          className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
+          onClick={() => window.open('/tailor-made-for-you', '_blank')}
+        >
+          Generate Your Report
+        </button>
+      </div>
+    ),
+  },
+  {
+    id: 5,
+    image: '/images/popup/5.jpg',
     title: 'FinQuest- Game based learning',
    description:
-      'Haycarb’s digital report features a chart generator enabling stakeholders to create, customize, and download interactive performance visualizations.',
+      'FinQuest introduces game-based learning in Haycarb’s digital report, engaging stakeholders through interactive quizzes on strategy, performance, and ESG.',
+         button: () => (
+      <div>
+        <button
+          className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
+          onClick={() => window.open('/game', '_blank')}
+        >
+         Play Now
+        </button>
+      </div>
+    ),
+
+  },
+  {
+    id: 6,
+    image: '/images/popup/6.jpg',
+    title: 'User profiles-based dashboards',
+    description:
+      'Haycarb’s digital report offers user profile-based dashboards, enabling personalized data views tailored to stakeholder roles and interests',
+           button: () => (
+      <div>
+        <button
+          className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
+          onClick={() => window.open('/user-profile', '_blank')}
+        >
+          Learn More
+        </button>
+      </div>
+    ),
   },
   {
     id: 7,
     image: '/images/popup/7.jpg',
-    title: 'User profiles-based dashboards',
+    title: 'Synopsis of Annual report 2024/25',
    description:
-      'FinQuest introduces game-based learning in Haycarb’s digital report, engaging stakeholders through interactive quizzes on strategy, performance, and ESG.',
+      'The summarized version fo the Haycarb 2024/25 annual report highlights global leadership, resilient performance, ESG impact, and digital transformation through integrated, accessible reporting.',
            button: () => (
       <div>
         <button
@@ -152,19 +173,18 @@ const ModelWindow: React.FC = () => {
  <div className={styles.topControls}>
           <button onClick={prevSlide}>
             <svg className='leftarrow' xmlns="http://www.w3.org/2000/svg" width="31" height="21" viewBox="0 0 31 21" fill="none">
-<path d="M10.3185 19.0715L1.74707 10.5M1.74707 10.5L10.3185 1.86645M1.74707 10.5L29.6042 10.5" stroke="white" strokeOpacity="0.1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
+<path d="M10.3185 19.0715L1.74707 10.5M1.74707 10.5L10.3185 1.86645M1.74707 10.5L29.6042 10.5" stroke="white" strokeOpacity="0.7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+</svg> 
 </button>
-
           <button onClick={nextSlide}>
             {/* <Image src="/icons/modelarrow.svg" className='rightarrow' alt="rightarrow" width={30} height={30} /> */}
              <svg className={styles.rightarrow} xmlns="http://www.w3.org/2000/svg" width="31" height="21" viewBox="0 0 31 21" fill="none">
-<path d="M10.3185 19.0715L1.74707 10.5M1.74707 10.5L10.3185 1.86645M1.74707 10.5L29.6042 10.5" stroke="white" strokeOpacity="0.1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M10.3185 19.0715L1.74707 10.5M1.74707 10.5L10.3185 1.86645M1.74707 10.5L29.6042 10.5" stroke="white" strokeOpacity="0.7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
           </button>
           <button onClick={closeModal} className={styles.closeBtn}>
             <svg className='modelclose' xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-<path opacity="0.5" d="M1 20L20 1M1 1.00007L20 20" stroke="white" strokeOpacity="0.5" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round"/>
+<path opacity="0.7" d="M1 20L20 1M1 1.00007L20 20" stroke="white" strokeOpacity="0.7" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round"/>
 </svg>
           </button>
         </div>
@@ -181,19 +201,19 @@ const ModelWindow: React.FC = () => {
              <div className={styles.topControls}>
           <button onClick={prevSlide}>
             <svg className='leftarrow' xmlns="http://www.w3.org/2000/svg" width="31" height="21" viewBox="0 0 31 21" fill="none">
-<path d="M10.3185 19.0715L1.74707 10.5M1.74707 10.5L10.3185 1.86645M1.74707 10.5L29.6042 10.5" stroke="white" strokeOpacity="0.1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M10.3185 19.0715L1.74707 10.5M1.74707 10.5L10.3185 1.86645M1.74707 10.5L29.6042 10.5" stroke="white" strokeOpacity="0.7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 </button>
 
           <button onClick={nextSlide}>
             {/* <Image src="/icons/modelarrow.svg" className='rightarrow' alt="rightarrow" width={30} height={30} /> */}
              <svg className={styles.rightarrow} xmlns="http://www.w3.org/2000/svg" width="31" height="21" viewBox="0 0 31 21" fill="none">
-<path d="M10.3185 19.0715L1.74707 10.5M1.74707 10.5L10.3185 1.86645M1.74707 10.5L29.6042 10.5" stroke="white" strokeOpacity="0.1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M10.3185 19.0715L1.74707 10.5M1.74707 10.5L10.3185 1.86645M1.74707 10.5L29.6042 10.5" stroke="white" strokeOpacity="0.7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
           </button>
           <button onClick={closeModal} className={styles.closeBtn}>
             <svg className='modelclose' xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-<path opacity="0.5" d="M1 20L20 1M1 1.00007L20 20" stroke="white" strokeOpacity="0.5" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round"/>
+<path opacity="0.7" d="M1 20L20 1M1 1.00007L20 20" stroke="white" strokeOpacity="0.7" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round"/>
 </svg>
           </button>
         </div></div>
