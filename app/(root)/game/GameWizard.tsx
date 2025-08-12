@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
 function GameWizard() {
   return (
-  <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
@@ -54,13 +54,11 @@ function GameWizard() {
       {/* Description section */}
       <div className="lg:px-53 text-center">
         <h1 className="text-[#005881] text-[40px] font-normal">
-          Comming Soon...
+          Coming Soon...
         </h1>
-        
       </div>
-
     </section>
-  )
+  );
 }
 
-export default GameWizard
+export default GameWizard;
