@@ -126,7 +126,7 @@ const Integration = () => {
         </div>
         <div className="lg:col-span-6">
           <Image
-            src="/images/innerpage/integration-placeholder.svg"
+            src="/images/innerpage/non-financial-highlights/ESG-governance.jpg"
             alt="banner"
             width={650}
             height={480}
@@ -138,7 +138,7 @@ const Integration = () => {
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
         <div className="lg:col-span-6">
           <Image
-            src="/images/innerpage/integration-placeholder.svg"
+            src="/images/innerpage/non-financial-highlights/ESG-strategies,-metrics-and-targets-.jpg"
             alt="banner"
             width={650}
             height={480}
@@ -219,7 +219,7 @@ const Integration = () => {
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
         <div className="lg:col-span-6">
           <Image
-            src="/images/innerpage/integration-placeholder.svg"
+            src="/images/innerpage/non-financial-highlights/Assessing-Climate-Resilience.jpg"
             alt="banner"
             width={650}
             height={480}
