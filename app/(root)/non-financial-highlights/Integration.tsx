@@ -150,10 +150,11 @@ const Integration = () => {
             ESG strategies,metrics and targets
           </h1>
           <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
-            Introduces Haycarb’s ACTIVATE ESG framework - a strategic roadmap
-            built on five key pillars to guide sustainability through 2030 and
-            outlines Haycarb’s approach to managing environmental, social, and
-            governance impacts with measurable goals and performance indicators.
+            Introduces Haycarb’s &quot;ACTIVATE&quot; ESG framework - a
+            strategic roadmap built on five key pillars to guide sustainability
+            through 2030 and outlines Haycarb’s approach to managing
+            environmental, social, and governance impacts with measurable goals
+            and performance indicators.
           </p>
 
           <WaveButton

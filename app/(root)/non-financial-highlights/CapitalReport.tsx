@@ -330,7 +330,7 @@ const CapitalReport = () => {
                 {useAnimatedNumberText("Rs.31.1 Mn")}
               </p>
               <p className="text-base">
-                Invested in IT i=Infrastructure & Systems
+                Invested in IT Infrastructure & Systems
               </p>
             </div>
           </div>

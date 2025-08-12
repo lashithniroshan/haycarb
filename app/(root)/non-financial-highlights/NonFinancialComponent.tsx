@@ -28,7 +28,7 @@ const NonFinancialComponent = () => {
       {/* Banner section */}
       <Banner
         title="Non Financial Highlights"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id nisi vitae arcu ultrices vehicula. Fusce dignissim pulvinar odio at ultricies. Suspendisse potenti. Phasellus et rutrum ipsum, quis dignissim odio. Donec consequat quam a prium sagittis. Etiam mollis tempus sit amet scelerisque ante."
+        description="Presents a concise overview of the company’s sustainable value creation journey, integrating SLFRS S1 and S2 standards whilst showcasing Haycarb’s performance across the six capitals framed by the strategic pillars of the ESG roadmap, Activate."
         tabs={tabs}
         activeTab={activatedTab}
         onTabChange={(val) => setActivatedTab(val)}

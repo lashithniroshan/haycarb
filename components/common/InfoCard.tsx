@@ -22,9 +22,81 @@ const InfoCard: React.FC<InfoCardProps> = ({
 }) => {
   return (
     <div
+      className={`bg-white rounded-[20px] shadow-md flex flex-col w-full max-w-md text-center relative aspect-auto mx-auto ${className}`}
+    >
+      {/* Image/Header Section - Much more compact */}
+      <div className="relative w-full aspect-[3/2] rounded-t-[20px] overflow-hidden flex-shrink-0">
+        {image ? (
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 400px"
+          />
+        ) : (
+          <div className="w-full h-full bg-gray-300 rounded-t-[20px]" />
+        )}
+      </div>
+
+      {/* Content Section - Much more compact padding */}
+      <div
+        className="flex-1 p-3 sm:p-4 flex flex-col justify-between border-x border-b rounded-b-[20px] bg-white"
+        style={{ borderColor: "rgba(29, 128, 160, 0.5)" }}
+      >
+        <div>
+          <h1 className="text-base sm:text-lg lg:text-3xl text-[#005881] font-normal mb-2 sm:mb-3 leading-tight">
+            {title}
+          </h1>
+          <p className="text-xs sm:text-sm mb-3 sm:mb-4 text-[#000000] leading-relaxed">
+            {description}
+          </p>
+        </div>
+
+        <div className="flex items-center justify-center w-full relative mt-10">
+          <WaveButton
+            title={buttonTitle}
+            onBtnClick={onButtonClick}
+            style={{
+              background: "white",
+              position: "absolute",
+              zIndex: 10,
+              bottom: -35, // Much more compact
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default InfoCard;
+
+/* import React from "react";
+import Image from "next/image";
+import WaveButton from "components/innerpage/WaveButton";
+
+interface InfoCardProps {
+  title: string;
+  description: string;
+  buttonTitle: string;
+  image?: string;
+  onButtonClick?: () => void;
+  className?: string;
+}
+
+const InfoCard: React.FC<InfoCardProps> = ({
+  title,
+  description,
+  image,
+  onButtonClick,
+  className = "",
+  buttonTitle = "Click Me",
+}) => {
+  return (
+    <div
       className={`bg-white rounded-[30px] shadow-md flex flex-col w-full max-w-xl 2xl:max-w-none text-center relative aspect-auto mx-auto ${className}`}
     >
-      {/* Image/Header Section */}
       <div className="relative w-full aspect-[16/9] rounded-t-[30px] overflow-hidden flex-shrink-0">
         {image ? (
           <Image
@@ -39,7 +111,6 @@ const InfoCard: React.FC<InfoCardProps> = ({
         )}
       </div>
 
-      {/* Content Section */}
       <div
         className="flex-1 p-6 sm:p-8 flex flex-col justify-between border-x border-b rounded-b-[30px] bg-white"
         style={{ borderColor: "rgba(29, 128, 160, 0.5)" }}
@@ -71,4 +142,4 @@ const InfoCard: React.FC<InfoCardProps> = ({
   );
 };
 
-export default InfoCard;
+export default InfoCard; */

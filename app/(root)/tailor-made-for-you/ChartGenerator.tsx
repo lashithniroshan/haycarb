@@ -73,9 +73,6 @@ const ChartGenerator = () => {
 
       {/* Description section */}
       <div className="lg:px-53 text-center">
-        <h1 className="text-[#005881] text-[40px] font-normal">
-          Nurturing our resources-Our Capitals report
-        </h1>
         <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
           You can visually explore Haycarb PLC’s performance data through
           customizable, interactive charts. Designed to enhance stakeholder

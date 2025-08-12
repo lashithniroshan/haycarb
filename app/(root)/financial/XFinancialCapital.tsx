@@ -21,7 +21,7 @@ interface Category {
   title: string;
 }
 
-const FinancialCapital = () => {
+const XFinancialCapital = () => {
   const statsData = [
     {
       worth: useAnimatedNumberText("43,202"),
@@ -49,17 +49,17 @@ const FinancialCapital = () => {
   const financialData: FinancialData = {
     profitability: [
       { value: "13.6", label: "Return on equity (%)" },
-      { value: "9.3", label: "Return on Assets (%)" },
+      { value: "9.3", label: "Return on Assets" },
       { value: "21.15", label: "Interest cover ratio\n(No. of times)" },
     ],
     efficiency: [
       { value: "0.94", label: "Asset turnover ratio\n(No. of times)" },
-      { value: "14", label: "Creditor days\n(No. of times)" },
+      { value: "14", label: "Creditor days" },
       { value: "223", label: "Cash conversion\ncycle (Days)" },
     ],
     liquidity: [
       { value: "2.47", label: "Current ratio\n(No. of times)" },
-      { value: "1.14", label: "Quick asset ratio\n(Times)" },
+      { value: "1.14", label: "Quick asset ratio" },
       { value: null, label: null }, // Empty cell
     ],
     solvency: [
@@ -121,7 +121,7 @@ const FinancialCapital = () => {
                   -rotate-30 
                   scale-x-[-1]
                   bg-no-repeat 
-                  bg-contain z-40 opacity-50"
+                  bg-contain z-40"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -154,7 +154,7 @@ const FinancialCapital = () => {
       {/* --- Content Area --- */}
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-10 py-8">
         {/* Left Column */}
-        <div className="lg:col-span-12 text-center">
+        <div className="lg:col-span-8">
           <p className="para">
             Haycarb maintained financial stability in 2024/25, achieving a
             revenue of Rs. 43.2 Bn and a net profit of Rs. 4.27 Bn. Despite
@@ -182,6 +182,21 @@ const FinancialCapital = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Right Column */}
+        <div className="lg:col-span-4 flex justify-center items-start mt-8 lg:mt-0">
+          <div className="bg-white rounded-xl shadow-md flex flex-col justify-end items-center w-full max-w-[400px] 2xl:max-w-none text-center relative aspect-[3/4] mx-auto">
+            <div className="absolute inset-0 rounded-[10px] overflow-hidden">
+              <Image
+                // src="/images/innerpage/first-square.png"
+                src="/images/innerpage/financial/main.jpg"
+                alt="banner"
+                fill
+                className="rounded-2xl"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -285,4 +300,4 @@ const FinancialCapital = () => {
   );
 };
 
-export default FinancialCapital;
+export default XFinancialCapital;

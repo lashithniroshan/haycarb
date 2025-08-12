@@ -41,7 +41,7 @@ const ValueCreation = () => {
           Understanding our value creation and its impact
         </h1>
         <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
-          This report outlines how Haycarb creates and sustains value across
+          This section outlines how Haycarb creates and sustains value across
           capitals by integrating them into our strategy, operations, and
           stakeholder engagement. It reflects our commitment to transparency and
           long-term sustainability through a balanced view of performance,
@@ -128,20 +128,34 @@ const ValueCreation = () => {
           </div>
 
           <div className="lg:col-span-6 flex items-center justify-center lg:justify-end w-full">
-            <Image
-              src="/images/innerpage/value-doughnut.svg"
+            {/* <Image
+              src="/images/innerpage/non-financial-highlights/rotate-chart.webm"
               alt="banner"
               width={529}
               height={524}
-            />
+            /> */}
+
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full max-w-[400px] rounded-lg"
+            >
+              <source
+                src="/images/innerpage/non-financial-highlights/rotate-chart.webm"
+                type="video/webm"
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:px-8 2xl:px-30">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-6 lg:px-4 2xl:px-16 max-w-6xl mx-auto">
         <InfoCard
           title="Operating Environment"
-          description="This section summarizes the impact from external factors including political shifts, economic volatility, climate risks, social expectations, evolving technologies, and regulatory pressures that influence Haycarb’s business decisions and sustainability priorities."
+          description="This section summarizes the impact from external factors including political shifts, economic volatility, climate risks, social expectations, evolving technologies, and regulatory pressures that influence Haycarb's business decisions and sustainability priorities."
           buttonTitle="Explore More"
           image="/images/innerpage/non-financial-highlights/Operating Environment.jpg"
           onButtonClick={() =>
@@ -150,7 +164,7 @@ const ValueCreation = () => {
         />
         <InfoCard
           title="Listening to Our Stakeholders"
-          description="Highlights how Haycarb engages with key stakeholder groupsincluding employees, customers, suppliers, communities, and regulators, to understand their concerns, expectations, and priorities in shaping strategies and responsible decision-making."
+          description="Highlights how Haycarb engages with key stakeholder groups including employees, customers, suppliers, communities, and regulators, to understand their concerns, expectations, and priorities in shaping strategies and responsible decision-making."
           buttonTitle="Explore More"
           image="/images/innerpage/non-financial-highlights/Listening to Our Stakeholders.jpg"
           onButtonClick={() =>

@@ -5,7 +5,7 @@ import WaveButton from "components/innerpage/WaveButton";
 
 const GenerateReport = () => {
   const categories = {
-    introduction: [
+    Introduction: [
       "pdf/tbc/Strategic in Every Move, Boundless in Creating Impact.pdf",
       "pdf/tbc/Our Approach to Reporting.pdf",
       "pdf/tbc/Performance Highlights.pdf",
