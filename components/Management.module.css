@@ -18,7 +18,7 @@
 
 .slider {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -147,10 +147,11 @@
   }
 
   .sliderTrack {
-    height: 200px; /* Adjust height to accommodate two rows */
+    height: 200px; /* Adjust height if needed */
     width: 375px !important;
   }
-   .governanceSection {
+
+  .governanceSection {
     margin-top: 20px;
   }
 
@@ -167,21 +168,4 @@
     padding: 10px;
   }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
-  .governanceSectionh2 {
-    font-size: 32px;
-  }
 
-  .governanceSectionp {
-    font-size: 16px;
-  }
-
-}
-@media (max-width: 991px) {
-.customcol{
-  flex-direction: column;
-}
-.btngov{
-  width: 100%;
-}
-}

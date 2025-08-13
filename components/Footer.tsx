@@ -34,18 +34,18 @@ const HomeFooter = () => {
             <div className={styles.column}>
               <ul>
                 <li>
-                    <Link href="/" className="" >
+                    <Link href="pdf/Performance Highlights.pdf" target="_blank" className="" >
                   Performance Highlights
                 </Link>
                 </li>
                 <li>
-                  <Link href="/">Financial Statements</Link>
+                  <Link href="pdf/Financial Statements.pdf" target="_blank">Financial Statements</Link>
                 </li>
                 <li>
-                  <Link href="/">Leadership Message</Link>
+                  <Link href="/pdf/Board-of-Directors.pdf" target="_blank">Leadership Message</Link>
                 </li>
                  <li>
-                  <Link href="/">Our Strategy</Link>
+                  <Link href="pdf/tbc/Strategy and Resource Allocation.pdf" target="_blank">Our Strategy</Link>
                 </li>
               </ul>
             </div>
@@ -54,16 +54,16 @@ const HomeFooter = () => {
             <div className={styles.column}>
               <ul>
                 <li>
-                  <Link href="/">Segmental Review</Link>
+                  <Link href="pdf/Segment Review and Analysis.pdf" target="_blank">Segmental Review</Link>
                 </li>
                 <li>
-                  <Link href="/">ESG Integration</Link>
+                  <Link href="pdf/ESG Highlights.pdf" target="_blank">ESG Highlights</Link>
                 </li>
                 <li>
-                  <Link href="/">Corporate Governance</Link>
+                  <Link href="pdf/CorporateGovernance.pdf" target="_blank">Corporate Governance</Link>
                 </li>
                  <li>
-                  <Link href="/">FAQs</Link>
+                  <Link href="pdf/FAQs.pdf">FAQs</Link>
                 </li>
               </ul>
             </div>
@@ -162,18 +162,18 @@ const InnerPageFooter = () => {
             <div className={styles.column}>
               <ul>
                 <li>
-                    <Link href="/" className="" >
+                    <Link href="pdf/Performance Highlights.pdf" target="_blank" className="" >
                   Performance Highlights
                 </Link>
                 </li>
                 <li>
-                  <Link href="/">Financial Statements</Link>
+                  <Link href="pdf/Financial Statements.pdf" target="_blank">Financial Statements</Link>
                 </li>
                 <li>
-                  <Link href="/">Leadership Message</Link>
+                  <Link href="/pdf/Board-of-Directors.pdf" target="_blank">Leadership Message</Link>
                 </li>
                  <li>
-                  <Link href="/">Our Strategy</Link>
+                  <Link href="pdf/tbc/Strategy and Resource Allocation.pdf" target="_blank">Our Strategy</Link>
                 </li>
               </ul>
             </div>
@@ -182,16 +182,16 @@ const InnerPageFooter = () => {
             <div className={styles.column}>
               <ul>
                 <li>
-                  <Link href="/">Segmental Review</Link>
+                  <Link href="pdf/Segment Review and Analysis.pdf" target="_blank">Segmental Review</Link>
                 </li>
                 <li>
-                  <Link href="/">ESG Integration</Link>
+                  <Link href="pdf/ESG Highlights.pdf" target="_blank">ESG Highlights</Link>
                 </li>
                 <li>
-                  <Link href="/">Corporate Governance</Link>
+                  <Link href="pdf/CorporateGovernance.pdf" target="_blank">Corporate Governance</Link>
                 </li>
                  <li>
-                  <Link href="/">FAQs</Link>
+                  <Link href="pdf/FAQs.pdf">FAQs</Link>
                 </li>
               </ul>
             </div>

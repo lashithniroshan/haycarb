@@ -45,7 +45,7 @@ const Msgvideo = () => {
           </p>
           <button
             className="btn-custom wave-btn mt-4 md:mt-6 px-4 py-2 md:px-6 md:py-2 rounded-full text-white font-semibold relative overflow-hidden transition"
-            onClick={() => window.open('pdf/full-Annual-Report-2024-2025.pdf', '_blank')}
+            onClick={() => window.open('pdf/Haycarb PLC - Synopsis of Annual Report 2024_25.pdf', '_blank')}
           >
             Explore More
           </button>
@@ -165,7 +165,7 @@ const Msgvideo = () => {
               className={styles.modalVideo}
               width="100%"
               height="450"
-              src="https://www.youtube.com/embed/3c22C-IuKHc?si=ZSmb0JKztRxYJPUI"
+              src="https://www.youtube.com/embed/6uoNXRhH_co?si=6D79TDmKJ2SjwSIw"
               title="YouTube video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

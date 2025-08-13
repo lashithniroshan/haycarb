@@ -298,24 +298,7 @@ const Navbar = ({
                   />
                 </svg>
                 </Link>
-              {/* <button className="focus:outline-none" aria-label="User Profile">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`transition-all duration-300 ${
-                    isScrolled ? "w-6 h-6" : "w-8 h-8"
-                  }`}
-                  viewBox="0 0 31 31"
-                  fill="none"
-                >
-                  <path
-                    d="M25.8327 27.125C25.8327 23.5582 21.2063 20.6667 15.4993 20.6667C9.79241 20.6667 5.16602 23.5582 5.16602 27.125M15.4993 16.7917C11.9325 16.7917 9.04102 13.9002 9.04102 10.3333C9.04102 6.76649 11.9325 3.875 15.4993 3.875C19.0662 3.875 21.9577 6.76649 21.9577 10.3333C21.9577 13.9002 19.0662 16.7917 15.4993 16.7917Z"
-                    stroke="white"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button> */}
+
             </div>
           </motion.div>
         )}

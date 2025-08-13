@@ -150,21 +150,148 @@ padding-right: 55px;
 }
 
 .languageDropdown {
-    cursor: pointer;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 3.40282e+38px;
-    height: 40px;
-    margin-top: 22px;
-    padding: 10px 20px;
-    font-family: gotham-medium;
-    font-size: 12px;
-    display: flex;
-    position: relative;
-    width: 140px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Gotham-Medium';
+  font-size: 14px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 3.40282e+38px; /* Matches the rounded-full effect */
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.languageDropdown select {
+
+.languageDropdown:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 300%;
+  height: 100%;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 30' preserveAspectRatio='none'><path d='M0 20 Q30 0 60 20 T120 20 V30 H0 Z' fill='%23ffffff'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 60% 100%;
+  opacity: 0.4;
+  animation: wave-move 2s linear infinite;
+}
+
+.languageDropdown ul {
   width: 100%;
-  padding-right: 24px; /* Space for the arrow */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.languageDropdown li {
+  padding: 8px 16px;
+  font-family: 'Gotham-Book';
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.languageDropdown li:hover {
+  background-color: rgba(73, 220, 248, 0.2); /* Matches hover:bg-blue-200 */
+}
+
+
+/* Style for the placeholder "Select Your Language" item */
+.languageDropdown li.cursor-default {
+  cursor: default;
+  color: rgba(255, 255, 255, 0.7); /* Slightly faded to distinguish it */
+  font-style: italic;
+  pointer-events: none; /* Prevent interaction */
+}
+
+.languageDropdown li.cursor-default:hover {
+  background-color: transparent; /* No hover effect for placeholder */
+}
+
+/* Ensure the dropdown container matches the Navbar dropdown */
+.languageDropdown .custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 141, 168, 1) rgba(255, 255, 255, 1);
+}
+
+.languageDropdown .custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.languageDropdown .custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.languageDropdown .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 141, 168, 1);
+  border-radius: 4px;
+}
+
+.languageDropdown .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 141, 168, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .languageDropdown {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .languageDropdown svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .languageDropdown ul {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .languageDropdown li {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .languageDropdown li.cursor-default {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .buttonSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 86%;
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 430px) {
+  .languageDropdown {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  .languageDropdown svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .languageDropdown li {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .languageDropdown li.cursor-default {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
 }
 .arrowIcon {
     width: 15px;

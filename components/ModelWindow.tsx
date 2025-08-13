@@ -24,7 +24,7 @@ const slides: Slide[] = [
       <div>
         <button
           className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
-          onClick={() => window.open('pdf/Our-Approach-to-Reporting.pdf', '_blank')}
+          onClick={() => window.open('pdf/Report Evolution.pdf', '_blank')}
         >
           Explore More
         </button>
@@ -41,7 +41,7 @@ const slides: Slide[] = [
       <div>
         <button
           className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
-          onClick={() => window.open('pdf/Our-Approach-to-Reporting.pdf', '_blank')}
+          onClick={() => window.open('pdf/Digitally Innovating Our Corporate Reporting.pdf', '_blank')}
         >
           Learn More
         </button>
@@ -118,7 +118,7 @@ const slides: Slide[] = [
       <div>
         <button
           className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
-          onClick={() => window.open('pdf/tbc/Management Team.pdf', '_blank')}
+          onClick={() => window.open('pdf/Haycarb PLC - Synopsis of Annual Report 2024_25.pdf', '_blank')}
         >
           Annual reporting
         </button>
@@ -136,7 +136,7 @@ const ModelWindow: React.FC = () => {
     if (!visible) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length); // Loop continuously
-    }, 5000);
+    }, 10000);
     return () => clearInterval(timer);
   }, [visible]);
 

@@ -262,6 +262,9 @@ Dive in and explore a year of transformation
       transform: 'translateX(-50%)',
       zIndex: 3,
       pointerEvents: 'none',
+      display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     }}
   >
     <div
@@ -309,7 +312,6 @@ Dive in and explore a year of transformation
       marginTop: '8px',
       textAlign: 'center',
       fontFamily: 'Gotham-Book, sans-serif',
-      marginLeft:'-15px',
     }}>
       Drag to explore
     </p>
@@ -319,9 +321,8 @@ Dive in and explore a year of transformation
       marginTop: '8px',
       textAlign: 'center',
       fontFamily: 'Gotham-Book, sans-serif',
-      marginLeft:'-15px',
     }}>
-     Stay immersed
+     Stay immersed for 2 minutes
     </p>
   </motion.div>
 )}

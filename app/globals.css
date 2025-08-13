@@ -598,6 +598,6 @@ nav{
   }
   .drag-indicator{
         top: 10% !important;
-    right: 0% !important;
+    right: var(--background) !important;
   }
 }
