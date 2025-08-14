@@ -461,7 +461,7 @@ const Navbar = ({
                   paddingTop: "14px",
                 }}
               >
-                <Link href="#synopsis" className="" onClick={toggleMenu}>
+                <Link href="pdf/Haycarb PLC - Synopsis of Annual Report 2024_25.pdf" target="_blank" className="" onClick={toggleMenu}>
                   Synopsis
                 </Link>
               </li>
