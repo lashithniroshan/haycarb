@@ -11,7 +11,7 @@ const ReportingLandscape = () => {
         <>
           A separate section on the Group’s sustainability and climate related
           risk management in line with the requirements of{" "}
-          <span className="text-[#008DA8] font-semibold">SLFRS S1 and S2</span>.
+          <span className="text-[#008DA8] font-semibold">SLFRS S1 and S2</span>
         </>
       ),
     },
