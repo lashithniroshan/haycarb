@@ -88,7 +88,7 @@ const Integration = () => {
       {/* Description section */}
       <div className="lg:px-53 text-center">
         <h1 className="text-[#005881] text-[40px] font-normal">
-          Understanding our value creation and its impact
+          Framing Sustainability in Corporate Reporting
         </h1>
         <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
           Haycarb PLC has adopted IFRS S1 and S2 standards to strengthen its
@@ -125,29 +125,31 @@ const Integration = () => {
           />
         </div>
         <div className="lg:col-span-6">
-          <Image
-            src="/images/innerpage/non-financial-highlights/ESG-governance.jpg"
-            alt="banner"
-            width={650}
-            height={480}
-            className="mx-auto"
-          />
+          <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
+            <Image
+              src="/images/innerpage/non-financial-highlights/ESG-governance.jpg"
+              alt="banner"
+              fill
+              className="object-contain rounded-2xl"
+            />
+          </div>
         </div>
       </div>
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
         <div className="lg:col-span-6">
-          <Image
-            src="/images/innerpage/non-financial-highlights/ESG-strategies,-metrics-and-targets-.jpg"
-            alt="banner"
-            width={650}
-            height={480}
-            className="mx-auto"
-          />
+          <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
+            <Image
+              src="/images/innerpage/non-financial-highlights/ESG-strategies,-metrics-and-targets-.jpg"
+              alt="banner"
+              fill
+              className="object-contain rounded-2xl"
+            />
+          </div>
         </div>
         <div className="lg:col-span-6">
           <h1 className="text-[40px] text-[#005881] font-normal">
-            ESG strategies,metrics and targets
+            ESG strategies, metrics and targets
           </h1>
           <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
             Introduces Haycarb’s &quot;ACTIVATE&quot; ESG framework - a
@@ -207,25 +209,27 @@ const Integration = () => {
           />
         </div>
         <div className="lg:col-span-6">
-          <Image
-            src="/images/innerpage/non-financial-highlights/Sustainability.jpg"
-            alt="banner"
-            width={650}
-            height={480}
-            className="mx-auto rounded-2xl"
-          />
+          <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
+            <Image
+              src="/images/innerpage/non-financial-highlights/Sustainability.jpg"
+              alt="banner"
+              fill
+              className="object-contain rounded-2xl"
+            />
+          </div>
         </div>
       </div>
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
         <div className="lg:col-span-6">
-          <Image
-            src="/images/innerpage/non-financial-highlights/Assessing-Climate-Resilience.jpg"
-            alt="banner"
-            width={650}
-            height={480}
-            className="mx-auto"
-          />
+          <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
+            <Image
+              src="/images/innerpage/non-financial-highlights/Assessing-Climate-Resilience.jpg"
+              alt="banner"
+              fill
+              className="object-contain rounded-2xl"
+            />
+          </div>
         </div>
         <div className="lg:col-span-6">
           <h1 className="text-[40px] text-[#005881] font-normal">
