@@ -103,19 +103,27 @@ const ChartGenerator = () => {
           isActive={activatedBtn === "non-financial"}
         />
       </div>
+      <div className="lg:px-53 text-center">
+        <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
+          Select your preferred metrics to explore performance insights
+        </p>
+      </div>
       <div className="px-4 sm:px-6 md:px-10 lg:px-20 py-6 space-y-8">
         {activatedBtn === "financial" ? (
           <>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Profitability (Rs.Bn)
+                Earnings and Profitability (Rs. Bn)
               </h1>
               <ProfitablityChart />
             </div>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Financial Position (Rs.Bn)
+                Financial Position (Rs. Bn)
               </h1>
+              <p className="para text-center font-semibold text-[#005881] mt-2">
+                Slide to explore
+              </p>
               <FinancialPositionChart />
             </div>
           </>
@@ -123,20 +131,29 @@ const ChartGenerator = () => {
           <>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Emissions and Energy Consumption
+                Emissions (tCO2e) and Energy Consumption (GJ)
               </h1>
+              <p className="para text-center font-semibold text-[#005881] mt-2">
+                Slide to explore
+              </p>
               <EmissionsEnergyChart />
             </div>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Materials and Water Management
+                Materials (MT) and Water Management (m<sup>3</sup>)
               </h1>
+              <p className="para text-center font-semibold text-[#005881] mt-2">
+                Slide to explore
+              </p>
               <MaterialWaterChart />
             </div>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
                 Social and Governance Performance
               </h1>
+              <p className="para text-center font-semibold text-[#005881] mt-2">
+                Slide to explore
+              </p>
               <SocialGovernanceChart />
             </div>
           </>

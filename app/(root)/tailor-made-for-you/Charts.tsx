@@ -1139,6 +1139,17 @@ export function ProfitablityChart() {
       })
     );
 
+    yAxis.children.unshift(
+      am5.Label.new(root, {
+        rotation: -90,
+        text: "Rs. Bn",
+        y: am5.p50,
+        centerX: am5.p50,
+        fontSize: 14,
+        fontWeight: "bold",
+      })
+    );
+
     // Series creation function
     function makeSeries(name: string, fieldName: string) {
       const series = chart.series.push(
@@ -1256,7 +1267,8 @@ export function FinancialPositionChart() {
       {
         year: "2021",
         total_assets: 25,
-        share_capital: 0,
+        total_liab: 10.24,
+        share_capital: 331.77,
         revenue_reserves: 12,
         equity: 15,
         current_assets: 16,
@@ -1265,7 +1277,8 @@ export function FinancialPositionChart() {
       {
         year: "2022",
         total_assets: 40,
-        share_capital: 0,
+        total_liab: 19.19,
+        share_capital: 331.77,
         revenue_reserves: 17,
         equity: 21,
         current_assets: 29,
@@ -1274,7 +1287,8 @@ export function FinancialPositionChart() {
       {
         year: "2023",
         total_assets: 40,
-        share_capital: 0,
+        total_liab: 14.98,
+        share_capital: 331.77,
         revenue_reserves: 21,
         equity: 25,
         current_assets: 27,
@@ -1283,7 +1297,8 @@ export function FinancialPositionChart() {
       {
         year: "2024",
         total_assets: 40,
-        share_capital: 0,
+        total_liab: 14.52,
+        share_capital: 331.77,
         revenue_reserves: 22,
         equity: 26,
         current_assets: 26,
@@ -1292,7 +1307,8 @@ export function FinancialPositionChart() {
       {
         year: "2025",
         total_assets: 46,
-        share_capital: 0,
+        total_liab: 16.22,
+        share_capital: 331.77,
         revenue_reserves: 25,
         equity: 30,
         current_assets: 28,
@@ -1325,15 +1341,26 @@ export function FinancialPositionChart() {
       am5xy.ValueAxis.new(root, {
         maxPrecision: 0,
         renderer: am5xy.AxisRendererY.new(root, {
-          inversed: true,
+          inversed: false,
         }),
+      })
+    );
+
+    yAxis.children.unshift(
+      am5.Label.new(root, {
+        rotation: -90,
+        text: "Rs. Bn",
+        y: am5.p50,
+        centerX: am5.p50,
+        fontSize: 14,
+        fontWeight: "bold",
       })
     );
 
     const cursor = chart.set(
       "cursor",
       am5xy.XYCursor.new(root, {
-        alwaysShow: true,
+        alwaysShow: false,
         xAxis: xAxis,
         positionX: 1,
       })
@@ -1381,6 +1408,7 @@ export function FinancialPositionChart() {
 
     // Add all series
     createSeries("Total Assets", "total_assets");
+    createSeries("Total liabilities", "total_liab");
     createSeries("Share Capital", "share_capital");
     createSeries("Revenue Reserves", "revenue_reserves");
     createSeries("Equity", "equity");
@@ -1550,6 +1578,17 @@ export function EmissionsEnergyChart() {
         renderer: am5xy.AxisRendererY.new(root, {
           strokeOpacity: 0.1,
         }),
+      })
+    );
+
+    yAxis.children.unshift(
+      am5.Label.new(root, {
+        rotation: -90,
+        text: "tCO2e / GJ",
+        y: am5.p50,
+        centerX: am5.p50,
+        fontSize: 14,
+        fontWeight: "bold",
       })
     );
 
@@ -1782,24 +1821,24 @@ export function MaterialWaterChart() {
     const data = [
       {
         year: "2023",
-        waste_water: 40,
-        water_consumption: 0,
-        solid_waste_gen: 21,
-        renewable_raw_material: 25,
+        waste_water: 196918,
+        water_consumption: 649683,
+        solid_waste_gen: 6589,
+        renewable_raw_material: 158885,
       },
       {
         year: "2024",
-        waste_water: 40,
-        water_consumption: 0,
-        solid_waste_gen: 22,
-        renewable_raw_material: 26,
+        waste_water: 241465,
+        water_consumption: 732634,
+        solid_waste_gen: 5503,
+        renewable_raw_material: 152221,
       },
       {
         year: "2025",
-        waste_water: 46,
-        water_consumption: 0,
-        solid_waste_gen: 25,
-        renewable_raw_material: 30,
+        waste_water: 321433,
+        water_consumption: 696595,
+        solid_waste_gen: 5112,
+        renewable_raw_material: 146563,
       },
     ];
 
@@ -1828,15 +1867,26 @@ export function MaterialWaterChart() {
       am5xy.ValueAxis.new(root, {
         maxPrecision: 0,
         renderer: am5xy.AxisRendererY.new(root, {
-          inversed: true,
+          inversed: false,
         }),
+      })
+    );
+
+    yAxis.children.unshift(
+      am5.Label.new(root, {
+        rotation: -90,
+        text: "MT / m3",
+        y: am5.p50,
+        centerX: am5.p50,
+        fontSize: 14,
+        fontWeight: "bold",
       })
     );
 
     const cursor = chart.set(
       "cursor",
       am5xy.XYCursor.new(root, {
-        alwaysShow: true,
+        alwaysShow: false,
         xAxis: xAxis,
         positionX: 1,
       })
@@ -2059,6 +2109,17 @@ export function SocialGovernanceChart() {
         renderer: am5xy.AxisRendererY.new(root, {
           strokeOpacity: 0.1,
         }),
+      })
+    );
+
+    yAxis.children.unshift(
+      am5.Label.new(root, {
+        rotation: -90,
+        text: "Rs. Mn / No.",
+        y: am5.p50,
+        centerX: am5.p50,
+        fontSize: 14,
+        fontWeight: "bold",
       })
     );
 
