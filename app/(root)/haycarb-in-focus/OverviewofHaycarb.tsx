@@ -204,7 +204,7 @@ const OverviewofHaycarb = () => {
           </p>
           <div className="my-10 flex items-center justify-center ">
             <WaveButton
-              title="Video version"
+              title="Watch Purpose Statement"
               style={{ fontSize: "12px" }}
               icon={
                 <svg
