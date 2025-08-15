@@ -180,6 +180,9 @@ const GenerateReport = () => {
           strategic highlights, this tool lets you tailor a report to your
           needs.
         </p>
+        <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
+          Choose the relevant PDF sections to generate a customized report
+        </p>
       </div>
 
       {/* Category Sections */}
