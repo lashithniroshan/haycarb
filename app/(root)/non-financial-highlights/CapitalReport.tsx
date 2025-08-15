@@ -402,6 +402,11 @@ const CapitalReport = () => {
           risks, and opportunities.
         </p>
       </div>
+      <div className="lg:px-32 text-center">
+        <p className="para text-center xl:text-left text-[#005881] text-lg font-semibold mt-10">
+          Click on the relevant capital for more information
+        </p>
+      </div>
       <CommonAccordion items={accordionItems} />
     </section>
   );
