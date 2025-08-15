@@ -54,7 +54,7 @@ const FinancialCapital = () => {
     ],
     efficiency: [
       { value: "0.94", label: "Asset turnover ratio\n(No. of times)" },
-      { value: "14", label: "Creditor days\n(No. of times)" },
+      { value: "14", label: "Creditor days" },
       { value: "223", label: "Cash conversion\ncycle (Days)" },
     ],
     liquidity: [

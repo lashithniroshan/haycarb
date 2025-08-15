@@ -17,9 +17,9 @@ const FinancialSupplementary = () => {
         className="absolute
                 hidden lg:block
                 top-170 right-90
-                lg:top-165 lg:right-80
-                xl:top-160 xl:right-90
-                2xl:top-155 2xl:right-160
+                lg:top-135 lg:right-80
+                xl:top-140 xl:right-90
+                2xl:top-140 2xl:right-160
                 lg:w-[480px] lg:h-[480px]
                 rotate-20 scale-x-[-1] 
                 bg-no-repeat bg-contain z-40"
