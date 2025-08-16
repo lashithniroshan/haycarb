@@ -99,7 +99,7 @@ const Integration = () => {
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
         {/* Left: Text Block (Vertically Centered) */}
         <div className="lg:col-span-6 flex flex-col justify-center">
-          <h1 className="text-[40px] text-[#005881] font-normal">
+          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
             ESG governance
           </h1>
           <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
@@ -154,7 +154,7 @@ const Integration = () => {
 
         {/* Right: Text Block (Vertically Centered) */}
         <div className="lg:col-span-6 flex flex-col justify-center">
-          <h1 className="text-[40px] text-[#005881] font-normal">
+          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
             ESG strategies, metrics and targets
           </h1>
           <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
@@ -191,7 +191,7 @@ const Integration = () => {
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
         <div className="lg:col-span-6 flex flex-col justify-center">
-          <h1 className="text-[40px] text-[#005881] font-normal">
+          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
             Sustainability and Climate related risks and opportunities
           </h1>
           <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
@@ -238,7 +238,7 @@ const Integration = () => {
           </div>
         </div>
         <div className="lg:col-span-6 flex flex-col justify-center">
-          <h1 className="text-[40px] text-[#005881] font-normal">
+          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
             Assessing Climate Resilience
           </h1>
           <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">

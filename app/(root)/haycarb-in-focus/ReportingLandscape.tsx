@@ -181,7 +181,7 @@ const ReportingLandscape = () => {
           />
         </div>
         <div className="lg:col-span-5">
-          <h1 className="text-[40px] text-[#005881] font-normal">
+          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
             Evolution of Haycarb&apos;s Annual Report
           </h1>
           <p className="para text-[15px] font-medium text-[#000] my-3">
@@ -214,7 +214,7 @@ const ReportingLandscape = () => {
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8">
           {/* Left Column - Center Vertically */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <h1 className="text-[40px] text-[#005881] font-normal">
+            <h1 className="text-[40px] text-[#005881] font-normal leading-none">
               Digital evolution in reporting
             </h1>
             <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">

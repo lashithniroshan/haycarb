@@ -448,7 +448,7 @@ const ContentPage = () => {
         {/* Chairman and director message section */}
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 py-8 my-10">
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left">
+            <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left leading-none">
               {
                 stakeholdersData[activeKey].content?.chairman_and_director
                   ?.title

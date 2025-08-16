@@ -37,7 +37,7 @@ const ValueCreation = () => {
 
       {/* Description section */}
       <div className="lg:px-53 text-center">
-        <h1 className="text-[#005881] text-[40px] font-normal">
+        <h1 className="text-[#005881] text-[40px] font-normal leading-none">
           Understanding our value creation and its impact
         </h1>
         <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
@@ -103,7 +103,7 @@ const ValueCreation = () => {
       <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 mx-auto">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8">
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <h1 className="text-[40px] text-[#005881] font-normal">
+            <h1 className="text-[40px] text-[#005881] font-normal leading-none">
               Managing Business Risks & Opportunities
             </h1>
             <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
