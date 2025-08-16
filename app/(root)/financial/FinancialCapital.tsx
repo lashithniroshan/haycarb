@@ -247,7 +247,7 @@ const FinancialCapital = () => {
                         >
                           {item?.value && (
                             <div className="space-y-1 sm:space-y-2">
-                              <div className="text-lg sm:text-sm lg:text-sm font-semibold text-gray-800">
+                              <div className="text-lg sm:text-sm lg:text-base font-semibold text-gray-800">
                                 {item.value}
                               </div>
                               <div className="text-xs sm:text-sm lg:text-sm text-gray-600 font-medium leading-tight break-words">
