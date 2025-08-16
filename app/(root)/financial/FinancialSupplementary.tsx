@@ -42,7 +42,6 @@ const FinancialSupplementary = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
             <WaveButton
               title="Statement of Group Value Added"
-              style={{ fontSize: "14px" }}
               onBtnClick={() =>
                 window.open(
                   "pdf/innerpage/Statement of Group Value Added.pdf",
@@ -52,7 +51,6 @@ const FinancialSupplementary = () => {
             />
             <WaveButton
               title="History of Dividends and Scrip Issues"
-              style={{ fontSize: "14px" }}
               onBtnClick={() =>
                 window.open(
                   "pdf/innerpage/History of Dividends and Scrip Issues.pdf",
@@ -62,7 +60,6 @@ const FinancialSupplementary = () => {
             />
             <WaveButton
               title="Ten Year Financial Review"
-              style={{ fontSize: "14px" }}
               onBtnClick={() =>
                 window.open(
                   "pdf/innerpage/Ten Year Financial Review.pdf",
@@ -72,7 +69,6 @@ const FinancialSupplementary = () => {
             />
             <WaveButton
               title="Indicative US Dollar Financial Statements"
-              style={{ fontSize: "14px" }}
               onBtnClick={() =>
                 window.open(
                   "pdf/innerpage/Indicative US Dollar Financial Statements.pdf",
@@ -82,7 +78,6 @@ const FinancialSupplementary = () => {
             />
             <WaveButton
               title="Statement of Profit or Loss - Horizontal and Vertical Analysis"
-              style={{ fontSize: "14px" }}
               onBtnClick={() =>
                 window.open(
                   "pdf/innerpage/Statement of Profit or Loss -Horizontal and Vertical Analysis.pdf",
@@ -92,28 +87,24 @@ const FinancialSupplementary = () => {
             />
             <WaveButton
               title="Investor Information"
-              style={{ fontSize: "14px" }}
               onBtnClick={() =>
                 window.open("pdf/innerpage/Investor Information.pdf", "_blank")
               }
             />
             <WaveButton
               title="Quarterly Analysis"
-              style={{ fontSize: "14px" }}
               onBtnClick={() =>
                 window.open("pdf/innerpage/Quarterly Analysis.pdf", "_blank")
               }
             />
             <WaveButton
               title="Group Profile"
-              style={{ fontSize: "14px" }}
               onBtnClick={() =>
                 window.open("pdf/innerpage/Group Profile.pdf", "_blank")
               }
             />
             <WaveButton
               title="Country Report"
-              style={{ fontSize: "14px" }}
               onBtnClick={() =>
                 window.open("pdf/innerpage/Country Report.pdf", "_blank")
               }

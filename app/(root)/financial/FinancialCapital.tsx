@@ -267,7 +267,7 @@ const FinancialCapital = () => {
       </div>
 
       {/* Download buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-6 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-60">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-10 mt-6 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-60">
         <WaveButton
           title="Financial Highlights"
           onBtnClick={() =>

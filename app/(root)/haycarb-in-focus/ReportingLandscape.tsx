@@ -234,7 +234,7 @@ const ReportingLandscape = () => {
                   "_blank"
                 )
               }
-              className="w-50"
+              className="w-40"
             />
           </div>
 
@@ -298,13 +298,13 @@ const ReportingLandscape = () => {
       <div className="my-15 flex items-center justify-center ">
         <WaveButton
           title="Explore More"
-          style={{ fontSize: "12px" }}
           onBtnClick={() =>
             window.open(
               "pdf/innerpage/Segment Review and Analysis.pdf",
               "_blank"
             )
           }
+          className="w-40"
         />
       </div>
       <div className="lg:px-25 xl:px-30 mx-auto myt-12 mb-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-18 lg:gap-8">

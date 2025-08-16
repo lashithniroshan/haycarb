@@ -86,23 +86,23 @@ const ValueCreation = () => {
         height={781}
         className="mx-auto block"
       />
-      <div className="my-15 flex items-center justify-center">
+      <div className="mb-15 flex items-center justify-center">
         <WaveButton
           title="Explore More"
-          style={{ fontSize: "12px" }}
           onBtnClick={() =>
             window.open(
               "pdf/innerpage/Determining Material Issues.pdf",
               "_blank"
             )
           }
+          className="w-40"
         />
       </div>
 
       {/* Digital evolution section */}
       <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 mx-auto">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 flex flex-col justify-center">
             <h1 className="text-[40px] text-[#005881] font-normal">
               Managing Business Risks & Opportunities
             </h1>
@@ -117,13 +117,13 @@ const ValueCreation = () => {
             </p>
             <WaveButton
               title="Explore More"
-              style={{ fontSize: "12px" }}
               onBtnClick={() =>
                 window.open(
                   "pdf/innerpage/Managing Risks & Opportunities.pdf",
                   "_blank"
                 )
               }
+              className="w-40"
             />
           </div>
 
@@ -152,7 +152,7 @@ const ValueCreation = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-6 lg:px-4 2xl:px-16 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-6 lg:px-4 2xl:px-16 max-w-6xl mx-auto mt-12">
         <InfoCard
           title="Operating Environment"
           description="This section summarizes the impact from external factors including political shifts, economic volatility, climate risks, social expectations, evolving technologies, and regulatory pressures that influence Haycarb's business decisions and sustainability priorities."

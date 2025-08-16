@@ -119,10 +119,10 @@ const Integration = () => {
 
           <WaveButton
             title="Explore More"
-            style={{ fontSize: "12px" }}
             onBtnClick={() =>
               window.open("pdf/innerpage/ESG governance.pdf", "_blank")
             }
+            className="w-40"
           />
         </div>
 
@@ -165,27 +165,27 @@ const Integration = () => {
             and performance indicators.
           </p>
 
-          <WaveButton
-            title="Explore More"
-            style={{ fontSize: "12px" }}
-            className="mb-5"
-            onBtnClick={() =>
-              window.open(
-                "pdf/innerpage/ESG strategies,metrics and targets.pdf",
-                "_blank"
-              )
-            }
-          />
-          <WaveButton
-            title="Activate - ESG Roadmap 2030"
-            style={{ fontSize: "12px" }}
-            onBtnClick={() =>
-              window.open(
-                "pdf/innerpage/Activate ESG roadmap 2030.pdf",
-                "_blank"
-              )
-            }
-          />
+          <div className="lg:flex lg:flex-row lg:gap-6">
+            <WaveButton
+              title="Explore More"
+              onBtnClick={() =>
+                window.open(
+                  "pdf/innerpage/ESG strategies,metrics and targets.pdf",
+                  "_blank"
+                )
+              }
+              className="mb-4 lg:mb-0 w-40"
+            />
+            <WaveButton
+              title="Activate - ESG Roadmap 2030"
+              onBtnClick={() =>
+                window.open(
+                  "pdf/innerpage/Activate ESG roadmap 2030.pdf",
+                  "_blank"
+                )
+              }
+            />
+          </div>
         </div>
       </div>
 
@@ -211,6 +211,7 @@ const Integration = () => {
                 "_blank"
               )
             }
+            className="w-40"
           />
         </div>
         <div className="lg:col-span-6 flex items-center">
@@ -258,6 +259,7 @@ const Integration = () => {
                 "_blank"
               )
             }
+            className="w-40"
           />
         </div>
       </div>
