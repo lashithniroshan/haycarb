@@ -15,7 +15,7 @@ const ChartGenerator = () => {
     <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
+        className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain z-0"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -33,7 +33,7 @@ const ChartGenerator = () => {
                 xl:w-90 xl:h-90
                 2xl:w-100 2xl:h-100
                 -rotate-15 scale-x-[-1] 
-                bg-no-repeat bg-contain opacity-25 z-40"
+                bg-no-repeat bg-contain opacity-25 z-0"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -53,7 +53,7 @@ const ChartGenerator = () => {
                   xl:w-72 xl:h-72
                   transform scale-x-[-1] -rotate-20
                   -translate-x-1/2 -translate-y-9/10 
-                  bg-no-repeat bg-contain opacity-25"
+                  bg-no-repeat bg-contain opacity-25 z-0"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -65,7 +65,7 @@ const ChartGenerator = () => {
                   top-300 -left-40
                   lg:w-200 lg:h-200 
                   scale-x-[-1]
-                  bg-no-repeat bg-contain"
+                  bg-no-repeat bg-contain z-0"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -84,7 +84,7 @@ const ChartGenerator = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-4 px-4 py-6">
+      <div className="flex flex-wrap justify-center items-center gap-4 px-4 py-6 z-30">
         <WaveButton
           title="Financial"
           style={{

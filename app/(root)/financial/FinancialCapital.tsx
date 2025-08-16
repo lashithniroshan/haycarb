@@ -101,7 +101,7 @@ const FinancialCapital = () => {
       {/* --- Decorative Background Blobs --- */}
       <div
         aria-hidden="true"
-        className="absolute top-0 -right-30 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
+        className="absolute top-0 -right-30 lg:w-150 lg:h-150 bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -121,7 +121,7 @@ const FinancialCapital = () => {
                   -rotate-30 
                   scale-x-[-1]
                   bg-no-repeat 
-                  bg-contain z-40 opacity-50"
+                  bg-contain z-5 opacity-50"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -129,7 +129,7 @@ const FinancialCapital = () => {
 
       <div
         aria-hidden="true"
-        className="absolute top-1/2 left-0 w-96 h-96 md:w-[600px] md:h-[600px] rotate-180 transform -translate-y-1/3 -translate-x-1/3 bg-no-repeat bg-contain"
+        className="absolute top-1/2 left-0 w-96 h-96 md:w-[600px] md:h-[600px] rotate-180 transform -translate-y-1/3 -translate-x-1/3 bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -145,7 +145,7 @@ const FinancialCapital = () => {
                   md:w-72 md:h-72 
                   -rotate-15
                   transform -scale-x-90
-                  bg-no-repeat bg-contain opacity-25"
+                  bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -187,11 +187,11 @@ const FinancialCapital = () => {
       </div>
 
       {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 z-50">
         {chart.map((ch) => (
           <div
             key={ch.id}
-            className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-5"
+            className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-5 z-40"
           >
             <Image src={ch.value} alt="banner" width={386} height={479} />
           </div>
@@ -199,7 +199,7 @@ const FinancialCapital = () => {
       </div>
 
       {/* Table */}
-      <div className="w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 my-20">
+      <div className="relative z-30 w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 my-20">
         {/* Header */}
         <div
           className="bg-[#61B296] text-white text-center py-3 sm:py-4"
@@ -214,7 +214,7 @@ const FinancialCapital = () => {
           style={{ borderRadius: "0 0 10px 10px" }}
         >
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[320px] border-collapse">
+            <table className="w-full min-w-[320px] border-collapse ">
               {/* Header Row */}
               <thead>
                 <tr>

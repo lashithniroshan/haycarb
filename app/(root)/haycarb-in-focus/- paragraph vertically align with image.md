@@ -1,8 +1,9 @@
-- paragraph vertically align with image
-- haycarb page graph resize
-- button size 14px
-- above footer whitespace 100px
-- carousel button increase the size and make it vertically center
+- paragraph vertically align with image -----------> DONE
+- haycarb page graph resize ---------> DONE
+- button size 14px ------> DONE
+- above footer whitespace 100px ------> DONE
+- carousel button increase the size and make it vertically center ------> DONE
+
 - Financial page table black letters increase and whale opacity go back
 - below buttons gap space add and above space reduce
 - gap between matrics should be same to the below graphs
