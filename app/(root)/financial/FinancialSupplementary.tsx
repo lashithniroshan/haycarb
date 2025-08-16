@@ -22,16 +22,17 @@ const FinancialSupplementary = () => {
                 2xl:top-140 2xl:right-160
                 lg:w-[480px] lg:h-[480px]
                 rotate-20 scale-x-[-1] 
-                bg-no-repeat bg-contain z-40"
+                bg-no-repeat bg-contain z-40 opacity-25"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
       ></div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-8 py-8">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-20 px-4 lg:px-8 py-8">
         {/* Left column */}
-        <div className="lg:col-span-6 lg:pt-20">
-          {/* <p className="para text-[18px] text-[#606060] font-semibold">
+        <div className="lg:col-span-8 lg:pt-20 flex justify-center lg:justify-end">
+          <div className="w-full lg:w-auto lg:max-w-3xl">
+            {/* <p className="para text-[18px] text-[#606060] font-semibold">
             These supplementary materials including financial-related additional
             disclosures, our group profile, and country- specific overviews are
             designed to support a deeper exploration of our performance. We
@@ -39,79 +40,83 @@ const FinancialSupplementary = () => {
             well-rounded understanding of our strategic direction, regional
             presence, and overall results.
           </p> */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
-            <WaveButton
-              title="Statement of Group Value Added"
-              onBtnClick={() =>
-                window.open(
-                  "pdf/innerpage/Statement of Group Value Added.pdf",
-                  "_blank"
-                )
-              }
-            />
-            <WaveButton
-              title="History of Dividends and Scrip Issues"
-              onBtnClick={() =>
-                window.open(
-                  "pdf/innerpage/History of Dividends and Scrip Issues.pdf",
-                  "_blank"
-                )
-              }
-            />
-            <WaveButton
-              title="Ten Year Financial Review"
-              onBtnClick={() =>
-                window.open(
-                  "pdf/innerpage/Ten Year Financial Review.pdf",
-                  "_blank"
-                )
-              }
-            />
-            <WaveButton
-              title="Indicative US Dollar Financial Statements"
-              onBtnClick={() =>
-                window.open(
-                  "pdf/innerpage/Indicative US Dollar Financial Statements.pdf",
-                  "_blank"
-                )
-              }
-            />
-            <WaveButton
-              title="Statement of Profit or Loss - Horizontal and Vertical Analysis"
-              onBtnClick={() =>
-                window.open(
-                  "pdf/innerpage/Statement of Profit or Loss -Horizontal and Vertical Analysis.pdf",
-                  "_blank"
-                )
-              }
-            />
-            <WaveButton
-              title="Investor Information"
-              onBtnClick={() =>
-                window.open("pdf/innerpage/Investor Information.pdf", "_blank")
-              }
-            />
-            <WaveButton
-              title="Quarterly Analysis"
-              onBtnClick={() =>
-                window.open("pdf/innerpage/Quarterly Analysis.pdf", "_blank")
-              }
-            />
-            <WaveButton
-              title="Group Profile"
-              onBtnClick={() =>
-                window.open("pdf/innerpage/Group Profile.pdf", "_blank")
-              }
-            />
-            <WaveButton
-              title="Country Report"
-              onBtnClick={() =>
-                window.open("pdf/innerpage/Country Report.pdf", "_blank")
-              }
-            />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
+              <WaveButton
+                title="Statement of Group Value Added"
+                onBtnClick={() =>
+                  window.open(
+                    "pdf/innerpage/Statement of Group Value Added.pdf",
+                    "_blank"
+                  )
+                }
+              />
+              <WaveButton
+                title="History of Dividends and Scrip Issues"
+                onBtnClick={() =>
+                  window.open(
+                    "pdf/innerpage/History of Dividends and Scrip Issues.pdf",
+                    "_blank"
+                  )
+                }
+              />
+              <WaveButton
+                title="Ten Year Financial Review"
+                onBtnClick={() =>
+                  window.open(
+                    "pdf/innerpage/Ten Year Financial Review.pdf",
+                    "_blank"
+                  )
+                }
+              />
+              <WaveButton
+                title="Indicative US Dollar Financial Statements"
+                onBtnClick={() =>
+                  window.open(
+                    "pdf/innerpage/Indicative US Dollar Financial Statements.pdf",
+                    "_blank"
+                  )
+                }
+              />
+              <WaveButton
+                title="Statement of Profit or Loss - Horizontal and Vertical Analysis"
+                onBtnClick={() =>
+                  window.open(
+                    "pdf/innerpage/Statement of Profit or Loss -Horizontal and Vertical Analysis.pdf",
+                    "_blank"
+                  )
+                }
+              />
+              <WaveButton
+                title="Investor Information"
+                onBtnClick={() =>
+                  window.open(
+                    "pdf/innerpage/Investor Information.pdf",
+                    "_blank"
+                  )
+                }
+              />
+              <WaveButton
+                title="Quarterly Analysis"
+                onBtnClick={() =>
+                  window.open("pdf/innerpage/Quarterly Analysis.pdf", "_blank")
+                }
+              />
+              <WaveButton
+                title="Group Profile"
+                onBtnClick={() =>
+                  window.open("pdf/innerpage/Group Profile.pdf", "_blank")
+                }
+              />
+              <WaveButton
+                title="Country Report"
+                onBtnClick={() =>
+                  window.open("pdf/innerpage/Country Report.pdf", "_blank")
+                }
+              />
+            </div>
           </div>
         </div>
-        <div className="lg:col-span-6 h-full flex items-stretch justify-center mt-8 lg:mt-0">
+        <div className="lg:col-span-4 h-full flex items-stretch justify-center lg:justify-start mt-8 lg:mt-0">
           <div className="h-full flex items-stretch">
             <Image
               src="/images/innerpage/financial/suplementary_main.jpg"
