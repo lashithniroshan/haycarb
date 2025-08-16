@@ -98,7 +98,7 @@ const OverviewofHaycarb = () => {
     },
     {
       title: "Milestones",
-      image: "/images/innerpage/haycarb/logo.png",
+      image: "/images/innerpage/haycarb/milestone.jpg",
       onDownload: () => window.open("pdf/innerpage/Milestones.pdf", "_blank"),
     },
     {

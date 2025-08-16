@@ -117,7 +117,7 @@ const ReportingLandscape = () => {
     <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
+        className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -134,7 +134,7 @@ const ReportingLandscape = () => {
                   rotate-180 
                   transform 
                   -translate-y-1/3 -translate-x-1/3 
-                  bg-no-repeat bg-contain"
+                  bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -154,7 +154,7 @@ const ReportingLandscape = () => {
                   xl:w-80 xl:h-80
                   transform scale-x-[-1] -rotate-20
                   -translate-x-1/2 -translate-y-9/10 
-                  bg-no-repeat bg-contain opacity-25 z-10"
+                  bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -164,7 +164,7 @@ const ReportingLandscape = () => {
         className="absolute 
                   top-6/7 -right-30 
                   lg:w-200 lg:h-200 
-                  bg-no-repeat bg-contain"
+                  bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -309,7 +309,7 @@ const ReportingLandscape = () => {
       </div>
       <div className="lg:px-25 xl:px-30 mx-auto myt-12 mb-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-18 lg:gap-8">
         {cardData.map((item, idx) => (
-          <DownloadCard key={idx} {...item} />
+          <DownloadCard key={idx} {...item} className="z-30" />
         ))}
       </div>
       <div className="lg:px-53">
