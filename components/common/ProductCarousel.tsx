@@ -30,6 +30,24 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
 
   return (
     <div className="relative w-full px-4">
+      {/* Arrows - Positioned exactly at image center */}
+      <button
+        onClick={() => instanceRef.current?.prev()}
+        className="absolute -left-1 sm:-left-2 bg-[#e4e4e4] hover:bg-[#ccc] transition-colors duration-200 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 shadow-md"
+        style={{ top: "calc(50% - 45px)" }}
+      >
+        <span className="text-xl sm:text-2xl text-white rotate-180 leading-none">
+          ❯
+        </span>
+      </button>
+      <button
+        onClick={() => instanceRef.current?.next()}
+        className="absolute -right-1 sm:-right-2 bg-[#e4e4e4] hover:bg-[#ccc] transition-colors duration-200 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 shadow-md"
+        style={{ top: "calc(50% - 45px)" }}
+      >
+        <span className="text-xl sm:text-2xl text-white leading-none">❯</span>
+      </button>
+
       {/* Slider */}
       <div ref={sliderRef} className="keen-slider">
         {products.map((product) => (
@@ -49,20 +67,6 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
           </div>
         ))}
       </div>
-
-      {/* Arrows */}
-      <button
-        onClick={() => instanceRef.current?.prev()}
-        className="absolute top-[130] lg:top-[80] xl:top-[110] 2xl:top-[150] left-0 -translate-y-1/2 bg-[#e4e4e4] hover:bg-[#ccc] w-8 h-8 rounded-full flex items-center justify-center z-10"
-      >
-        <span className="text-xl text-white rotate-180">❯</span>
-      </button>
-      <button
-        onClick={() => instanceRef.current?.next()}
-        className="absolute op-[130] top-[130] lg:top-[80] xl:top-[110] 2xl:top-[150] right-0 -translate-y-1/2 bg-[#e4e4e4] hover:bg-[#ccc] w-8 h-8 rounded-full flex items-center justify-center z-10"
-      >
-        <span className="text-xl text-white">❯</span>
-      </button>
     </div>
   );
 };
