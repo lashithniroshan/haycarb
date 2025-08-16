@@ -22,9 +22,9 @@ const slidesData: Slide[] = [
     subtitle: "Signalling Clarity and Intent",
     description:
       "When whales surface to breathe, their spout signals presence and strength with clarity. Similarly, Haycarb rises with purpose; transparency is our core. Strong performance and lasting impact drives us forward, powered by a relentless commitment to sustainable innovation and high standards.",
-    image: "/images/fish/1.webm",
-    activeimage: "/images/fish/1.webm",
-    selectedimage: "/images/fish/1.webm",
+      image: "/images/fish/2.webm",
+    activeimage: "/images/fish/2.webm",
+    selectedimage: "/images/fish/2.webm",
     alt: "Wallscape",
   },
   {
@@ -33,9 +33,9 @@ const slidesData: Slide[] = [
     subtitle: "Staying Informed and Aware",
     description:
       "A spy hop is when a whale rises vertically to observe its surroundings - signaling awareness and clarity. At Haycarb, we stay attuned to global trends, enabling swift, strategic responses that turn insight into action with agility, precision, and forward-thinking purpose.",
-    image: "/images/fish/2.webm",
-    activeimage: "/images/fish/2.webm",
-    selectedimage: "/images/fish/2.webm",
+       image: "/images/fish/3.webm",
+    activeimage: "/images/fish/3.webm",
+    selectedimage: "/images/fish/3.webm",
     alt: "Stores",
   },
   {
@@ -44,9 +44,9 @@ const slidesData: Slide[] = [
     subtitle: "Diving Deep to Make an Impacttle",
     description:
       "The iconic fluke-up dive signals the whales deep, deliberate descent into the ocean’s deaths. As we dive deep into every challenge, uncovering insights, optimising processes, and creating value at every level, Haycarb navigates complexity with focus and intent, emerging stronger, smarter, and more resilient.",
-    image: "/images/fish/3.webm",
-    activeimage: "/images/fish/3.webm",
-    selectedimage: "/images/fish/3.webm",
+     image: "/images/fish/6.webm",
+    activeimage: "/images/fish/6.webm",
+    selectedimage: "/images/fish/6.webm",
     alt: "wayfinders",
   },
   {
@@ -77,9 +77,9 @@ const slidesData: Slide[] = [
     subtitle: "Rising Above and Beyond",
     description:
       "Few sights inspire like a whale breaching rising with strength and purpose. Haycarb’s breakthroughs soar just as boldly: transformative leaps that redefine sustainable manufacturing and drive impact for people, planet, and future generations with unwavering purpose. 'Driving Value, Changing Lives'.",
-    image: "/images/fish/6.webm",
-    activeimage: "/images/fish/6.webm",
-    selectedimage: "/images/fish/6.webm",
+      image: "/images/fish/1.webm",
+    activeimage: "/images/fish/1.webm",
+    selectedimage: "/images/fish/1.webm",
     alt: "Wallscape",
   },
 ];

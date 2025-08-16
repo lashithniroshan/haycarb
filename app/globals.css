@@ -597,7 +597,11 @@ nav{
         align-items: center;
   }
   .drag-indicator{
-        top: 10% !important;
-    right: var(--background) !important;
+        top: 12% !important;
+        right: -10% !important;
   }
+}
+
+.ulmenu li:last-child{
+  border-bottom: 0px !important;
 }

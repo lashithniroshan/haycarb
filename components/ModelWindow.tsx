@@ -36,7 +36,7 @@ const slides: Slide[] = [
   image: '/images/popup/2.jpg',
     title: 'What’s new in digital reporting',
    description:
-      'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency.',
+      'Haycarb’s 2024/25 report introduces an AI-driven, digitally immersive experience with enhanced accessibility and interactive features to boost stakeholder engagement and transparency',
          button: () => (
       <div>
         <button
@@ -61,7 +61,7 @@ const slides: Slide[] = [
     image: '/images/popup/4.jpg',
     title: 'Chart Generator',
     description:
-      'Haycarb’s digital report features a chart generator enabling stakeholders to create, customize, and download interactive performance visualizations.',
+      'Haycarb’s digital report features a chart generator enabling stakeholders to create, customize, and download interactive performance visualizations',
          button: () => (
       <div>
         <button
@@ -78,7 +78,7 @@ const slides: Slide[] = [
     image: '/images/popup/5.jpg',
     title: 'FinQuest- Game based learning',
    description:
-      'FinQuest introduces game-based learning in Haycarb’s digital report, engaging stakeholders through interactive quizzes on strategy, performance, and ESG.',
+      'FinQuest introduces game-based learning in Haycarb’s digital report, engaging stakeholders through interactive quizzes on strategy, performance, and ESG',
          button: () => (
       <div>
         <button
@@ -113,14 +113,14 @@ const slides: Slide[] = [
     image: '/images/popup/7.jpg',
     title: 'Synopsis of Annual report 2024/25',
    description:
-      'The summarized version fo the Haycarb 2024/25 annual report highlights global leadership, resilient performance, ESG impact, and digital transformation through integrated, accessible reporting.',
+      'The summarized version fo the Haycarb 2024/25 annual report highlights global leadership, resilient performance, ESG impact, and digital transformation through integrated, accessible reporting',
            button: () => (
       <div>
         <button
           className="mt-6 px-6 py-2 flex bg-white text-blue-500 rounded-full transition btn-custom wave-btn"
           onClick={() => window.open('pdf/Haycarb PLC - Synopsis of Annual Report 2024_25.pdf', '_blank')}
         >
-          Annual reporting
+          View Synopsis
         </button>
       </div>
     ),

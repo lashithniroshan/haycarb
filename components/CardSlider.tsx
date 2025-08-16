@@ -27,7 +27,7 @@ const CardSlider = () => {
       title: 'User Dashboards',
       image: '/images/carduserprofiles.jpg',
       alt: 'user profiles',
-       route: '/uerprofiles',
+       route: '/user-profile',
     },
   ];
 
@@ -60,9 +60,13 @@ const CardSlider = () => {
   };
 
 
-const handleTitleClick = (route: string) => {
-  router.push(route);
-};
+  const handleTitleClick = (route: string) => {
+    // Convert relative route to full URL
+    const baseUrl = window.location.origin; // e.g., 'http://localhost:3000' or 'https://yourdomain.com'
+    const fullUrl = `${baseUrl}${route}`;
+    window.open(fullUrl, '_blank', 'noopener,noreferrer'); // Open in new tab
+  };
+
 
  return (
     <div className={styles.sliderContainer}>
