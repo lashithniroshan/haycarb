@@ -96,7 +96,7 @@ const Integration = () => {
         </p>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4">
         {/* Left: Text Block (Vertically Centered) */}
         <div className="lg:col-span-6 flex flex-col justify-center">
           <h1 className="text-[40px] text-[#005881] font-normal leading-none">
@@ -139,7 +139,7 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4">
         {/* Left: Image */}
         <div className="lg:col-span-6 flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
@@ -189,7 +189,7 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4">
         <div className="lg:col-span-6 flex flex-col justify-center">
           <h1 className="text-[40px] text-[#005881] font-normal leading-none">
             Sustainability and Climate related risks and opportunities
@@ -226,7 +226,7 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 mt-10 pt-8">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 mt-5 pt-4">
         <div className="lg:col-span-6 flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
