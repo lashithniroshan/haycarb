@@ -97,7 +97,7 @@ const FinancialCapital = () => {
   };
 
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       {/* --- Decorative Background Blobs --- */}
       <div
         aria-hidden="true"

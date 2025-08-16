@@ -279,7 +279,7 @@ const ContentPage = () => {
   const [activeKey, setActiveKey] = useState(stakeholderKeys[0]);
 
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-30 overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute top-0 -right-25 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
@@ -652,7 +652,7 @@ const ContentPage = () => {
       </div>
 
       {/* Grpahs */}
-      <div className="my-12 px-10 lg:px-50">
+      <div className="mt-12 px-10 lg:px-50">
         <h1 className="text-[#005881] text-[40px] font-normal text-center mb-10">
           {stakeholdersData[activeKey].content?.related_chart_image?.title}
         </h1>

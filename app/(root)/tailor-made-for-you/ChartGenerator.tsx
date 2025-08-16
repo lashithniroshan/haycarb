@@ -12,7 +12,7 @@ const ChartGenerator = () => {
   const [activatedBtn, setActivatedBtn] = useState("financial");
 
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"

@@ -4,7 +4,7 @@ import React from "react";
 
 const Integration = () => {
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute top-0 -right-30 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
@@ -226,7 +226,7 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 mt-10 pt-8">
         <div className="lg:col-span-6 flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
