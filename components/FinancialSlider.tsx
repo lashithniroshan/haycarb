@@ -57,8 +57,11 @@ const FinancialSlider = () => {
     if (isMobile) setActiveIndex(index); // Only allow dot clicks on mobile
   };
   const handleTitleClick = (route: string) => {
-  router.push(route);
-};
+    // Convert relative route to full URL
+    const baseUrl = window.location.origin; // e.g., 'http://localhost:3000' or 'https://yourdomain.com'
+    const fullUrl = `${baseUrl}${route}`;
+    window.open(fullUrl, '_blank', 'noopener,noreferrer'); // Open in new tab
+  };
 
  return (
   <div className={style.sliderContainerfinancial}>

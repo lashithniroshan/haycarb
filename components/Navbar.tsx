@@ -245,7 +245,7 @@ const Navbar = ({
                   <div
                     className="absolute right-0 mt-2 w-64 bg-white text-black rounded-md shadow-lg z-50"
                     style={{
-                      background: "#3C7DA6",
+                      backgroundColor:"rgba(2, 30, 67, 0.8)",
                       color: "rgb(255, 255, 255)",
                       boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
                       fontSize: "14px",
@@ -409,23 +409,7 @@ const Navbar = ({
                   className=""
                   onClick={toggleMenu}
                 >
-                  Chart Generator
-                </Link>
-              </li>
-              <li
-                className="px-5 md:py-3 sm:py-1 pl-[50px] hover:bg-[rgba(73,220,248,0.1)] block w-full"
-                style={{
-                  borderBottom: "0.5px solid rgba(0, 141, 168, 0.5)",
-                  paddingBottom: "14px",
-                  paddingTop: "14px",
-                }}
-              >
-                <Link
-                  href="/tailor-made-for-you"
-                  className=""
-                  onClick={toggleMenu}
-                >
-                  Create Your Own Report
+                  Charts & Reports Generator
                 </Link>
               </li>
               <li

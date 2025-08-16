@@ -36,7 +36,7 @@ function Management() {
     },
     {
       id:6,
-      name:`<p class="${styles.name}">MS.JEEVANI<br />ABEYRATNE</p>`,
+      name:`<p class="${styles.name}">MS. JEEVANI<br />ABEYRATNE</p>`,
        title: `<p class="${styles.title}">Director – Finance & IT</p>`,
       image: '/images/management/6.png',
     },

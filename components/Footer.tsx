@@ -26,8 +26,8 @@ const HomeFooter = () => {
             <div className={styles.column}>
               <p>No: 400, Deans Road, Colombo 10,</p>
               <p>Sri Lanka</p>
-              <p>Tel: +94 112 627 000</p>
-              <p>Email: inquiries@haycarb.com</p>
+               <p>Tel: <a href="tel:+94112627000">+94 112 627 000</a></p>
+              <p>Email: <a href="mailto:inquiries@haycarb.com">inquiries@haycarb.com</a></p>
             </div>
 
             {/* Column 2: Links 1 */}
@@ -42,7 +42,7 @@ const HomeFooter = () => {
                   <Link href="pdf/Financial Statements.pdf" target="_blank">Financial Statements</Link>
                 </li>
                 <li>
-                  <Link href="/pdf/Board-of-Directors.pdf" target="_blank">Leadership Message</Link>
+                  <Link href="/pdf/tbc/Chairmans & Managing Directors Joint Statement.pdf" target="_blank">Leadership Message</Link>
                 </li>
                  <li>
                   <Link href="pdf/tbc/Strategy and Resource Allocation.pdf" target="_blank">Our Strategy</Link>
@@ -63,7 +63,7 @@ const HomeFooter = () => {
                   <Link href="pdf/CorporateGovernance.pdf" target="_blank">Corporate Governance</Link>
                 </li>
                  <li>
-                  <Link href="pdf/FAQs.pdf">FAQs</Link>
+                  <Link href="pdf/FAQs.pdf" target="_blank">FAQs</Link>
                 </li>
               </ul>
             </div>
@@ -154,8 +154,8 @@ const InnerPageFooter = () => {
             <div className={styles.column}>
               <p>No: 400, Deans Road, Colombo 10,</p>
               <p>Sri Lanka</p>
-              <p>Tel: +94 112 627 000</p>
-              <p>Email: inquiries@haycarb.com</p>
+             <p>Tel: <a href="tel:+94112627000">+94 112 627 000</a></p>
+              <p>Email: <a href="mailto:inquiries@haycarb.com">inquiries@haycarb.com</a></p>
             </div>
 
             {/* Column 2: Links 1 */}
@@ -170,7 +170,7 @@ const InnerPageFooter = () => {
                   <Link href="pdf/Financial Statements.pdf" target="_blank">Financial Statements</Link>
                 </li>
                 <li>
-                  <Link href="/pdf/Board-of-Directors.pdf" target="_blank">Leadership Message</Link>
+                  <Link href="/pdf/tbc/Chairmans & Managing Directors Joint Statement.pdf" target="_blank">Leadership Message</Link>
                 </li>
                  <li>
                   <Link href="pdf/tbc/Strategy and Resource Allocation.pdf" target="_blank">Our Strategy</Link>
@@ -191,7 +191,7 @@ const InnerPageFooter = () => {
                   <Link href="pdf/CorporateGovernance.pdf" target="_blank">Corporate Governance</Link>
                 </li>
                  <li>
-                  <Link href="pdf/FAQs.pdf">FAQs</Link>
+                  <Link href="pdf/FAQs.pdf" target="_blank">FAQs</Link>
                 </li>
               </ul>
             </div>

@@ -10,11 +10,11 @@ const Videoslider = () => {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const slides = [
-    { id: 1, src: 'https://www.youtube.com/embed/LE-DSz-2TcE?si=BlxGjh_1sYOsMq7c', thumbnill: '/videos/Puritas Sath Diyawara.jpg', title: 'Puritas Sath Diyawara', subtitle: 'Transforming lives by delivering safe drinking water and supporting education in underprivileged communities.' },
-    { id: 2, src: 'https://www.youtube.com/embed/AgMRWMykfww?si=Nx9WK9BdErAXU568', thumbnill: '/videos/Sisu Diwi Pahana.jpg', title: 'Sisu Diwi Pahana', subtitle: 'Empowering students with better nutrition to combat malnutrition and improve well-being.' },
-    { id: 3, src: 'https://www.youtube.com/embed/LE-DSz-2TcE?si=OAQAVsyPgFrx4AoD', thumbnill: '/videos/Haritha Angara.jpg', title: 'Haritha Angara', subtitle: 'Production of high-quality coconut shell charcoal while empowering small scale suppliers and reducing environmental impact.' },
+    { id: 1, src: 'https://www.youtube.com/embed/Lvwft7vve2Y?si=rRCdyUPt7mphPxMU', thumbnill: '/videos/Puritas Sath Diyawara.jpg', title: 'Puritas Sath Diyawara', subtitle: 'Transforming lives by delivering safe drinking water and supporting education in underprivileged communities' },
+    { id: 2, src: 'https://www.youtube.com/embed/AgMRWMykfww?si=Nx9WK9BdErAXU568', thumbnill: '/videos/Sisu Diwi Pahana.jpg', title: 'Sisu Diwi Pahana', subtitle: 'Empowering students with better nutrition to combat malnutrition and improve well-being' },
+    { id: 3, src: 'https://www.youtube.com/embed/LE-DSz-2TcE?si=OAQAVsyPgFrx4AoD', thumbnill: '/videos/Haritha Angara.jpg', title: 'Haritha Angara', subtitle: 'Production of high-quality coconut shell charcoal while empowering small scale suppliers and reducing environmental impact' },
     { id: 4, src: 'https://www.youtube.com/embed/CzBTs5hdFGI?si=pZi0IxNM4hUVyDxv', thumbnill: '/videos/Behold the Turtle.jpg', title: 'Behold the Turtle', subtitle: 'Safeguarding marine biodiversity through conservation, habitat restoration and awareness effort' },
-    { id: 5, src: 'https://www.youtube.com/embed/psD1JTSJqOk?si=iAA9XbzpM4yOnOnT', thumbnill: '/videos/Puritas Sath Diyawara - Going Beyond.jpg', title: 'Puritas Sath Diyawara - Going Beyond', subtitle: 'Empowering underprivileged children through access to education and essential school supplies for a brighter future.' },
+    { id: 5, src: 'https://www.youtube.com/embed/psD1JTSJqOk?si=iAA9XbzpM4yOnOnT', thumbnill: '/videos/Puritas Sath Diyawara - Going Beyond.jpg', title: 'Puritas Sath Diyawara - Going Beyond', subtitle: 'Empowering underprivileged children through access to education and essential school supplies for a brighter future' },
   ];
 
   const handleSlideChange = (id: number) => {

@@ -318,11 +318,10 @@ Dive in and explore a year of transformation
      <p style={{
       color: 'white',
       fontSize: '14px',
-      marginTop: '8px',
       textAlign: 'center',
       fontFamily: 'Gotham-Book, sans-serif',
     }}>
-     Stay immersed for 2 minutes
+     Immersive experience
     </p>
   </motion.div>
 )}
