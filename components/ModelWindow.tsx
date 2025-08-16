@@ -132,13 +132,13 @@ const ModelWindow: React.FC = () => {
   const [visible, setVisible] = useState(true);
 
   // Auto-play slides every 5 seconds
-  useEffect(() => {
-    if (!visible) return;
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length); // Loop continuously
-    }, 10000);
-    return () => clearInterval(timer);
-  }, [visible]);
+  // useEffect(() => {
+  //   if (!visible) return;
+  //   const timer = setInterval(() => {
+  //     setCurrentSlide((prev) => (prev + 1) % slides.length); 
+  //   }, 10000);
+  //   return () => clearInterval(timer);
+  // }, [visible]);
 
   const nextSlide = () =>
     setCurrentSlide((prev) => (prev + 1) % slides.length);

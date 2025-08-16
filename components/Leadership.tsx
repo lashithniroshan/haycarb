@@ -294,7 +294,7 @@ const pdfUrls: Record<Exclude<Language, null>, string> = {
               <div
                 className="absolute right-0 mt-2 w-64 bg-white text-black rounded-md shadow-lg z-50"
                 style={{
-                  background: '#3C7DA6',
+                  background: 'rgba(60, 125, 166, 0.9)',
                   color: 'rgb(255, 255, 255)',
                   boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
                   fontSize: '14px',

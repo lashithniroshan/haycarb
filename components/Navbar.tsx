@@ -249,6 +249,7 @@ const Navbar = ({
                       color: "rgb(255, 255, 255)",
                       boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
                       fontSize: "14px",
+                      marginTop:'30px',
                     }}
                   >
                     <input
@@ -259,6 +260,9 @@ const Navbar = ({
                       // onBlur={() => setTimeout(() => setIsDropdownOpen(false), 200)}
                       placeholder="Search PDFs..."
                       className="w-full p-1 border-b focus:outline-none"
+                       style={{
+                        height:'40px'
+                      }}
                     />
                     <ul className="max-h-40 overflow-y-auto custom-scrollbar">
                       {filteredPdfs.length > 0 ? (

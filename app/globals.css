@@ -605,3 +605,6 @@ nav{
 .ulmenu li:last-child{
   border-bottom: 0px !important;
 }
+.custom-scrollbar li:hover{
+  background-color: rgba(73, 220, 248, .1);
+}

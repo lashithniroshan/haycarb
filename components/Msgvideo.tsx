@@ -44,7 +44,7 @@ const Msgvideo = () => {
             At Haycarb, we lead with expertise, global reach, and purpose. Like strength beneath waves, our deep innovation fuels sustainable manufacturing, ethical leadership, and lasting impact. We deliver value beyond carbon to industries worldwide. Here&apos;s a brief about our impact during 2024/25.
           </p>
           <button
-            className="btn-custom wave-btn mt-4 md:mt-6 px-4 py-2 md:px-6 md:py-2 rounded-full text-white font-semibold relative overflow-hidden transition"
+            className="btn-custom wave-btn mt-4 md:mt-6 px-4 py-2 md:px-6 md:py-2 rounded-full text-white relative overflow-hidden transition"
             onClick={() => window.open('pdf/Haycarb PLC - Synopsis of Annual Report 2024_25.pdf', '_blank')}
           >
             Explore More
