@@ -236,7 +236,6 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         },
         { worth: "13.6%", title: "ROE" },
         { worth: "16", title: "New Products Launched" },
-        { worth: "Rs. 209.3 Mn", title: "Investment in R&D" },
         { worth: "50.4", title: "Investment in CSR (Rs. Mn)" },
       ],
       chairman_and_director: {
