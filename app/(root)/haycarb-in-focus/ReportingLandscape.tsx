@@ -290,7 +290,7 @@ const ReportingLandscape = () => {
               alt="banner"
               width={408}
               height={349}
-              className="mx-auto"
+              className="mx-auto scale-120"
             />
           </div>
         ))}
