@@ -62,7 +62,7 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           <li>
             Strategic interventions to secure adequate supplies of raw material
             to support stable volumes. Revised prices upward to support margin
-            management.
+            management
           </li>
           <li>
             Pursued strategic expansion in growth markets. Ongoing emphasis on
@@ -71,11 +71,11 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           </li>
           <li>
             Drove progress on expanding our manufacturing footprint to the
-            Philippines.
+            Philippines
           </li>
           <li>
             Robust risk management to identify and respond to risks and
-            opportunities including climate related risks.
+            opportunities including climate related risks
           </li>
         </>
       ),
@@ -112,18 +112,18 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           <li>
             Goal setting and Performance Appraisals with fair and equitable
             remuneration for all employees based on skills, competencies and
-            performance.
+            performance
           </li>
-          <li>Strengthened the safety culture within the Group.</li>
+          <li>Strengthened the safety culture within the Group</li>
           <li>
             Continuous learning with investment of Rs. 9.6 million and launching
-            digital learning platform.
+            digital learning platform
           </li>
           <li>
             Introduced a post onboarding review system to support the
-            integration of new recruits.
+            integration of new recruits
           </li>
-          <li>Fostered a diverse and inclusive work environment.</li>
+          <li>Fostered a diverse and inclusive work environment</li>
         </>
       ),
       related_chart_image: {
@@ -145,7 +145,6 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         },
         { worth: "26", title: "New Customers" },
         { worth: "16", title: "New Products Launched" },
-        { worth: "4", title: "Products in Pipeline" },
         { worth: "Rs. 209.3 Mn", title: "Investment in R&D" },
       ],
       chairman_and_director: {
@@ -158,18 +157,18 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         <>
           <li>
             New product development through R&D to deliver tailored solutions
-            that fulfill specific customer needs.
+            that fulfill specific customer needs
           </li>
           <li>
             Numerous initiatives to source adequate supplies of raw materials
-            are procured from all countries in supply chain.
+            are procured from all countries in supply chain
           </li>
-          <li>Capacity enhancement.</li>
-          <li>Delivered on several ESG goals outlined in ”Activate“.</li>
+          <li>Capacity enhancement</li>
+          <li>Delivered on several ESG goals outlined in ”Activate“</li>
           <li>
             Robust manufacturing and quality assurance systems along with
             numerous certifications such as ISO and GMP to ensure consistent
-            product quality.
+            product quality
           </li>
         </>
       ),
@@ -194,15 +193,16 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         { worth: "Rs. 20.6 Mn", title: "Investment in Capacity Building" },
         {
           worth: "500",
-          title: "Total no. of coconut shell and charcoal suppliers supported",
+          title:
+            "Total no. of coconut shell and \ncharcoal suppliers supported",
         },
         {
           worth: "200",
-          title: "Total no. of other material and service Suppliers",
+          title: "Total no. of other material and \nservice Suppliers",
         },
         {
           worth: "91%",
-          title: "% of spending on coconut shell and charcoal suppliers",
+          title: "% of spending on coconut shell and \ncharcoal suppliers",
         },
       ],
       chairman_and_director: {
@@ -213,16 +213,16 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
       },
       stratergy_and_performance: (
         <>
-          <li>Strengthened our supplier value proposition.</li>
+          <li>Strengthened our supplier value proposition</li>
           <li>
             Maintained emphasis on ethical procurement practices and timely
-            payments.
+            payments
           </li>
           <li>
             Engaged in capacity building through supplier audits and other
-            initiatives.
+            initiatives
           </li>
-          <li>Propagated green charcoaling practices among suppliers.</li>
+          <li>Propagated green charcoaling practices among suppliers</li>
         </>
       ),
       related_chart_image: {
@@ -258,21 +258,21 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         <>
           <li>
             Strategic interventions to secure adequate supplies of raw material
-            to support stable volumes.
+            to support stable volumes
           </li>
-          <li>Revised prices upward to support margin management.</li>
-          <li>Pursued strategic expansion in growth markets.</li>
+          <li>Revised prices upward to support margin management</li>
+          <li>Pursued strategic expansion in growth markets</li>
           <li>
             Ongoing emphasis on innovation and expansion of the value-added
-            product portfolio to strengthen margins.
+            product portfolio to strengthen margins
           </li>
           <li>
             Drove progress on expanding our manufacturing footprint to the
-            Philippines.
+            Philippines
           </li>
           <li>
             Robust risk management to identify and respond to risks and
-            opportunities including climate related risks.
+            opportunities including climate related risks
           </li>
         </>
       ),
@@ -405,18 +405,17 @@ const ContentPage = () => {
               <button
                 key={key}
                 onClick={() => setActiveKey(key)}
-                className="flex flex-col items-center text-center rounded-lg transition-all p-4 border border-transparent hover:shadow-sm"
+                className={`flex flex-col items-center text-center rounded-lg transition-all p-4 border border-transparent hover:shadow-sm relative z-10`}
                 style={
                   isActive ? { border: "2px solid rgba(0, 88, 129, 0.5)" } : {}
                 }
               >
-                <div className="relative w-[140px] h-[140px]">
+                <div className="relative w-[140px] h-[140px] pointer-events-none">
                   <Image
                     src={item.icon}
                     alt={item.title}
                     className="object-contain"
-                    width={140}
-                    height={140}
+                    fill
                   />
                 </div>
                 <p className="text-lg font-semibold text-[#005881] mb-3">
@@ -450,7 +449,7 @@ const ContentPage = () => {
                         `}
               >
                 <p className="text-[40px] font-bold">{item.worth}</p>
-                <p className="text-base">{item.title}</p>
+                <p className="text-base whitespace-pre-line">{item.title}</p>
               </div>
             );
           })}
@@ -605,8 +604,8 @@ const ContentPage = () => {
                     <li>
                       New features in the digital annual report including
                       immersive experience, new accessibility feature, AI
-                      assistant, Chart Generator, FinQuest (Game based learning)
-                      and User profiling
+                      Assistant, Chart Generator, FinQuest (Game based learning)
+                      and User Profiling
                     </li>
                   </ul>
                 </div>
