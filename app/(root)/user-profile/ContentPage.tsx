@@ -395,7 +395,7 @@ const ContentPage = () => {
               <button
                 key={key}
                 onClick={() => setActiveKey(key)}
-                className={`flex flex-col items-center text-center rounded-lg transition-all p-4 border border-transparent hover:shadow-sm relative z-60`}
+                className={`flex flex-col items-center text-center rounded-lg transition-all p-4 border border-transparent hover:shadow-sm relative z-40`}
                 style={
                   isActive ? { border: "2px solid rgba(0, 88, 129, 0.5)" } : {}
                 }
@@ -433,7 +433,7 @@ const ContentPage = () => {
                 key={idx}
                 className={`
                             text-[#005881] px-8
-                            ${!isLast ? "border-r border-[#1D80A0]" : ""}
+                            ${!isLast ? "lg:border-r border-[#1D80A0]" : ""}
                             basis-1/2 sm:basis-1/3 lg:basis-auto
                             flex-shrink-0
                         `}
@@ -638,6 +638,7 @@ const ContentPage = () => {
             onBtnClick={() =>
               window.open("pdf/innerpage/Corporate Governance.pdf", "_blank")
             }
+            className="mx-auto lg:mx-0"
           />
         </div>
         <div className="lg:pl-20 lg:border-l-1 lg:border-[#1D80A0]">
@@ -651,7 +652,7 @@ const ContentPage = () => {
       </div>
 
       {/* Grpahs */}
-      <div className="mb-12">
+      <div className="my-12 px-10 lg:px-50">
         <h1 className="text-[#005881] text-[40px] font-normal text-center mb-10">
           {stakeholdersData[activeKey].content?.related_chart_image?.title}
         </h1>

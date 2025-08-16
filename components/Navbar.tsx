@@ -10,7 +10,7 @@ const Navbar = ({
   isContentVisible,
   setIsContentVisible,
   isFromInnerPage = false,
-  setIsMenuOpen
+  setIsMenuOpen,
 }: {
   isScrolled: boolean;
   isContentVisible: boolean;
@@ -27,7 +27,7 @@ const Navbar = ({
   const router = useRouter();
 
   const toggleMenu = () => {
-     setIsMenuOpenLocal(!isMenuOpen);
+    setIsMenuOpenLocal(!isMenuOpen);
     setIsMenuOpen?.(!isMenuOpen);
   };
 
@@ -280,8 +280,8 @@ const Navbar = ({
               </div>
 
               {/* User Profile Icon */}
-               <Link href="/user-profile">
-                  <svg
+              <Link href="/user-profile">
+                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={`transition-all duration-300 ${
                     isScrolled ? "w-6 h-6" : "w-8 h-8"
@@ -297,8 +297,7 @@ const Navbar = ({
                     strokeLinejoin="round"
                   />
                 </svg>
-                </Link>
-
+              </Link>
             </div>
           </motion.div>
         )}
@@ -461,7 +460,12 @@ const Navbar = ({
                   paddingTop: "14px",
                 }}
               >
-                <Link href="pdf/Haycarb PLC - Synopsis of Annual Report 2024_25.pdf" target="_blank" className="" onClick={toggleMenu}>
+                <Link
+                  href="pdf/Haycarb PLC - Synopsis of Annual Report 2024_25.pdf"
+                  target="_blank"
+                  className=""
+                  onClick={toggleMenu}
+                >
                   Synopsis
                 </Link>
               </li>
