@@ -14,7 +14,7 @@ const CommonAccordion: React.FC<CommonAccordionProps> = ({ items }) => {
   };
 
   return (
-    <div className="w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 py-12 relative z-10">
+    <div className="w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 pb-12 relative z-10">
       {items.map((item, index) => (
         <div key={index} className="border-b border-[#50CDA480] relative z-10">
           {/* Entire row is clickable */}

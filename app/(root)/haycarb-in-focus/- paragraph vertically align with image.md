@@ -6,10 +6,10 @@
 - Financial page table black letters increase and whale opacity go back ------> DONE
 - below buttons gap space add and above space reduce ------> DONE
 - gap between matrics should be same to the below graphs ------> DONE
+- supplymentary page column gap reduce and reduce whale opacitiy ------> DONE
+- capital report eke without graph - manufacturing margin ------> DONE
+- click text make bold and add spacing above --> font size increase to 18px ------> DONE
 
-- supplymentary page column gap reduce and reduce whale opacitiy
-- capital report eke without graph - manufacturing margin
-  - click text make bold and add spacing above --> font size increase to 18px
 - zig zag esg stratgey button side by side
 
   - reduce line spacing

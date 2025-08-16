@@ -273,7 +273,7 @@ const CapitalReport = () => {
             adapts to change through strength, efficiency, and purpose-driven
             transformation.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-18 text-center">
             <div className="text-[#005881]">
               <p className="text-[40px] font-bold">
                 {useAnimatedNumberText(7)}
@@ -312,7 +312,7 @@ const CapitalReport = () => {
             Digitalization is used to nurture the learning culture, equipping
             every team member to navigate change with confidence.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-18 text-center">
             <div className="text-[#005881]">
               <p className="text-[40px] font-bold">
                 &gt;{useAnimatedNumberText("50,600")}
@@ -403,7 +403,7 @@ const CapitalReport = () => {
         </p>
       </div>
       <div className="lg:px-32 text-center">
-        <p className="para text-center xl:text-left text-[#005881] text-lg font-semibold mt-10">
+        <p className="text-center xl:text-left text-[#005881] text-lg font-extrabold mt-10 mb-0">
           Click on the relevant capital for more information
         </p>
       </div>
