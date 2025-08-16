@@ -167,7 +167,8 @@ const FinancialCapital = () => {
           </p>
 
           {/* Dynamic Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-center">
+          {/* grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-center */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-30 mt-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 z-50 text-center">
             {statsData.map((stat, index) => (
               <div key={index}>
                 <p className="text-[50px] font-extrabold text-[#369E93]">
@@ -199,7 +200,7 @@ const FinancialCapital = () => {
       </div>
 
       {/* Table */}
-      <div className="relative z-30 w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 my-20">
+      <div className="relative z-30 w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 mt-20">
         {/* Header */}
         <div
           className="bg-[#61B296] text-white text-center py-3 sm:py-4"
@@ -267,7 +268,7 @@ const FinancialCapital = () => {
       </div>
 
       {/* Download buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-10 mt-6 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-60">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-10 bg-white mt-10 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-60">
         <WaveButton
           title="Financial Highlights"
           onBtnClick={() =>

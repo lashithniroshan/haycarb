@@ -3,10 +3,10 @@
 - button size 14px ------> DONE
 - above footer whitespace 100px ------> DONE
 - carousel button increase the size and make it vertically center ------> DONE
+- Financial page table black letters increase and whale opacity go back ------> DONE
+- below buttons gap space add and above space reduce ------> DONE
+- gap between matrics should be same to the below graphs ------> DONE
 
-- Financial page table black letters increase and whale opacity go back
-- below buttons gap space add and above space reduce
-- gap between matrics should be same to the below graphs
 - supplymentary page column gap reduce and reduce whale opacitiy
 - capital report eke without graph - manufacturing margin
   - click text make bold and add spacing above --> font size increase to 18px
