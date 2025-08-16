@@ -212,7 +212,8 @@ const ReportingLandscape = () => {
       {/* Digital evolution section */}
       <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 mx-auto">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8">
-          <div className="lg:col-span-5">
+          {/* Left Column - Center Vertically */}
+          <div className="lg:col-span-5 flex flex-col justify-center">
             <h1 className="text-[40px] text-[#005881] font-normal">
               Digital evolution in reporting
             </h1>
@@ -227,16 +228,17 @@ const ReportingLandscape = () => {
             </p>
             <WaveButton
               title="Explore More"
-              style={{ fontSize: "12px" }}
               onBtnClick={() =>
                 window.open(
                   "pdf/innerpage/Our Approach to Reporting.pdf",
                   "_blank"
                 )
               }
+              className="w-50"
             />
           </div>
 
+          {/* Right Column - Image Centered */}
           <div className="lg:col-span-6 flex items-center justify-center w-full">
             <Image
               src="/images/innerpage/digital-evolution.svg"

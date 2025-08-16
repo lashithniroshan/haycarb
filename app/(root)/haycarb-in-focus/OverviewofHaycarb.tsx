@@ -186,7 +186,8 @@ const OverviewofHaycarb = () => {
 
       {/* Image and Para */}
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-8 py-8">
-        <div className="lg:col-span-6 flex items-center justify-center  w-full">
+        {/* Left Column - Image */}
+        <div className="lg:col-span-6 flex items-center justify-center w-full">
           <Image
             src="/images/innerpage/reporting-landscape.svg"
             alt="banner"
@@ -194,7 +195,9 @@ const OverviewofHaycarb = () => {
             height={364}
           />
         </div>
-        <div className="lg:col-span-6 lg:pr-30">
+
+        {/* Right Column - Text (Vertically Centered) */}
+        <div className="lg:col-span-6 flex flex-col justify-center lg:pr-30">
           <p className="para text-center text-[18px] text-[#005881] font-semibold">
             At Haycarb, our purpose - Driving Value, Changing Lives ; guides us
             to envision a future where we are a catalyst in purification and
@@ -202,7 +205,8 @@ const OverviewofHaycarb = () => {
             and world-class processes, and enrich lives through
             customer-centric, innovative, and sustainable value creation.
           </p>
-          <div className="my-10 flex items-center justify-center ">
+
+          <div className="my-10 flex items-center justify-center">
             <WaveButton
               title="Watch Purpose Statement"
               style={{ fontSize: "12px" }}

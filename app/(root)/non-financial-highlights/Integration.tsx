@@ -97,7 +97,8 @@ const Integration = () => {
       </div>
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
-        <div className="lg:col-span-6">
+        {/* Left: Text Block (Vertically Centered) */}
+        <div className="lg:col-span-6 flex flex-col justify-center">
           <h1 className="text-[40px] text-[#005881] font-normal">
             ESG governance
           </h1>
@@ -124,7 +125,9 @@ const Integration = () => {
             }
           />
         </div>
-        <div className="lg:col-span-6">
+
+        {/* Right: Image */}
+        <div className="lg:col-span-6 flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
               src="/images/innerpage/non-financial-highlights/ESG-governance.jpg"
@@ -137,7 +140,8 @@ const Integration = () => {
       </div>
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
-        <div className="lg:col-span-6">
+        {/* Left: Image */}
+        <div className="lg:col-span-6 flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
               src="/images/innerpage/non-financial-highlights/ESG-strategies,-metrics-and-targets-.jpg"
@@ -147,7 +151,9 @@ const Integration = () => {
             />
           </div>
         </div>
-        <div className="lg:col-span-6">
+
+        {/* Right: Text Block (Vertically Centered) */}
+        <div className="lg:col-span-6 flex flex-col justify-center">
           <h1 className="text-[40px] text-[#005881] font-normal">
             ESG strategies, metrics and targets
           </h1>
@@ -170,7 +176,6 @@ const Integration = () => {
               )
             }
           />
-          <br />
           <WaveButton
             title="Activate - ESG Roadmap 2030"
             style={{ fontSize: "12px" }}
@@ -185,7 +190,7 @@ const Integration = () => {
       </div>
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
-        <div className="lg:col-span-6">
+        <div className="lg:col-span-6 flex flex-col justify-center">
           <h1 className="text-[40px] text-[#005881] font-normal">
             Sustainability and Climate related risks and opportunities
           </h1>
@@ -208,7 +213,7 @@ const Integration = () => {
             }
           />
         </div>
-        <div className="lg:col-span-6">
+        <div className="lg:col-span-6 flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
               src="/images/innerpage/non-financial-highlights/Sustainability.jpg"
@@ -221,7 +226,7 @@ const Integration = () => {
       </div>
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
-        <div className="lg:col-span-6">
+        <div className="lg:col-span-6 flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
               src="/images/innerpage/non-financial-highlights/Assessing-Climate-Resilience.jpg"
@@ -231,7 +236,7 @@ const Integration = () => {
             />
           </div>
         </div>
-        <div className="lg:col-span-6">
+        <div className="lg:col-span-6 flex flex-col justify-center">
           <h1 className="text-[40px] text-[#005881] font-normal">
             Assessing Climate Resilience
           </h1>
