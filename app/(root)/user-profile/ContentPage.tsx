@@ -231,7 +231,7 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         "As the guiding current beneath our journey, you steer Haycarb’s course. Dive into a clear view of our performance, strategy, and sustainable growth.",
       matrics: [
         {
-          worth: "Rs. 43.2Bn",
+          worth: "Rs. 43.2 Bn",
           title: "Revenue",
         },
         { worth: "13.6%", title: "ROE" },
@@ -439,7 +439,7 @@ const ContentPage = () => {
                             flex-shrink-0
                         `}
               >
-                <p className="text-[40px] font-bold">{item.worth}</p>
+                <p className="text-[32px] font-bold">{item.worth}</p>
                 <p className="text-base whitespace-pre-line">{item.title}</p>
               </div>
             );
