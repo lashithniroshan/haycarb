@@ -283,14 +283,14 @@ const OverviewofHaycarb = () => {
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
-      {/* <div className="lg:px-53">
+      <div className="lg:px-53">
         <p className="para text-center text-[#000000] text-[15px] font-medium">
           To be the leading global provider of activated carbon and foremost
           provider of water purification systems in Sri Lanka and the region,
           renowned for technical excellence, customer centricity, innovation and
           sustainable business practices.
         </p>
-      </div> */}
+      </div>
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 my-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         <div className="flex flex-col items-center justify-center w-full px-4 py-6 text-center">
