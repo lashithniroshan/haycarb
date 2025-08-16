@@ -83,9 +83,9 @@ const GenerateReport = () => {
       "pdf/tbc/Group Profile.pdf",
       "pdf/tbc/Country Report.pdf",
       "pdf/tbc/Corporate Information.pdf",
-      "pdf/tbc/Notice of Annual General Meeting.pdf",
-      "pdf/tbc/Form of Request for a Printed Copy of The Annual Report 2024_25.pdf",
-      "pdf/tbc/Form of Proxy.pdf",
+      // "pdf/tbc/Notice of Annual General Meeting.pdf",
+      // "pdf/tbc/Form of Request for a Printed Copy of The Annual Report 2024_25.pdf",
+      // "pdf/tbc/Form of Proxy.pdf",
     ],
   };
 
@@ -200,7 +200,7 @@ const GenerateReport = () => {
               {category}
             </h3>
             {files.map((file) => (
-              <label key={file} className="block text-sm">
+              <label key={file} className="block text-base">
                 <input
                   type="checkbox"
                   checked={checkedFiles.includes(file)}

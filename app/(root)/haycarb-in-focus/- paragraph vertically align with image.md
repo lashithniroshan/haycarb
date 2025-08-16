@@ -10,20 +10,20 @@
 - capital report eke without graph - manufacturing margin ------> DONE
 - click text make bold and add spacing above --> font size increase to 18px ------> DONE
 
-- zig zag esg stratgey button side by side
+- zig zag esg stratgey button side by side ------> DONE
 
-  - reduce line spacing
-  - spacing above and below spacing
+  - reduce line spacing ------> DONE
+  - spacing above and below spacing ------> DONE
 
 - value creating
 
-  - reducce button space under full image
-  - circulate image under space add
+  - reducce button space under full image ------> DONE
+  - circulate image under space add ------> DONE
 
 - generate report
 
-  - remove 3
-  - font 16px
+  - remove 3 ------> DONE
+  - font 16px ------> DONE
 
 - user profile
   - center text vertically
