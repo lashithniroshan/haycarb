@@ -49,7 +49,6 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
         { worth: "13.6%", title: "ROE" },
         { worth: "Rs. 89.30", title: "Net Asset per Share" },
         { worth: "4.6%", title: "Dividends Yield" },
-        { worth: "14.9%", title: "ROCE" },
       ],
       chairman_and_director: {
         title: "Chairman's and Managing Director's Joint Message",
@@ -92,10 +91,6 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
       short_description:
         "You are the power behind the wave. See how your commitment fuels our mission as we navigate new depths of innovation and impact together.",
       matrics: [
-        {
-          worth: "2,026",
-          title: "No. of Employees",
-        },
         { worth: "91%", title: "Retention rate" },
         { worth: "35,129", title: "Total Training hours" },
         { worth: "Rs. 4.9 Bn", title: "Payments to Employees" },
@@ -195,10 +190,6 @@ const stakeholdersData: Record<StakeholderKey, Stakeholder> = {
           worth: "500",
           title:
             "Total no. of coconut shell and \ncharcoal suppliers supported",
-        },
-        {
-          worth: "200",
-          title: "Total no. of other material and \nservice Suppliers",
         },
         {
           worth: "91%",
