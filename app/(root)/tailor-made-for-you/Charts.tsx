@@ -1615,7 +1615,7 @@ export function EmissionsChart() {
 
     const series2 = chart.series.push(
       am5xy.ColumnSeries.new(root, {
-        name: "Scope 1 emission",
+        name: "Scope 1 emission (tCO2e)",
         xAxis: xAxis,
         yAxis: yAxis,
         valueYField: "scope_1_emission",
@@ -1636,7 +1636,7 @@ export function EmissionsChart() {
 
     const series3 = chart.series.push(
       am5xy.ColumnSeries.new(root, {
-        name: "Scope 2 emission",
+        name: "Scope 2 emission (tCO2e)",
         xAxis: xAxis,
         yAxis: yAxis,
         valueYField: "scope_2_emission",
@@ -1657,7 +1657,7 @@ export function EmissionsChart() {
 
     const series4 = chart.series.push(
       am5xy.ColumnSeries.new(root, {
-        name: "Scope 3 emission",
+        name: "Scope 3 emission (tCO2e)",
         xAxis: xAxis,
         yAxis: yAxis,
         valueYField: "scope_3_emission",
@@ -2191,7 +2191,7 @@ export function MaterialWaterChart() {
       "Waste water treated through treatment plants (m3)",
       "waste_water"
     );
-    createSeries("Water consumption", "water_consumption");
+    createSeries("Water consumption (m3)", "water_consumption");
     createSeries("Solid waste generated (MT)", "solid_waste_gen");
     createSeries(
       "Renewable raw material consumption (MT)",
