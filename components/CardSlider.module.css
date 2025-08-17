@@ -41,7 +41,7 @@
     flex-direction: row;
     overflow-x: hidden;
     padding: 0;
-    width: 117%;
+    width: 100%;
     position: relative;
     justify-content: flex-start; /* Remove centering to eliminate gap */
     gap: 0; /* Ensure no gap */
@@ -55,7 +55,7 @@
   }
 
   .dotControls {
-    display: flex;
+    display: none;
     justify-content: center;
     gap: 8px;
     padding: 10px 0;
@@ -80,5 +80,7 @@
   .cardWrapper {
   gap: 0px;
   padding: 0 0px 60px 0px;
+          display: flex;
+        flex-direction: column;
 }
 }

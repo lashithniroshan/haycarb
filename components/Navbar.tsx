@@ -466,7 +466,7 @@ const Navbar = ({
                 }}
               >
                 <Link
-                  href="pdf/tbc/Independent Auditors Report.pdf"
+                  href="pdf/tbc/FAQs.pdf"
                   target="_blank"
                   className=""
                   onClick={toggleMenu}

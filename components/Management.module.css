@@ -140,9 +140,9 @@
     font-size: 10px;
   }
 
-  .arrow {
-    display: none; /* Hide arrows on mobile */
-  }
+  /* .arrow {
+    display: none; 
+  } */
 
   .dots {
     display: block; /* Show dots on mobile */

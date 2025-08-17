@@ -157,6 +157,7 @@
     flex-direction: column;
     padding: 20px;
     align-items: center;
+    background-position: -10% -6% !important;
   }
 
   .leftSection {
