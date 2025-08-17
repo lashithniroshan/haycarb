@@ -168,7 +168,8 @@ cursor: pointer;
 .textWrapper p{
   font-size: 13px;
 }
-.textWrapper .wave-btn{
+.textWrapper .centercontent button{
 font-size: 12px;
+padding: 10px 25px;
 }
 }
