@@ -7,6 +7,59 @@ import { useAnimatedNumberText } from "utils/useSpeedCounter";
 const CapitalReport = () => {
   const accordionItems: AccordionData[] = [
     {
+      title: "Natural Capital",
+      downloadLink: "pdf/innerpage/Natural Capital.pdf",
+      content: (
+        <div className="text-[#333] text-[15px] space-y-4">
+          <p className="para">
+            Haycarb’s approach to natural capital focuses on reducing
+            environmental impact and supporting sustainability, inspired by the
+            whale’s symbolism of strength and balance within ecosystems.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
+            <div className="text-[#005881]">
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("44,554")}
+              </p>
+              <p className="text-base">
+                Carbol Footprint (tCO<sub>2</sub>e)
+              </p>
+            </div>
+            <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
+              <p className="text-[40px] font-bold">
+                {useAnimatedNumberText("10,366")}
+              </p>
+              <p className="text-base">Sea Tutrle Hatchlings</p>
+            </div>
+            <div className="text-[#005881]">
+              <p className="text-[40px] font-bold">
+                &gt;{useAnimatedNumberText("75,000")}
+              </p>
+              <p className="text-base">Trees Planted</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
+              <Image
+                src="/images/innerpage/non-financial-highlights/natural_cap_1.jpg"
+                alt="banner"
+                width={491}
+                height={420}
+              />
+            </div>
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
+              <Image
+                src="/images/innerpage/non-financial-highlights/natural_cap_2.jpg"
+                alt="banner"
+                width={491}
+                height={420}
+              />
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "Financial Capital",
       downloadLink: "pdf/innerpage/financial_capital.pdf",
       content: (
@@ -58,59 +111,6 @@ const CapitalReport = () => {
             <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
                 src="/images/innerpage/financial/financial_cap_3.jpg"
-                alt="banner"
-                width={491}
-                height={420}
-              />
-            </div>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Natural Capital",
-      downloadLink: "pdf/innerpage/Natural Capital.pdf",
-      content: (
-        <div className="text-[#333] text-[15px] space-y-4">
-          <p className="para">
-            Haycarb’s approach to natural capital focuses on reducing
-            environmental impact and supporting sustainability, inspired by the
-            whale’s symbolism of strength and balance within ecosystems.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
-            <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
-                {useAnimatedNumberText("44,554")}
-              </p>
-              <p className="text-base">
-                Carbol Footprint (tCO<sub>2</sub>e)
-              </p>
-            </div>
-            <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">
-                {useAnimatedNumberText("10,366")}
-              </p>
-              <p className="text-base">Sea Tutrle Hatchlings</p>
-            </div>
-            <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
-                &gt;{useAnimatedNumberText("75,000")}
-              </p>
-              <p className="text-base">Trees Planted</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
-              <Image
-                src="/images/innerpage/non-financial-highlights/natural_cap_1.jpg"
-                alt="banner"
-                width={491}
-                height={420}
-              />
-            </div>
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
-              <Image
-                src="/images/innerpage/non-financial-highlights/natural_cap_2.jpg"
                 alt="banner"
                 width={491}
                 height={420}
@@ -403,7 +403,7 @@ const CapitalReport = () => {
         </p>
       </div>
       <div className="lg:px-32 text-center">
-        <p className="text-center xl:text-left text-[#005881] text-lg font-extrabold mt-10 mb-0">
+        <p className="text-center xl:text-left text-[#000] text-base font-extrabold mt-10 mb-0">
           Click on the relevant capital for more information
         </p>
       </div>

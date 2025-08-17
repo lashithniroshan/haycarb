@@ -28,6 +28,27 @@ const FinancialSupplementary = () => {
         }}
       ></div>
 
+      <div
+        aria-hidden="true"
+        className="absolute
+                  hidden lg:block
+                  top-450 left-10 
+                  lg:top-7/8 lg:-left-10
+                  xl:top-7/8 xl:left-0
+                  2xl:top-7/8 2xl:left-0
+                  w-96 h-96 
+                  lg:w-[800px] lg:h-[800px] 
+                  xl:w-[700px] xl:h-[700px] 
+                  2xl:w-[850px] 2xl:h-[850px] 
+                  rotate-180 
+                  transform 
+                  -translate-y-1/3 -translate-x-1/3 
+                  bg-no-repeat bg-contain opacity-25"
+        style={{
+          backgroundImage: "url(/images/innerpage/water-full=spread.png)",
+        }}
+      ></div>
+
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-20 px-4 lg:px-8 py-8">
         {/* Left column */}
         <div className="lg:col-span-8 lg:pt-20 flex justify-center lg:justify-end">
@@ -42,6 +63,7 @@ const FinancialSupplementary = () => {
           </p> */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
               <WaveButton
+                style={{ background: "#fff" }}
                 title="Statement of Group Value Added"
                 onBtnClick={() =>
                   window.open(
@@ -51,6 +73,7 @@ const FinancialSupplementary = () => {
                 }
               />
               <WaveButton
+                style={{ background: "#fff" }}
                 title="History of Dividends and Scrip Issues"
                 onBtnClick={() =>
                   window.open(
@@ -60,6 +83,7 @@ const FinancialSupplementary = () => {
                 }
               />
               <WaveButton
+                style={{ background: "#fff" }}
                 title="Ten Year Financial Review"
                 onBtnClick={() =>
                   window.open(
@@ -69,6 +93,7 @@ const FinancialSupplementary = () => {
                 }
               />
               <WaveButton
+                style={{ background: "#fff" }}
                 title="Indicative US Dollar Financial Statements"
                 onBtnClick={() =>
                   window.open(
@@ -78,6 +103,7 @@ const FinancialSupplementary = () => {
                 }
               />
               <WaveButton
+                style={{ background: "#fff" }}
                 title="Statement of Profit or Loss - Horizontal and Vertical Analysis"
                 onBtnClick={() =>
                   window.open(
@@ -87,6 +113,7 @@ const FinancialSupplementary = () => {
                 }
               />
               <WaveButton
+                style={{ background: "#fff" }}
                 title="Investor Information"
                 onBtnClick={() =>
                   window.open(
@@ -96,18 +123,21 @@ const FinancialSupplementary = () => {
                 }
               />
               <WaveButton
+                style={{ background: "#fff" }}
                 title="Quarterly Analysis"
                 onBtnClick={() =>
                   window.open("pdf/innerpage/Quarterly Analysis.pdf", "_blank")
                 }
               />
               <WaveButton
+                style={{ background: "#fff" }}
                 title="Group Profile"
                 onBtnClick={() =>
                   window.open("pdf/innerpage/Group Profile.pdf", "_blank")
                 }
               />
               <WaveButton
+                style={{ background: "#fff" }}
                 title="Country Report"
                 onBtnClick={() =>
                   window.open("pdf/innerpage/Country Report.pdf", "_blank")

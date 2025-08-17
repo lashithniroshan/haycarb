@@ -33,7 +33,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
       {/* Arrows - Positioned exactly at image center */}
       <button
         onClick={() => instanceRef.current?.prev()}
-        className="absolute -left-1 sm:-left-2 bg-[#e4e4e4] hover:bg-[#ccc] transition-colors duration-200 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 shadow-md"
+        className="absolute -left-1 sm:-left-2 bg-[#005881] hover:bg-[#157897] transition-colors duration-200 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 shadow-md"
         style={{ top: "calc(50% - 45px)" }}
       >
         <span className="text-xl sm:text-2xl text-white rotate-180 leading-none">
@@ -42,7 +42,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
       </button>
       <button
         onClick={() => instanceRef.current?.next()}
-        className="absolute -right-1 sm:-right-2 bg-[#e4e4e4] hover:bg-[#ccc] transition-colors duration-200 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 shadow-md"
+        className="absolute -right-1 sm:-right-2 bg-[#005881] hover:bg-[#157897] transition-colors duration-200 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 shadow-md"
         style={{ top: "calc(50% - 45px)" }}
       >
         <span className="text-xl sm:text-2xl text-white leading-none">❯</span>

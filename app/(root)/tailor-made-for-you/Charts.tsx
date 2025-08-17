@@ -1268,7 +1268,7 @@ export function FinancialPositionChart() {
         year: "2021",
         total_assets: 25,
         total_liab: 10.24,
-        share_capital: 331.77,
+        // share_capital: 331.77,
         revenue_reserves: 12,
         equity: 15,
         current_assets: 16,
@@ -1278,7 +1278,7 @@ export function FinancialPositionChart() {
         year: "2022",
         total_assets: 40,
         total_liab: 19.19,
-        share_capital: 331.77,
+        // share_capital: 331.77,
         revenue_reserves: 17,
         equity: 21,
         current_assets: 29,
@@ -1288,7 +1288,7 @@ export function FinancialPositionChart() {
         year: "2023",
         total_assets: 40,
         total_liab: 14.98,
-        share_capital: 331.77,
+        // share_capital: 331.77,
         revenue_reserves: 21,
         equity: 25,
         current_assets: 27,
@@ -1298,7 +1298,7 @@ export function FinancialPositionChart() {
         year: "2024",
         total_assets: 40,
         total_liab: 14.52,
-        share_capital: 331.77,
+        // share_capital: 331.77,
         revenue_reserves: 22,
         equity: 26,
         current_assets: 26,
@@ -1308,7 +1308,7 @@ export function FinancialPositionChart() {
         year: "2025",
         total_assets: 46,
         total_liab: 16.22,
-        share_capital: 331.77,
+        // share_capital: 331.77,
         revenue_reserves: 25,
         equity: 30,
         current_assets: 28,
@@ -1409,7 +1409,7 @@ export function FinancialPositionChart() {
     // Add all series
     createSeries("Total Assets", "total_assets");
     createSeries("Total liabilities", "total_liab");
-    createSeries("Share Capital", "share_capital");
+    // createSeries("Share Capital", "share_capital");
     createSeries("Revenue Reserves", "revenue_reserves");
     createSeries("Equity", "equity");
     createSeries("Current Assets", "current_assets");
@@ -1681,7 +1681,7 @@ export function EmissionsEnergyChart() {
 
     // lines
 
-    const series5 = chart.series.push(
+    /* const series5 = chart.series.push(
       am5xy.LineSeries.new(root, {
         name: "Renewable energy consumption (GJ)",
         xAxis: xAxis,
@@ -1711,9 +1711,9 @@ export function EmissionsEnergyChart() {
           fill: root.interfaceColors.get("background"),
         }),
       });
-    });
+    }); */
 
-    const series6 = chart.series.push(
+    /* const series6 = chart.series.push(
       am5xy.LineSeries.new(root, {
         name: "Electricity supplied to national grid (GJ)",
         xAxis: xAxis,
@@ -1744,7 +1744,7 @@ export function EmissionsEnergyChart() {
         }),
       });
     });
-
+ */
     chart.set("cursor", am5xy.XYCursor.new(root, {}));
 
     const legend = chart.children.push(

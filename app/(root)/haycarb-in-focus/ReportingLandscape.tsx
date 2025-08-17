@@ -230,7 +230,7 @@ const ReportingLandscape = () => {
               title="Explore More"
               onBtnClick={() =>
                 window.open(
-                  "pdf/innerpage/Our Approach to Reporting.pdf",
+                  "pdf/innerpage/Digitally Innovating Our Corporate Reporting.pdf",
                   "_blank"
                 )
               }
@@ -290,7 +290,7 @@ const ReportingLandscape = () => {
               alt="banner"
               width={408}
               height={349}
-              className="mx-auto scale-120"
+              className="mx-auto xl:scale-110"
             />
           </div>
         ))}

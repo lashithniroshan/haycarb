@@ -104,7 +104,7 @@ const ChartGenerator = () => {
         />
       </div>
       <div className="lg:px-53 text-center">
-        <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
+        <p className="text-center text-[#000] text-xl font-extrabold mt-10">
           Select your preferred metrics to explore performance insights
         </p>
       </div>
@@ -121,7 +121,7 @@ const ChartGenerator = () => {
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
                 Financial Position (Rs. Bn)
               </h1>
-              <p className="para text-center font-semibold text-[#005881] mt-2">
+              <p className="text-center text-xl font-extrabold text-[#000] mt-2">
                 Slide to explore
               </p>
               <FinancialPositionChart />
@@ -133,7 +133,7 @@ const ChartGenerator = () => {
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
                 Emissions (tCO2e) and Energy Consumption (GJ)
               </h1>
-              <p className="para text-center font-semibold text-[#005881] mt-2">
+              <p className="text-center text-xl font-extrabold text-[#000] mt-2">
                 Slide to explore
               </p>
               <EmissionsEnergyChart />
@@ -142,7 +142,7 @@ const ChartGenerator = () => {
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
                 Materials (MT) and Water Management (m<sup>3</sup>)
               </h1>
-              <p className="para text-center font-semibold text-[#005881] mt-2">
+              <p className="text-center text-xl font-extrabold text-[#000] mt-2">
                 Slide to explore
               </p>
               <MaterialWaterChart />
@@ -151,7 +151,7 @@ const ChartGenerator = () => {
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
                 Social and Governance Performance
               </h1>
-              <p className="para text-center font-semibold text-[#005881] mt-2">
+              <p className="text-center text-xl font-extrabold text-[#000] mt-2">
                 Slide to explore
               </p>
               <SocialGovernanceChart />
