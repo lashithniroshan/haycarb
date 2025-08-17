@@ -77,16 +77,16 @@ position: absolute;
 
 @media (max-width: 991px) {
   .card {
-    width: 100%;
+    width: 90%;
     height: auto;
     position: relative;
-    margin: 0;
+    margin: 10px 0px;
     transform: translateX(0);
     transition: transform 0.3s ease;
   }
 
   .cardImage {
-    height: 240px;
+    height: 250px;
   }
 
   .title {

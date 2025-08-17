@@ -44,14 +44,14 @@ const FinancialSlider = () => {
   }, []);
 
   // Auto-slide only on mobile
-  useEffect(() => {
-    if (isMobile) {
-      const interval = setInterval(() => {
-        setActiveIndex((prev) => (prev + 1) % slidesData.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isMobile]);
+  // useEffect(() => {
+  //   if (isMobile) {
+  //     const interval = setInterval(() => {
+  //       setActiveIndex((prev) => (prev + 1) % slidesData.length);
+  //     }, 5000);
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [isMobile]);
 
   const handleDotClick = (index: number) => {
     if (isMobile) setActiveIndex(index); // Only allow dot clicks on mobile
@@ -68,17 +68,17 @@ const FinancialSlider = () => {
     <div className={styles.sliderContainer}>
       <div className={styles.cardWrapper}>
         {slidesData.map((slide, index) => {
-          let style: React.CSSProperties = {};
-          if (isMobile) {
-            let translateX = 0;
-            if (index === 0) translateX = -70 * activeIndex - 25; // Left card
-            else if (index === slidesData.length - 1) translateX = -70 * activeIndex + 25; // Right card
-            else translateX = -70 * activeIndex; // Middle card
-            style = {
-                transform: `translateX(${translateX * 0.2}%)`,
-              opacity: index === activeIndex ? 1 : 0.5,
-            };
-          }
+          // let style: React.CSSProperties = {};
+          // if (isMobile) {
+          //   let translateX = 0;
+          //   if (index === 0) translateX = -70 * activeIndex - 25; 
+          //   else if (index === slidesData.length - 1) translateX = -70 * activeIndex + 25; 
+          //   else translateX = -70 * activeIndex; 
+          //   style = {
+          //       transform: `translateX(${translateX * 0.2}%)`,
+          //     opacity: index === activeIndex ? 1 : 0.5,
+          //   };
+          // }
           return (
             <Card
               key={slide.id}

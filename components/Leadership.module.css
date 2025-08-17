@@ -270,6 +270,12 @@ padding-right: 55px;
     width: 86%;
     margin-left: 25px;
   }
+  .headerSection {
+  margin-bottom: 0px;
+}
+.position {
+  margin-bottom: 10px;
+}
 }
 
 @media (max-width: 430px) {
