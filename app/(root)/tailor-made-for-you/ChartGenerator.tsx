@@ -113,13 +113,13 @@ const ChartGenerator = () => {
         {activatedBtn === "financial" ? (
           <>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
                 Earnings and Profitability (Rs. Bn)
               </h1>
               <ProfitablityChart />
             </div>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
                 Financial Position (Rs. Bn)
               </h1>
               <p className="text-center text-xl font-extrabold text-[#000] mt-2">
@@ -131,7 +131,7 @@ const ChartGenerator = () => {
         ) : (
           <>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
                 Emissions (tCO2e)
               </h1>
               <p className="text-center text-xl font-extrabold text-[#000] mt-2">
@@ -140,7 +140,7 @@ const ChartGenerator = () => {
               <EmissionsChart />
             </div>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
                 Energy Consumption (GJ)
               </h1>
               <p className="text-center text-xl font-extrabold text-[#000] mt-2">
@@ -149,7 +149,7 @@ const ChartGenerator = () => {
               <EnergyConsumptionChart />
             </div>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
                 Materials (MT) and Water Management (m<sup>3</sup>)
               </h1>
               <p className="text-center text-xl font-extrabold text-[#000] mt-2">
@@ -158,7 +158,7 @@ const ChartGenerator = () => {
               <MaterialWaterChart />
             </div>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
                 Social and Governance Performance
               </h1>
               <p className="text-center text-xl font-extrabold text-[#000] mt-2">
