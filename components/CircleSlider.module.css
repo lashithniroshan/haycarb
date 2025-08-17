@@ -568,3 +568,14 @@ text-align: center;
     top: 15%;
   }
 }
+
+@media (min-width: 768px) {
+  .mobwallslider{
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .mobwallslider{
+    display: block;
+  }
+}

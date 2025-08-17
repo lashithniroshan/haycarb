@@ -186,7 +186,7 @@ const InnerPageFooter = () => {
         </div>
         {/* Four Columns */}
         <div className={styles.footerContent}>
-          <div className={styles.columns}>
+          <div className={styles.columnsdf}>
             {/* Column 1: Address */}
             <div className={styles.column}>
               <p>No: 400, Deans Road, Colombo 10,</p>

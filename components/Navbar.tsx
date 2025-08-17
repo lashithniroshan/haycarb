@@ -46,7 +46,7 @@ const Navbar = ({
             setPdfFiles([
               "full-Annual-Report-2024.pdf",
               "Haycarb-PLC-Annual-Report-2024-25.pdf",
-              "Haycarb-Glance.pdf",
+              "Haycarb at a Glance.pdf",
               "Our-Approach-to-Reporting.pdf",
               "Our-Products.pdf",
               "Performance-Highlights.pdf",
@@ -59,7 +59,7 @@ const Navbar = ({
           setPdfFiles([
             "full-Annual-Report-2024.pdf",
             "full-Annual-Report-2024-2025.pdf",
-            "Haycarb-Glance.pdf",
+            "Haycarb at a Glance.pdf",
             "Our-Approach-to-Reporting.pdf",
             "Our-Products.pdf",
             "Performance-Highlights.pdf",
@@ -72,7 +72,7 @@ const Navbar = ({
         setPdfFiles([
           "full-Annual-Report-2024.pdf",
           "full-Annual-Report-2024-2025.pdf",
-          "Haycarb-Glance.pdf",
+          "Haycarb at a Glance.pdf",
           "Our-Approach-to-Reporting.pdf",
           "Our-Products.pdf",
           "Performance-Highlights.pdf",
@@ -200,7 +200,11 @@ const Navbar = ({
               alt="Haycarb Logo"
               width={isScrolled ? 120 : 200} // shrink logo smoothly
               height={isScrolled ? 72 : 100}
-              className="transition-all duration-600"
+               className={`transition-all duration-600 ${
+          isScrolled
+            ? 'w-[120px] h-[72px] max-[991px]:w-[90px] max-[991px]:h-[48px]' // Scrolled sizes
+            : 'w-[200px] h-[100px] max-[991px]:w-[120px] max-[991px]:h-[60px]' // Not scrolled sizes
+        }`}
             />
           </Link>
         </div>
