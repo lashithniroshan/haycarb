@@ -146,7 +146,7 @@ const FinancialSupplementary = () => {
             </div>
           </div>
         </div>
-        <div className="lg:col-span-4 h-full flex items-stretch justify-center lg:justify-start mt-8 lg:mt-0">
+        <div className="hidden lg:block lg:col-span-4 h-full flex items-stretch justify-center lg:justify-start mt-8 lg:mt-0">
           <div className="h-full flex items-stretch">
             <Image
               src="/images/innerpage/financial/suplementary_main.jpg"
