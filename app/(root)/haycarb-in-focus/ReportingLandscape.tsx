@@ -125,6 +125,7 @@ const ReportingLandscape = () => {
       <div
         aria-hidden="true"
         className="absolute
+                  hidden sm:block
                   top-450 left-25 
                   lg:top-300 
                   xl:top-250 
@@ -181,10 +182,10 @@ const ReportingLandscape = () => {
           />
         </div>
         <div className="lg:col-span-5">
-          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
+          <h1 className="text-center md:text-left text-[40px] text-[#005881] font-normal leading-none">
             Evolution of Haycarb&apos;s Annual Report
           </h1>
-          <p className="para text-[15px] font-medium text-[#000] my-3">
+          <p className="text-center md:text-left text-[15px] font-medium text-[#000] my-8">
             We are pleased to present Haycarb PLC’s 5th Integrated Annual Report
             for the financial year ended 31st March 2025. This Report offers a
             balanced and concise account of how we navigated the challenging
@@ -213,11 +214,18 @@ const ReportingLandscape = () => {
       <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 mx-auto">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8">
           {/* Left Column - Center Vertically */}
-          <div className="lg:col-span-5 flex flex-col justify-center">
+          <div className="lg:col-span-5 text-center md:text-left flex flex-col items-center md:items-start justify-center">
             <h1 className="text-[40px] text-[#005881] font-normal leading-none">
               Digital evolution in reporting
             </h1>
-            <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
+            <Image
+              src="/images/innerpage/digital-evolution.svg"
+              alt="banner"
+              width={701}
+              height={533}
+              className="lg:hidden mt-8"
+            />
+            <p className="para text-[15px] font-medium text-[#000] my-8">
               Cognisant of the growing shift toward digital communication, we
               continued to integrate technology into our corporate reporting
               with an emphasis on providing a more interactive and engaging
@@ -245,32 +253,33 @@ const ReportingLandscape = () => {
               alt="banner"
               width={701}
               height={533}
+              className="hidden lg:block"
             />
           </div>
         </div>
       </div>
 
       {/* Segmental review */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 lg:py-8 text-center">
         {/* Top or Left Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
 
         {/* Center Text */}
-        <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[30px] xl:text-[40px] text-[#005881]">
+        <h1 className="text-[40px] text-[#005881] leading-none">
           Segmental Review Analysis
         </h1>
 
         {/* Bottom or Right Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+      <div className="grid grid-cols-1 my-8 lg:my-12 lg:grid-cols-2 gap-8 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         {chart.map((ch) => (
           <div
             key={ch.id}
@@ -295,7 +304,7 @@ const ReportingLandscape = () => {
           </div>
         ))}
       </div>
-      <div className="my-15 flex items-center justify-center ">
+      <div className="flex items-center justify-center mb-8 lg:my-15">
         <WaveButton
           title="Explore More"
           onBtnClick={() =>
