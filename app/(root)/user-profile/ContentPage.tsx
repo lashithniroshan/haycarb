@@ -282,7 +282,7 @@ const ContentPage = () => {
     <section className="relative bg-white text-[#606060] pt-16 pb-30 overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute top-0 -right-25 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
+        className="absolute top-0 -right-25 lg:w-150 lg:h-150 bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -300,7 +300,7 @@ const ContentPage = () => {
                 xl:w-90 xl:h-90
                 2xl:w-100 2xl:h-100
                 -rotate-15 scale-x-[-1] 
-                bg-no-repeat bg-contain opacity-25 z-40"
+                bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -319,7 +319,7 @@ const ContentPage = () => {
                   rotate-180 
                   transform 
                   -translate-y-1/3 -translate-x-1/3 
-                  bg-no-repeat bg-contain"
+                  bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -336,7 +336,7 @@ const ContentPage = () => {
                 2xl:top-0 2xl:-right-20 
                 lg:w-200 lg:h-200 
                 xl:w-[800px] xl:h-[800px]
-                bg-no-repeat bg-contain opacity-25"
+                bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/water-full=spread.png)",
         }}
@@ -357,7 +357,7 @@ const ContentPage = () => {
                   rotate-180 
                   transform 
                   -translate-y-1/3 -translate-x-1/3 
-                  bg-no-repeat bg-contain opacity-25"
+                  bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/water-full=spread.png)",
         }}
@@ -378,7 +378,7 @@ const ContentPage = () => {
                   xl:w-80 xl:h-80
                   transform scale-x-[-1] -rotate-20
                   -translate-x-1/2 -translate-y-9/10 
-                  bg-no-repeat bg-contain opacity-25 z-10"
+                  bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -620,7 +620,7 @@ const ContentPage = () => {
 
       {/* Leadershipt Governance and Strategy section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:py-8 lg:my-10 mx-10 lg:mx-30">
-        <div className="text-center lg:text-left">
+        <div className="text-center lg:text-left z-30">
           <h1 className="text-[40px] text-[#005881] font-normal">
             Leadership & Governance
           </h1>
@@ -638,10 +638,11 @@ const ContentPage = () => {
             onBtnClick={() =>
               window.open("pdf/innerpage/Corporate Governance.pdf", "_blank")
             }
-            className="mx-auto lg:mx-0 w-40"
+            className="mx-auto lg:mx-0 w-40 z-30"
+            style={{ background: "#fff" }}
           />
         </div>
-        <div className="lg:pl-20 lg:border-l-1 lg:border-[#1D80A0]">
+        <div className="lg:pl-20 lg:border-l-1 lg:border-[#1D80A0] z-30">
           <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left">
             Strategy and Performance
           </h1>
@@ -652,7 +653,7 @@ const ContentPage = () => {
       </div>
 
       {/* Grpahs */}
-      <div className="mt-12 px-10 lg:px-50">
+      <div className="relative z-30 mt-12 px-10 lg:px-50">
         <h1 className="text-[#005881] text-[40px] font-normal text-center mb-10">
           {stakeholdersData[activeKey].content?.related_chart_image?.title}
         </h1>
