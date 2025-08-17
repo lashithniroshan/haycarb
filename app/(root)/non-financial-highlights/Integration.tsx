@@ -217,12 +217,12 @@ const Integration = () => {
           />
         </div>
         <div className="lg:col-span-6 hidden lg:block flex items-center">
-          <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
+          <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-3xl">
             <Image
               src="/images/innerpage/non-financial-highlights/Sustainability.jpg"
               alt="banner"
               fill
-              className="object-contain rounded-2xl"
+              className="object-fill rounded-3xl"
             />
           </div>
         </div>

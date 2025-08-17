@@ -15,7 +15,7 @@ const FinancialSupplementary = () => {
       <div
         aria-hidden="true"
         className="absolute
-                hidden lg:block
+                hidden
                 top-170 right-90
                 lg:top-135 lg:right-80
                 xl:top-140 xl:right-90
@@ -31,7 +31,7 @@ const FinancialSupplementary = () => {
       <div
         aria-hidden="true"
         className="absolute
-                  hidden lg:block
+                  hidden
                   top-450 left-10 
                   lg:top-7/8 lg:-left-10
                   xl:top-7/8 xl:left-0
