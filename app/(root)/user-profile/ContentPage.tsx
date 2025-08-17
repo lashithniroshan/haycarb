@@ -386,7 +386,7 @@ const ContentPage = () => {
 
       <div className="w-full px-4 lg:px-12 py-8">
         {/* Tabs */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="flex flex-wrap justify-center gap-6 lg:grid lg:grid-cols-5">
           {stakeholderKeys.map((key) => {
             const item = stakeholdersData[key];
             const isActive = key === activeKey;
@@ -417,12 +417,12 @@ const ContentPage = () => {
         </div>
 
         {/* Short description section */}
-        <p className="mt-10 py-4 lg:px-20 para text-center text-lg font-semibold text-[#005881]">
+        <p className="my-8 lg:mt-10 py-4 lg:px-20 para text-center text-lg font-semibold text-[#005881]">
           {stakeholdersData[activeKey].content.short_description}
         </p>
 
         {/* Matrics section */}
-        <div className="flex flex-wrap justify-center items-center gap-y-8 mt-18 text-center">
+        <div className="flex flex-wrap justify-center items-center gap-y-8 lg:mt-18 text-center">
           {stakeholdersData[activeKey].content?.matrics?.map((item, idx) => {
             const totalItems =
               stakeholdersData[activeKey].content?.matrics?.length || 0;
@@ -438,7 +438,9 @@ const ContentPage = () => {
                             flex-shrink-0
                         `}
               >
-                <p className="text-[32px] font-bold">{item.worth}</p>
+                <p className="text-[35px] lg:text-[40px] font-bold">
+                  {item.worth}
+                </p>
                 <p className="text-base whitespace-pre-line">{item.title}</p>
               </div>
             );
@@ -446,7 +448,7 @@ const ContentPage = () => {
         </div>
 
         {/* Chairman and director message section */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 py-8 my-10">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 py-8 lg:my-10">
           <div className="lg:col-span-5 flex flex-col justify-center">
             <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left leading-none">
               {
@@ -454,7 +456,7 @@ const ContentPage = () => {
                   ?.title
               }
             </h1>
-            <p className="para text-base font-medium text-[#000] text-center lg:text-left mt-3 mb-10">
+            <p className="para text-base font-medium text-[#000] text-center lg:text-left mt-8 lg:mt-3 lg:mb-10">
               {
                 stakeholdersData[activeKey].content?.chairman_and_director
                   ?.message
@@ -621,7 +623,7 @@ const ContentPage = () => {
       {/* Leadershipt Governance and Strategy section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:py-8 lg:my-10 mx-10 lg:mx-30">
         <div className="text-center lg:text-left z-30">
-          <h1 className="text-[40px] text-[#005881] font-normal">
+          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
             Leadership & Governance
           </h1>
           <p className="para text-base font-medium text-[#000] mt-3 mb-10">
@@ -643,7 +645,7 @@ const ContentPage = () => {
           />
         </div>
         <div className="lg:pl-20 lg:border-l-1 lg:border-[#1D80A0] z-30">
-          <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left">
+          <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left leading-none mb-5 lg:mb-0">
             Strategy and Performance
           </h1>
           <ul className="text-base list-disc leading-loose">
@@ -654,7 +656,7 @@ const ContentPage = () => {
 
       {/* Grpahs */}
       <div className="relative z-30 mt-12 px-10 lg:px-50">
-        <h1 className="text-[#005881] text-[40px] font-normal text-center mb-10">
+        <h1 className="text-[#005881] text-[40px] font-normal text-center leading-none mb-10">
           {stakeholdersData[activeKey].content?.related_chart_image?.title}
         </h1>
         <Image
