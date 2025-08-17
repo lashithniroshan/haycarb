@@ -3,9 +3,10 @@ import WaveButton from "components/innerpage/WaveButton";
 import {
   ProfitablityChart,
   FinancialPositionChart,
-  EmissionsEnergyChart,
   MaterialWaterChart,
   SocialGovernanceChart,
+  EmissionsChart,
+  EnergyConsumptionChart,
 } from "./Charts";
 
 const ChartGenerator = () => {
@@ -131,12 +132,21 @@ const ChartGenerator = () => {
           <>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Emissions (tCO2e) and Energy Consumption (GJ)
+                Emissions (tCO2e)
               </h1>
               <p className="text-center text-xl font-extrabold text-[#000] mt-2">
                 Slide to explore
               </p>
-              <EmissionsEnergyChart />
+              <EmissionsChart />
+            </div>
+            <div className="w-full">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+                Energy Consumption (GJ)
+              </h1>
+              <p className="text-center text-xl font-extrabold text-[#000] mt-2">
+                Slide to explore
+              </p>
+              <EnergyConsumptionChart />
             </div>
             <div className="w-full">
               <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
