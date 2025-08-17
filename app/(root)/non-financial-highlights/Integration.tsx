@@ -77,6 +77,8 @@ const Integration = () => {
       <div
         aria-hidden="true"
         className="absolute 
+                  hidden 
+                  lg:block 
                   top-6/7 -right-30 
                   lg:w-200 lg:h-200 
                   bg-no-repeat bg-contain"
@@ -87,7 +89,7 @@ const Integration = () => {
 
       {/* Description section */}
       <div className="lg:px-53 text-center">
-        <h1 className="text-[#005881] text-[40px] font-normal">
+        <h1 className="text-[#005881] text-[40px] font-normal leading-none">
           Framing Sustainability in Corporate Reporting
         </h1>
         <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
@@ -96,13 +98,13 @@ const Integration = () => {
         </p>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881] lg:border-b-0">
         {/* Left: Text Block (Vertically Centered) */}
-        <div className="lg:col-span-6 flex flex-col justify-center">
-          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
+        <div className="lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
+          <h1 className="text-[40px] text-center lg:text-left text-[#005881] font-normal leading-none">
             ESG governance
           </h1>
-          <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
+          <p className="para text-[15px] text-center lg:text-left font-medium text-[#000] my-8 lg:mt-3 lg:mb-10">
             Haycarb’s ESG governance is structured around its proprietary
             framework “ACTIVATE,” which integrates environmental, social, and
             governance principles into every facet of its operations. Governance
@@ -122,12 +124,12 @@ const Integration = () => {
             onBtnClick={() =>
               window.open("pdf/innerpage/ESG governance.pdf", "_blank")
             }
-            className="w-40"
+            className="w-40 mb-8 lg:mb-0"
           />
         </div>
 
         {/* Right: Image */}
-        <div className="lg:col-span-6 flex items-center">
+        <div className="lg:col-span-6 hidden lg:block flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
               src="/images/innerpage/non-financial-highlights/ESG-governance.jpg"
@@ -139,9 +141,9 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881] lg:border-b-0">
         {/* Left: Image */}
-        <div className="lg:col-span-6 flex items-center">
+        <div className="lg:col-span-6 hidden lg:block flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
               src="/images/innerpage/non-financial-highlights/ESG-strategies,-metrics-and-targets-.jpg"
@@ -153,11 +155,11 @@ const Integration = () => {
         </div>
 
         {/* Right: Text Block (Vertically Centered) */}
-        <div className="lg:col-span-6 flex flex-col justify-center">
-          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
+        <div className="lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
+          <h1 className="text-[40px] text-center lg:text-left text-[#005881] font-normal leading-none">
             ESG strategies, metrics and targets
           </h1>
-          <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
+          <p className="para text-[15px] text-center lg:text-left font-medium text-[#000] my-8 lg:mt-3 lg:mb-10">
             Introduces Haycarb’s &quot;ACTIVATE&quot; ESG framework - a
             strategic roadmap built on five key pillars to guide sustainability
             through 2030 and outlines Haycarb’s approach to managing
@@ -165,7 +167,7 @@ const Integration = () => {
             and performance indicators.
           </p>
 
-          <div className="lg:flex lg:flex-row lg:gap-6">
+          <div className="lg:flex lg:flex-row lg:gap-6 mb-8 lg:mb-0">
             <WaveButton
               title="Explore More"
               onBtnClick={() =>
@@ -174,7 +176,7 @@ const Integration = () => {
                   "_blank"
                 )
               }
-              className="mb-4 lg:mb-0 w-40"
+              className="mb-4 lg:mb-0 w-67 lg:w-40"
             />
             <WaveButton
               title="Activate - ESG Roadmap 2030"
@@ -189,12 +191,12 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4">
-        <div className="lg:col-span-6 flex flex-col justify-center">
-          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881] lg:border-b-0">
+        <div className="lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
+          <h1 className="text-[40px] text-center lg:text-left text-[#005881] font-normal leading-none">
             Sustainability and Climate related risks and opportunities
           </h1>
-          <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
+          <p className="para text-[15px] text-center lg:text-left font-medium text-[#000] my-8 lg:mt-3 lg:mb-10">
             Based on the 2024/25 Annual Report of Haycarb PLC, the company has
             adopted a deeply integrated and forward-looking approach to managing
             sustainability and climate-related risks and opportunities. These
@@ -211,10 +213,10 @@ const Integration = () => {
                 "_blank"
               )
             }
-            className="w-40"
+            className="w-40 mb-8 lg:mb-0"
           />
         </div>
-        <div className="lg:col-span-6 flex items-center">
+        <div className="lg:col-span-6 hidden lg:block flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
               src="/images/innerpage/non-financial-highlights/Sustainability.jpg"
@@ -226,8 +228,8 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 mt-5 pt-4">
-        <div className="lg:col-span-6 flex items-center">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 mt-5 pt-4 border-b border-[#005881] lg:border-b-0">
+        <div className="lg:col-span-6 hidden lg:block flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
               src="/images/innerpage/non-financial-highlights/Assessing-Climate-Resilience.jpg"
@@ -237,11 +239,11 @@ const Integration = () => {
             />
           </div>
         </div>
-        <div className="lg:col-span-6 flex flex-col justify-center">
-          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
+        <div className="lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
+          <h1 className="text-[40px] text-center lg:text-left text-[#005881] font-normal leading-none">
             Assessing Climate Resilience
           </h1>
-          <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
+          <p className="para text-[15px] text-center lg:text-left font-medium text-[#000] my-8 lg:mt-3 lg:mb-10">
             Given our exposure to climate related risks and opportunities, we
             conducted a climate resilience assessment during the year under
             review. Building on last year’s qualitative analysis, this year’s
@@ -259,7 +261,7 @@ const Integration = () => {
                 "_blank"
               )
             }
-            className="w-40"
+            className="w-40 mb-8 lg:mb-0"
           />
         </div>
       </div>
