@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useEffect, useState, Suspense, useRef } from 'react';
 import { motion, Variants } from "framer-motion";
 import Navbar from 'components/Navbar';
 import Msgvideo from 'components/Msgvideo';
@@ -16,6 +16,8 @@ import ModelWindow from 'components/ModelWindow';
 import FloatingButtons from 'components/ui/FloatingButtons';
 import SearchParamsHandler from 'components/SearchParamsHandler';
 import TableofContentMob from 'components/TableofContentMob';
+import { Fascinate_Inline } from 'next/font/google';
+
 
 
 const Home = () => {
@@ -23,6 +25,35 @@ const Home = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
   const [showModal, setShowModal] = useState(false); // New state for modal delay
 const [isMenuOpen, setIsMenuOpen] = useState(false);
+const audioRef =  useRef<HTMLAudioElement | null>(null); // Reference to Audio instance
+const [isVideoPlaying, setIsVideoPlaying] = useState(false); 
+
+  // Initialize audio
+  useEffect(() => {
+    audioRef.current = new Audio('audio/WhaleSounds.mp3');
+    audioRef.current.loop = true; // Loop the audio
+    audioRef.current.volume = 0.5; // Adjust volume as needed
+
+ // Play audio when content is visible
+    if (isContentVisible && !isVideoPlaying) {
+      audioRef.current.play().catch((error) => {
+        console.error('Audio playback failed:', error);
+      });
+    }
+
+    // Pause audio when video is playing
+    if (isVideoPlaying) {
+      audioRef.current.pause();
+    }
+
+    // Cleanup on component unmount
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
+  }, [isContentVisible, isVideoPlaying]);
 
   useEffect(() => {
     // Force scroll to top and disable scroll immediately
