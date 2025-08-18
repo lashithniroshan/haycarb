@@ -204,3 +204,20 @@
   border-left: 0px solid #fff;
 }
 }
+
+@media (min-width: 768px) {
+  .TableofContentContainerMob{
+    display: none;
+  }
+  .innerWrapper{
+    /* display: block; */
+  }
+}
+@media (max-width: 768px) {
+  .TableofContentContainerMob{
+    display: block;
+  }
+  .innerWrapper{
+    display: none;
+  }
+}
