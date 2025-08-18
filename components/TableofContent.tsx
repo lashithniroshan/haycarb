@@ -101,7 +101,7 @@ const contentData = {
       {/* Left 1/3 for image */}
       <div className={style.leftSection}>
         <img
-          src="/images/book.png"
+          src="/images/Book.png"
           alt="Table of Content"
           className={style.leftImage}
         />

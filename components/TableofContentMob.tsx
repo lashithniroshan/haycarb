@@ -122,9 +122,9 @@ const contentData = {
             onClick={() => toggleCategory(category as Category)}
           >
             {category}
-            <span className={style.arrow}>
+            {/* <span className={style.arrow}>
               {expandedCategories.includes(category as Category) ? '▼' : '▶'}
-            </span>
+            </span> */}
           </button>
           {expandedCategories.includes(category as Category) && (
             <div className={style.accordionContent}>
