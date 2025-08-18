@@ -1,7 +1,7 @@
 // components/Footer.tsx
 import React from "react";
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 import styles from "./Footer.module.css";
 
 const HomeFooter = () => {
@@ -26,26 +26,47 @@ const HomeFooter = () => {
             <div className={styles.column}>
               <p>No: 400, Deans Road, Colombo 10,</p>
               <p>Sri Lanka</p>
-              <p>Tel: +94 112 627 000</p>
-              <p>Email: inquiries@haycarb.com</p>
+              <p>
+                Tel: <a href="tel:+94112627000">+94 112 627 000</a>
+              </p>
+              <p>
+                Email:{" "}
+                <a href="mailto:inquiries@haycarb.com">inquiries@haycarb.com</a>
+              </p>
             </div>
 
             {/* Column 2: Links 1 */}
             <div className={styles.column}>
               <ul>
                 <li>
-                    <Link href="pdf/Performance Highlights.pdf" target="_blank" className="" >
-                  Performance Highlights
-                </Link>
+                  <Link
+                    href="pdf/Performance Highlights.pdf"
+                    target="_blank"
+                    className=""
+                  >
+                    Performance Highlights
+                  </Link>
                 </li>
                 <li>
-                  <Link href="pdf/Financial Statements.pdf" target="_blank">Financial Statements</Link>
+                  <Link href="pdf/Financial Statements.pdf" target="_blank">
+                    Financial Statements
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/pdf/Board-of-Directors.pdf" target="_blank">Leadership Message</Link>
+                  <Link
+                    href="/pdf/tbc/Chairmans & Managing Directors Joint Statement.pdf"
+                    target="_blank"
+                  >
+                    Leadership Message
+                  </Link>
                 </li>
-                 <li>
-                  <Link href="pdf/tbc/Strategy and Resource Allocation.pdf" target="_blank">Our Strategy</Link>
+                <li>
+                  <Link
+                    href="pdf/tbc/Strategy and Resource Allocation.pdf"
+                    target="_blank"
+                  >
+                    Our Strategy
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -54,16 +75,27 @@ const HomeFooter = () => {
             <div className={styles.column}>
               <ul>
                 <li>
-                  <Link href="pdf/Segment Review and Analysis.pdf" target="_blank">Segmental Review</Link>
+                  <Link
+                    href="pdf/Segment Review and Analysis.pdf"
+                    target="_blank"
+                  >
+                    Segmental Review
+                  </Link>
                 </li>
                 <li>
-                  <Link href="pdf/ESG Highlights.pdf" target="_blank">ESG Highlights</Link>
+                  <Link href="pdf/ESG Highlights.pdf" target="_blank">
+                    ESG Highlights
+                  </Link>
                 </li>
                 <li>
-                  <Link href="pdf/CorporateGovernance.pdf" target="_blank">Corporate Governance</Link>
+                  <Link href="pdf/CorporateGovernance.pdf" target="_blank">
+                    Corporate Governance
+                  </Link>
                 </li>
-                 <li>
-                  <Link href="pdf/FAQs.pdf">FAQs</Link>
+                <li>
+                  <Link href="pdf/FAQs.pdf" target="_blank">
+                    FAQs
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -71,7 +103,10 @@ const HomeFooter = () => {
             {/* Column 4: Social Media */}
             <div className={styles.column}>
               <div className={styles.socialRow}>
-                <a href="https://www.linkedin.com/company/haycarbplc/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/company/haycarbplc/"
+                  target="_blank"
+                >
                   <Image
                     src="/icons/Likin.svg"
                     alt="Linkin"
@@ -79,7 +114,10 @@ const HomeFooter = () => {
                     height={30}
                   />
                 </a>
-                <a href="https://web.facebook.com/haycarbplcofficial" target="_blank">
+                <a
+                  href="https://web.facebook.com/haycarbplcofficial"
+                  target="_blank"
+                >
                   <Image
                     src="/icons/Facebook.svg"
                     alt="Facebook"
@@ -96,7 +134,6 @@ const HomeFooter = () => {
                   />
                 </a>
               </div>
-              
             </div>
           </div>
         </div>
@@ -149,31 +186,52 @@ const InnerPageFooter = () => {
         </div>
         {/* Four Columns */}
         <div className={styles.footerContent}>
-          <div className={styles.columns}>
+          <div className={styles.columnsdf}>
             {/* Column 1: Address */}
             <div className={styles.column}>
               <p>No: 400, Deans Road, Colombo 10,</p>
               <p>Sri Lanka</p>
-              <p>Tel: +94 112 627 000</p>
-              <p>Email: inquiries@haycarb.com</p>
+              <p>
+                Tel: <a href="tel:+94112627000">+94 112 627 000</a>
+              </p>
+              <p>
+                Email:{" "}
+                <a href="mailto:inquiries@haycarb.com">inquiries@haycarb.com</a>
+              </p>
             </div>
 
             {/* Column 2: Links 1 */}
             <div className={styles.column}>
               <ul>
                 <li>
-                    <Link href="pdf/Performance Highlights.pdf" target="_blank" className="" >
-                  Performance Highlights
-                </Link>
+                  <Link
+                    href="pdf/Performance Highlights.pdf"
+                    target="_blank"
+                    className=""
+                  >
+                    Performance Highlights
+                  </Link>
                 </li>
                 <li>
-                  <Link href="pdf/Financial Statements.pdf" target="_blank">Financial Statements</Link>
+                  <Link href="pdf/Financial Statements.pdf" target="_blank">
+                    Financial Statements
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/pdf/Board-of-Directors.pdf" target="_blank">Leadership Message</Link>
+                  <Link
+                    href="/pdf/tbc/Chairmans & Managing Directors Joint Statement.pdf"
+                    target="_blank"
+                  >
+                    Leadership Message
+                  </Link>
                 </li>
-                 <li>
-                  <Link href="pdf/tbc/Strategy and Resource Allocation.pdf" target="_blank">Our Strategy</Link>
+                <li>
+                  <Link
+                    href="pdf/tbc/Strategy and Resource Allocation.pdf"
+                    target="_blank"
+                  >
+                    Our Strategy
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -182,16 +240,27 @@ const InnerPageFooter = () => {
             <div className={styles.column}>
               <ul>
                 <li>
-                  <Link href="pdf/Segment Review and Analysis.pdf" target="_blank">Segmental Review</Link>
+                  <Link
+                    href="pdf/Segment Review and Analysis.pdf"
+                    target="_blank"
+                  >
+                    Segmental Review
+                  </Link>
                 </li>
                 <li>
-                  <Link href="pdf/ESG Highlights.pdf" target="_blank">ESG Highlights</Link>
+                  <Link href="pdf/ESG Highlights.pdf" target="_blank">
+                    ESG Highlights
+                  </Link>
                 </li>
                 <li>
-                  <Link href="pdf/CorporateGovernance.pdf" target="_blank">Corporate Governance</Link>
+                  <Link href="pdf/CorporateGovernance.pdf" target="_blank">
+                    Corporate Governance
+                  </Link>
                 </li>
-                 <li>
-                  <Link href="pdf/FAQs.pdf">FAQs</Link>
+                <li>
+                  <Link href="pdf/FAQs.pdf" target="_blank">
+                    FAQs
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -199,7 +268,10 @@ const InnerPageFooter = () => {
             {/* Column 4: Social Media */}
             <div className={styles.column}>
               <div className={styles.socialRow}>
-                <a href="https://www.linkedin.com/company/haycarbplc/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/company/haycarbplc/"
+                  target="_blank"
+                >
                   <Image
                     src="/icons/Likin.svg"
                     alt="Facebook"
@@ -207,7 +279,10 @@ const InnerPageFooter = () => {
                     height={30}
                   />
                 </a>
-                <a href="https://web.facebook.com/haycarbplcofficial" target="_blank">
+                <a
+                  href="https://web.facebook.com/haycarbplcofficial"
+                  target="_blank"
+                >
                   <Image
                     src="/icons/Facebook.svg"
                     alt="Twitter"
@@ -215,7 +290,7 @@ const InnerPageFooter = () => {
                     height={30}
                   />
                 </a>
-                 <a href="https://youtube.com/@haycarbplc" target="_blank">
+                <a href="https://youtube.com/@haycarbplc" target="_blank">
                   <Image
                     src="/icons/youtube.svg"
                     alt="YouTube"
@@ -224,7 +299,6 @@ const InnerPageFooter = () => {
                   />
                 </a>
               </div>
-              
             </div>
           </div>
         </div>

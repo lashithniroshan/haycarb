@@ -26,7 +26,7 @@
 
 .innerWrapper {
   display: flex;
-  height: 415px;
+  height: 430px;
   padding: 5px 60px 5px 40px;
   gap: 20px;
 }
@@ -157,6 +157,7 @@
     flex-direction: column;
     padding: 20px;
     align-items: center;
+    background-position: -10% -6% !important;
   }
 
   .leftSection {
@@ -202,4 +203,21 @@
   .contentList{
   border-left: 0px solid #fff;
 }
+}
+
+@media (min-width: 768px) {
+  .TableofContentContainerMob{
+    display: none;
+  }
+  .innerWrapper{
+    /* display: block; */
+  }
+}
+@media (max-width: 768px) {
+  .TableofContentContainerMob{
+    display: block;
+  }
+  .innerWrapper{
+    display: none;
+  }
 }

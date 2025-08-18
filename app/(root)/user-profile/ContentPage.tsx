@@ -279,10 +279,10 @@ const ContentPage = () => {
   const [activeKey, setActiveKey] = useState(stakeholderKeys[0]);
 
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-30 overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute top-0 -right-25 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
+        className="absolute top-0 -right-25 lg:w-150 lg:h-150 bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -300,7 +300,7 @@ const ContentPage = () => {
                 xl:w-90 xl:h-90
                 2xl:w-100 2xl:h-100
                 -rotate-15 scale-x-[-1] 
-                bg-no-repeat bg-contain opacity-25 z-40"
+                bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -319,7 +319,7 @@ const ContentPage = () => {
                   rotate-180 
                   transform 
                   -translate-y-1/3 -translate-x-1/3 
-                  bg-no-repeat bg-contain"
+                  bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -336,7 +336,7 @@ const ContentPage = () => {
                 2xl:top-0 2xl:-right-20 
                 lg:w-200 lg:h-200 
                 xl:w-[800px] xl:h-[800px]
-                bg-no-repeat bg-contain opacity-25"
+                bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/water-full=spread.png)",
         }}
@@ -357,7 +357,7 @@ const ContentPage = () => {
                   rotate-180 
                   transform 
                   -translate-y-1/3 -translate-x-1/3 
-                  bg-no-repeat bg-contain opacity-25"
+                  bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/water-full=spread.png)",
         }}
@@ -378,7 +378,7 @@ const ContentPage = () => {
                   xl:w-80 xl:h-80
                   transform scale-x-[-1] -rotate-20
                   -translate-x-1/2 -translate-y-9/10 
-                  bg-no-repeat bg-contain opacity-25 z-10"
+                  bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -386,7 +386,7 @@ const ContentPage = () => {
 
       <div className="w-full px-4 lg:px-12 py-8">
         {/* Tabs */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="flex flex-wrap justify-center gap-6 lg:grid lg:grid-cols-5">
           {stakeholderKeys.map((key) => {
             const item = stakeholdersData[key];
             const isActive = key === activeKey;
@@ -417,12 +417,12 @@ const ContentPage = () => {
         </div>
 
         {/* Short description section */}
-        <p className="mt-10 py-4 lg:px-20 para text-center text-lg font-semibold text-[#005881]">
+        <p className="my-8 lg:mt-10 py-4 lg:px-20 para text-center text-lg font-semibold text-[#005881]">
           {stakeholdersData[activeKey].content.short_description}
         </p>
 
         {/* Matrics section */}
-        <div className="flex flex-wrap justify-center items-center gap-y-8 mt-18 text-center">
+        <div className="flex flex-wrap justify-center items-center gap-y-8 lg:mt-18 text-center">
           {stakeholdersData[activeKey].content?.matrics?.map((item, idx) => {
             const totalItems =
               stakeholdersData[activeKey].content?.matrics?.length || 0;
@@ -438,7 +438,9 @@ const ContentPage = () => {
                             flex-shrink-0
                         `}
               >
-                <p className="text-[32px] font-bold">{item.worth}</p>
+                <p className="text-[35px] lg:text-[40px] font-bold">
+                  {item.worth}
+                </p>
                 <p className="text-base whitespace-pre-line">{item.title}</p>
               </div>
             );
@@ -446,15 +448,15 @@ const ContentPage = () => {
         </div>
 
         {/* Chairman and director message section */}
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 py-8 my-10">
-          <div className="lg:col-span-5">
-            <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left">
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-8 py-8 lg:my-10">
+          <div className="lg:col-span-5 flex flex-col justify-center">
+            <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left leading-none">
               {
                 stakeholdersData[activeKey].content?.chairman_and_director
                   ?.title
               }
             </h1>
-            <p className="para text-base font-medium text-[#000] text-center lg:text-left mt-3 mb-10">
+            <p className="para text-base font-medium text-[#000] text-center lg:text-left mt-8 lg:mt-3 lg:mb-10">
               {
                 stakeholdersData[activeKey].content?.chairman_and_director
                   ?.message
@@ -620,8 +622,8 @@ const ContentPage = () => {
 
       {/* Leadershipt Governance and Strategy section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:py-8 lg:my-10 mx-10 lg:mx-30">
-        <div className="text-center lg:text-left">
-          <h1 className="text-[40px] text-[#005881] font-normal">
+        <div className="text-center lg:text-left z-30">
+          <h1 className="text-[40px] text-[#005881] font-normal leading-none">
             Leadership & Governance
           </h1>
           <p className="para text-base font-medium text-[#000] mt-3 mb-10">
@@ -638,11 +640,12 @@ const ContentPage = () => {
             onBtnClick={() =>
               window.open("pdf/innerpage/Corporate Governance.pdf", "_blank")
             }
-            className="mx-auto lg:mx-0"
+            className="mx-auto lg:mx-0 w-40 z-30"
+            style={{ background: "#fff" }}
           />
         </div>
-        <div className="lg:pl-20 lg:border-l-1 lg:border-[#1D80A0]">
-          <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left">
+        <div className="lg:pl-20 lg:border-l-1 lg:border-[#1D80A0] z-30">
+          <h1 className="text-[40px] text-[#005881] font-normal text-center lg:text-left leading-none mb-5 lg:mb-0">
             Strategy and Performance
           </h1>
           <ul className="text-base list-disc leading-loose">
@@ -652,8 +655,8 @@ const ContentPage = () => {
       </div>
 
       {/* Grpahs */}
-      <div className="my-12 px-10 lg:px-50">
-        <h1 className="text-[#005881] text-[40px] font-normal text-center mb-10">
+      <div className="relative z-30 mt-12 px-10 lg:px-50">
+        <h1 className="text-[#005881] text-[40px] font-normal text-center leading-none mb-10">
           {stakeholdersData[activeKey].content?.related_chart_image?.title}
         </h1>
         <Image

@@ -7,22 +7,21 @@ interface DownloadCardProps {
   title: string;
   image: string;
   onDownload?: () => void;
+  className?: string;
 }
 
 const DownloadCard: React.FC<DownloadCardProps> = ({
   title,
   image,
   onDownload,
+  className,
 }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md flex flex-col justify-end items-center w-full max-w-[400px] 2xl:max-w-none text-center relative aspect-[4/3] mx-auto">
+    <div
+      className={`bg-white rounded-xl shadow-md flex flex-col justify-end items-center w-full max-w-[400px] 2xl:max-w-none text-center relative aspect-[4/3] mx-auto ${className}`}
+    >
       <div className="absolute inset-0 rounded-[10px] overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover opacity-80"
-        />
+        <Image src={image} alt={title} fill className="object-cover" />
       </div>
       <div
         className="absolute inset-0 rounded-xl"

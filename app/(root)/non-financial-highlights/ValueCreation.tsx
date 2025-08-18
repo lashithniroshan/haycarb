@@ -5,10 +5,10 @@ import React from "react";
 
 const ValueCreation = () => {
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
+        className="absolute hidden lg:block top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -37,7 +37,7 @@ const ValueCreation = () => {
 
       {/* Description section */}
       <div className="lg:px-53 text-center">
-        <h1 className="text-[#005881] text-[40px] font-normal">
+        <h1 className="text-[#005881] text-[40px] font-normal leading-none">
           Understanding our value creation and its impact
         </h1>
         <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
@@ -50,26 +50,26 @@ const ValueCreation = () => {
       </div>
 
       {/* Understanding Value */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 mt-12 text-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 lg:py-8 my-8 lg:mt-12 text-center">
         {/* Top or Left Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-1/6 xl:w-1/4 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-1/6 xl:w-1/4 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
 
         {/* Center Text */}
-        <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[40px] text-[#005881]">
+        <h1 className="text-[40px] text-[#005881] leading-none">
           Determining Material Issues
         </h1>
 
         {/* Bottom or Right Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-1/6 xl:w-1/4 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-1/6 xl:w-1/4 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
-      <div className="lg:px-53 mb-12">
-        <p className="para text-center text-[#000000] text-[15px] font-medium mb-6">
+      <div className="lg:px-53 lg:mb-12">
+        <p className="para text-center text-[#000000] text-[15px] font-medium my-8 lg:mb-6">
           Haycarb PLC conducts an annual materiality assessment to identify its
           most important business and sustainability concerns, considering both
           the company’s strategic goals and stakeholder concerns. Using a double
@@ -86,27 +86,27 @@ const ValueCreation = () => {
         height={781}
         className="mx-auto block"
       />
-      <div className="my-15 flex items-center justify-center">
+      <div className="lg:mb-15 flex items-center justify-center mt-4 lg:mt-0">
         <WaveButton
           title="Explore More"
-          style={{ fontSize: "12px" }}
           onBtnClick={() =>
             window.open(
               "pdf/innerpage/Determining Material Issues.pdf",
               "_blank"
             )
           }
+          className="w-40"
         />
       </div>
 
       {/* Digital evolution section */}
       <div className="w-full px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 mx-auto">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 py-8">
-          <div className="lg:col-span-5">
-            <h1 className="text-[40px] text-[#005881] font-normal">
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-start justify-center">
+            <h1 className="text-[40px] text-[#005881] text-center lg:text-left font-normal leading-none">
               Managing Business Risks & Opportunities
             </h1>
-            <p className="para text-[15px] font-medium text-[#000] mt-3 mb-10">
+            <p className="para text-[15px] text-center lg:text-left font-medium text-[#000] my-8 lg:mt-3 lg:mb-10">
               Haycarb PLC uses a structured risk management approach aligned
               with global standards, assessing business risks annually across
               different timeframes. Led by the Board and supported by various
@@ -117,13 +117,13 @@ const ValueCreation = () => {
             </p>
             <WaveButton
               title="Explore More"
-              style={{ fontSize: "12px" }}
               onBtnClick={() =>
                 window.open(
                   "pdf/innerpage/Managing Risks & Opportunities.pdf",
                   "_blank"
                 )
               }
+              className="w-40"
             />
           </div>
 
@@ -152,7 +152,7 @@ const ValueCreation = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-6 lg:px-4 2xl:px-16 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-6 lg:px-4 2xl:px-16 max-w-6xl mx-auto lg:mt-12">
         <InfoCard
           title="Operating Environment"
           description="This section summarizes the impact from external factors including political shifts, economic volatility, climate risks, social expectations, evolving technologies, and regulatory pressures that influence Haycarb's business decisions and sustainability priorities."

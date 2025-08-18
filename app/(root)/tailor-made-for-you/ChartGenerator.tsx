@@ -3,19 +3,20 @@ import WaveButton from "components/innerpage/WaveButton";
 import {
   ProfitablityChart,
   FinancialPositionChart,
-  EmissionsEnergyChart,
   MaterialWaterChart,
   SocialGovernanceChart,
+  EmissionsChart,
+  EnergyConsumptionChart,
 } from "./Charts";
 
 const ChartGenerator = () => {
   const [activatedBtn, setActivatedBtn] = useState("financial");
 
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
+        className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain z-0"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -33,7 +34,7 @@ const ChartGenerator = () => {
                 xl:w-90 xl:h-90
                 2xl:w-100 2xl:h-100
                 -rotate-15 scale-x-[-1] 
-                bg-no-repeat bg-contain opacity-25 z-40"
+                bg-no-repeat bg-contain opacity-25 z-0"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -53,7 +54,7 @@ const ChartGenerator = () => {
                   xl:w-72 xl:h-72
                   transform scale-x-[-1] -rotate-20
                   -translate-x-1/2 -translate-y-9/10 
-                  bg-no-repeat bg-contain opacity-25"
+                  bg-no-repeat bg-contain opacity-25 z-0"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -65,7 +66,7 @@ const ChartGenerator = () => {
                   top-300 -left-40
                   lg:w-200 lg:h-200 
                   scale-x-[-1]
-                  bg-no-repeat bg-contain"
+                  bg-no-repeat bg-contain z-0"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -84,7 +85,7 @@ const ChartGenerator = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-4 px-4 py-6">
+      <div className="flex flex-wrap justify-center items-center gap-4 px-4 py-6 z-30">
         <WaveButton
           title="Financial"
           style={{
@@ -104,7 +105,7 @@ const ChartGenerator = () => {
         />
       </div>
       <div className="lg:px-53 text-center">
-        <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
+        <p className="text-center text-[#000] text-xl font-extrabold mt-10">
           Select your preferred metrics to explore performance insights
         </p>
       </div>
@@ -112,16 +113,16 @@ const ChartGenerator = () => {
         {activatedBtn === "financial" ? (
           <>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
                 Earnings and Profitability (Rs. Bn)
               </h1>
               <ProfitablityChart />
             </div>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
                 Financial Position (Rs. Bn)
               </h1>
-              <p className="para text-center font-semibold text-[#005881] mt-2">
+              <p className="text-center text-xl font-extrabold text-[#000] mt-2">
                 Slide to explore
               </p>
               <FinancialPositionChart />
@@ -130,28 +131,37 @@ const ChartGenerator = () => {
         ) : (
           <>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
-                Emissions (tCO2e) and Energy Consumption (GJ)
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
+                Emissions (tCO2e)
               </h1>
-              <p className="para text-center font-semibold text-[#005881] mt-2">
+              <p className="text-center text-xl font-extrabold text-[#000] mt-2">
                 Slide to explore
               </p>
-              <EmissionsEnergyChart />
+              <EmissionsChart />
             </div>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
+                Energy Consumption (GJ)
+              </h1>
+              <p className="text-center text-xl font-extrabold text-[#000] mt-2">
+                Slide to explore
+              </p>
+              <EnergyConsumptionChart />
+            </div>
+            <div className="w-full">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
                 Materials (MT) and Water Management (m<sup>3</sup>)
               </h1>
-              <p className="para text-center font-semibold text-[#005881] mt-2">
+              <p className="text-center text-xl font-extrabold text-[#000] mt-2">
                 Slide to explore
               </p>
               <MaterialWaterChart />
             </div>
             <div className="w-full">
-              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px]">
+              <h1 className="text-center text-[#005881] text-[30px] lg:text-[38px] leading-none">
                 Social and Governance Performance
               </h1>
-              <p className="para text-center font-semibold text-[#005881] mt-2">
+              <p className="text-center text-xl font-extrabold text-[#000] mt-2">
                 Slide to explore
               </p>
               <SocialGovernanceChart />

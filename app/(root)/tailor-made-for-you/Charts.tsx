@@ -1268,7 +1268,7 @@ export function FinancialPositionChart() {
         year: "2021",
         total_assets: 25,
         total_liab: 10.24,
-        share_capital: 331.77,
+        // share_capital: 331.77,
         revenue_reserves: 12,
         equity: 15,
         current_assets: 16,
@@ -1278,7 +1278,7 @@ export function FinancialPositionChart() {
         year: "2022",
         total_assets: 40,
         total_liab: 19.19,
-        share_capital: 331.77,
+        // share_capital: 331.77,
         revenue_reserves: 17,
         equity: 21,
         current_assets: 29,
@@ -1288,7 +1288,7 @@ export function FinancialPositionChart() {
         year: "2023",
         total_assets: 40,
         total_liab: 14.98,
-        share_capital: 331.77,
+        // share_capital: 331.77,
         revenue_reserves: 21,
         equity: 25,
         current_assets: 27,
@@ -1298,7 +1298,7 @@ export function FinancialPositionChart() {
         year: "2024",
         total_assets: 40,
         total_liab: 14.52,
-        share_capital: 331.77,
+        // share_capital: 331.77,
         revenue_reserves: 22,
         equity: 26,
         current_assets: 26,
@@ -1308,7 +1308,7 @@ export function FinancialPositionChart() {
         year: "2025",
         total_assets: 46,
         total_liab: 16.22,
-        share_capital: 331.77,
+        // share_capital: 331.77,
         revenue_reserves: 25,
         equity: 30,
         current_assets: 28,
@@ -1409,7 +1409,7 @@ export function FinancialPositionChart() {
     // Add all series
     createSeries("Total Assets", "total_assets");
     createSeries("Total liabilities", "total_liab");
-    createSeries("Share Capital", "share_capital");
+    // createSeries("Share Capital", "share_capital");
     createSeries("Revenue Reserves", "revenue_reserves");
     createSeries("Equity", "equity");
     createSeries("Current Assets", "current_assets");
@@ -1472,7 +1472,325 @@ export function FinancialPositionChart() {
   );
 }
 
-export function EmissionsEnergyChart() {
+export function EmissionsChart() {
+  const chartRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const root = am5.Root.new(chartRef.current!);
+
+    const responsive = am5themes_Responsive.new(root);
+
+    responsive.addRule({
+      relevant: am5themes_Responsive.widthM,
+      applying: function () {
+        chart.set("layout", root.verticalLayout);
+        legend.setAll({
+          y: null,
+          centerY: undefined,
+          x: am5.p0,
+          centerX: am5.p0,
+        });
+      },
+      removing: function () {
+        chart.set("layout", root.horizontalLayout);
+        legend.setAll({
+          y: am5.p50,
+          centerY: am5.p50,
+          x: null,
+          centerX: undefined,
+        });
+      },
+    });
+
+    // Theme
+    root.setThemes([am5themes_Animated.new(root), responsive]);
+
+    const chart = root.container.children.push(
+      am5xy.XYChart.new(root, {
+        panX: false,
+        panY: false,
+        wheelX: "panX",
+        wheelY: "zoomX",
+        paddingLeft: 0,
+        layout: root.verticalLayout,
+      })
+    );
+
+    chart.set(
+      "scrollbarX",
+      am5.Scrollbar.new(root, {
+        orientation: "horizontal",
+      })
+    );
+
+    const data = [
+      {
+        year: "2023",
+        total_carbon_emission: 28396,
+        scope_1_emission: 12622,
+        scope_2_emission: 13330,
+        scope_3_emission: 2444,
+        biogenic: 41305,
+      },
+      {
+        year: "2024",
+        total_carbon_emission: 26696,
+        scope_1_emission: 10903,
+        scope_2_emission: 13485,
+        scope_3_emission: 2308,
+        biogenic: 48658,
+      },
+      {
+        year: "2025",
+        total_carbon_emission: 44554,
+        scope_1_emission: 13741,
+        scope_2_emission: 14356,
+        scope_3_emission: 16457,
+        biogenic: 31429,
+      },
+    ];
+
+    // Create axes
+    const xRenderer = am5xy.AxisRendererX.new(root, {
+      minorGridEnabled: true,
+      minGridDistance: 60,
+    });
+    const xAxis = chart.xAxes.push(
+      am5xy.CategoryAxis.new(root, {
+        categoryField: "year",
+        renderer: xRenderer,
+        tooltip: am5.Tooltip.new(root, {}),
+      })
+    );
+    xRenderer.grid.template.setAll({
+      location: 1,
+    });
+
+    xAxis.data.setAll(data);
+
+    const yAxis = chart.yAxes.push(
+      am5xy.ValueAxis.new(root, {
+        min: 0,
+        extraMax: 0.1,
+        renderer: am5xy.AxisRendererY.new(root, {
+          strokeOpacity: 0.1,
+        }),
+      })
+    );
+
+    yAxis.children.unshift(
+      am5.Label.new(root, {
+        rotation: -90,
+        text: "tCO2e",
+        y: am5.p50,
+        centerX: am5.p50,
+        fontSize: 14,
+        fontWeight: "bold",
+      })
+    );
+
+    // Add series
+
+    // bar
+    const series1 = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Total Carbon emissions (tCO2e)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "total_carbon_emission",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series1.columns.template.setAll({
+      tooltipY: am5.percent(10),
+      templateField: "columnSettings",
+    });
+
+    series1.data.setAll(data);
+
+    const series2 = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Scope 1 emission (tCO2e)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "scope_1_emission",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series2.columns.template.setAll({
+      tooltipY: am5.percent(10),
+      templateField: "columnSettings",
+    });
+
+    series2.data.setAll(data);
+
+    const series3 = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Scope 2 emission (tCO2e)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "scope_2_emission",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series3.columns.template.setAll({
+      tooltipY: am5.percent(10),
+      templateField: "columnSettings",
+    });
+
+    series3.data.setAll(data);
+
+    const series4 = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Scope 3 emission (tCO2e)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "scope_3_emission",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series4.columns.template.setAll({
+      tooltipY: am5.percent(10),
+      templateField: "columnSettings",
+    });
+
+    series4.data.setAll(data);
+
+    const series5 = chart.series.push(
+      am5xy.ColumnSeries.new(root, {
+        name: "Biogenic emission (tCO2e)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "biogenic",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series5.columns.template.setAll({
+      tooltipY: am5.percent(10),
+      templateField: "columnSettings",
+    });
+
+    series5.data.setAll(data);
+
+    // lines
+
+    /* const series5 = chart.series.push(
+      am5xy.LineSeries.new(root, {
+        name: "Renewable energy consumption (GJ)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "renewable_energy",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series5.strokes.template.setAll({
+      strokeWidth: 3,
+      templateField: "strokeSettings",
+    });
+
+    series5.data.setAll(data);
+
+    series5.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        sprite: am5.Circle.new(root, {
+          strokeWidth: 3,
+          stroke: series5.get("stroke"),
+          radius: 5,
+          fill: root.interfaceColors.get("background"),
+        }),
+      });
+    }); */
+
+    /* const series6 = chart.series.push(
+      am5xy.LineSeries.new(root, {
+        name: "Electricity supplied to national grid (GJ)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "electricity_supplied",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series6.strokes.template.setAll({
+      strokeWidth: 3,
+      templateField: "strokeSettings",
+    });
+
+    series6.data.setAll(data);
+
+    series6.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        sprite: am5.Circle.new(root, {
+          strokeWidth: 3,
+          stroke: series6.get("stroke"),
+          radius: 5,
+          fill: root.interfaceColors.get("background"),
+        }),
+      });
+    });
+ */
+    chart.set("cursor", am5xy.XYCursor.new(root, {}));
+
+    const legend = chart.children.push(
+      am5.Legend.new(root, {
+        centerX: am5.p50,
+        x: am5.p50,
+      })
+    );
+    legend.data.setAll(chart.series.values);
+
+    chart.appear(1000, 100);
+    series1.appear();
+
+    return () => {
+      root.dispose();
+    };
+  }, []);
+
+  return (
+    <div
+      ref={chartRef}
+      id="emissionchart"
+      className="w-full h-[500px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px]"
+    />
+  );
+}
+
+export function EnergyConsumptionChart() {
   const chartRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -1527,29 +1845,20 @@ export function EmissionsEnergyChart() {
       {
         year: "2023",
         renewable_energy: 942301,
-        electricity_supplied: 3656,
-        total_carbon_emission: 28396,
-        scope_1_emission: 12622,
-        scope_2_emission: 13330,
-        scope_3_emission: 2444,
+        non_renewable: 265139,
+        total_consumption: 1207440,
       },
       {
         year: "2024",
         renewable_energy: 885612,
-        electricity_supplied: 2889,
-        total_carbon_emission: 26696,
-        scope_1_emission: 10903,
-        scope_2_emission: 13485,
-        scope_3_emission: 2308,
+        non_renewable: 247352,
+        total_consumption: 1132964,
       },
       {
         year: "2025",
         renewable_energy: 850874,
-        electricity_supplied: 4390,
-        total_carbon_emission: 44554,
-        scope_1_emission: 13741,
-        scope_2_emission: 14356,
-        scope_3_emission: 16457,
+        non_renewable: 290821,
+        total_consumption: 1141695,
       },
     ];
 
@@ -1584,7 +1893,7 @@ export function EmissionsEnergyChart() {
     yAxis.children.unshift(
       am5.Label.new(root, {
         rotation: -90,
-        text: "tCO2e / GJ",
+        text: "GJ",
         y: am5.p50,
         centerX: am5.p50,
         fontSize: 14,
@@ -1592,96 +1901,9 @@ export function EmissionsEnergyChart() {
       })
     );
 
-    // Add series
-
-    // bar
-    const series1 = chart.series.push(
-      am5xy.ColumnSeries.new(root, {
-        name: "Total Carbon emissions (tCO2e)",
-        xAxis: xAxis,
-        yAxis: yAxis,
-        valueYField: "total_carbon_emission",
-        categoryXField: "year",
-        tooltip: am5.Tooltip.new(root, {
-          pointerOrientation: "horizontal",
-          labelText: "{name} in {categoryX}: {valueY} {info}",
-        }),
-      })
-    );
-
-    series1.columns.template.setAll({
-      tooltipY: am5.percent(10),
-      templateField: "columnSettings",
-    });
-
-    series1.data.setAll(data);
-
-    const series2 = chart.series.push(
-      am5xy.ColumnSeries.new(root, {
-        name: "Scope 1 emission",
-        xAxis: xAxis,
-        yAxis: yAxis,
-        valueYField: "scope_1_emission",
-        categoryXField: "year",
-        tooltip: am5.Tooltip.new(root, {
-          pointerOrientation: "horizontal",
-          labelText: "{name} in {categoryX}: {valueY} {info}",
-        }),
-      })
-    );
-
-    series2.columns.template.setAll({
-      tooltipY: am5.percent(10),
-      templateField: "columnSettings",
-    });
-
-    series2.data.setAll(data);
-
-    const series3 = chart.series.push(
-      am5xy.ColumnSeries.new(root, {
-        name: "Scope 2 emission",
-        xAxis: xAxis,
-        yAxis: yAxis,
-        valueYField: "scope_2_emission",
-        categoryXField: "year",
-        tooltip: am5.Tooltip.new(root, {
-          pointerOrientation: "horizontal",
-          labelText: "{name} in {categoryX}: {valueY} {info}",
-        }),
-      })
-    );
-
-    series3.columns.template.setAll({
-      tooltipY: am5.percent(10),
-      templateField: "columnSettings",
-    });
-
-    series3.data.setAll(data);
-
-    const series4 = chart.series.push(
-      am5xy.ColumnSeries.new(root, {
-        name: "Scope 3 emission",
-        xAxis: xAxis,
-        yAxis: yAxis,
-        valueYField: "scope_3_emission",
-        categoryXField: "year",
-        tooltip: am5.Tooltip.new(root, {
-          pointerOrientation: "horizontal",
-          labelText: "{name} in {categoryX}: {valueY} {info}",
-        }),
-      })
-    );
-
-    series4.columns.template.setAll({
-      tooltipY: am5.percent(10),
-      templateField: "columnSettings",
-    });
-
-    series4.data.setAll(data);
-
     // lines
 
-    const series5 = chart.series.push(
+    const series1 = chart.series.push(
       am5xy.LineSeries.new(root, {
         name: "Renewable energy consumption (GJ)",
         xAxis: xAxis,
@@ -1695,30 +1917,30 @@ export function EmissionsEnergyChart() {
       })
     );
 
-    series5.strokes.template.setAll({
+    series1.strokes.template.setAll({
       strokeWidth: 3,
       templateField: "strokeSettings",
     });
 
-    series5.data.setAll(data);
+    series1.data.setAll(data);
 
-    series5.bullets.push(function () {
+    series1.bullets.push(function () {
       return am5.Bullet.new(root, {
         sprite: am5.Circle.new(root, {
           strokeWidth: 3,
-          stroke: series5.get("stroke"),
+          stroke: series1.get("stroke"),
           radius: 5,
           fill: root.interfaceColors.get("background"),
         }),
       });
     });
 
-    const series6 = chart.series.push(
+    const series2 = chart.series.push(
       am5xy.LineSeries.new(root, {
-        name: "Electricity supplied to national grid (GJ)",
+        name: "Non - renewable energy consumptions (GJ)",
         xAxis: xAxis,
         yAxis: yAxis,
-        valueYField: "electricity_supplied",
+        valueYField: "non_renewable",
         categoryXField: "year",
         tooltip: am5.Tooltip.new(root, {
           pointerOrientation: "horizontal",
@@ -1727,18 +1949,50 @@ export function EmissionsEnergyChart() {
       })
     );
 
-    series6.strokes.template.setAll({
+    series2.strokes.template.setAll({
       strokeWidth: 3,
       templateField: "strokeSettings",
     });
 
-    series6.data.setAll(data);
+    series2.data.setAll(data);
 
-    series6.bullets.push(function () {
+    series2.bullets.push(function () {
       return am5.Bullet.new(root, {
         sprite: am5.Circle.new(root, {
           strokeWidth: 3,
-          stroke: series6.get("stroke"),
+          stroke: series2.get("stroke"),
+          radius: 5,
+          fill: root.interfaceColors.get("background"),
+        }),
+      });
+    });
+
+    const series3 = chart.series.push(
+      am5xy.LineSeries.new(root, {
+        name: "Total energy consumption (GJ)",
+        xAxis: xAxis,
+        yAxis: yAxis,
+        valueYField: "total_consumption",
+        categoryXField: "year",
+        tooltip: am5.Tooltip.new(root, {
+          pointerOrientation: "horizontal",
+          labelText: "{name} in {categoryX}: {valueY} {info}",
+        }),
+      })
+    );
+
+    series3.strokes.template.setAll({
+      strokeWidth: 3,
+      templateField: "strokeSettings",
+    });
+
+    series3.data.setAll(data);
+
+    series3.bullets.push(function () {
+      return am5.Bullet.new(root, {
+        sprite: am5.Circle.new(root, {
+          strokeWidth: 3,
+          stroke: series3.get("stroke"),
           radius: 5,
           fill: root.interfaceColors.get("background"),
         }),
@@ -1937,7 +2191,7 @@ export function MaterialWaterChart() {
       "Waste water treated through treatment plants (m3)",
       "waste_water"
     );
-    createSeries("Water consumption", "water_consumption");
+    createSeries("Water consumption (m3)", "water_consumption");
     createSeries("Solid waste generated (MT)", "solid_waste_gen");
     createSeries(
       "Renewable raw material consumption (MT)",

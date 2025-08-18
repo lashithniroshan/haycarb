@@ -115,7 +115,7 @@ const Strategy = () => {
               "75%"
             )}</h4><p>Energy requirements fulfilled through renewable energy</p></li>
             <li><h4>${useAnimatedNumberText(
-              "1,523"
+              "1,523 "
             )}MWh</h4><p>Total solar power generation</p></li>
             <li><h4>${useAnimatedNumberText(
               "Rs.81.8"

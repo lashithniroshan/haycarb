@@ -97,11 +97,11 @@ const FinancialCapital = () => {
   };
 
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       {/* --- Decorative Background Blobs --- */}
       <div
         aria-hidden="true"
-        className="absolute top-0 -right-30 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
+        className="absolute top-0 -right-30 lg:w-150 lg:h-150 bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -121,7 +121,7 @@ const FinancialCapital = () => {
                   -rotate-30 
                   scale-x-[-1]
                   bg-no-repeat 
-                  bg-contain z-40 opacity-50"
+                  bg-contain z-5 opacity-50"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -129,7 +129,7 @@ const FinancialCapital = () => {
 
       <div
         aria-hidden="true"
-        className="absolute top-1/2 left-0 w-96 h-96 md:w-[600px] md:h-[600px] rotate-180 transform -translate-y-1/3 -translate-x-1/3 bg-no-repeat bg-contain"
+        className="absolute top-1/2 left-0 w-96 h-96 md:w-[600px] md:h-[600px] rotate-180 transform -translate-y-1/3 -translate-x-1/3 bg-no-repeat bg-contain z-5"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -145,7 +145,7 @@ const FinancialCapital = () => {
                   md:w-72 md:h-72 
                   -rotate-15
                   transform -scale-x-90
-                  bg-no-repeat bg-contain opacity-25"
+                  bg-no-repeat bg-contain opacity-25 z-5"
         style={{
           backgroundImage: "url(/images/innerpage/blue-whale.png)",
         }}
@@ -167,7 +167,8 @@ const FinancialCapital = () => {
           </p>
 
           {/* Dynamic Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-center">
+          {/* grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 text-center */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-30 mt-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 z-50 text-center">
             {statsData.map((stat, index) => (
               <div key={index}>
                 <p className="text-[50px] font-extrabold text-[#369E93]">
@@ -187,11 +188,11 @@ const FinancialCapital = () => {
       </div>
 
       {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 z-50">
         {chart.map((ch) => (
           <div
             key={ch.id}
-            className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-5"
+            className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-5 z-40"
           >
             <Image src={ch.value} alt="banner" width={386} height={479} />
           </div>
@@ -199,7 +200,7 @@ const FinancialCapital = () => {
       </div>
 
       {/* Table */}
-      <div className="w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 my-20">
+      <div className="relative z-30 w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 mt-20">
         {/* Header */}
         <div
           className="bg-[#61B296] text-white text-center py-3 sm:py-4"
@@ -214,7 +215,7 @@ const FinancialCapital = () => {
           style={{ borderRadius: "0 0 10px 10px" }}
         >
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[320px] border-collapse">
+            <table className="w-full min-w-[320px] border-collapse ">
               {/* Header Row */}
               <thead>
                 <tr>
@@ -247,7 +248,7 @@ const FinancialCapital = () => {
                         >
                           {item?.value && (
                             <div className="space-y-1 sm:space-y-2">
-                              <div className="text-lg sm:text-sm lg:text-sm font-semibold text-gray-800">
+                              <div className="text-lg sm:text-sm lg:text-base font-semibold text-gray-800">
                                 {item.value}
                               </div>
                               <div className="text-xs sm:text-sm lg:text-sm text-gray-600 font-medium leading-tight break-words">
@@ -267,7 +268,7 @@ const FinancialCapital = () => {
       </div>
 
       {/* Download buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-6 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-60">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-10 bg-white mt-10 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-60">
         <WaveButton
           title="Financial Highlights"
           onBtnClick={() =>

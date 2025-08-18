@@ -20,7 +20,7 @@ const WaveButton = ({
 }: WaveButtonProps) => {
   return (
     <button
-      className={`rounded-full transition flex items-center justify-center ${
+      className={`rounded-full transition flex items-center justify-center text-[14px] ${
         styles.btnCustomInner
       } ${styles.waveBtnInner} ${
         isActive ? styles.active : ""

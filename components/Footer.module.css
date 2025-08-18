@@ -26,7 +26,7 @@
   padding-bottom: 40px;
 }
 
-.columns {
+.columns,.columnsdf {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -136,8 +136,8 @@
     margin-bottom: 20px;
   }
 
-  .columns {
-    gap: 40px;
+  .columns,.columnsdf {
+    gap: 0px;
   }
 
   .column {
@@ -163,14 +163,23 @@
     justify-content: center;
   }
 
-  .columns {
+  .columns,.columnsdf {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 250px;
   }
+   .columns {
+    margin-top: 250px;
+  }
+     .columnsdf {
+    margin-top: 0px;
+  }
+
 
   .column {
     min-width: 100%;
+    margin-top: 0px;
   }
 
   .socialRow {
@@ -181,6 +190,15 @@
     flex-direction: column;
     gap: 5px;
   }
+  .backgroundImage {
+  background: url("/images/Coralsmob.png") no-repeat center center/cover;
+  min-height: 300px;
+  position: relative;
+          background-position: 1% -2%;
+}
+.footerContent{
+  /* padding-bottom: 160px; */
+}
 }
 
 /* Small Mobile */

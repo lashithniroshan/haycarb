@@ -22,9 +22,9 @@ const slidesData: Slide[] = [
     subtitle: "Signalling Clarity and Intent",
     description:
       "When whales surface to breathe, their spout signals presence and strength with clarity. Similarly, Haycarb rises with purpose; transparency is our core. Strong performance and lasting impact drives us forward, powered by a relentless commitment to sustainable innovation and high standards.",
-    image: "/images/fish/1.webm",
-    activeimage: "/images/fish/1.webm",
-    selectedimage: "/images/fish/1.webm",
+      image: "/images/fish/2.webm",
+    activeimage: "/images/fish/2.webm",
+    selectedimage: "/images/fish/2.webm",
     alt: "Wallscape",
   },
   {
@@ -33,9 +33,9 @@ const slidesData: Slide[] = [
     subtitle: "Staying Informed and Aware",
     description:
       "A spy hop is when a whale rises vertically to observe its surroundings - signaling awareness and clarity. At Haycarb, we stay attuned to global trends, enabling swift, strategic responses that turn insight into action with agility, precision, and forward-thinking purpose.",
-    image: "/images/fish/2.webm",
-    activeimage: "/images/fish/2.webm",
-    selectedimage: "/images/fish/2.webm",
+       image: "/images/fish/3.webm",
+    activeimage: "/images/fish/3.webm",
+    selectedimage: "/images/fish/3.webm",
     alt: "Stores",
   },
   {
@@ -44,9 +44,9 @@ const slidesData: Slide[] = [
     subtitle: "Diving Deep to Make an Impacttle",
     description:
       "The iconic fluke-up dive signals the whales deep, deliberate descent into the ocean’s deaths. As we dive deep into every challenge, uncovering insights, optimising processes, and creating value at every level, Haycarb navigates complexity with focus and intent, emerging stronger, smarter, and more resilient.",
-    image: "/images/fish/3.webm",
-    activeimage: "/images/fish/3.webm",
-    selectedimage: "/images/fish/3.webm",
+     image: "/images/fish/6.webm",
+    activeimage: "/images/fish/6.webm",
+    selectedimage: "/images/fish/6.webm",
     alt: "wayfinders",
   },
   {
@@ -77,9 +77,9 @@ const slidesData: Slide[] = [
     subtitle: "Rising Above and Beyond",
     description:
       "Few sights inspire like a whale breaching rising with strength and purpose. Haycarb’s breakthroughs soar just as boldly: transformative leaps that redefine sustainable manufacturing and drive impact for people, planet, and future generations with unwavering purpose. 'Driving Value, Changing Lives'.",
-    image: "/images/fish/6.webm",
-    activeimage: "/images/fish/6.webm",
-    selectedimage: "/images/fish/6.webm",
+      image: "/images/fish/1.webm",
+    activeimage: "/images/fish/1.webm",
+    selectedimage: "/images/fish/1.webm",
     alt: "Wallscape",
   },
 ];
@@ -89,6 +89,8 @@ const CircleSlider = () => {
   const [showOverlay2, setShowOverlay2] = useState(false);
   const [currentRotation, setCurrentRotation] = useState(0);
   const [activeIndex, setActiveIndex] = useState(4); // Initial active slide (id: 5, index: 4)
+ const [currentIndex, setCurrentIndex] = useState(0);
+
   const radius = 150;
   const gap = 150;
   const adjustedRadius = radius + gap;
@@ -200,6 +202,43 @@ const CircleSlider = () => {
   const handleClose2 = () => {
     setShowOverlay2(false);
   };
+
+   // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex - 1 < 0 ? slidesData.length - 1 : prevIndex - 1
+      );
+    }, 10000); // Change slide every 5 seconds
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
+
+  // Handle next slide
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+     
+      prevIndex - 1 < 0 ? slidesData.length - 1 : prevIndex - 1
+    );
+  };
+
+  // Handle previous slide
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 1 >= slidesData.length ? 0 : prevIndex + 1
+    );
+  };
+
+  // Get indices for the three visible slides
+  const getVisibleSlides = () => {
+    const prev = (currentIndex - 1 + slidesData.length) % slidesData.length;
+    const current = currentIndex;
+    const next = (currentIndex + 1) % slidesData.length;
+    return [prev, current, next];
+  };
+
+  const visibleSlides = getVisibleSlides();
 
   return (
     <div
@@ -544,6 +583,48 @@ const CircleSlider = () => {
                   </div>
                 </div>
               </div>
+         
+
+ <div className="relative w-full max-w-5xl mx-auto py-0 mobwallslider">
+      {/* Slider Container */}
+      <div className={styles.mobwallslider}>
+      <div className="flex justify-center items-center gap-4 overflow-hidden">
+        {visibleSlides.map((slideIndex, index) => {
+          const slide = slidesData[slideIndex];
+          const isActive = index === 1; // Middle slide is active
+
+          return (
+            <div
+              key={slide.id}
+              className={`transition-all duration-300 ease-in-out ${
+                isActive
+                  ? "w-1/2 scale-60 z-10"
+                  : "w-1/4 scale-60 opacity-70"
+              } flex flex-col items-center`}
+            >
+              {/* Video/Image */}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-50 object-cover rounded-lg"
+                src={isActive ? slide.activeimage : slide.image}
+                aria-label={slide.alt}
+              />
+              {/* Content */}
+
+            </div>
+          );
+        })}
+      </div>
+      </div>
+
+      {/* Navigation Buttons */}
+
+    </div>
+  
+
               <div className={styles.infoCard}>
                 <div className={styles.infoContentCol}>
                   <p className={styles.infoContentColtitle}>{slide.title}</p>

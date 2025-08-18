@@ -98,7 +98,7 @@ const OverviewofHaycarb = () => {
     },
     {
       title: "Milestones",
-      image: "/images/innerpage/haycarb/logo.png",
+      image: "/images/innerpage/haycarb/milestone.jpg",
       onDownload: () => window.open("pdf/innerpage/Milestones.pdf", "_blank"),
     },
     {
@@ -110,7 +110,7 @@ const OverviewofHaycarb = () => {
   ];
 
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
@@ -137,6 +137,7 @@ const OverviewofHaycarb = () => {
       <div
         aria-hidden="true"
         className="absolute
+                  hidden lg:block
                   top-450 left-25 
                   lg:top-300 
                   xl:top-250 
@@ -186,7 +187,8 @@ const OverviewofHaycarb = () => {
 
       {/* Image and Para */}
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-8 py-8">
-        <div className="lg:col-span-6 flex items-center justify-center  w-full">
+        {/* Left Column - Image */}
+        <div className="lg:col-span-6 flex items-center justify-center w-full">
           <Image
             src="/images/innerpage/reporting-landscape.svg"
             alt="banner"
@@ -194,7 +196,9 @@ const OverviewofHaycarb = () => {
             height={364}
           />
         </div>
-        <div className="lg:col-span-6 lg:pr-30">
+
+        {/* Right Column - Text (Vertically Centered) */}
+        <div className="lg:col-span-6 flex flex-col justify-center lg:pr-30">
           <p className="para text-center text-[18px] text-[#005881] font-semibold">
             At Haycarb, our purpose - Driving Value, Changing Lives ; guides us
             to envision a future where we are a catalyst in purification and
@@ -202,7 +206,8 @@ const OverviewofHaycarb = () => {
             and world-class processes, and enrich lives through
             customer-centric, innovative, and sustainable value creation.
           </p>
-          <div className="my-10 flex items-center justify-center ">
+
+          <div className="my-10 flex items-center justify-center">
             <WaveButton
               title="Watch Purpose Statement"
               style={{ fontSize: "12px" }}
@@ -228,29 +233,29 @@ const OverviewofHaycarb = () => {
       </div>
 
       {/* Static Snapshot */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 lg:py-8 text-center">
         {/* Top or Left Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
 
         {/* Center Text */}
-        <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[40px] text-[#005881]">
+        <h1 className="text-[40px] text-[#005881] leading-none">
           Snapshot of 2024/25
         </h1>
 
         {/* Bottom or Right Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-1/4 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-8 my-12 px-10 text-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-8 my-8 lg:my-12 px-10 text-center">
         {statsData.map((stat, index) => (
           <div key={index}>
-            <p className="text-[50px] font-extrabold text-[#005881]">
+            <p className="text-[35px] lg:text-[50px] font-extrabold text-[#005881]">
               {stat.worth}
             </p>
             <div className="h-[1px] bg-[#1D80A0] w-1/2 lg:w-2/3 mx-auto my-1"></div>
@@ -265,26 +270,24 @@ const OverviewofHaycarb = () => {
       </div>
 
       {/* Our vision */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 lg:py-8 text-center">
         {/* Top or Left Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
 
         {/* Center Text */}
-        <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[40px] text-[#005881]">
-          Our Vision
-        </h1>
+        <h1 className="text-[40px] text-[#005881] leading-none">Our Vision</h1>
 
         {/* Bottom or Right Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
-      <div className="lg:px-53">
-        <p className="para text-center text-[#000000] text-[15px] font-medium">
+      <div className="lg:px-53 my-8">
+        <p className="text-center text-[#000000] text-[15px] font-medium">
           To be the leading global provider of activated carbon and foremost
           provider of water purification systems in Sri Lanka and the region,
           renowned for technical excellence, customer centricity, innovation and
@@ -292,7 +295,7 @@ const OverviewofHaycarb = () => {
         </p>
       </div>
       {/* Charts */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 my-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8 lg:my-12 bg-white px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
         <div className="flex flex-col items-center justify-center w-full px-4 py-6 text-center">
           {/* Top Paragraph */}
           <p className="para text-[20px] text-[#005881] font-semibold mb-6">
@@ -334,25 +337,25 @@ const OverviewofHaycarb = () => {
       </div>
 
       {/* Our global presence */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 lg:py-8 text-center">
         {/* Top or Left Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-1/6 xl:w-1/4 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-1/6 xl:w-1/4 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
 
         {/* Center Text */}
-        <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[40px] text-[#005881]">
+        <h1 className="text-[40px] text-[#005881] leading-none">
           Our Global Presence
         </h1>
 
         {/* Bottom or Right Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-1/6 xl:w-1/4 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-1/6 xl:w-1/4 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
-      <div className="lg:px-53 mb-12">
+      <div className="lg:px-53 my-8 lg:mb-12">
         {/* <p className="para text-center text-[#000000] text-[15px] font-medium mb-6">
           To be the leading global provider of activated carbon and foremost
           provider of water purification systems in Sri Lanka and the region,
@@ -369,25 +372,25 @@ const OverviewofHaycarb = () => {
       </div>
 
       {/* Our product */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 py-8 text-center">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-16 px-4 lg:px-8 lg:py-8 text-center">
         {/* Top or Left Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
 
         {/* Center Text */}
-        <h1 className="text-[24px] sm:text-[30px] md:text-[36px] lg:text-[38px] xl:text-[40px] text-[#005881]">
+        <h1 className="text-[40px] text-[#005881] leading-none">
           Our Products
         </h1>
 
         {/* Bottom or Right Line */}
         <div
-          className="w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
+          className="hidden lg:block w-3xs md:w-1/2 h-[1px] lg:w-60 xl:w-100 2xl:w-100 lg:h-[1px]"
           style={{ background: "rgba(80, 205, 164, 0.5)" }}
         ></div>
       </div>
-      <div className="px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+      <div className="px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 my-8 lg:my-0">
         <ProductCarousel products={products} />
       </div>
       <div className="lg:px-25 xl:px-50 mx-auto mt-12 mb-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-18 lg:gap-8 xl:gap-8">

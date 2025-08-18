@@ -7,10 +7,63 @@ import { useAnimatedNumberText } from "utils/useSpeedCounter";
 const CapitalReport = () => {
   const accordionItems: AccordionData[] = [
     {
+      title: "Natural Capital",
+      downloadLink: "pdf/innerpage/Natural Capital.pdf",
+      content: (
+        <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
+          <p className="para">
+            Haycarb’s approach to natural capital focuses on reducing
+            environmental impact and supporting sustainability, inspired by the
+            whale’s symbolism of strength and balance within ecosystems.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 lg:mt-18 text-center">
+            <div className="text-[#005881]">
+              <p className="text-[35px] lg:text-[40px] font-bold">
+                {useAnimatedNumberText("44,554")}
+              </p>
+              <p className="text-base">
+                Carbol Footprint (tCO<sub>2</sub>e)
+              </p>
+            </div>
+            <div className="text-[#005881] border-[#005881] lg:border-y-0 lg:border-x">
+              <p className="text-[35px] lg:text-[40px] font-bold">
+                {useAnimatedNumberText("10,366")}
+              </p>
+              <p className="text-base">Sea Tutrle Hatchlings</p>
+            </div>
+            <div className="text-[#005881]">
+              <p className="text-[35px] lg:text-[40px] font-bold">
+                &gt;{useAnimatedNumberText("75,000")}
+              </p>
+              <p className="text-base">Trees Planted</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 lg:my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
+              <Image
+                src="/images/innerpage/non-financial-highlights/natural_cap_1.jpg"
+                alt="banner"
+                width={491}
+                height={420}
+              />
+            </div>
+            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
+              <Image
+                src="/images/innerpage/non-financial-highlights/natural_cap_2.jpg"
+                alt="banner"
+                width={491}
+                height={420}
+              />
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "Financial Capital",
       downloadLink: "pdf/innerpage/financial_capital.pdf",
       content: (
-        <div className="text-[#333] text-[15px] space-y-4">
+        <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
             In 2024/25, Haycarb sustained financial stability with revenue of
             Rs. 43.2 Bn and net profit of Rs. 4.27 Bn, despite rising raw
@@ -18,27 +71,27 @@ const CapitalReport = () => {
             strengthened resilience, supporting sustainable growth and
             innovation.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 lg:mt-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 {useAnimatedNumberText("43,202")}
               </p>
               <p className="text-base">Revenue (Rs. Mn)</p>
             </div>
-            <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">
+            <div className="text-[#005881] border-[#005881] lg:border-y-0 lg:border-x">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 {useAnimatedNumberText("5,517")}
               </p>
               <p className="text-base">Profit Before Tax (Rs. Mn)</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 {useAnimatedNumberText("4,271")}
               </p>
               <p className="text-base">Profit After Tax (Rs. Mn)</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 my-8 lg:my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-20">
             <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
                 src="/images/innerpage/financial/financial_cap_1.jpg"
@@ -68,63 +121,10 @@ const CapitalReport = () => {
       ),
     },
     {
-      title: "Natural Capital",
-      downloadLink: "pdf/innerpage/Natural Capital.pdf",
-      content: (
-        <div className="text-[#333] text-[15px] space-y-4">
-          <p className="para">
-            Haycarb’s approach to natural capital focuses on reducing
-            environmental impact and supporting sustainability, inspired by the
-            whale’s symbolism of strength and balance within ecosystems.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
-            <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
-                {useAnimatedNumberText("44,554")}
-              </p>
-              <p className="text-base">
-                Carbol Footprint (tCO<sub>2</sub>e)
-              </p>
-            </div>
-            <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">
-                {useAnimatedNumberText("10,366")}
-              </p>
-              <p className="text-base">Sea Tutrle Hatchlings</p>
-            </div>
-            <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
-                &gt;{useAnimatedNumberText("75,000")}
-              </p>
-              <p className="text-base">Trees Planted</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
-              <Image
-                src="/images/innerpage/non-financial-highlights/natural_cap_1.jpg"
-                alt="banner"
-                width={491}
-                height={420}
-              />
-            </div>
-            <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
-              <Image
-                src="/images/innerpage/non-financial-highlights/natural_cap_2.jpg"
-                alt="banner"
-                width={491}
-                height={420}
-              />
-            </div>
-          </div>
-        </div>
-      ),
-    },
-    {
       title: "Intellectual Capital",
       downloadLink: "pdf/innerpage/Intellectual Capital.pdf",
       content: (
-        <div className="text-[#333] text-[15px] space-y-4">
+        <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
             Our Intellectual Capital is central to value creation through new
             product development, strategic innovation, and a reputation for
@@ -132,21 +132,21 @@ const CapitalReport = () => {
             we foster intelligence and problem-solving within our teams to drive
             sustained innovation and growth.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 lg:mt-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 {useAnimatedNumberText(32)}
               </p>
               <p className="text-base">Certifications</p>
             </div>
-            <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">
+            <div className="text-[#005881] border-[#005881] lg:border-y-0 lg:border-x">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 &gt;{useAnimatedNumberText("1,500")}
               </p>
               <p className="text-base">Activated Carbol Products</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 &gt;{useAnimatedNumberText(100)}
               </p>
               <p className="text-base">
@@ -154,7 +154,7 @@ const CapitalReport = () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 lg:my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
             <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
                 src="/images/innerpage/non-financial-highlights/intellectual_1.jpg"
@@ -179,7 +179,7 @@ const CapitalReport = () => {
       title: "Human Capital",
       downloadLink: "pdf/innerpage/Human Capital.pdf",
       content: (
-        <div className="text-[#333] text-[15px] space-y-4">
+        <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
             Haycarb places strong emphasis on nurturing talent and supporting
             employee wellbeing, enabling individuals to reach their full
@@ -188,7 +188,7 @@ const CapitalReport = () => {
             continuously develop their skills to remain agile and capable.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 lg:my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
             <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
                 src="/images/innerpage/non-financial-highlights/human_cap_1.jpg"
@@ -213,34 +213,34 @@ const CapitalReport = () => {
       title: "Social and Relationship Capital",
       downloadLink: "pdf/innerpage/Social and Relationship Capital.pdf",
       content: (
-        <div className="text-[#333] text-[15px] space-y-4">
+        <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
             Our Social and Relationship Capital consists of enduring
             partnerships that were essential for overcoming challenges this
             year. Strengthened engagement and collaboration created shared
             value, reflecting the cooperative nature found in whale pods.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 lg:mt-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 &gt;{useAnimatedNumberText(600)}
               </p>
               <p className="text-base">Customers</p>
             </div>
-            <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">
+            <div className="text-[#005881] border-[#005881] lg:border-y-0 lg:border-x">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 &gt;{useAnimatedNumberText(500)}
               </p>
               <p className="text-base">Coconut Shell and Charcoal Suppliers</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 &gt;{useAnimatedNumberText("71,500")}
               </p>
               <p className="text-base">CSR Beneficiaries</p>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 lg:my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
             <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image
                 src="/images/innerpage/non-financial-highlights/social_1.jpg"
@@ -265,7 +265,7 @@ const CapitalReport = () => {
       title: "Manufactured Capital",
       downloadLink: "pdf/innerpage/Manufactured Capital.pdf",
       content: (
-        <div className="text-[#333] text-[15px] space-y-4">
+        <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
             Haycarb’s Manufactured Capital is vital for producing high-quality
             activated carbon, supported by ongoing investments that drive
@@ -273,23 +273,23 @@ const CapitalReport = () => {
             adapts to change through strength, efficiency, and purpose-driven
             transformation.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 lg:my-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 {useAnimatedNumberText(7)}
               </p>
               <p className="text-base">
                 Production Facilities across 3 Countries
               </p>
             </div>
-            <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">
+            <div className="text-[#005881] border-[#005881] lg:border-y-0 lg:border-x">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 {useAnimatedNumberText("Rs.6.9 Bn")}
               </p>
               <p className="text-base">Asset Base (PPE) Local</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 {useAnimatedNumberText("Rs.5.8 Bn")}
               </p>
               <p className="text-base">Asset Base (PPE) Overseas</p>
@@ -302,7 +302,7 @@ const CapitalReport = () => {
       title: "Digital Capital",
       downloadLink: "pdf/innerpage/Digital Capital.pdf",
       content: (
-        <div className="text-[#333] text-[15px] space-y-4">
+        <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
             Haycarb is focusing on digital technologies to drive positive change
             and improve its operations, services and processes. Just as whales
@@ -312,21 +312,21 @@ const CapitalReport = () => {
             Digitalization is used to nurture the learning culture, equipping
             every team member to navigate change with confidence.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-18 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 lg:my-18 text-center">
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 &gt;{useAnimatedNumberText("50,600")}
               </p>
               <p className="text-base">Users Visited the Website</p>
             </div>
-            <div className="text-[#005881] border-y border-[#005881] lg:border-y-0 lg:border-x">
-              <p className="text-[40px] font-bold">
+            <div className="text-[#005881] border-[#005881] lg:border-y-0 lg:border-x">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 {useAnimatedNumberText("Rs.6.1 Mn")}
               </p>
               <p className="text-base">Digital Marketing Spend</p>
             </div>
             <div className="text-[#005881]">
-              <p className="text-[40px] font-bold">
+              <p className="text-[35px] lg:text-[40px] font-bold">
                 {useAnimatedNumberText("Rs.31.1 Mn")}
               </p>
               <p className="text-base">
@@ -340,10 +340,10 @@ const CapitalReport = () => {
   ];
 
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-25 px-4 overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
+        className="hidden lg:block absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
         style={{
           backgroundImage: "url(/images/water-spread.svg)",
         }}
@@ -352,6 +352,7 @@ const CapitalReport = () => {
       <div
         aria-hidden="true"
         className="absolute
+                  hidden lg:block
                   top-450 left-10 
                   lg:top-150 
                   xl:top-120 
@@ -371,7 +372,7 @@ const CapitalReport = () => {
         aria-hidden="true"
         className="absolute
                   hidden 
-                  sm:block 
+                  lg:block 
                   left-15 
                   lg:top-295 lg:left-170
                   xl:top-270 xl:left-250
@@ -391,10 +392,10 @@ const CapitalReport = () => {
 
       {/* Description section */}
       <div className="lg:px-53 text-center">
-        <h1 className="text-[#005881] text-[40px] font-normal">
+        <h1 className="text-[#005881] text-[40px] font-normal leading-none">
           Nurturing our resources-Our Capitals report
         </h1>
-        <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
+        <p className="para text-center text-[#005881] text-lg font-semibold my-8 lg:mt-10">
           This report outlines how Haycarb creates and sustains value across
           capitals by integrating them into our strategy, operations, and
           stakeholder engagement. It reflects our commitment to transparency and
@@ -403,7 +404,7 @@ const CapitalReport = () => {
         </p>
       </div>
       <div className="lg:px-32 text-center">
-        <p className="para text-center xl:text-left text-[#005881] text-lg font-semibold mt-10">
+        <p className="text-center xl:text-left text-[#000] text-base font-extrabold mt-8 lg:mt-10 mb-0">
           Click on the relevant capital for more information
         </p>
       </div>

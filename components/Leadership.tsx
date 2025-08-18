@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './Leadership.module.css';
 
-type Language = 'english' | 'spanish' | 'french' | 'bahasa' | 'chinese' | 'german' | 'sinhala' | 'tamil' | 'thai';
+type Language = 'english' | 'spanish' | 'french' | 'bahasa' | 'chinese' | 'german' | 'sinhala' | 'tamil' | 'thai' | null;
 
 type Person = {
   name: string;
@@ -10,11 +10,13 @@ type Person = {
 };
 
 type Messages = {
-  [key in Language]: {
+  [key in Exclude<Language, null>]: {
     person1: Person;
     person2: Person;
   };
 };
+
+
 
 const Leadership = () => {
   // Dataset for paragraph messages in three languages for two people
@@ -31,28 +33,41 @@ const Leadership = () => {
         message: 'Haycarb continues to invest in the advancement of its technology to be a cutting-edge innovative coconut shell based activated carbon company.',
       },
     },
-    spanish: {
+    sinhala: {
       person1: {
-        name: 'Mohan Pandithage',
-        position: 'Presidente',
-        message: 'Haycarb plc logró un crecimiento sólido en 2024/25, impulsado por la innovación, la sostenibilidad y un portafolio de productos diversificado en los mercados globales.',
+        name: `මොහාන් පණ්ඩිතගේ`,
+        position: `සභාපති`,
+        message: `නව්‍යකරණය, තිරසාරතාව සහ ගෝලීය වෙළඳපලවල විවිධීකෘත වූ නිෂ්පාදන කළඹ මත පදනම්ව ප්‍රතිසාධනශීලී වර්ධනයක් ලබා ගැනීමට හේකාබ් පීඑල්සී, 2024/25 වසරේදී සමත් විය.`,
       },
       person2: {
-        name: 'Rajitha Kariyawasan',
-        position: 'Director General',
-        message: 'Haycarb continúa la inversión en el dearrollo de su tecnología para convertirse en una empresa de carbón activado de cáscara de coco innovadora y de vanguardia.',
+        name: `රාජිත කාරියවසන්`,
+        position: `කළමනාකාර අධ්‍යක්ෂක`,
+        message: `පොල් කටු පදනම් කරගත් නවෝත්පාදනශීලී සක්‍රීය කාබන් සමාගමක් ලෙස ඉදිරියට යාම සඳහා, හේකාබ්, එහි තාක්ෂණය වර්ධනය කිරීමට නිරන්තරයෙන් ආයෝජනය කරයි.`,
       },
     },
-    french: {
+     tamil: {
       person1: {
-        name: 'Mohan Pandithage',
-        position: 'Président',
-        message: `Haycarb plc a enregistré une croissance résiliente en 2024/25, portée par l'innovation, la durabilité et un portefeuille de produits diversifié sur les marchés mondiaux.`,
+        name: 'மோகன் பண்டிதகே',
+        position: 'தலைவர்',
+        message: '2024/25 ஆம் ஆண்டில் ஹேகார்ப் பி எல் சி (Haycarb Plc ) உலக சந்தைகளில் புதுமை, நிலைத்தன்மை மற்றும் பல்வகை தயாரிப்பு வரிசை மூலம் உறுதியான வளர்ச்சியை எட்டியுள்ளது.',
       },
       person2: {
-        name: 'Rajitha Kariyawasan',
-        position: 'Directeur Général',
-        message: `Haycarb continue d’investir dans l’amélioration technologique afin d’être une entreprise de pointe et innovante spécialisée dans le charbon actif à base de coque de noix de coco.`,
+        name: 'ராஜித காரியவாசன்',
+        position: 'முகாமைத்துவப் பணிப்பாளர்',
+        message: 'ஹேகார்ப் பி எல் சி (Haycarb Plc ), முன்னணி புதுமையான தேங்காய் ஓட்டில் செயல்படுத்தப்பட்ட கார்பன் நிறுவனமாக உருவாகும் நோக்கில் தனது தொழில்நுட்ப முன்னேற்றத்தில் தொடர்ந்து முதலீடு செய்து வருகிறது.',
+      },
+    },
+     thai: {
+      person1: {
+        name: 'โมฮัน พันดิทาเก',
+        position: 'ประธานกรรมการ',
+        message: `Haycarb plc มีการเติบโตอย่างแข็งแกร่งในปี 2024/25 โดยขับเคลื่อนด้วยนวัตกรรม ความยั่งยืน และการมีพอร์ตผลิตภัณฑ์ที่หลากหลายครอบคลุมตลาดทั่วโลก
+`,
+      },
+      person2: {
+        name: 'ราจิตะ กาลิยาวสัน',
+        position: 'กรรมการผู้จัดการ',
+        message: 'Haycarb ยังคงลงทุนในการพัฒนาเทคโนโลยีอย่างต่อเนื่อง เพื่อก้าวสู่การเป็นบริษัทผู้ผลิตถ่านกัมมันต์จากกะลามะพร้าวที่ล้ำสมัยและเปี่ยมด้วยนวัตกรรม',
       },
     },
      bahasa: {
@@ -67,7 +82,7 @@ const Leadership = () => {
         message: 'Haycarb terus berinvestasi dalam pengembangan teknologi untuk menjadi perusahaan karbon aktif berbasis tempurung kelapa yang inovatif dan terdepan.',
       },
     },
-     chinese: {
+    chinese: {
       person1: {
         name: `莫汉·潘迪塔格`,
         position: `董事长`,
@@ -79,6 +94,18 @@ const Leadership = () => {
         message: 'Haycarb 持续投资于技术进步，致力于成为一家领先创新的椰壳活性炭公司。',
       },
     },
+    french: {
+      person1: {
+        name: 'Mohan Pandithage',
+        position: 'Président',
+        message: `Haycarb plc a enregistré une croissance résiliente en 2024/25, portée par l'innovation, la durabilité et un portefeuille de produits diversifié sur les marchés mondiaux.`,
+      },
+      person2: {
+        name: 'Rajitha Kariyawasan',
+        position: 'Directeur Général',
+        message: `Haycarb continue d’investir dans l’amélioration technologique afin d’être une entreprise de pointe et innovante spécialisée dans le charbon actif à base de coque de noix de coco.`,
+      },
+    },   
     german: {
       person1: {
         name: 'Mohan Pandithage',
@@ -91,45 +118,21 @@ const Leadership = () => {
         message: 'Haycarb investiert weiterhin in die Weiterentwicklung seiner Technologie, um ein führendes, innovatives Unternehmen für Aktivkohle auf Basis von Kokosnussschalen zu werden.',
       },
     },
-     sinhala: {
+    spanish: {
       person1: {
-        name: `මොහාන් පණ්ඩිතගේ`,
-        position: `සභාපති`,
-        message: `නව්‍යකරණය, තිරසාරතාව සහ ගෝලීය වෙළඳපලවල විවිධීකෘත වූ නිෂ්පාදන කළඹ මත පදනම්ව ප්‍රතිසාධනශීලී වර්ධනයක් ලබා ගැනීමට හේකාබ් පීඑල්සී, 2024/25 වසරේදී සමත් විය.`,
+        name: 'Mohan Pandithage',
+        position: 'Presidente',
+        message: 'Haycarb plc logró un crecimiento sólido en 2024/25, impulsado por la innovación, la sostenibilidad y un portafolio de productos diversificado en los mercados globales.',
       },
       person2: {
-        name: `රාජිත කාරියවසන්`,
-        position: `කළමනාකාර අධ්‍යක්ෂක`,
-        message: `පොල් කටු පදනම් කරගත් නවෝත්පාදනශීලී සක්‍රීය කාබන් සමාගමක් ලෙස ඉදිරියට යාම සඳහා, හේකාබ්, එහි තාක්ෂණය වර්ධනය කිරීමට නිරන්තරයෙන් ආයෝජනය කරයි.`,
+        name: 'Rajitha Kariyawasan',
+        position: 'Director General',
+        message: 'Haycarb continúa la inversión en el dearrollo de su tecnología para convertirse en una empresa de carbón activado de cáscara de coco innovadora y de vanguardia.',
       },
-    },
-      thai: {
-      person1: {
-        name: 'โมฮัน พันดิทาเก',
-        position: 'ประธานกรรมการ',
-        message: `Haycarb plc มีการเติบโตอย่างแข็งแกร่งในปี 2024/25 โดยขับเคลื่อนด้วยนวัตกรรม ความยั่งยืน และการมีพอร์ตผลิตภัณฑ์ที่หลากหลายครอบคลุมตลาดทั่วโลก
-`,
-      },
-      person2: {
-        name: 'ราจิตะ กาลิยาวสัน',
-        position: 'กรรมการผู้จัดการ',
-        message: 'Haycarb ยังคงลงทุนในการพัฒนาเทคโนโลยีอย่างต่อเนื่อง เพื่อก้าวสู่การเป็นบริษัทผู้ผลิตถ่านกัมมันต์จากกะลามะพร้าวที่ล้ำสมัยและเปี่ยมด้วยนวัตกรรม',
-      },
-    },
-      tamil: {
-      person1: {
-        name: 'மோகன் பண்டிதகே',
-        position: 'தலைவர்',
-        message: '2024/25 ஆம் ஆண்டில் ஹேகார்ப் பி எல் சி (Haycarb Plc ) உலக சந்தைகளில் புதுமை, நிலைத்தன்மை மற்றும் பல்வகை தயாரிப்பு வரிசை மூலம் உறுதியான வளர்ச்சியை எட்டியுள்ளது.',
-      },
-      person2: {
-        name: 'ராஜித காரியவாசன்',
-        position: 'முகாமைத்துவப் பணிப்பாளர்',
-        message: 'ஹேகார்ப் பி எல் சி (Haycarb Plc ), முன்னணி புதுமையான தேங்காய் ஓட்டில் செயல்படுத்தப்பட்ட கார்பன் நிறுவனமாக உருவாகும் நோக்கில் தனது தொழில்நுட்ப முன்னேற்றத்தில் தொடர்ந்து முதலீடு செய்து வருகிறது.',
-      },
-    },
+    }, 
+     
   };
-const pdfUrls: Record<string, string> = {
+const pdfUrls: Record<Exclude<Language, null>, string> = {
   english: 'Pdf/ceomessages/english.pdf',
   spanish: 'Pdf/ceomessages/spanish.pdf',
   french: 'Pdf/ceomessages/French.pdf',
@@ -141,24 +144,29 @@ const pdfUrls: Record<string, string> = {
   thai: 'Pdf/ceomessages/thai.pdf',
 };
  
- const [selectedLanguage, setSelectedLanguage] = useState<Language>('english');
+ const [selectedLanguage, setSelectedLanguage] = useState<Language | null>(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const { person1, person2 } = messages[selectedLanguage];
+  const { person1, person2 } = messages[selectedLanguage || 'english'];
   const [showOverlay, setShowOverlay] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleLanguageSelect = (lang: Language) => {
-    setSelectedLanguage(lang);
+ const handleLanguageSelect = (lang: Language) => {
+  console.log('Selected language:', lang);
+  setSelectedLanguage(lang);
+  if (lang !== null) {
     const pdfUrl = pdfUrls[lang];
     if (pdfUrl) {
       window.open(pdfUrl, '_blank');
     }
-    setIsDropdownOpen(false);
-  };
+  }
+  setIsDropdownOpen(false);
+};
+
+
 
   // Handle click outside to close dropdown
   useEffect(() => {
@@ -286,7 +294,7 @@ const pdfUrls: Record<string, string> = {
               <div
                 className="absolute right-0 mt-2 w-64 bg-white text-black rounded-md shadow-lg z-50"
                 style={{
-                  background: '#3C7DA6',
+                  background: 'rgba(60, 125, 166, 0.9)',
                   color: 'rgb(255, 255, 255)',
                   boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
                   fontSize: '14px',
@@ -315,7 +323,7 @@ const pdfUrls: Record<string, string> = {
               className={styles.modalVideo}
               width="100%"
               height="450"
-              src="https://www.youtube.com/embed/SpYtLJjxeKw?si=pHiM05lPcQyCV4mW"
+              src="https://www.youtube.com/embed/UcMb9eTg9yY?si=IDcrnX3iG_Y14WfM"
               title="YouTube video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

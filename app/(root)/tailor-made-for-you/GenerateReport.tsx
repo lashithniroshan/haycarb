@@ -83,9 +83,9 @@ const GenerateReport = () => {
       "pdf/tbc/Group Profile.pdf",
       "pdf/tbc/Country Report.pdf",
       "pdf/tbc/Corporate Information.pdf",
-      "pdf/tbc/Notice of Annual General Meeting.pdf",
-      "pdf/tbc/Form of Request for a Printed Copy of The Annual Report 2024_25.pdf",
-      "pdf/tbc/Form of Proxy.pdf",
+      // "pdf/tbc/Notice of Annual General Meeting.pdf",
+      // "pdf/tbc/Form of Request for a Printed Copy of The Annual Report 2024_25.pdf",
+      // "pdf/tbc/Form of Proxy.pdf",
     ],
   };
 
@@ -119,7 +119,7 @@ const GenerateReport = () => {
     setCheckedFiles([]);
   };
   return (
-    <section className="relative bg-white text-[#606060] pt-16 pb-20 px-4 overflow-hidden">
+    <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       <div
         aria-hidden="true"
         className="absolute top-0 -right-20 lg:w-150 lg:h-150 bg-no-repeat bg-contain"
@@ -170,7 +170,7 @@ const GenerateReport = () => {
 
       {/* Description section */}
       <div className="lg:px-53 text-center">
-        <h1 className="text-[#005881] text-[40px] font-normal">
+        <h1 className="text-[#005881] text-[40px] font-normal leading-none">
           Generate Your Own Report
         </h1>
         <p className="para text-center text-[#005881] text-lg font-semibold mt-10">
@@ -186,11 +186,11 @@ const GenerateReport = () => {
       </div>
 
       {/* Category Sections */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 lg:px-20 my-10 py-8">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 lg:px-20 lg:my-10 py-8">
         {Object.entries(categories).map(([category, files]) => (
           <div key={category} className="space-y-4">
             <h3
-              className="text-xl text-[#005881] font-semibold mb-2"
+              className="text-xl text-[#005881] font-semibold leading-none mb-3"
               style={{
                 fontFamily: "Brogadier",
                 fontSize: "30px",
@@ -200,7 +200,7 @@ const GenerateReport = () => {
               {category}
             </h3>
             {files.map((file) => (
-              <label key={file} className="block text-sm">
+              <label key={file} className="block text-base">
                 <input
                   type="checkbox"
                   checked={checkedFiles.includes(file)}
@@ -215,14 +215,12 @@ const GenerateReport = () => {
       </div>
 
       {/* Button */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-10 py-8">
-        <div className="lg:col-span-12 text-center">
-          <WaveButton
-            onBtnClick={mergeAndDownload}
-            title="Generate My Report"
-            style={{ fontSize: "12px" }}
-          />
-        </div>
+      <div className="relative z-10 flex justify-center lg:block px-4 lg:px-20 lg:my-10 lg:py-8">
+        <WaveButton
+          onBtnClick={mergeAndDownload}
+          title="Generate My Report"
+          style={{ fontSize: "12px" }}
+        />
       </div>
     </section>
   );

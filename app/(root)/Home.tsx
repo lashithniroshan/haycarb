@@ -15,6 +15,7 @@ import Videoslider from 'components/Videoslider';
 import ModelWindow from 'components/ModelWindow';
 import FloatingButtons from 'components/ui/FloatingButtons';
 import SearchParamsHandler from 'components/SearchParamsHandler';
+import TableofContentMob from 'components/TableofContentMob';
 
 
 const Home = () => {
@@ -318,11 +319,10 @@ Dive in and explore a year of transformation
      <p style={{
       color: 'white',
       fontSize: '14px',
-      marginTop: '8px',
       textAlign: 'center',
       fontFamily: 'Gotham-Book, sans-serif',
     }}>
-     Stay immersed for 2 minutes
+     Immersive experience
     </p>
   </motion.div>
 )}
@@ -337,6 +337,7 @@ Dive in and explore a year of transformation
     <div id="strategy"><Strategy /></div>
     <div id="financial"><FinancialSlider /></div>
     <div id="tableofcontent"><TableofContent /></div>
+    <div id="tableofcontent"><TableofContentMob /></div>
     <div id="videoslider"><Videoslider /></div>
     <HomeFooter />
     <FloatingButtons />
