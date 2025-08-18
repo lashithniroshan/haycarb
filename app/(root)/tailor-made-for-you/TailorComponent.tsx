@@ -7,6 +7,7 @@ import Banner from "components/innerpage/Banner";
 import Navbar from "components/Navbar";
 import ChartGenerator from "./ChartGenerator";
 import GenerateReport from "./GenerateReport";
+import FloatingButtons from "components/ui/FloatingButtons";
 
 const TailorComponent = () => {
   const [activatedTab, setActivatedTab] = useState("chart-generator");
@@ -41,6 +42,8 @@ const TailorComponent = () => {
       )}
 
       <InnerPageFooter />
+
+      <FloatingButtons />
     </div>
   );
 };

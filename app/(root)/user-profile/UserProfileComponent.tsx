@@ -4,6 +4,7 @@ import Navbar from "components/Navbar";
 import React from "react";
 import ContentPage from "./ContentPage";
 import { InnerPageFooter } from "components/Footer";
+import FloatingButtons from "components/ui/FloatingButtons";
 
 const UserProfileComponent = () => {
   return (
@@ -21,6 +22,8 @@ const UserProfileComponent = () => {
       <ContentPage />
 
       <InnerPageFooter />
+
+      <FloatingButtons />
     </div>
   );
 };

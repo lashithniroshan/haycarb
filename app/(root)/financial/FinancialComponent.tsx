@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import FinancialCapital from "./FinancialCapital";
 import FinancialSupplementary from "./FinancialSupplementary";
 import { DefaultFooter, InnerPageFooter } from "components/Footer";
+import FloatingButtons from "components/ui/FloatingButtons";
 
 const FinancialComponent = () => {
   const [activatedTab, setActivatedTab] = useState("finance-capital");
@@ -39,6 +40,8 @@ const FinancialComponent = () => {
         <FinancialSupplementary />
       )}
       <InnerPageFooter />
+
+      <FloatingButtons />
     </div>
   );
 };

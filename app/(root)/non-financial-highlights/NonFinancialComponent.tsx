@@ -6,6 +6,7 @@ import CapitalReport from "./CapitalReport";
 import Integration from "./Integration";
 import ValueCreation from "./ValueCreation";
 import { InnerPageFooter } from "components/Footer";
+import FloatingButtons from "components/ui/FloatingButtons";
 
 const NonFinancialComponent = () => {
   const [activatedTab, setActivatedTab] = useState("capital-report");
@@ -43,6 +44,8 @@ const NonFinancialComponent = () => {
       )}
 
       <InnerPageFooter />
+
+      <FloatingButtons />
     </div>
   );
 };

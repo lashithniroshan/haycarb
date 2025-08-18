@@ -5,6 +5,7 @@ import Navbar from "components/Navbar";
 import React, { useState } from "react";
 import OverviewofHaycarb from "./OverviewofHaycarb";
 import ReportingLandscape from "./ReportingLandscape";
+import FloatingButtons from "components/ui/FloatingButtons";
 
 const HaycarbFocusComponent = () => {
   const [activatedTab, setActivatedTab] = useState("reporting-landscape");
@@ -40,6 +41,7 @@ const HaycarbFocusComponent = () => {
       )}
 
       <InnerPageFooter />
+      <FloatingButtons />
     </div>
   );
 };
