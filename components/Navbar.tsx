@@ -429,7 +429,7 @@ const Navbar = ({
                 }}
               >
                 <Link href="/game" className="" onClick={toggleMenu}>
-                  Finquest
+                  FinQuest Game
                 </Link>
               </li>
               <li
@@ -470,7 +470,7 @@ const Navbar = ({
                 }}
               >
                 <Link
-                  href="pdf/tbc/FAQs.pdf"
+                  href="pdf/FAQs.pdf"
                   target="_blank"
                   className=""
                   onClick={toggleMenu}
