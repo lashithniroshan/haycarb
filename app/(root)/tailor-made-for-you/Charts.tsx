@@ -1340,6 +1340,8 @@ export function FinancialPositionChart() {
     const yAxis = chart.yAxes.push(
       am5xy.ValueAxis.new(root, {
         maxPrecision: 0,
+        min: 0,
+        strictMinMax: true,
         renderer: am5xy.AxisRendererY.new(root, {
           inversed: false,
         }),
