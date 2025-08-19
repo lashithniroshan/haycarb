@@ -191,9 +191,24 @@ const ModelWindow: React.FC = () => {
         </div>
         <div className={styles.content}>
           {/* Left Image */}
-          <div className={styles.imageWrapper}>
+          {/* <div className={styles.imageWrapper}>
             <img src={slide.image} alt={slide.title} />
-          </div>
+          </div> */}
+       
+<div className={styles.imageWrapper}>
+  <Image
+    src={slide.image}
+    alt={slide.title}
+    width={400} // Set appropriate width based on your design
+    height={500} // Set appropriate height based on your design
+    priority={currentSlide === 0} // Prioritize the first slide for initial load
+    placeholder="blur" // Optional: Add a blur placeholder for smoother loading
+    blurDataURL="/images/popup/placeholder.jpg" // Optional: Provide a low-res placeholder
+    style={{ objectFit: 'cover', borderTopLeftRadius: '40px' }}
+  />
+</div>
+
+
 
           {/* Right Text */}
           <div className={styles.textWrapper}>

@@ -55,7 +55,7 @@ const Msgvideo = () => {
           <div
             className="relative"
             onMouseEnter={() => setShowIcons(true)}
-            onMouseLeave={() => setShowIcons(false)}
+            onMouseLeave={() => setShowIcons(true)}
           >
             <img
               src="videos/videobg1.jpg"

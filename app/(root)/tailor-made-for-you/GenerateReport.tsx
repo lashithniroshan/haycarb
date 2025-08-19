@@ -215,11 +215,11 @@ const GenerateReport = () => {
       </div>
 
       {/* Button */}
-      <div className="relative z-10 flex justify-center lg:block px-4 lg:px-20 lg:my-10 lg:py-8">
+      <div className="relative z-10 flex justify-center lg:block px-4 lg:px-20 lg:my-10 lg:py-8" style={{display: 'flex', justifyContent: 'center'}}>
         <WaveButton
           onBtnClick={mergeAndDownload}
           title="Generate My Report"
-          style={{ fontSize: "12px" }}
+          
         />
       </div>
     </section>
