@@ -188,6 +188,26 @@ const CapitalReport = () => {
             continuously develop their skills to remain agile and capable.
           </p>
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 lg:mt-18 text-center">
+            <div className="text-[#005881]">
+              <p className="text-[35px] lg:text-[40px] font-bold">
+                {useAnimatedNumberText(2026)}
+              </p>
+              <p className="text-base">Team of Across 7 Countries</p>
+            </div>
+            <div className="text-[#005881] border-[#005881] lg:border-y-0 lg:border-x">
+              <p className="text-[35px] lg:text-[40px] font-bold">
+                {useAnimatedNumberText(1926)}
+              </p>
+              <p className="text-base">Activated Carbon Segment</p>
+            </div>
+            <div className="text-[#005881]">
+              <p className="text-[35px] lg:text-[40px] font-bold">
+                {useAnimatedNumberText(100)}
+              </p>
+              <p className="text-base">Environmental Engineering Segment</p>
+            </div>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8 lg:my-18 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32">
             <div className="border border-[#1D80A080] rounded-[30px] flex items-center justify-center w-full p-3">
               <Image

@@ -7,7 +7,7 @@ interface CommonAccordionProps {
 }
 
 const CommonAccordion: React.FC<CommonAccordionProps> = ({ items }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0); // Initially first accordion is opened.
 
   const handleClick = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
