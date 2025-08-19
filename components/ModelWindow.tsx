@@ -139,6 +139,13 @@ const ModelWindow: React.FC = () => {
   //   }, 10000);
   //   return () => clearInterval(timer);
   // }, [visible]);
+  useEffect(() => {
+  slides.forEach((slide) => {
+    const img = document.createElement('img');
+    img.src = slide.image;
+  });
+}, []);
+
 
   const nextSlide = () =>
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -201,7 +208,8 @@ const ModelWindow: React.FC = () => {
     alt={slide.title}
     width={400} // Set appropriate width based on your design
     height={500} // Set appropriate height based on your design
-    priority={currentSlide === 0} // Prioritize the first slide for initial load
+    // priority={currentSlide === 0} 
+    unoptimized
     placeholder="blur" // Optional: Add a blur placeholder for smoother loading
     blurDataURL="/images/popup/placeholder.jpg" // Optional: Provide a low-res placeholder
     style={{ objectFit: 'cover', borderTopLeftRadius: '40px' }}
