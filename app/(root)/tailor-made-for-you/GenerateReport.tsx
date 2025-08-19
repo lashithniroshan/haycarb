@@ -97,27 +97,27 @@ const GenerateReport = () => {
     );
   };
 
- const mergeAndDownload = async () => {
-  if (checkedFiles.length === 0) return alert("Select at least one PDF!");
+  const mergeAndDownload = async () => {
+    if (checkedFiles.length === 0) return alert("Select at least one PDF!");
 
-  const mergedPdf = await PDFDocument.create();
+    const mergedPdf = await PDFDocument.create();
 
-  for (const file of checkedFiles) {
-    const response = await fetch(file);
-    const pdfBytes = await response.arrayBuffer();
-    const pdf = await PDFDocument.load(pdfBytes);
+    for (const file of checkedFiles) {
+      const response = await fetch(file);
+      const pdfBytes = await response.arrayBuffer();
+      const pdf = await PDFDocument.load(pdfBytes);
 
-    const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
-    copiedPages.forEach((page) => mergedPdf.addPage(page));
-  }
+      const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+      copiedPages.forEach((page) => mergedPdf.addPage(page));
+    }
 
-  const mergedBytes: Uint8Array = await mergedPdf.save();
+    const mergedBytes = await mergedPdf.save();
 
-  const blob = new Blob([mergedBytes as unknown as BlobPart], { type: "application/pdf" });
-  saveAs(blob, "merged.pdf");
-  setCheckedFiles([]);
-};
-
+    // Download merged PDF
+    const blob = new Blob([mergedBytes], { type: "application/pdf" });
+    saveAs(blob, "merged.pdf");
+    setCheckedFiles([]);
+  };
   return (
     <section className="relative bg-white text-[#606060] pt-16 pb-30 px-4 overflow-hidden">
       <div
