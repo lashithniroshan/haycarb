@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import rehypeRaw from "rehype-raw";
 import { Avatar } from "../avatar";
+import Image from "next/image";
 
 interface ChatMessageProps {
   message: string;
@@ -34,7 +35,14 @@ export function ChatMessage({
         }`}
       >
         {isBot ? (
-          <Bot className="h-4 w-4 text-white" />
+          // <Bot className="h-4 w-4 text-white" />
+          <Image
+            src="/icons/ChatBot.png"
+            alt="assumability"
+            width={38}
+            height={38}
+            className="object-contain h-full"
+          />
         ) : (
           <User className="h-4 w-4 text-white" />
         )}

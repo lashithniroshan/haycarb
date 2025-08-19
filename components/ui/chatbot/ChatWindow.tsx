@@ -10,6 +10,7 @@ import { Input } from "../input";
 import { ChatMessage } from "./ChatMessage";
 import { TypingIndicator } from "./TypingIndicator";
 import { FAQPanel } from "./FAQPanel";
+import Image from "next/image";
 
 interface Message {
   text: string;
@@ -115,7 +116,14 @@ export function ChatWindow({
       }}
     >
       <div className="flex items-center gap-3 bg-white p-4 shadow-sm">
-        <Bot className="h-6 w-6 text-[#005881]" />
+        {/* <Bot className="h-6 w-6 text-[#005881]" /> */}
+        <Image
+          src="/icons/ChatBot.png"
+          alt="assumability"
+          width={38}
+          height={38}
+          className="object-contain h-full"
+        />
 
         <div className="flex flex-col items-start">
           <h3 className="font-semibold leading-tight text-[#005881]">
@@ -153,7 +161,14 @@ export function ChatWindow({
               className="flex items-start gap-3 flex-row"
             >
               <Avatar className="h-8 w-8 flex items-center justify-center bg-[#005881]">
-                <Bot className="h-4 w-4 text-white" />
+                {/* <Bot className="h-4 w-4 text-white" /> */}
+                <Image
+                  src="/icons/ChatBot.png"
+                  alt="assumability"
+                  width={38}
+                  height={38}
+                  className="object-contain h-full"
+                />
               </Avatar>
               <div className="flex flex-col max-w-[80%] items-start">
                 <div className="rounded-2xl px-4 py-2 bg-[#f5f1eb] text-[#005881]">
