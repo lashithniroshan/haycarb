@@ -202,7 +202,7 @@ const Navbar = ({
               height={isScrolled ? 72 : 100}
                className={`transition-all duration-600 ${
           isScrolled
-            ? 'w-[120px] h-[72px] max-[991px]:w-[90px] max-[991px]:h-[48px]' // Scrolled sizes
+            ? 'w-[100px] h-[52px] max-[991px]:w-[90px] max-[991px]:h-[48px]' // Scrolled sizes
             : 'w-[200px] h-[100px] max-[991px]:w-[120px] max-[991px]:h-[60px]' // Not scrolled sizes
         }`}
             />
@@ -429,7 +429,7 @@ const Navbar = ({
                 }}
               >
                 <Link href="/game" className="" onClick={toggleMenu}>
-                  Finquest
+                  FinQuest Game
                 </Link>
               </li>
               <li
@@ -470,7 +470,7 @@ const Navbar = ({
                 }}
               >
                 <Link
-                  href="pdf/tbc/FAQs.pdf"
+                  href="pdf/FAQs.pdf"
                   target="_blank"
                   className=""
                   onClick={toggleMenu}

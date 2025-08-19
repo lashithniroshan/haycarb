@@ -1,6 +1,6 @@
 .accordioncontent{
   /* display: flex; */
-  padding: 5px 30px;
+  padding: 5px 30px 40px 30px;
 }
 .accordionItem{
   text-align: left;

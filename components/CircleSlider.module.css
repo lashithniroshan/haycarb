@@ -35,6 +35,7 @@
   margin-left: calc((-1 * var(--cisrcleSliderSize) / 2) - (var(--circleSize) / 2 - 0px));
   z-index: 5;
   margin-bottom: 80px;
+  background: transparent;
 }
 
 .circleSlider::before {
@@ -87,6 +88,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  background: transparent;
 }
 
 .circleSlide.activeSlide .slideImage {
@@ -105,7 +107,7 @@
 }
 
 .circleSlide.activeSlide {
-  background-color: var(--primary);
+  background-color: transparent;
   color: #fff;
   z-index: 10;
 }
@@ -364,6 +366,7 @@ font-size: 16px;
         overflow: hidden;
         width: 100%;
         max-width: 100%;
+        background-color: transparent;
   }
   .circleSlide {
   top: 162%;
@@ -372,6 +375,7 @@ font-size: 16px;
   .circleSlide.activeSlide {
     left: 17%;
     top: 12%;
+    background-color: transparent;
   }
   .sliderControls{
     top: 24%;
@@ -453,11 +457,12 @@ font-size: 16px;
   .circleSlide.activeSlide .slideImage {
   width: 120px !important; /* Adjust SVG size for active slide */
   height: 120px !important;
-
+background-color: transparent;
 }
  .circleSlide.activeSlide {
     left: -42%;
     top: 15%;
+    background-color: transparent;
   }
   .titleSubtitleContainer{
     display: none;
@@ -526,6 +531,10 @@ font-size: 16px;
   .infoContentCol .infoCardmainh2{
 font-size: 30px;
  line-height: 1;
+ text-align: center;
+}
+  .infoContentCol .infoCardmainp{
+text-align: center;
 }
 .btn-custom.btn-custom-mobile{
 font-size: 10px;
@@ -566,6 +575,7 @@ text-align: center;
  .circleSlide.activeSlide {
     left: 12%;
     top: 15%;
+    background-color: transparent;
   }
 }
 

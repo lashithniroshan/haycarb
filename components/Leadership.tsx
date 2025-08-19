@@ -133,15 +133,15 @@ const Leadership = () => {
      
   };
 const pdfUrls: Record<Exclude<Language, null>, string> = {
-  english: 'Pdf/ceomessages/english.pdf',
-  spanish: 'Pdf/ceomessages/spanish.pdf',
-  french: 'Pdf/ceomessages/French.pdf',
-  bahasa: 'Pdf/ceomessages/bahasa.pdf',
-  chinese: 'Pdf/ceomessages/chinese.pdf',
-  german: 'Pdf/ceomessages/german.pdf',
-  sinhala: 'Pdf/ceomessages/sinhala.pdf',
-  tamil: 'Pdf/ceomessages/tamil.pdf',
-  thai: 'Pdf/ceomessages/thai.pdf',
+  english: 'pdf/ceomessages/english.pdf',
+  spanish: 'pdf/ceomessages/spanish.pdf',
+  french: 'pdf/ceomessages/French.pdf',
+  bahasa: 'pdf/ceomessages/bahasa.pdf',
+  chinese: 'pdf/ceomessages/chinese.pdf',
+  german: 'pdf/ceomessages/german.pdf',
+  sinhala: 'pdf/ceomessages/sinhala.pdf',
+  tamil: 'pdf/ceomessages/tamil.pdf',
+  thai: 'pdf/ceomessages/thai.pdf',
 };
  
  const [selectedLanguage, setSelectedLanguage] = useState<Language | null>(null);

@@ -460,7 +460,7 @@ margin-top: 56px;
 /* Small phones (iPhone, Samsung) */
 @media (max-width: 430px) {
   .peopleImages {
-    margin-top: 100px;
+    margin-top: 60x;
             background-image: radial-gradient(50% 50%, rgba(9, 226, 255, 0.2) 0%, rgba(2, 39, 88, 0) 100%), url(/images/leaderpersonbg.png);
         background-size: auto;
         background-repeat: no-repeat;
