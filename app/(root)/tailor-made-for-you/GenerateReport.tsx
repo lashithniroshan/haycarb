@@ -114,7 +114,7 @@ const GenerateReport = () => {
     const mergedBytes = await mergedPdf.save();
 
     // Download merged PDF
-    const blob = new Blob([mergedBytes], { type: "application/pdf" });
+      const blob = new Blob([mergedBytes as unknown as BlobPart], { type: "application/pdf" });
     saveAs(blob, "merged.pdf");
     setCheckedFiles([]);
   };
