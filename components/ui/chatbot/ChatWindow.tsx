@@ -127,7 +127,7 @@ export function ChatWindow({
 
         <div className="flex flex-col items-start">
           <h3 className="font-semibold leading-tight text-[#005881]">
-            Haycarb Assistant
+            Haycarb AI Assistant
           </h3>
           <p className="text-xs text-gray-500">Online</p>
         </div>

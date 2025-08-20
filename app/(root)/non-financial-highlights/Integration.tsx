@@ -129,7 +129,7 @@ const Integration = () => {
         </div>
 
         {/* Right: Image */}
-        <div className="lg:col-span-6 hidden lg:block flex items-center">
+        <div className="lg:col-span-6 flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
               src="/images/innerpage/non-financial-highlights/ESG-governance.jpg"
