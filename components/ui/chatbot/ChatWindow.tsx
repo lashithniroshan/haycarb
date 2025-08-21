@@ -213,6 +213,9 @@ export function ChatWindow({
             <Send className="h-5 w-5" />
           </Button>
         </div>
+        <span className="block text-center text-gray-500 text-xs my-2">
+          AI responses may contain errors. Verify important information.
+        </span>
       </div>
 
       <AnimatePresence>

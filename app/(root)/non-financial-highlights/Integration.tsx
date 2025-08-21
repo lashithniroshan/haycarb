@@ -98,7 +98,7 @@ const Integration = () => {
         </p>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881] lg:border-b-0">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881]/50 lg:border-b-0">
         {/* Left: Text Block (Vertically Centered) */}
         <div className="lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
           <h1 className="text-[40px] text-center lg:text-left text-[#005881] font-normal leading-none">
@@ -141,7 +141,7 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881] lg:border-b-0">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881]/50 lg:border-b-0">
         {/* Left: Image */}
         <div className="lg:col-span-6 hidden lg:block flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
@@ -191,7 +191,7 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881] lg:border-b-0">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881]/50 lg:border-b-0">
         <div className="lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
           <h1 className="text-[40px] text-center lg:text-left text-[#005881] font-normal leading-none">
             Sustainability and Climate related risks and opportunities
@@ -228,7 +228,7 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 mt-5 pt-4 border-b border-[#005881] lg:border-b-0">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 mt-5 pt-4">
         <div className="lg:col-span-6 hidden lg:block flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image

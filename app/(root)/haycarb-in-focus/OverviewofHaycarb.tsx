@@ -74,8 +74,7 @@ const OverviewofHaycarb = () => {
     {
       id: 5,
       name: "Pharmaceutical & Cosmetics",
-      image:
-        "/images/innerpage/haycarb/products/Pharmaceutical & Cosmetics.jpg",
+      image: "/images/innerpage/haycarb/products/Pharmaceutical_Cosmetics.jpg",
     },
     {
       id: 6,
