@@ -16,9 +16,26 @@
   z-index: 9999;
 }
 
+
 .floatingbtn:hover {
   transform: scale(1.1);
   background-color: rgb(2, 150, 199);
+}
+.floatingbtnsoundplay{
+ position: fixed;
+  bottom: 9%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(105, 207, 240, 1);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s;
+  z-index: 9999;
 }
 
 .leftbtn {

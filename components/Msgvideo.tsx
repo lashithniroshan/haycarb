@@ -63,13 +63,13 @@ const Msgvideo = () => {
               className="w-full h-auto object-cover rounded-3xl"
             />
            
-            {showIcons && (
+           
               <div
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
                 style={{
                   width: '80px',
                   height: '80px',
-                  animation: showIcons ? 'fadeIn 0.5s forwards' : 'fadeOut 0.5s forwards',
+                  // animxation: showIcons ? 'fadeIn 0.5s forwards' : 'fadeOut 0.5s forwards',
                   zIndex: 2,
                 }}
               >
@@ -78,7 +78,7 @@ const Msgvideo = () => {
                   style={{
                     borderRadius: '50%',
                     boxShadow: '0 0 0 5px rgba(255, 255, 255, 0.5), 0 0 0 10px rgba(255, 255, 255, 0.3)',
-                    animation: showIcons ? 'borderFadeIn 0.5s forwards' : 'borderFadeOut 0.5s forwards',
+                    // animation: showIcons ? 'borderFadeIn 0.5s forwards' : 'borderFadeOut 0.5s forwards',
                   }}
                 />
                 <div
@@ -126,7 +126,7 @@ const Msgvideo = () => {
                   </svg>
                 </div>
               </div>
-            )}
+          
           </div>
         </div>
       </section>

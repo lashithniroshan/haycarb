@@ -9,6 +9,11 @@ interface Message {
   isBot: boolean;
   timestamp: Date;
 }
+interface FloatingButtonsProps {
+  isPlaying: boolean;
+  toggleAudio: () => void;
+   isHomePage?: boolean;
+}
 
 const INITIAL_MESSAGE: Message = {
   text: "You’re welcome to ask your questions in any language you prefer. I’ll do my best to guide you through the Annual Report!",
@@ -16,7 +21,7 @@ const INITIAL_MESSAGE: Message = {
   timestamp: new Date(),
 };
 
-const FloatingButtons: React.FC = () => {
+const FloatingButtons: React.FC<FloatingButtonsProps> = ({ isPlaying, toggleAudio, isHomePage }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -55,25 +60,40 @@ const FloatingButtons: React.FC = () => {
       setIsVisible(false);
     }, 300);
   };
+  const handleplay = () => {
+  
+  };
 
   return (
     <>
       {/* Left: User Button */}
-      {/* <button
-        className={`${styles.floatingbtn} ${styles.leftbtn}`}
-        aria-label="User"
-      >
-        <Image
-          src="/icons/assumability.png"
-          alt="assumability"
-          width={38}
-          height={38}
-          className="object-contain h-full"
-        />
-      </button> */}
+      /
 
       {/* Right: Chat Button */}
       <AnimatePresence mode="wait">
+       <>
+        {isHomePage && (
+           <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          className="fixed bottom-4 right-4 z-50"
+        >
+          <button
+            className={`${styles.floatingbtnsoundplay} ${styles.rightbtn}`}
+            aria-label={isPlaying ? "Pause audio" : "Play audio"}
+            onClick={toggleAudio}
+          >
+            <Image
+              src={isPlaying ? "/icons/soundPause.png" : "/icons/soundplay.png"}
+              alt={isPlaying ? "Pause" : "Play"}
+              width={38}
+              height={38}
+              className="object-contain h-full"
+            />
+          </button>
+        </motion.div>
+        )}
         {isVisible ? (
           <ChatWindow
             onClose={handleClose}
@@ -83,27 +103,18 @@ const FloatingButtons: React.FC = () => {
             setMessages={setMessages}
             sessionId={sessionId}
           />
-        ) : (
-          <motion.div
+        ) : (         
+           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
             className="fixed bottom-4 right-4 z-50"
           >
-            <button
+              <button
               className={`${styles.floatingbtn} ${styles.rightbtn}`}
               aria-label="Chat"
               onClick={handleOpen}
             >
-              {/* <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="white"
-          viewBox="0 0 24 24"
-        >
-          <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
-        </svg> */}
               <Image
                 src="/icons/ChatBot.png"
                 alt="assumability"
@@ -113,7 +124,9 @@ const FloatingButtons: React.FC = () => {
               />
             </button>
           </motion.div>
+
         )}
+        </>
       </AnimatePresence>
     </>
   );
