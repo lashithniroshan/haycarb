@@ -67,7 +67,7 @@ const FinancialSupplementary = () => {
                 title="Statement of Group Value Added"
                 onBtnClick={() =>
                   window.open(
-                    "pdf/innerpage/Statement of Group Value Added.pdf",
+                    "pdf/innerpage/Statement_of_Group_Value_Added.pdf",
                     "_blank"
                   )
                 }
@@ -77,7 +77,7 @@ const FinancialSupplementary = () => {
                 title="History of Dividends and Scrip Issues"
                 onBtnClick={() =>
                   window.open(
-                    "pdf/innerpage/History of Dividends and Scrip Issues.pdf",
+                    "pdf/innerpage/History_of_Dividends_and_Scrip_Issues.pdf",
                     "_blank"
                   )
                 }
@@ -87,7 +87,7 @@ const FinancialSupplementary = () => {
                 title="Ten Year Financial Review"
                 onBtnClick={() =>
                   window.open(
-                    "pdf/innerpage/Ten Year Financial Review.pdf",
+                    "pdf/innerpage/Ten_Year_Financial_Review.pdf",
                     "_blank"
                   )
                 }
@@ -97,7 +97,7 @@ const FinancialSupplementary = () => {
                 title="Indicative US Dollar Financial Statements"
                 onBtnClick={() =>
                   window.open(
-                    "pdf/innerpage/Indicative US Dollar Financial Statements.pdf",
+                    "pdf/innerpage/Indicative_US_Dollar_Financial_Statements.pdf",
                     "_blank"
                   )
                 }
@@ -107,7 +107,7 @@ const FinancialSupplementary = () => {
                 title="Statement of Profit or Loss - Horizontal and Vertical Analysis"
                 onBtnClick={() =>
                   window.open(
-                    "pdf/innerpage/Statement of Profit or Loss -Horizontal and Vertical Analysis.pdf",
+                    "pdf/innerpage/Statement_of_Profit_or_Loss_Horizontal_and_Vertical_Analysis.pdf",
                     "_blank"
                   )
                 }
@@ -117,7 +117,7 @@ const FinancialSupplementary = () => {
                 title="Investor Information"
                 onBtnClick={() =>
                   window.open(
-                    "pdf/innerpage/Investor Information.pdf",
+                    "pdf/innerpage/Investor_Information.pdf",
                     "_blank"
                   )
                 }
@@ -126,21 +126,21 @@ const FinancialSupplementary = () => {
                 style={{ background: "#fff" }}
                 title="Quarterly Analysis"
                 onBtnClick={() =>
-                  window.open("pdf/innerpage/Quarterly Analysis.pdf", "_blank")
+                  window.open("pdf/innerpage/Quarterly_Analysis.pdf", "_blank")
                 }
               />
               <WaveButton
                 style={{ background: "#fff" }}
                 title="Group Profile"
                 onBtnClick={() =>
-                  window.open("pdf/innerpage/Group Profile.pdf", "_blank")
+                  window.open("pdf/innerpage/Group_Profile.pdf", "_blank")
                 }
               />
               <WaveButton
                 style={{ background: "#fff" }}
                 title="Country Report"
                 onBtnClick={() =>
-                  window.open("pdf/innerpage/Country Report.pdf", "_blank")
+                  window.open("pdf/innerpage/Country_Report.pdf", "_blank")
                 }
               />
             </div>

@@ -91,7 +91,7 @@ const ValueCreation = () => {
           title="Explore More"
           onBtnClick={() =>
             window.open(
-              "pdf/innerpage/Determining Material Issues.pdf",
+              "pdf/innerpage/Determining_Material_Issues.pdf",
               "_blank"
             )
           }
@@ -119,7 +119,7 @@ const ValueCreation = () => {
               title="Explore More"
               onBtnClick={() =>
                 window.open(
-                  "pdf/innerpage/Managing Risks & Opportunities.pdf",
+                  "pdf/innerpage/Managing_Risks_Opportunities.pdf",
                   "_blank"
                 )
               }
@@ -159,7 +159,7 @@ const ValueCreation = () => {
           buttonTitle="Explore More"
           image="/images/innerpage/non-financial-highlights/Operating Environment.jpg"
           onButtonClick={() =>
-            window.open("pdf/innerpage/Operating Environment.pdf", "_blank")
+            window.open("pdf/innerpage/Operating_Environment.pdf", "_blank")
           }
         />
         <InfoCard
@@ -169,7 +169,7 @@ const ValueCreation = () => {
           image="/images/innerpage/non-financial-highlights/Listening to Our Stakeholders.jpg"
           onButtonClick={() =>
             window.open(
-              "pdf/innerpage/Listening to Our Stakeholders.pdf",
+              "pdf/innerpage/Listening_to_Our_Stakeholders.pdf",
               "_blank"
             )
           }

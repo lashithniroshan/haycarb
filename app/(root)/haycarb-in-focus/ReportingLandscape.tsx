@@ -94,14 +94,14 @@ const ReportingLandscape = () => {
       title: "Our Approach to Reporting",
       image: "/images/innerpage/haycarb/our_approach_to_reporting.jpg",
       onDownload: () =>
-        window.open("pdf/innerpage/Our Approach to Reporting.pdf", "_blank"),
+        window.open("pdf/innerpage/Our_Approach_to_Reporting.pdf", "_blank"),
     },
     {
       title: "Group Value Addition and Distribution",
       image: "/images/innerpage/haycarb/Group value addition.jpg",
       onDownload: () =>
         window.open(
-          "pdf/innerpage/Group Value Addition and Distribution.pdf",
+          "pdf/innerpage/Group_Value_Addition_and_Distribution.pdf",
           "_blank"
         ),
     },
@@ -109,7 +109,7 @@ const ReportingLandscape = () => {
       title: "Our Value Creation Model",
       image: "/images/innerpage/haycarb/Value creation.jpg",
       onDownload: () =>
-        window.open("pdf/innerpage/Our Value Creation Model.pdf", "_blank"),
+        window.open("pdf/innerpage/Our_Value_Creation_Model.pdf", "_blank"),
     },
   ];
 
@@ -238,7 +238,7 @@ const ReportingLandscape = () => {
               title="Explore More"
               onBtnClick={() =>
                 window.open(
-                  "pdf/innerpage/Digitally Innovating Our Corporate Reporting.pdf",
+                  "pdf/innerpage/Digitally_Innovating_Our_Corporate_Reporting.pdf",
                   "_blank"
                 )
               }
@@ -309,7 +309,7 @@ const ReportingLandscape = () => {
           title="Explore More"
           onBtnClick={() =>
             window.open(
-              "pdf/innerpage/Segment Review and Analysis.pdf",
+              "pdf/innerpage/Segment_Review_and_Analysis.pdf",
               "_blank"
             )
           }
