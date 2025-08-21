@@ -23,6 +23,7 @@ const Home = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
   const [showModal, setShowModal] = useState(false); // New state for modal delay
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null); // Reference to Audio instance
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
@@ -33,25 +34,39 @@ const Home = () => {
     audioRef.current.volume = 0.5; // Adjust volume as needed
 
     // Play audio when content is visible
-    if (isContentVisible && !isVideoPlaying) {
+    if (isContentVisible && !isVideoPlaying && isPlaying) {
       audioRef.current.play().catch((error) => {
         console.error("Audio playback failed:", error);
       });
     }
 
     // Pause audio when video is playing
-    if (isVideoPlaying) {
+   if (isVideoPlaying || !isPlaying) {
       audioRef.current.pause();
     }
 
     // Cleanup on component unmount
-    return () => {
+      return () => {
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current = null;
       }
     };
-  }, [isContentVisible, isVideoPlaying]);
+  }, [isContentVisible, isVideoPlaying, isPlaying]);
+
+    const toggleAudio = () => {
+    setIsPlaying((prev) => {
+      const newState = !prev;
+      if (newState && isContentVisible && !isVideoPlaying) {
+        audioRef.current?.play().catch((error) => {
+          console.error("Audio playback failed:", error);
+        });
+      } else {
+        audioRef.current?.pause();
+      }
+      return newState;
+    });
+  };
 
   useEffect(() => {
     // Force scroll to top and disable scroll immediately
@@ -81,6 +96,7 @@ const Home = () => {
 
     const clickHandler = () => {
     setIsContentVisible(true);
+    setIsPlaying(true);
     // Set a timer to show the modal after 1 minute
     setTimeout(() => setShowModal(true), 60000);
   };
@@ -513,7 +529,11 @@ const Home = () => {
             <Videoslider />
           </div>
           <HomeFooter />
-          <FloatingButtons />
+           <FloatingButtons
+            isPlaying={isPlaying}
+            toggleAudio={toggleAudio}
+              isHomePage={true}
+          />
           {showModal && <ModelWindow />}
           {/* model window */}
         </>
