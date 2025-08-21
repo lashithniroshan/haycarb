@@ -11,7 +11,7 @@ interface Message {
 }
 
 const INITIAL_MESSAGE: Message = {
-  text: "Hello! I'm your test chatbot. How can I help you today?",
+  text: "You’re welcome to ask your questions in any language you prefer. I’ll do my best to guide you through the Annual Report!",
   isBot: true,
   timestamp: new Date(),
 };
