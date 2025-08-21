@@ -4,7 +4,7 @@ import path from 'path';
 
 export async function GET() {
   try {
-    const pdfDir = path.join(process.cwd(), 'public/pdf');
+    const pdfDir = path.join(process.cwd(), 'public/pdf/tbc');
     const files = await fs.readdir(pdfDir);
     const pdfFiles = files.filter((file) => file.endsWith('.pdf'));
     return new Response(JSON.stringify(pdfFiles), { status: 200 });

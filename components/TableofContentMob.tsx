@@ -4,14 +4,14 @@ import style from './TableofContentMob.module.css';
 const TableofContentMob = () => {
 const contentData = {
   'Introduction': [
-    { title: 'Strategic in Every Move, Boundless in Creating Impact', pdf: 'pdf/tbc/Strategic in Every Move, Boundless in Creating Impact.pdf' },
+    { title: 'Strategic in Every Move, Boundless in Creating Impact', pdf: 'pdf/tbc/Strategic in Every Move Boundless in Creating Impact.pdf' },
     { title: 'Our Approach to Reporting', pdf: 'pdf/tbc/Our Approach to Reporting.pdf' },
     { title: 'Performance Highlights', pdf: 'pdf/tbc/Performance Highlights.pdf' },
     { title: 'Haycarb at a Glance', pdf: 'pdf/tbc/Haycarb at a Glance.pdf' },
     { title: 'Milestones', pdf: 'pdf/tbc/Milestones.pdf' },
     { title: 'Our Products', pdf: 'pdf/tbc/Our Products.pdf' },
     { title: 'Awards and Recognitions', pdf: '/pdf/tbc/Awards and Recognitions.pdf' },
-    { title: "Chairman's & Managing Director's Joint Statement", pdf: 'pdf/tbc/Chairmans & Managing Directors Joint Statement.pdf' },
+    { title: "Chairman's & Managing Director's Joint Statement", pdf: 'pdf/tbc/Chairmans Managing Directors Joint Statement.pdf' },
     { title: 'Board of Directors', pdf: 'pdf/tbc/Board of Directors.pdf' },
     { title: 'Management Team', pdf: 'pdf/tbc/Management Team.pdf' },
   ],

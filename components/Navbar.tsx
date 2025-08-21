@@ -44,7 +44,7 @@ const Navbar = ({
             console.error("API Error:", data.error);
             // Fallback to hardcoded list if API fails
             setPdfFiles([
-              "full-Annual-Report-2024.pdf",
+              "A Decade of Puritas Sath Diyawara.pdf",
               "Haycarb-PLC-Annual-Report-2024-25.pdf",
               "Haycarb at a Glance.pdf",
               "Our-Approach-to-Reporting.pdf",
@@ -57,7 +57,7 @@ const Navbar = ({
           console.error("Failed to fetch PDF files from API");
           // Fallback to hardcoded list
           setPdfFiles([
-            "full-Annual-Report-2024.pdf",
+            "A Decade of Puritas Sath Diyawara.pdf",
             "full-Annual-Report-2024-2025.pdf",
             "Haycarb at a Glance.pdf",
             "Our-Approach-to-Reporting.pdf",
@@ -70,7 +70,7 @@ const Navbar = ({
         console.error("Error fetching PDF files:", error);
         // Fallback to hardcoded list
         setPdfFiles([
-          "full-Annual-Report-2024.pdf",
+          "A Decade of Puritas Sath Diyawara.pdf",
           "full-Annual-Report-2024-2025.pdf",
           "Haycarb at a Glance.pdf",
           "Our-Approach-to-Reporting.pdf",
@@ -91,7 +91,7 @@ const Navbar = ({
 
   // Handle PDF selection
   const handlePdfSelect = (file: string) => {
-    window.open(`/pdf/${file}`, "_blank");
+    window.open(`/pdf/tbc/${file}`, "_blank");
     setSearchQuery("");
     setIsDropdownOpen(false);
   };

@@ -203,7 +203,7 @@ function Management() {
             window.open('pdf/Board-of-Directors.pdf', '_blank')
           }
         >
-          Board of Directors
+          Director Profiles
         </button>
          <button
           className="mt-6 px-6 py-2 bg-white text-blue-500 rounded-full hover:bg-gray-200 transition btn-custom"

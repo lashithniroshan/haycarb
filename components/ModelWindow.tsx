@@ -19,7 +19,7 @@ const slides: Slide[] = [
     image: '/images/popup/1.jpg',
     title: 'Evolution of Annual reporting',
     description:
-      'Five years of integrated reporting at Haycarb have evolved into a strategic narrative, reflecting deeper ESG insights, transparent governance, and stakeholder-focused value creation',
+      'Five years of integrated reporting at Haycarb has evolved into a strategic narrative, reflecting deeper ESG insights, transparent governance, and stakeholder-focused value creation',
       button: () => (
       <div>
         <button
@@ -131,14 +131,15 @@ const ModelWindow: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [visible, setVisible] = useState(true);
 
-  // Auto-play slides every 5 seconds
-  // useEffect(() => {
-  //   if (!visible) return;
-  //   const timer = setInterval(() => {
-  //     setCurrentSlide((prev) => (prev + 1) % slides.length); 
-  //   }, 10000);
-  //   return () => clearInterval(timer);
-  // }, [visible]);
+  // Show popup after 1 minute (60,000 milliseconds)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, 60000); // 1 minute delay
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
+  
   useEffect(() => {
   slides.forEach((slide) => {
     const img = document.createElement('img');

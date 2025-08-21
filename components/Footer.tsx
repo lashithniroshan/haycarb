@@ -219,7 +219,7 @@ const InnerPageFooter = () => {
                 </li>
                 <li>
                   <Link
-                    href="/pdf/tbc/Chairmans & Managing Directors Joint Statement.pdf"
+                    href="/pdf/tbc/Chairmans Managing Directors Joint Statement.pdf"
                     target="_blank"
                   >
                     Leadership Message

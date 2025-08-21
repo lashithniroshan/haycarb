@@ -76,20 +76,16 @@ const Home = () => {
     document.documentElement.style.overflow = isContentVisible
       ? "auto"
       : "hidden";
-
-    // Show modal after 5 seconds if content is visible
-    let timer: NodeJS.Timeout;
-    if (isContentVisible) {
-      timer = setTimeout(() => setShowModal(true), 2000);
-    } else {
-      setShowModal(false);
-    }
-    return () => clearTimeout(timer);
   }, [isContentVisible]);
 
-  const clickHandler = () => {
+
+    const clickHandler = () => {
     setIsContentVisible(true);
+    // Set a timer to show the modal after 1 minute
+    setTimeout(() => setShowModal(true), 60000);
   };
+
+
   // Animation variants for menuforitems
   const menuVariants: Variants = {
     visible: {
