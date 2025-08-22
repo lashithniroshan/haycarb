@@ -10,8 +10,9 @@ interface Message {
   timestamp: Date;
 }
 interface FloatingButtonsProps {
-  isPlaying: boolean;
-  toggleAudio: () => void;
+  // Optional because non-home pages don't control audio
+  isPlaying?: boolean;
+  toggleAudio?: () => void;
   isHomePage?: boolean;
 }
 
@@ -22,9 +23,9 @@ const INITIAL_MESSAGE: Message = {
 };
 
 const FloatingButtons: React.FC<FloatingButtonsProps> = ({
-  isPlaying,
+  isPlaying = false,
   toggleAudio,
-  isHomePage,
+  isHomePage = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
