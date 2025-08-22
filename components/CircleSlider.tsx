@@ -12,6 +12,7 @@ interface Slide {
   image: string;
   activeimage: string;
   selectedimage: string;
+  mobimage:string;
   alt: string;
 }
 
@@ -25,6 +26,7 @@ const slidesData: Slide[] = [
       image: "/images/fish/2.webm",
     activeimage: "/images/fish/2.webm",
     selectedimage: "/images/fish/2.webm",
+    mobimage:"/images/fish/Asset6.png",
     alt: "Wallscape",
   },
   {
@@ -36,6 +38,7 @@ const slidesData: Slide[] = [
        image: "/images/fish/3.webm",
     activeimage: "/images/fish/3.webm",
     selectedimage: "/images/fish/3.webm",
+    mobimage:"/images/fish/Asset5.png",
     alt: "Stores",
   },
   {
@@ -47,6 +50,7 @@ const slidesData: Slide[] = [
      image: "/images/fish/6.webm",
     activeimage: "/images/fish/6.webm",
     selectedimage: "/images/fish/6.webm",
+    mobimage:"/images/fish/Asset4.png",
     alt: "wayfinders",
   },
   {
@@ -58,6 +62,7 @@ const slidesData: Slide[] = [
     image: "/images/fish/4.webm",
     activeimage: "/images/fish/4.webm",
     selectedimage: "/images/fish/4.webm",
+    mobimage:"/images/fish/Asset2.png",
     alt: "trains",
   },
   {
@@ -69,6 +74,7 @@ const slidesData: Slide[] = [
     image: "/images/fish/5.webm",
     activeimage: "/images/fish/5.webm",
     selectedimage: "/images/fish/5.webm",
+    mobimage:"/images/fish/Asset3.png",
     alt: "Venues",
   },
   {
@@ -80,6 +86,7 @@ const slidesData: Slide[] = [
       image: "/images/fish/1.webm",
     activeimage: "/images/fish/1.webm",
     selectedimage: "/images/fish/1.webm",
+    mobimage:"/images/fish/Asset1.png",
     alt: "Wallscape",
   },
 ];
@@ -276,34 +283,7 @@ const CircleSlider = () => {
                   }px) ${index === activeIndex ? "scale(1.5)" : ""}`,
                 }}
               >
-                {/* <div className={styles.titleSubtitleContainer}>
-                  {index === getPreviousIndex() && (
-                    <div className={styles.previousTitle}>
-                      {slide.title}
-                    </div>
-                  )}
-                </div>
-                <Image
-                  src={index === activeIndex ? slide.activeimage : slide.image}
-                  alt={slide.alt}
-                  width={80}
-                  height={80}
-                  className={styles.slideImage}
-                  onLoad={() =>
-                    console.log(
-                      `Loaded image for slide ${slide.id}: ${
-                        index === activeIndex ? slide.activeimage : slide.image
-                      }`
-                    )
-                  }
-                  onError={() =>
-                    console.error(
-                      `Failed to load image for slide ${slide.id}: ${
-                        index === activeIndex ? slide.activeimage : slide.image
-                      }`
-                    )
-                  }
-                /> */}
+                
                 <div className={styles.titleSubtitleContainer}>
                   {index === getPreviousIndex() && (
                     <div className={styles.previousTitle}>{slide.title}</div>
@@ -603,15 +583,13 @@ const CircleSlider = () => {
               } flex flex-col items-center`}
             >
               {/* Video/Image */}
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-50 object-cover rounded-lg"
-                src={isActive ? slide.activeimage : slide.image}
-                aria-label={slide.alt}
-              />
+              <Image
+              width={100}
+              height={100}
+                className="w-50 object-cover rounded-lg mobimage"
+                src={isActive ? slide.mobimage : slide.mobimage}
+                aria-label={slide.alt} alt={""}  
+                 />
               {/* Content */}
 
             </div>

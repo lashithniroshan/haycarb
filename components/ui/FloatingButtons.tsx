@@ -77,10 +77,10 @@ const FloatingButtons: React.FC<FloatingButtonsProps> = ({ isPlaying, toggleAudi
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
-          className="fixed bottom-4 right-4 z-50"
+          className="fixed bottom-5 right-4 z-50"
         >
           <button
-            className={`${styles.floatingbtnsoundplay} ${styles.rightbtn}`}
+            className={`${styles.floatingbtnsoundplay} ${styles.rightbtn} ${styles.playmob} `}
             aria-label={isPlaying ? "Pause audio" : "Play audio"}
             onClick={toggleAudio}
           >

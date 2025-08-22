@@ -4,7 +4,7 @@ import style from './TableofContent.module.css';
 const TableofContent = () => {
 const contentData = {
   'Introduction': [
-    { title: 'Strategic in Every Move, Boundless in Creating Impact', pdf: 'pdf/tbc/Strategic in Every Move, Boundless in Creating Impact.pdf' },
+    { title: 'Strategic in Every Move, Boundless in Creating Impact', pdf: 'pdf/tbc/Strategic in Every Move Boundless in Creating Impact.pdf' },
     { title: 'Our Approach to Reporting', pdf: 'pdf/tbc/Our Approach to Reporting.pdf' },
     { title: 'Performance Highlights', pdf: 'pdf/tbc/Performance Highlights.pdf' },
     { title: 'Haycarb at a Glance', pdf: 'pdf/tbc/Haycarb at a Glance.pdf' },
