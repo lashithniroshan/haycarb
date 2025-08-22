@@ -638,7 +638,7 @@ const ContentPage = () => {
           <WaveButton
             title="More details"
             onBtnClick={() =>
-              window.open("pdf/innerpage/Corporate Governance.pdf", "_blank")
+              window.open("pdf/innerpage/Corporate_Governance.pdf", "_blank")
             }
             className="mx-auto lg:mx-0 w-40 z-30"
             style={{ background: "#fff" }}

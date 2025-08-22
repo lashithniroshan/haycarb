@@ -8,7 +8,7 @@ const CapitalReport = () => {
   const accordionItems: AccordionData[] = [
     {
       title: "Natural Capital",
-      downloadLink: "pdf/innerpage/Natural Capital.pdf",
+      downloadLink: "pdf/innerpage/Natural_Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
@@ -122,7 +122,7 @@ const CapitalReport = () => {
     },
     {
       title: "Intellectual Capital",
-      downloadLink: "pdf/innerpage/Intellectual Capital.pdf",
+      downloadLink: "pdf/innerpage/Intellectual_Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
@@ -177,7 +177,7 @@ const CapitalReport = () => {
     },
     {
       title: "Human Capital",
-      downloadLink: "pdf/innerpage/Human Capital.pdf",
+      downloadLink: "pdf/innerpage/Human_Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
@@ -231,7 +231,7 @@ const CapitalReport = () => {
     },
     {
       title: "Social and Relationship Capital",
-      downloadLink: "pdf/innerpage/Social and Relationship Capital.pdf",
+      downloadLink: "pdf/innerpage/Social_and_Relationship_Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
@@ -283,7 +283,7 @@ const CapitalReport = () => {
     },
     {
       title: "Manufactured Capital",
-      downloadLink: "pdf/innerpage/Manufactured Capital.pdf",
+      downloadLink: "pdf/innerpage/Manufactured_Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">
@@ -320,7 +320,7 @@ const CapitalReport = () => {
     },
     {
       title: "Digital Capital",
-      downloadLink: "pdf/innerpage/Digital Capital.pdf",
+      downloadLink: "pdf/innerpage/Digital_Capital.pdf",
       content: (
         <div className="text-[#333] text-[15px] text-center lg:text-left lg:space-y-4">
           <p className="para">

@@ -98,7 +98,7 @@ const Integration = () => {
         </p>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881] lg:border-b-0">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881]/50 lg:border-b-0">
         {/* Left: Text Block (Vertically Centered) */}
         <div className="lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
           <h1 className="text-[40px] text-center lg:text-left text-[#005881] font-normal leading-none">
@@ -122,7 +122,7 @@ const Integration = () => {
           <WaveButton
             title="Explore More"
             onBtnClick={() =>
-              window.open("pdf/innerpage/ESG governance.pdf", "_blank")
+              window.open("pdf/innerpage/ESG_governance.pdf", "_blank")
             }
             className="w-40 mb-8 lg:mb-0"
           />
@@ -141,7 +141,7 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881] lg:border-b-0">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881]/50 lg:border-b-0">
         {/* Left: Image */}
         <div className="lg:col-span-6 hidden lg:block flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
@@ -172,7 +172,7 @@ const Integration = () => {
               title="Explore More"
               onBtnClick={() =>
                 window.open(
-                  "pdf/innerpage/ESG strategies,metrics and targets.pdf",
+                  "pdf/innerpage/ESG_strategies_metrics_and_targets.pdf",
                   "_blank"
                 )
               }
@@ -182,7 +182,7 @@ const Integration = () => {
               title="Activate - ESG Roadmap 2030"
               onBtnClick={() =>
                 window.open(
-                  "pdf/innerpage/Activate ESG roadmap 2030.pdf",
+                  "pdf/innerpage/Activate_ESG_roadmap_2030.pdf",
                   "_blank"
                 )
               }
@@ -191,7 +191,7 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881] lg:border-b-0">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 my-5 py-4 border-b border-[#005881]/50 lg:border-b-0">
         <div className="lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
           <h1 className="text-[40px] text-center lg:text-left text-[#005881] font-normal leading-none">
             Sustainability and Climate related risks and opportunities
@@ -209,7 +209,7 @@ const Integration = () => {
             style={{ fontSize: "12px" }}
             onBtnClick={() =>
               window.open(
-                "pdf/innerpage/Managing Risks & Opportunities.pdf",
+                "pdf/innerpage/Managing_Risks_Opportunities.pdf",
                 "_blank"
               )
             }
@@ -228,7 +228,7 @@ const Integration = () => {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 mt-5 pt-4 border-b border-[#005881] lg:border-b-0">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-20 mt-5 pt-4">
         <div className="lg:col-span-6 hidden lg:block flex items-center">
           <div className="relative w-full aspect-[16/11] max-h-[420px] mx-auto bg-white rounded-2xl">
             <Image
@@ -257,7 +257,7 @@ const Integration = () => {
             style={{ fontSize: "12px" }}
             onBtnClick={() =>
               window.open(
-                "pdf/innerpage/Assessing Climate Resilience.pdf",
+                "pdf/innerpage/Assessing_Climate_Resilience.pdf",
                 "_blank"
               )
             }

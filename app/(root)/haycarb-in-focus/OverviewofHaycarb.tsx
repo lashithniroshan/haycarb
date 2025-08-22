@@ -74,8 +74,7 @@ const OverviewofHaycarb = () => {
     {
       id: 5,
       name: "Pharmaceutical & Cosmetics",
-      image:
-        "/images/innerpage/haycarb/products/Pharmaceutical & Cosmetics.jpg",
+      image: "/images/innerpage/haycarb/products/Pharmaceutical_Cosmetics.jpg",
     },
     {
       id: 6,
@@ -94,7 +93,7 @@ const OverviewofHaycarb = () => {
       title: "Awards and Recognitions",
       image: "/images/innerpage/haycarb/awards.jpg",
       onDownload: () =>
-        window.open("pdf/innerpage/Awards and Recognitions.pdf", "_blank"),
+        window.open("pdf/innerpage/Awards_and_Recognitions.pdf", "_blank"),
     },
     {
       title: "Milestones",
@@ -105,7 +104,7 @@ const OverviewofHaycarb = () => {
       title: "Our Socio-Economic Impact",
       image: "/images/innerpage/haycarb/socio-eco.png",
       onDownload: () =>
-        window.open("pdf/innerpage/Our Socio-Economic Impact.pdf", "_blank"),
+        window.open("pdf/innerpage/Our_Socio_Economic_Impact.pdf", "_blank"),
     },
   ];
 
