@@ -135,7 +135,7 @@ const ModelWindow: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(true);
-    }, 60000); // 1 minute delay
+    }, 40000); // 1 minute delay
 
     return () => clearTimeout(timer); // Cleanup on unmount
   }, []);
