@@ -111,7 +111,7 @@ export function ChatWindow({
       style={{
         width: isExpanded ? "calc(100% - 2rem)" : "380px",
         height: isExpanded
-          ? "calc(100vh - 2rem)"
+          ? "calc(80vh - 2rem)"
           : "min(600px, calc(90vh - 2rem))",
       }}
     >
