@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { InnerPageFooter } from "components/Footer";
-import Banner from "components/innerpage/Banner";
 import Navbar from "components/Navbar";
 import GameWizard from "./GameWizard";
+import FloatingButtons from "components/ui/FloatingButtons";
 
 
 const GameComponent = () => {
@@ -17,13 +17,13 @@ const GameComponent = () => {
       />
 
       {/* Banner section */}
-      <Banner
+      {/* <Banner
         title="FinQuest"
         description=""
-      />
+      /> */}
       <GameWizard />
        <InnerPageFooter />
-
+ <FloatingButtons />
     </div>
   )
 }

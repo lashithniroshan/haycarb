@@ -1,0 +1,177 @@
+/* GameWizard.module.css */
+.gamecontainer {
+  background: rgba(0, 80, 114, 0.9); /* Semi-transparent dark blue background */
+  border-radius: 1rem; /* Rounded corners for the container */
+  padding: 2rem; /* Internal padding */
+  width: 100%;
+  max-width: 800px; /* Maximum width for larger screens */
+  min-height: 400px; /* Minimum height to ensure content fits */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  color: white; /* White text for contrast against dark background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically within the container */
+  gap: 1rem; /* Add spacing between elements */
+}
+
+/* First slide (welcome screen) */
+.firtslide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem; /* Space between elements */
+  width: 100%;
+  max-width: 600px; /* Match answer grid width for consistency */
+  text-align: center;
+}
+
+.firtslide h3 {
+  font-size: 2rem; /* Match h1 in game state for prominence */
+  color: white;
+  font-weight: normal;
+}
+
+.firtslide p {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Wrapper for gamecontainer and navigation buttons */
+.gameWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Match gamecontainer max-width */
+  display: flex;
+  align-items: center; /* Vertically center the buttons relative to the container */
+}
+
+/* Navigation buttons */
+.navButton {
+  border-radius: 50px; /* Circular buttons */
+  padding: 16px 20px;
+  background: rgba(29, 128, 160, 1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navButton.prev {
+  left: -30px; /* Position outside the left border of gamecontainer */
+}
+
+.navButton.next {
+  right: -30px; /* Position outside the right border of gamecontainer */
+}
+.navButton:hover{
+    background: #005072; /* Slightly darker on hover */
+}
+
+.navButtonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.navButtonDisabled:hover {
+background: rgba(29, 128, 160, 1);
+}
+
+/* Styling for answer boxes, buttons, and progress bar */
+.blueBox {
+  background: linear-gradient(180deg, rgba(73, 220, 248, 0.2) 0%, rgba(43, 129, 146, 0.2) 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.greenBox {
+  background-color: rgba(225, 248, 73, 0.3);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.redBox {
+  background-color: rgba(239, 68, 68, 0.3);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.grayBox {
+  background-color: rgba(209, 213, 219, 0.3);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: not-allowed;
+}
+
+.moreInfoButton {
+  margin-top: 1.5rem;
+  background-color: #005881;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.progressBarSegment {
+  height: 0.5rem;
+  width: 20%;
+  border-radius: 0.25rem;
+}
+
+.progressBarGray {
+  background-color: #e5e7eb;
+}
+
+.progressBarGreen {
+  background-color: rgba(225, 248, 73, 0.3);
+}
+
+.progressBarRed {
+  background-color: rgba(239, 68, 68, 0.3);
+}
+
+/* Ensure progress bar is visible */
+.progressBarContainer {
+  margin-top: 1.5rem; /* Space above progress bar */
+  width: 100%;
+  max-width: 600px; /* Match answer grid width */
+  display: flex;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+    .gameWrapper {
+  width: 90%;  
+}
+  .navButton.prev {
+    left: -40px; /* Reduce offset on smaller screens */
+  }
+  .navButton.next {
+    right: -40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navButton.prev {
+    left: -16px; /* Further reduce for very small screens */
+  }
+  .navButton.next {
+    right: -16px;
+  }
+  .firtslide h3 {
+    font-size: 1.5rem; /* Smaller font on mobile */
+  }
+  .firtslide p {
+    font-size: 0.875rem; /* Smaller font on mobile */
+  }
+}
