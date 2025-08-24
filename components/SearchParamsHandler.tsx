@@ -15,12 +15,16 @@ export default function SearchParamsHandler({ setIsContentVisible, setShowModal 
 
   useEffect(() => {
     const show = searchParams.get('show');
-    const contentVisible = searchParams.get('contentVisible');
-     setIsContentVisible(true);
+        const contentVisible = searchParams.get('contentVisible');
+
     if (show === 'true') {
       setIsContentVisible(true);
       setShowModal(false);
       router.replace('/');
+    }
+    if (contentVisible === 'true') {
+      setIsContentVisible(true);
+      router.replace('/'); // Clear query parameters after handling
     }
   }, [searchParams, router, setIsContentVisible, setShowModal]);
 

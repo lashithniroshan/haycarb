@@ -538,8 +538,9 @@ function GameWizard() {
     setShowFirstSlide(false); // Transition to first question
   };
 const handleExit = () => {
- localStorage.setItem("contentVisible", "true");
-  router.push("/");
+//  localStorage.setItem("contentVisible", "true");
+//   router.push("/");
+router.push('/?contentVisible=true');
   };
   const openPdf = () => {
     window.open(`/pdf/${currentDataset[currentQuestionIndex].pdf}`, "_blank");
