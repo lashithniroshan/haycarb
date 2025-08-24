@@ -52,6 +52,12 @@
     height: 45px; */
   }
   .playmob{
-    margin-bottom: 5px;
+    margin-bottom: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .playmob{
+    margin-bottom: 17px;
   }
 }

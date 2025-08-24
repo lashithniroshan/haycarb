@@ -88,7 +88,7 @@ const FloatingButtons: React.FC<FloatingButtonsProps> = ({
               >
                 <Image
                   src={
-                    isPlaying ? "/icons/soundPause.png" : "/icons/soundplay.png"
+                    isPlaying ? "/icons/Asset2.svg" : "/icons/Asset1.svg"
                   }
                   alt={isPlaying ? "Pause" : "Play"}
                   width={38}

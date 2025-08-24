@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 import styles from "./GameWizard.module.css";
 
 const datasets = [
@@ -31,11 +33,11 @@ const datasets = [
       question: "What can be considered a brand new feature of the Haycarb's annual report 2024/25",
       answers: [
         "Availability of a microsite",
-        "Increase in accesibility and reach to stakeholders",
+        "Increase in accesibility",
         "Reporting of SLFRS S1 and S2",
-        "Obtaining limited assurance on integrated reporting and GRI standards",
+        "Obtaining limited assurance",
       ],
-      correctAnswer: "Increase in accesibility and reach to stakeholders",
+      correctAnswer: "Increase in accesibility",
       pdf: "/tbc/Our Approach to Reporting.pdf",
     },
     {
@@ -72,7 +74,7 @@ const datasets = [
       pdf: "/tbc/Haycarb at a Glance.pdf",
     },
      {
-      question: "Haycarb’s manufacturing plants are located in Sri Lanka, Thailand, and which other country?",
+      question: "Haycarb’s manufacturing plants are located in Sri Lanka, Thailand, and ___?",
       answers: [
         "India",
         "Indonesia",
@@ -154,12 +156,12 @@ const datasets = [
     {
       question: "How does Haycarb mianly contribute to clean water solutions globally?",
       answers: [
-        "By producing activated carbon used in water filtration systems",
-        "By selling bottled water",
-        "By developing desalination plants",
-        "By manufacturing plastic pipes",
+        "Activated carbon for water filtration systems",
+        "Selling bottled water",
+        "Building desalination plants",
+        "Manufacturing plastic pipes",
       ],
-      correctAnswer: "By producing activated carbon used in water filtration systems",
+      correctAnswer: "Activated carbon for water filtration systems",
       pdf: "/Our Products.pdf",
     },
     {
@@ -209,12 +211,12 @@ const datasets = [
      {
       question: "Who is the Chairman and Managing Director of Haycarb PLC?",
       answers: [
-        "Mr. Mohan Pandithage & Mr. Rajitha Kariyawasan",
-        "Mr. Rajitha Kariyawasan & Mr. Mohan Pandithage",
-        "Mr. Brahman Balaratnarajah, Mr. Mohan Pandithage",
-        "Mr. Brahman Balaratnarajah, Mr. Rajitha Kariyawasan",
+        "Mohan Pandithage & Rajitha Kariyawasan",
+        "Rajitha Kariyawasan & Mohan Pandithage",
+        "Brahman Balaratnarajah, Mohan Pandithage",
+        "Brahman Balaratnarajah, Rajitha Kariyawasan",
       ],
-      correctAnswer: "Mr. Rajitha Kariyawasan & Mr. Mohan Pandithage",
+      correctAnswer: "Rajitha Kariyawasan & Mohan Pandithage",
       pdf: "/tbc/Chairmans Managing Directors Joint Statement.pdf",
     },
     {
@@ -254,7 +256,7 @@ const datasets = [
       pdf: "/tbc/Activate - in Pursuit of a More Sustainable Future.pdf",
     },
     {
-      question: "What is the latest venture of Haycarb PLC which is expected to complete the first phase by the first half of 2027?",
+      question: "What is Haycarb PLC’s latest project, set to complete phase one by 2027?",
       answers: [
         "Haycarb Philippines Corporation",
         "Eurocarb Germany GmbH",
@@ -276,7 +278,7 @@ const datasets = [
       pdf: "/tbc/Haycarb at a Glance.pdf",
     },
     {
-      question: "What is the approximate manufacturing capacilty of activated carbon in Sri Lankan manufacturing plants?",
+      question: "What is Sri Lanka’s approximate activated carbon production capacity?",
       answers: [
         "Between 45% to 50%",
         "Between 50% to 55%",
@@ -360,7 +362,7 @@ const datasets = [
       answers: [
         "Transition to low carbon economy",
         "Global economic volatility",
-        "Strong demand for activated carbon products",
+        "Strong demand",
         "Advancement in green manufacturing",
       ],
       correctAnswer: "Global economic volatility",
@@ -380,10 +382,10 @@ const datasets = [
     {
       question: "How many trees did the Haycarb group plant in 2024/25 as a decarbonization effort?",
       answers: [
-        "Between 50,000 to 60,000",
+        "50,000 to 60,000",
         "More than 75,000",
-        "Between 60,000 to 70,000",
-        "Between 70,000 to 75,000",
+        "60,000 to 70,000",
+        "70,000 to 75,000",
       ],
       correctAnswer: "More than 75,000",
       pdf: "/Haycarb PLC Annual Report 2024_25 128.pdf",
@@ -432,6 +434,28 @@ const datasets = [
       correctAnswer: "Sisu Divi Pahana",
       pdf: "/tbc/Activate - in Pursuit of a More Sustainable Future.pdf",
     },
+     {
+      question: "Which investment will increase Haycarb PLC’s electricity generation next year?",
+      answers: [
+        "Expansion of Indonesian kiln capacity",
+        "Upgrade of Recogen system",
+        "Floating solar panels in Sri Lanka",
+        "New plant in India",
+      ],
+      correctAnswer: "Upgrade of Recogen system",
+      pdf: "/recogen capacity enhancement.pdf",
+    },
+     {
+      question: "What was the total asset base of the Haycarb Group as at 31st March 2025?",
+      answers: [
+        "Rs. 39.6Bn",
+        "Rs. 40.2 Bn",
+        "Rs. 45.9 Bn",
+        "Rs. 43.5 Bn",
+      ],
+      correctAnswer: "Rs. 45.9 Bn",
+      pdf: "/asset base.pdf",
+    },
   ],
   
 ];
@@ -444,6 +468,7 @@ type Question = {
 };
 
 function GameWizard() {
+  const router = useRouter();
   const [currentDataset, setCurrentDataset] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
@@ -451,6 +476,7 @@ function GameWizard() {
   const [showMoreInfo, setShowMoreInfo] = useState(false);
   const [gameCompleted, setGameCompleted] = useState(false);
   const [showFirstSlide, setShowFirstSlide] = useState(true); // New state for welcome slide
+  const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
 
   // Load random dataset on mount
   useEffect(() => {
@@ -474,12 +500,25 @@ function GameWizard() {
     const newResults = [...results];
     newResults[currentQuestionIndex] = isCorrect;
     setResults(newResults);
+
+      // If wrong answer, delay showing the correct answer
+    if (!isCorrect) {
+      setShowCorrectAnswer(false); // Reset to ensure delay
+      const timer = setTimeout(() => {
+        setShowCorrectAnswer(true);
+      }, 500); // 300ms delay for green box
+      return () => clearTimeout(timer); // Cleanup timeout
+    } else {
+      setShowCorrectAnswer(true); // Immediate for correct answer
+    }
   };
+
 
   const handleNext = () => {
     if (currentQuestionIndex < currentDataset.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setShowMoreInfo(!!selectedAnswers[currentQuestionIndex + 1]); // Show More Info if next question has answer
+       setShowCorrectAnswer(!!selectedAnswers[currentQuestionIndex + 1]); 
       setGameCompleted(false); // Ensure gameCompleted is false when navigating forward
     } else {
       setGameCompleted(true);
@@ -490,6 +529,7 @@ function GameWizard() {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
       setShowMoreInfo(!!selectedAnswers[currentQuestionIndex - 1]); // Show More Info if prev question has answer
+      setShowCorrectAnswer(!!selectedAnswers[currentQuestionIndex - 1]); 
       setGameCompleted(false); // Ensure gameCompleted is false when navigating back
     }
   };
@@ -497,7 +537,10 @@ function GameWizard() {
   const handleStartGame = () => {
     setShowFirstSlide(false); // Transition to first question
   };
-
+const handleExit = () => {
+ localStorage.setItem("contentVisible", "true");
+  router.push("/");
+  };
   const openPdf = () => {
     window.open(`/pdf/${currentDataset[currentQuestionIndex].pdf}`, "_blank");
   };
@@ -512,14 +555,18 @@ function GameWizard() {
 
   return (
     <section
-      className="flex items-center justify-center min-h-screen text-[#606060] overflow-hidden"
-      style={{
-        backgroundImage: "url(/images/gamebg.png)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+      className="flex items-center justify-center min-h-screen text-[#606060] overflow-hidden">
+       {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="/images/gamebg.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
       <div className={styles.gameWrapper}>
         <div className={styles.gamecontainer}>
           {showFirstSlide ? (
@@ -534,10 +581,15 @@ function GameWizard() {
               <button className={`mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn`} onClick={handleStartGame}>Start the challenge now!</button>
             </section>
           ) : gameCompleted ? (
-            <div>
-              <h1 className="text-white text-center lg:text-[40px] sm:text-[38px] font-normal">
-                Congratulations, you played the game! Your score is {score}/{totalQuestions}
-              </h1>
+            <div className={styles.lastslide}>
+              <h1 className="text-white text-center lg:text-[40px] sm:text-[38px] font-normal">Well done, FinQuester!</h1>
+              <h2 className="text-white text-center lg:text-[28px] sm:text-[18px] font-normal">You&apos;ve completed the challenge and unlocked your score!
+              </h2>
+               <h2 className="text-white text-center lg:text-[28px] sm:text-[18px] font-normal">Your score is {score}/{totalQuestions}
+              </h2>
+              <p className="text-center">Thank you for exploring Haycarb’s journey with us.
+</p>
+              <button className={`mt-5 px-6 py-2 text-center rounded-full transition btn-custom wave-btn`} onClick={handleExit}>Exit</button>
             </div>
           ) : (
             <>
@@ -551,14 +603,13 @@ function GameWizard() {
                 {currentQuestion.answers.map((answer, index) => {
                   const selectedAnswer = selectedAnswers[currentQuestionIndex];
                   let bgColor = styles.blueBox;
-                  if (selectedAnswer) {
-                    if (answer === selectedAnswer) {
-                      bgColor =
-                        answer === currentQuestion.correctAnswer
-                          ? styles.greenBox
-                          : styles.redBox;
+                 if (selectedAnswer) {
+                    if (answer === currentQuestion.correctAnswer && showCorrectAnswer) {
+                      bgColor = styles.greenBox; // Show correct answer in green after delay
+                    } else if (answer === selectedAnswer) {
+                      bgColor = answer === currentQuestion.correctAnswer ? styles.greenBox : styles.redBox; // Immediate red for wrong selected answer
                     } else {
-                      bgColor = styles.grayBox;
+                      bgColor = styles.grayBox; // Gray out other answers
                     }
                   }
 

@@ -15,6 +15,8 @@ export default function SearchParamsHandler({ setIsContentVisible, setShowModal 
 
   useEffect(() => {
     const show = searchParams.get('show');
+    const contentVisible = searchParams.get('contentVisible');
+     setIsContentVisible(true);
     if (show === 'true') {
       setIsContentVisible(true);
       setShowModal(false);
