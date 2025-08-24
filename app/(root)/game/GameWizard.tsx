@@ -583,13 +583,14 @@ router.push('/?contentVisible=true');
             </section>
           ) : gameCompleted ? (
             <div className={styles.lastslide}>
-              <h1 className="text-white text-center lg:text-[40px] sm:text-[38px] font-normal">Well done, FinQuester!</h1>
+               <h2 className="text-white text-center lg:text-[48px] text-[24px] font-normal">Your score is {score}/{totalQuestions}
+              </h2>
+              <h1 className="text-white text-center lg:text-[48px] text-[24px] font-normal">Well done, FinQuester!</h1>
               <h2 className="text-white text-center lg:text-[28px] sm:text-[18px] font-normal">You&apos;ve completed the challenge and unlocked your score!
               </h2>
-               <h2 className="text-white text-center lg:text-[28px] sm:text-[18px] font-normal">Your score is {score}/{totalQuestions}
-              </h2>
-              <p className="text-center">Thank you for exploring Haycarb’s journey with us.
-</p>
+              
+               <h2 className="text-white text-center lg:text-[28px] sm:text-[18px] font-normal">Thank you for exploring Haycarb’s journey with us.
+</h2>
               <button className={`mt-5 px-6 py-2 text-center rounded-full transition btn-custom wave-btn`} onClick={handleExit}>Exit</button>
             </div>
           ) : (
