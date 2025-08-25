@@ -247,7 +247,7 @@ const datasets = [
     },
     {
       question:
-        "ow many employees are currently being employed in the Haycarb group?",
+        "How many employees are currently being employed in the Haycarb group?",
       answers: ["2020", "2022", "2024", "2026"],
       correctAnswer: "2026",
       pdf: "/tbc/Haycarb at a Glance.pdf",
@@ -470,7 +470,7 @@ function GameWizard() {
         <div className={styles.gamecontainer}>
           {showFirstSlide ? (
             <section className={styles.firtslide}>
-              <h3>Welcome to FinQuest!</h3>
+              <h1 className="text-[40px]">Welcome to FinQuest!</h1>
               <p>
                 Get ready to dive into the story behind Haycarb PLC’s 2024/25
                 journey through 10 engaging questions that spotlight our
