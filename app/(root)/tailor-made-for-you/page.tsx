@@ -5,14 +5,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Haycarb PLC | Annual Report 2024/25 | Create Charts & Graphs",
   description:
-    "Engage in the FinQuest game to explore Haycarb’s impact through interactive learning, where strategy, sustainability, and fun meet. Play now!",
+    "Explore Haycarb PLC’s 2024/25 annual report microsite to create charts & graphs to analyze data, and tailor your own version of the annual report.",
   keywords:
     "Haycarb PLC, personalized reports, chart generator, custom reports, annual report, interactive tools, data visualization, Sri Lanka, activated carbon",
   openGraph: {
     title:
       "Tailor-Made Reports & Chart Generator | Haycarb PLC Annual Report 2024/25",
     description:
-      "Engage in the FinQuest game to explore Haycarb’s impact through interactive learning, where strategy, sustainability, and fun meet. Play now!",
+      "Explore Haycarb PLC’s 2024/25 annual report microsite to create charts & graphs to analyze data, and tailor your own version of the annual report.",
     type: "website",
     locale: "en_US",
     siteName: "Haycarb PLC",
