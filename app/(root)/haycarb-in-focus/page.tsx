@@ -9,10 +9,9 @@ export const metadata: Metadata = {
   keywords:
     "Haycarb PLC, company overview, global presence, activated carbon, water purification, milestones, awards, reporting landscape, Sri Lanka, manufacturing",
   openGraph: {
-    title:
-      "Haycarb in Focus | Company Overview & Reporting Landscape | Annual Report 2024/25",
+    title: "Haycarb PLC | Annual Report 2024/25 | Haycarb in Focus",
     description:
-      "Explore Haycarb PLC's company overview, global presence, product portfolio, milestones, awards, and comprehensive reporting landscape for the financial year 2024/25.",
+      "Haycarb in Focus highlights our legacy, innovation, and global impact, where sustainability and strategy drive boundless transformation.",
     type: "website",
     locale: "en_US",
     siteName: "Haycarb PLC",
@@ -27,10 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Haycarb in Focus | Company Overview & Reporting Landscape | Annual Report 2024/25",
+    title: "Haycarb PLC | Annual Report 2024/25 | Haycarb in Focus",
     description:
-      "Explore Haycarb PLC's company overview and comprehensive reporting landscape for FY 2024/25.",
+      "Haycarb in Focus highlights our legacy, innovation, and global impact, where sustainability and strategy drive boundless transformation.",
     images: ["/images/innerpage/haycarb/awards.jpg"],
   },
   robots: {

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Haycarb PLC | Annual Report 2024/25 | User Profiles",
     description:
-      "Explore Haycarb PLC's stakeholder engagement strategies and user profiling for FY 2024/25.",
+      "Access Haycarb PLC’s 2024/25 Annual Report microsite user profiles to save insights, set preferences, and view performance tailored to your interests.",
     images: ["/images/innerpage/user-profile/investor_ratio.jpg"],
   },
   robots: {
