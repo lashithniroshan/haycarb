@@ -3,12 +3,15 @@ import UserProfileComponent from "./UserProfileComponent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "User Profile & Stakeholder Engagement | Haycarb PLC Annual Report 2024/25",
-  description: "Explore Haycarb PLC's stakeholder engagement strategies, user profiling, and tailored content for shareholders, employees, customers, suppliers, and general users in our Annual Report 2024/25.",
-  keywords: "Haycarb PLC, stakeholder engagement, user profiling, shareholders, employees, customers, suppliers, annual report, Sri Lanka, activated carbon, corporate governance",
+  title: "Haycarb PLC | Annual Report 2024/25 | User Profiles",
+  description:
+    "Access Haycarb PLC’s 2024/25 Annual Report microsite user profiles to save insights, set preferences, and view performance tailored to your interests.",
+  keywords:
+    "Haycarb PLC, stakeholder engagement, user profiling, shareholders, employees, customers, suppliers, annual report, Sri Lanka, activated carbon, corporate governance",
   openGraph: {
-    title: "User Profile & Stakeholder Engagement | Haycarb PLC Annual Report 2024/25",
-    description: "Explore Haycarb PLC's stakeholder engagement strategies, user profiling, and tailored content for shareholders, employees, customers, suppliers, and general users in our Annual Report 2024/25.",
+    title: "Haycarb PLC | Annual Report 2024/25 | User Profiles",
+    description:
+      "Access Haycarb PLC’s 2024/25 Annual Report microsite user profiles to save insights, set preferences, and view performance tailored to your interests.",
     type: "website",
     locale: "en_US",
     siteName: "Haycarb PLC",
@@ -23,8 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "User Profile & Stakeholder Engagement | Haycarb PLC Annual Report 2024/25",
-    description: "Explore Haycarb PLC's stakeholder engagement strategies and user profiling for FY 2024/25.",
+    title: "Haycarb PLC | Annual Report 2024/25 | User Profiles",
+    description:
+      "Explore Haycarb PLC's stakeholder engagement strategies and user profiling for FY 2024/25.",
     images: ["/images/innerpage/user-profile/investor_ratio.jpg"],
   },
   robots: {

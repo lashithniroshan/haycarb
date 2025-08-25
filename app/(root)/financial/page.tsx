@@ -3,12 +3,15 @@ import FinancialComponent from "./FinancialComponent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Financial Highlights | Haycarb PLC Annual Report 2024/25",
-  description: "Explore Haycarb PLC's financial performance, revenue of Rs. 43.2 Bn, profit after tax of Rs. 4.27 Bn, and strategic financial highlights for FY 2024/25.",
-  keywords: "Haycarb PLC, financial highlights, annual report, revenue, profit, financial performance, Sri Lanka, activated carbon",
+  title: "Haycarb PLC | Annual Report 2024/25 | Financial Highlights",
+  description:
+    "Review Haycarb PLC’s 2024/25 financial highlights with key metrics, growth trends, and insights designed for investors and stakeholders.",
+  keywords:
+    "Haycarb PLC, financial highlights, annual report, revenue, profit, financial performance, Sri Lanka, activated carbon",
   openGraph: {
     title: "Financial Highlights | Haycarb PLC Annual Report 2024/25",
-    description: "Explore Haycarb PLC's financial performance, revenue of Rs. 43.2 Bn, profit after tax of Rs. 4.27 Bn, and strategic financial highlights for FY 2024/25.",
+    description:
+      "Explore Haycarb PLC's financial performance, revenue of Rs. 43.2 Bn, profit after tax of Rs. 4.27 Bn, and strategic financial highlights for FY 2024/25.",
     type: "website",
     locale: "en_US",
     siteName: "Haycarb PLC",
@@ -24,7 +27,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Financial Highlights | Haycarb PLC Annual Report 2024/25",
-    description: "Explore Haycarb PLC's financial performance and strategic highlights for FY 2024/25.",
+    description:
+      "Explore Haycarb PLC's financial performance and strategic highlights for FY 2024/25.",
     images: ["/images/innerpage/financial/financial_cap_1.jpg"],
   },
   robots: {
