@@ -9,82 +9,55 @@ const datasets = [
   [
     {
       question: "Which year was Haycarb PLC established?",
-      answers: [
-        "1970",
-        "1973",
-        "1976",
-        "1980",
-      ],
+      answers: ["1970", "1973", "1976", "1980"],
       correctAnswer: "1973",
       pdf: "/tbc/Milestones.pdf",
     },
     {
-      question: "The annual report 2024/25 is the __ th integrated report produced by Haycarb PLC",
-      answers: [
-        "5",
-        "3",
-        "2",
-        "10",
-      ],
+      question:
+        "The annual report 2024/25 is the __ th integrated report produced by Haycarb PLC",
+      answers: ["5", "3", "2", "10"],
       correctAnswer: "5",
       pdf: "/tbc/Our Approach to Reporting.pdf",
     },
     {
-      question: "What can be considered a brand new feature of the Haycarb's annual report 2024/25",
+      question:
+        "What can be considered a brand new feature of the Haycarb's annual report 2024/25",
       answers: [
         "Availability of a microsite",
-        "Increase in accesibility",
+        "Increase in accessibility",
         "Reporting of SLFRS S1 and S2",
         "Obtaining limited assurance",
       ],
-      correctAnswer: "Increase in accesibility",
+      correctAnswer: "Increase in accessibility",
       pdf: "/tbc/Our Approach to Reporting.pdf",
     },
     {
       question: "What is Haycarb’s main product?",
-      answers: [
-        "Rubber sheets",
-        "Activated carbon",
-        "Cement",
-        "Tea",
-      ],
+      answers: ["Rubber sheets", "Activated carbon", "Cement", "Tea"],
       correctAnswer: "Activated carbon",
       pdf: "/tbc/Haycarb at a Glance.pdf",
     },
     {
       question: "Which natural resource is key to Haycarb’s products?",
-      answers: [
-        "Coconut shells",
-        "Palm shells",
-        "Coal",
-        "Wood",
-      ],
+      answers: ["Coconut shells", "Palm shells", "Coal", "Wood"],
       correctAnswer: "Coconut shells",
       pdf: "/tbc/Haycarb at a Glance.pdf",
     },
-     {
+    {
       question: "In 2024/25, how many countries did Haycarb operate in?",
-      answers: [
-        "3",
-        "5",
-        "7",
-        "8",
-      ],
+      answers: ["3", "5", "7", "8"],
       correctAnswer: "7",
       pdf: "/tbc/Haycarb at a Glance.pdf",
     },
-     {
-      question: "Haycarb’s manufacturing plants are located in Sri Lanka, Thailand, and ___?",
-      answers: [
-        "India",
-        "Indonesia",
-        "Malaysia",
-        "Australia",
-      ],
+    {
+      question:
+        "Haycarb’s manufacturing plants are located in Sri Lanka, Thailand, and ___?",
+      answers: ["India", "Indonesia", "Malaysia", "Australia"],
       correctAnswer: "Indonesia",
       pdf: "/tbc/Haycarb at a Glance.pdf",
     },
-     {
+    {
       question: "What is Haycarb’s parent company?",
       answers: [
         "Hayleys PLC",
@@ -93,27 +66,18 @@ const datasets = [
         "Hemas Holdings",
       ],
       correctAnswer: "Hayleys PLC",
-      pdf: "/tbc/Managing Risks Opportunities.pdf",
+      pdf: "/bod and affairs of the company.pdf",
     },
-     {
-      question: "What percentage of Haycarb’s energy requirement is met through renewable sources in 2024/25?",
-      answers: [
-        "25%",
-        "75%",
-        "45%",
-        "50%",
-      ],
+    {
+      question:
+        "What percentage of Haycarb’s energy requirement is met through renewable sources in 2024/25?",
+      answers: ["25%", "75%", "45%", "50%"],
       correctAnswer: "75%",
       pdf: "/Haycarb PLC Annual Report 2024_25 129.pdf",
     },
-     {
+    {
       question: "What was the Group’s revenue for 2024/25?",
-      answers: [
-        "LKR 45.1 Bn",
-        "LKR 43.2 Bn",
-        "LKR 56.5 Bn",
-        "LKR 60.2 Bn",
-      ],
+      answers: ["LKR 45.1 Bn", "LKR 43.2 Bn", "LKR 56.5 Bn", "LKR 60.2 Bn"],
       correctAnswer: "LKR 43.2 Bn",
       pdf: "/Haycarb PLC Annual Report 2024_25 122.pdf",
     },
@@ -122,39 +86,26 @@ const datasets = [
   [
     {
       question: "What was the Group’s operating profit for 2024/25?",
-      answers: [
-        "LKR 5.5 Bn",
-        "LKR 6.1 Bn",
-        "LKR 5.8Bn",
-        "LKR 4.3 Bn",
-      ],
+      answers: ["LKR 5.5 Bn", "LKR 6.1 Bn", "LKR 5.8Bn", "LKR 4.3 Bn"],
       correctAnswer: "LKR 5.8Bn",
       pdf: "/Haycarb PLC Annual Report 2024_25 122.pdf",
     },
     {
       question: "Which program focuses on protecting endangered turtles?",
-      answers: [
-        "Behold the turtles",
-        "OceanLife",
-        "EcoWave",
-        "GreenReef",
-      ],
+      answers: ["Behold the turtles", "OceanLife", "EcoWave", "GreenReef"],
       correctAnswer: "Behold the turtles",
       pdf: "/Haycarb PLC Annual Report 2024_25 139.pdf",
     },
     {
-      question: "What quality certification does Haycarb hold for its production processes?",
-      answers: [
-        "ISO 9001",
-        "ISO 14001",
-        "ISO 22000",
-        "All of the above",
-      ],
+      question:
+        "What quality certification does Haycarb hold for its production processes?",
+      answers: ["ISO 9001", "ISO 14001", "ISO 22000", "All of the above"],
       correctAnswer: "All of the above",
       pdf: "/Haycarb PLC Annual Report 2024_25 146.pdf",
     },
     {
-      question: "How does Haycarb mianly contribute to clean water solutions globally?",
+      question:
+        "How does Haycarb mainly contribute to clean water solutions globally?",
       answers: [
         "Activated carbon for water filtration systems",
         "Selling bottled water",
@@ -165,50 +116,34 @@ const datasets = [
       pdf: "/Our Products.pdf",
     },
     {
-      question: "What percentage of Haycarb’s raw material suppliers are sourced locally?",
-      answers: [
-        "61%",
-        "65%",
-        "91%",
-        "80%",
-      ],
+      question:
+        "What % of raw material supplier payments are to local suppliers?",
+      answers: ["61%", "65%", "91%", "80%"],
       correctAnswer: "91%",
       pdf: "/Haycarb PLC Annual Report 2024_25 169.pdf",
     },
-     {
-      question: "The company invested LKR ______ Mn for Solar power generation in 2024/25.",
-      answers: [
-        "800",
-        "600",
-        "1000",
-        "750",
-      ],
+    {
+      question:
+        "The company invested LKR ______ Mn for Solar power generation in 2024/25.",
+      answers: ["800", "600", "1000", "750"],
       correctAnswer: "600",
       pdf: "/Haycarb PLC Annual Report 2024_25 133.pdf",
     },
-     {
-      question: "Haycarb’ s revenue in foreign currency reduces exposure to __________ risk.",
-      answers: [
-        "Inflation",
-        "Credit",
-        "Exchange rate",
-        "Liquidity",
-      ],
+    {
+      question:
+        "Haycarb’ s revenue in foreign currency reduces exposure to __________ risk.",
+      answers: ["Inflation", "Credit", "Exchange rate", "Liquidity"],
       correctAnswer: "Exchange rate",
-      pdf: "/tbc/Managing Risks Opportunities.pdf",
+      pdf: "/exchange rate risk.pdf",
     },
     {
-      question: "The water-saving initiative in Sri Lanka includes ________ harvesting systems.",
-      answers: [
-        "Groundwater",
-        "Rainwater",
-        "Fog",
-        "Dew",
-      ],
+      question:
+        "The water-saving initiative in Sri Lanka includes ________ harvesting systems.",
+      answers: ["Groundwater", "Rainwater", "Fog", "Dew"],
       correctAnswer: "Rainwater",
       pdf: "/Haycarb PLC Annual Report 2024_25 136.pdf",
     },
-     {
+    {
       question: "Who is the Chairman and Managing Director of Haycarb PLC?",
       answers: [
         "Mohan Pandithage & Rajitha Kariyawasan",
@@ -216,17 +151,13 @@ const datasets = [
         "Brahman Balaratnarajah, Mohan Pandithage",
         "Brahman Balaratnarajah, Rajitha Kariyawasan",
       ],
-      correctAnswer: "Rajitha Kariyawasan & Mohan Pandithage",
+      correctAnswer: "Mohan Pandithage & Rajitha Kariyawasan",
       pdf: "/tbc/Chairmans Managing Directors Joint Statement.pdf",
     },
     {
-      question: "What is the approximate market share of Haycarb PLC in the global Activated Carbon market?",
-      answers: [
-        "8%",
-        "16%",
-        "25%",
-        "27%",
-      ],
+      question:
+        "What is the approximate market share of Haycarb PLC in the global Activated Carbon market?",
+      answers: ["8%", "16%", "25%", "27%"],
       correctAnswer: "16%",
       pdf: "/Our Products.pdf",
     },
@@ -235,12 +166,7 @@ const datasets = [
   [
     {
       question: "What is the name of ESG Framework of Haycarb group?",
-      answers: [
-        "Entwine",
-        "Hayleys Lifecode",
-        "Activate",
-        "Activism",
-      ],
+      answers: ["Entwine", "Hayleys Lifecode", "Activate", "Activism"],
       correctAnswer: "Activate",
       pdf: "/tbc/Activate - in Pursuit of a More Sustainable Future.pdf",
     },
@@ -256,7 +182,8 @@ const datasets = [
       pdf: "/tbc/Activate - in Pursuit of a More Sustainable Future.pdf",
     },
     {
-      question: "What is Haycarb PLC’s latest project, set to complete phase one by 2027?",
+      question:
+        "What is Haycarb PLC’s latest project, set to complete phase one by 2027?",
       answers: [
         "Haycarb Philippines Corporation",
         "Eurocarb Germany GmbH",
@@ -267,18 +194,15 @@ const datasets = [
       pdf: "/tbc/Chairmans Managing Directors Joint Statement.pdf",
     },
     {
-      question: "What is the key activated carbon export market of Haycarb group?",
-      answers: [
-        "America",
-        "Asia",
-        "Europe",
-        "Australia",
-      ],
+      question:
+        "What is the key activated carbon export market of Haycarb group?",
+      answers: ["America", "Asia", "Europe", "Australia"],
       correctAnswer: "Asia",
       pdf: "/tbc/Haycarb at a Glance.pdf",
     },
     {
-      question: "What is Sri Lanka’s approximate activated carbon production capacity?",
+      question:
+        "What is Sri Lanka’s approximate activated carbon production capacity?",
       answers: [
         "Between 45% to 50%",
         "Between 50% to 55%",
@@ -289,7 +213,8 @@ const datasets = [
       pdf: "/tbc/Haycarb at a Glance.pdf",
     },
     {
-      question: "What is the programme implemented to promote green charcoaling practices by providing technical and financial assistance to small scale charcoal suppliers?",
+      question:
+        "What is the programme implemented to promote green charcoaling practices by providing technical and financial assistance to small scale charcoal suppliers?",
       answers: [
         "Puritas Sath Diyawara",
         "Sisu Divi Pahana",
@@ -300,46 +225,30 @@ const datasets = [
       pdf: "/tbc/Our Socio-Economic Impact.pdf",
     },
     {
-      question: "What is the market capitalization of Haycarb PLC by 31st March 2025",
-      answers: [
-        "Rs 24.4 Bn",
-        "RS 20.4 Bn",
-        "Rs 20 Bn",
-        "Rs 19.5 Bn",
-      ],
+      question:
+        "What is the market capitalization of Haycarb PLC by 31st March 2025",
+      answers: ["Rs 24.4 Bn", "RS 20.4 Bn", "Rs 20 Bn", "Rs 19.5 Bn"],
       correctAnswer: "Rs 24.4 Bn",
       pdf: "/Haycarb PLC Annual Report 2024_25 123.pdf",
     },
     {
-      question: "What is the earnings per share at year end 2024/25 recorded by the Haycarb Group?",
-      answers: [
-        "Rs. 12.1",
-        "Rs. 12.6",
-        "Rs. 19.6",
-        "Rs. 11.1",
-      ],
+      question:
+        "What is the earnings per share at year end 2024/25 recorded by the Haycarb Group?",
+      answers: ["Rs. 12.1", "Rs. 12.6", "Rs. 19.6", "Rs. 11.1"],
       correctAnswer: "Rs. 12.1",
       pdf: "/Haycarb PLC Annual Report 2024_25 123.pdf",
     },
     {
-      question: "How many product and process related certifications are obtained by Haycarb as at 31st March 2025?",
-      answers: [
-        "29",
-        "28",
-        "32",
-        "30",
-      ],
+      question:
+        "How many product and process related certifications are obtained by Haycarb as at 31st March 2025?",
+      answers: ["29", "28", "32", "30"],
       correctAnswer: "32",
       pdf: "/Haycarb PLC Annual Report 2024_25 140.pdf",
     },
     {
-      question: "ow many employees are currently being employed in the Haycarb group?",
-      answers: [
-        "2020",
-        "2022",
-        "2024",
-        "2026",
-      ],
+      question:
+        "ow many employees are currently being employed in the Haycarb group?",
+      answers: ["2020", "2022", "2024", "2026"],
       correctAnswer: "2026",
       pdf: "/tbc/Haycarb at a Glance.pdf",
     },
@@ -347,18 +256,15 @@ const datasets = [
   // Dataset 04
   [
     {
-      question: "What is the country in which floating solar panel projects are established within the Haycarb Group?",
-      answers: [
-        "Thailand",
-        "USA",
-        "Sri Lanka",
-        "Philiphine",
-      ],
+      question:
+        "What is the country in which floating solar panel projects are established within the Haycarb Group?",
+      answers: ["Thailand", "USA", "Sri Lanka", "Philippines"],
       correctAnswer: "Thailand",
       pdf: "/tbc/Managing Risks Opportunities.pdf",
     },
     {
-      question: "What can be considered as a threat faced by the Haycarb group?",
+      question:
+        "What can be considered as a threat faced by the Haycarb group?",
       answers: [
         "Transition to low carbon economy",
         "Global economic volatility",
@@ -369,7 +275,8 @@ const datasets = [
       pdf: "/tbc/Our Strategic Framework SWOT TOWS Strategy in Motion.pdf",
     },
     {
-      question: "What are the ways that customer value is created within Haycarb group?",
+      question:
+        "What are the ways that customer value is created within Haycarb group?",
       answers: [
         "Product quality",
         "Customer health & safety",
@@ -380,7 +287,8 @@ const datasets = [
       pdf: "/Haycarb PLC Annual Report 2024_25 167.pdf",
     },
     {
-      question: "How many trees did the Haycarb group plant in 2024/25 as a decarbonization effort?",
+      question:
+        "How many trees did the Haycarb group plant in 2024/25 as a decarbonization effort?",
       answers: [
         "50,000 to 60,000",
         "More than 75,000",
@@ -391,7 +299,8 @@ const datasets = [
       pdf: "/Haycarb PLC Annual Report 2024_25 128.pdf",
     },
     {
-      question: "What are the ways that supplier value is created within Haycarb group?",
+      question:
+        "What are the ways that supplier value is created within Haycarb group?",
       answers: [
         "Timely payments",
         "Opportunity for growth",
@@ -402,29 +311,21 @@ const datasets = [
       pdf: "/Haycarb PLC Annual Report 2024_25 169.pdf",
     },
     {
-      question: "How many instances were recorded in terms of non compliance to laws and regulations?",
-      answers: [
-        "Zero",
-        "One",
-        "Two",
-        "Three",
-      ],
+      question:
+        "How many instances were recorded in terms of non compliance to laws and regulations?",
+      answers: ["Zero", "One", "Two", "Three"],
       correctAnswer: "Zero",
       pdf: "/tbc/Listening to Our Stakeholders.pdf",
     },
     {
       question: "What is the employee retention rate of Haycarb group?",
-      answers: [
-        "89%",
-        "91%",
-        "90%",
-        "92%",
-      ],
+      answers: ["89%", "91%", "90%", "92%"],
       correctAnswer: "91%",
       pdf: "/tbc/Strategy and Resource Allocation.pdf",
     },
     {
-      question: "What is the corporate sustainability project implemented to upgrade the health and nutrition of school children?",
+      question:
+        "What is the corporate sustainability project implemented to upgrade the health and nutrition of school children?",
       answers: [
         "Haritha Angara",
         "Puritas Sath Diyawara",
@@ -434,8 +335,9 @@ const datasets = [
       correctAnswer: "Sisu Divi Pahana",
       pdf: "/tbc/Activate - in Pursuit of a More Sustainable Future.pdf",
     },
-     {
-      question: "Which investment will increase Haycarb PLC’s electricity generation next year?",
+    {
+      question:
+        "Which investment will increase Haycarb PLC’s electricity generation next year?",
       answers: [
         "Expansion of Indonesian kiln capacity",
         "Upgrade of Recogen system",
@@ -445,19 +347,14 @@ const datasets = [
       correctAnswer: "Upgrade of Recogen system",
       pdf: "/recogen capacity enhancement.pdf",
     },
-     {
-      question: "What was the total asset base of the Haycarb Group as at 31st March 2025?",
-      answers: [
-        "Rs. 39.6Bn",
-        "Rs. 40.2 Bn",
-        "Rs. 45.9 Bn",
-        "Rs. 43.5 Bn",
-      ],
+    {
+      question:
+        "What was the total asset base of the Haycarb Group as at 31st March 2025?",
+      answers: ["Rs. 39.6Bn", "Rs. 40.2 Bn", "Rs. 45.9 Bn", "Rs. 43.5 Bn"],
       correctAnswer: "Rs. 45.9 Bn",
       pdf: "/asset base.pdf",
     },
   ],
-  
 ];
 
 type Question = {
@@ -471,7 +368,9 @@ function GameWizard() {
   const router = useRouter();
   const [currentDataset, setCurrentDataset] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
+  const [selectedAnswers, setSelectedAnswers] = useState<
+    Record<number, string>
+  >({});
   const [results, setResults] = useState<(boolean | null)[]>([]);
   const [showMoreInfo, setShowMoreInfo] = useState(false);
   const [gameCompleted, setGameCompleted] = useState(false);
@@ -496,12 +395,13 @@ function GameWizard() {
     setShowMoreInfo(true);
 
     // Update results
-    const isCorrect = answer === currentDataset[currentQuestionIndex].correctAnswer;
+    const isCorrect =
+      answer === currentDataset[currentQuestionIndex].correctAnswer;
     const newResults = [...results];
     newResults[currentQuestionIndex] = isCorrect;
     setResults(newResults);
 
-      // If wrong answer, delay showing the correct answer
+    // If wrong answer, delay showing the correct answer
     if (!isCorrect) {
       setShowCorrectAnswer(false); // Reset to ensure delay
       const timer = setTimeout(() => {
@@ -513,12 +413,11 @@ function GameWizard() {
     }
   };
 
-
   const handleNext = () => {
     if (currentQuestionIndex < currentDataset.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setShowMoreInfo(!!selectedAnswers[currentQuestionIndex + 1]); // Show More Info if next question has answer
-       setShowCorrectAnswer(!!selectedAnswers[currentQuestionIndex + 1]); 
+      setShowCorrectAnswer(!!selectedAnswers[currentQuestionIndex + 1]);
       setGameCompleted(false); // Ensure gameCompleted is false when navigating forward
     } else {
       setGameCompleted(true);
@@ -529,7 +428,7 @@ function GameWizard() {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
       setShowMoreInfo(!!selectedAnswers[currentQuestionIndex - 1]); // Show More Info if prev question has answer
-      setShowCorrectAnswer(!!selectedAnswers[currentQuestionIndex - 1]); 
+      setShowCorrectAnswer(!!selectedAnswers[currentQuestionIndex - 1]);
       setGameCompleted(false); // Ensure gameCompleted is false when navigating back
     }
   };
@@ -537,10 +436,10 @@ function GameWizard() {
   const handleStartGame = () => {
     setShowFirstSlide(false); // Transition to first question
   };
-const handleExit = () => {
-//  localStorage.setItem("contentVisible", "true");
-//   router.push("/");
-router.push('/?contentVisible=true');
+  const handleExit = () => {
+    //  localStorage.setItem("contentVisible", "true");
+    //   router.push("/");
+    router.push("/?contentVisible=true");
   };
   const openPdf = () => {
     window.open(`/pdf/${currentDataset[currentQuestionIndex].pdf}`, "_blank");
@@ -555,9 +454,8 @@ router.push('/?contentVisible=true');
   const currentQuestion = currentDataset[currentQuestionIndex];
 
   return (
-    <section
-      className="flex items-center justify-center min-h-screen text-[#606060] overflow-hidden">
-       {/* Video Background */}
+    <section className="flex items-center justify-center min-h-screen text-[#606060] overflow-hidden">
+      {/* Video Background */}
       <video
         autoPlay
         loop
@@ -574,24 +472,42 @@ router.push('/?contentVisible=true');
             <section className={styles.firtslide}>
               <h3>Welcome to FinQuest!</h3>
               <p>
-                Get ready to dive into the story behind Haycarb PLC’s 2024/25 journey through 10 engaging questions that spotlight our performance, strategy, and sustainability milestones.
+                Get ready to dive into the story behind Haycarb PLC’s 2024/25
+                journey through 10 engaging questions that spotlight our
+                performance, strategy, and sustainability milestones.
               </p>
               <p>
-                Let’s play, learn, and celebrate Haycarb’s impact one question at a time.
+                Let’s play, learn, and celebrate Haycarb’s impact one question
+                at a time.
               </p>
-              <button className={`mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn`} onClick={handleStartGame}>Start the challenge now!</button>
+              <button
+                className={`mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn`}
+                onClick={handleStartGame}
+              >
+                Start the challenge now!
+              </button>
             </section>
           ) : gameCompleted ? (
             <div className={styles.lastslide}>
-               <h2 className="text-white text-center lg:text-[48px] text-[24px] font-normal">Your score is {score}/{totalQuestions}
+              <h2 className="text-white text-center lg:text-[48px] text-[24px] font-normal">
+                Your score is {score}/{totalQuestions}
               </h2>
-              <h1 className="text-white text-center lg:text-[48px] text-[24px] font-normal">Well done, FinQuester!</h1>
-              <h2 className="text-white text-center lg:text-[28px] sm:text-[18px] font-normal">You&apos;ve completed the challenge and unlocked your score!
+              <h1 className="text-white text-center lg:text-[48px] text-[24px] font-normal">
+                Well done, FinQuester!
+              </h1>
+              <h2 className="text-white text-center lg:text-[28px] sm:text-[18px] font-normal">
+                You&apos;ve completed the challenge and unlocked your score!
               </h2>
-              
-               <h2 className="text-white text-center lg:text-[28px] sm:text-[18px] font-normal">Thank you for exploring Haycarb’s journey with us.
-</h2>
-              <button className={`mt-5 px-6 py-2 text-center rounded-full transition btn-custom wave-btn`} onClick={handleExit}>Exit</button>
+
+              <h2 className="text-white text-center lg:text-[28px] sm:text-[18px] font-normal">
+                Thank you for exploring Haycarb’s journey with us.
+              </h2>
+              <button
+                className={`mt-5 px-6 py-2 text-center rounded-full transition btn-custom wave-btn`}
+                onClick={handleExit}
+              >
+                Exit
+              </button>
             </div>
           ) : (
             <>
@@ -605,11 +521,17 @@ router.push('/?contentVisible=true');
                 {currentQuestion.answers.map((answer, index) => {
                   const selectedAnswer = selectedAnswers[currentQuestionIndex];
                   let bgColor = styles.blueBox;
-                 if (selectedAnswer) {
-                    if (answer === currentQuestion.correctAnswer && showCorrectAnswer) {
+                  if (selectedAnswer) {
+                    if (
+                      answer === currentQuestion.correctAnswer &&
+                      showCorrectAnswer
+                    ) {
                       bgColor = styles.greenBox; // Show correct answer in green after delay
                     } else if (answer === selectedAnswer) {
-                      bgColor = answer === currentQuestion.correctAnswer ? styles.greenBox : styles.redBox; // Immediate red for wrong selected answer
+                      bgColor =
+                        answer === currentQuestion.correctAnswer
+                          ? styles.greenBox
+                          : styles.redBox; // Immediate red for wrong selected answer
                     } else {
                       bgColor = styles.grayBox; // Gray out other answers
                     }
@@ -630,7 +552,10 @@ router.push('/?contentVisible=true');
 
               {/* More Info Button */}
               {showMoreInfo && (
-                <button className={`mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn`} onClick={openPdf}>
+                <button
+                  className={`mt-6 px-6 py-2 rounded-full transition btn-custom wave-btn`}
+                  onClick={openPdf}
+                >
                   More Info
                 </button>
               )}
@@ -673,9 +598,13 @@ router.push('/?contentVisible=true');
             </button>
             <button
               onClick={handleNext}
-              disabled={currentQuestionIndex === currentDataset.length - 1 && gameCompleted}
+              disabled={
+                currentQuestionIndex === currentDataset.length - 1 &&
+                gameCompleted
+              }
               className={`${styles.navButton} ${styles.next} ${
-                currentQuestionIndex === currentDataset.length - 1 && gameCompleted
+                currentQuestionIndex === currentDataset.length - 1 &&
+                gameCompleted
                   ? styles.navButtonDisabled
                   : ""
               }`}
