@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
   },
-  manifest: '/site.webmanifest',
+  // manifest: '/site.webmanifest',
   openGraph: {
     siteName: 'Haycarb PLC',
     type: 'website',
