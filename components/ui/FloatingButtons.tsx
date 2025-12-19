@@ -82,14 +82,12 @@ const FloatingButtons: React.FC<FloatingButtonsProps> = ({
               className="fixed bottom-4 right-4 z-50"
             >
               <button
-                className={`${styles.floatingbtnsoundplay} ${styles.rightbtn} ${styles.playmob}`}
+                className={`${styles.floatingbtnsoundplay} bottom-[9%] xl:bottom-[12%] 2xl:bottom-[9%] ${styles.rightbtn} ${styles.playmob}`}
                 aria-label={isPlaying ? "Pause audio" : "Play audio"}
                 onClick={toggleAudio}
               >
                 <Image
-                  src={
-                    isPlaying ? "/icons/Asset2.svg" : "/icons/Asset1.svg"
-                  }
+                  src={isPlaying ? "/icons/Asset2.svg" : "/icons/Asset1.svg"}
                   alt={isPlaying ? "Pause" : "Play"}
                   width={38}
                   height={38}

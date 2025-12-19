@@ -3,12 +3,15 @@ import NonFinancialComponent from "./NonFinancialComponent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Non-Financial Highlights & ESG | Haycarb PLC Annual Report 2024/25",
-  description: "Discover Haycarb PLC's sustainability initiatives, ESG governance, climate resilience, and non-financial performance including natural capital, human capital, and social impact for FY 2024/25.",
-  keywords: "Haycarb PLC, ESG, sustainability, climate resilience, natural capital, human capital, social capital, activated carbon, Sri Lanka, corporate responsibility",
+  title: "Haycarb PLC | Annual Report 2024/25 Non-Financial Highlights",
+  description:
+    "Explore Haycarb PLC’s 2024/25 non financial highlights on sustainability, innovation, community impact & operational excellence.",
+  keywords:
+    "Haycarb PLC, ESG, sustainability, climate resilience, natural capital, human capital, social capital, activated carbon, Sri Lanka, corporate responsibility",
   openGraph: {
-    title: "Non-Financial Highlights & ESG | Haycarb PLC Annual Report 2024/25",
-    description: "Discover Haycarb PLC's sustainability initiatives, ESG governance, climate resilience, and non-financial performance including natural capital, human capital, and social impact for FY 2024/25.",
+    title: "Haycarb PLC | Annual Report 2024/25 Non-Financial Highlights",
+    description:
+      "Explore Haycarb PLC’s 2024/25 non financial highlights on sustainability, innovation, community impact & operational excellence.",
     type: "website",
     locale: "en_US",
     siteName: "Haycarb PLC",
@@ -23,8 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Non-Financial Highlights & ESG | Haycarb PLC Annual Report 2024/25",
-    description: "Discover Haycarb PLC's sustainability initiatives and ESG performance for FY 2024/25.",
+    title: "Haycarb PLC | Annual Report 2024/25 Non-Financial Highlights",
+    description:
+      "Explore Haycarb PLC’s 2024/25 non financial highlights on sustainability, innovation, community impact & operational excellence.",
     images: ["/images/innerpage/non-financial-highlights/ESG-governance.jpg"],
   },
   robots: {

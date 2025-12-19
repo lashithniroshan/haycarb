@@ -3,12 +3,15 @@ import TailorComponent from "./TailorComponent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tailor-Made Reports & Chart Generator | Haycarb PLC Annual Report 2024/25",
-  description: "Create personalized reports and generate custom charts from Haycarb PLC's Annual Report 2024/25. Tailor content to your needs with our interactive reporting tools.",
-  keywords: "Haycarb PLC, personalized reports, chart generator, custom reports, annual report, interactive tools, data visualization, Sri Lanka, activated carbon",
+  title: "Haycarb PLC | Annual Report 2024/25 | Create Charts & Graphs",
+  description:
+    "Explore Haycarb PLC’s 2024/25 annual report microsite to create charts & graphs to analyze data, and tailor your own version of the annual report.",
+  keywords:
+    "Haycarb PLC, personalized reports, chart generator, custom reports, annual report, interactive tools, data visualization, Sri Lanka, activated carbon",
   openGraph: {
-    title: "Tailor-Made Reports & Chart Generator | Haycarb PLC Annual Report 2024/25",
-    description: "Create personalized reports and generate custom charts from Haycarb PLC's Annual Report 2024/25. Tailor content to your needs with our interactive reporting tools.",
+    title: "Haycarb PLC | Annual Report 2024/25 | Create Charts & Graphs",
+    description:
+      "Explore Haycarb PLC’s 2024/25 annual report microsite to create charts & graphs to analyze data, and tailor your own version of the annual report.",
     type: "website",
     locale: "en_US",
     siteName: "Haycarb PLC",
@@ -23,8 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tailor-Made Reports & Chart Generator | Haycarb PLC Annual Report 2024/25",
-    description: "Create personalized reports and generate custom charts from Haycarb PLC's Annual Report 2024/25.",
+    title: "Haycarb PLC | Annual Report 2024/25 | Create Charts & Graphs",
+    description:
+      "Explore Haycarb PLC’s 2024/25 annual report microsite to create charts & graphs to analyze data, and tailor your own version of the annual report.",
     images: ["/images/cardchartgenerator.png"],
   },
   robots: {

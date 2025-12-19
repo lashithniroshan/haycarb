@@ -23,7 +23,7 @@ const Home = () => {
   const [isContentVisible, setIsContentVisible] = useState(false);
   const [showModal, setShowModal] = useState(false); // New state for modal delay
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-   const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null); // Reference to Audio instance
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
@@ -41,12 +41,12 @@ const Home = () => {
     }
 
     // Pause audio when video is playing
-   if (isVideoPlaying || !isPlaying) {
+    if (isVideoPlaying || !isPlaying) {
       audioRef.current.pause();
     }
 
     // Cleanup on component unmount
-      return () => {
+    return () => {
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current = null;
@@ -54,7 +54,7 @@ const Home = () => {
     };
   }, [isContentVisible, isVideoPlaying, isPlaying]);
 
-    const toggleAudio = () => {
+  const toggleAudio = () => {
     setIsPlaying((prev) => {
       const newState = !prev;
       if (newState && isContentVisible && !isVideoPlaying) {
@@ -93,14 +93,12 @@ const Home = () => {
       : "hidden";
   }, [isContentVisible]);
 
-
-    const clickHandler = () => {
+  const clickHandler = () => {
     setIsContentVisible(true);
     setIsPlaying(true);
-    // Set a timer to show the modal after 1 minute
-    setTimeout(() => setShowModal(true), 60000);
+    // Set a timer to show the modal after 40 Secs
+    setTimeout(() => setShowModal(true), 40000);
   };
-
 
   // Animation variants for menuforitems
   const menuVariants: Variants = {
@@ -529,10 +527,10 @@ const Home = () => {
             <Videoslider />
           </div>
           <HomeFooter />
-           <FloatingButtons
+          <FloatingButtons
             isPlaying={isPlaying}
             toggleAudio={toggleAudio}
-              isHomePage={true}
+            isHomePage={true}
           />
           {showModal && <ModelWindow />}
           {/* model window */}
