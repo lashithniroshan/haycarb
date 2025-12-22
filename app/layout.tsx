@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.haycarb.com"),
   title: "Haycarb PLC | Annual Report 2024/25",
   description:
     "Haycarb PLC Annual Report 2024/25 - Driving sustainability and innovation in activated carbon solutions.",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
-  manifest: "/site.webmanifest",
+  // manifest: "/site.webmanifest",
   openGraph: {
     siteName: "Haycarb PLC",
     type: "website",

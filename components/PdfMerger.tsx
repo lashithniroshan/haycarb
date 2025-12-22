@@ -39,7 +39,7 @@ const PdfMerger = () => {
     const mergedBytes = await mergedPdf.save();
 
     // Download merged PDF
-    const blob = new Blob([mergedBytes], { type: "application/pdf" });
+    const blob = new Blob([new Uint8Array(mergedBytes)], { type: "application/pdf" });
     saveAs(blob, "merged.pdf");
   };
 

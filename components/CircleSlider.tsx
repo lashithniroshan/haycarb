@@ -130,15 +130,15 @@ const CircleSlider = () => {
       }
     });
 
-    if (newActiveIndex !== activeIndex) {
-      setActiveIndex(newActiveIndex);
-      console.log(
-        "Active Index:",
-        newActiveIndex,
-        "Slide ID:",
-        slidesData[newActiveIndex]?.id
-      ); // Debug log
-    }
+    // if (newActiveIndex !== activeIndex) {
+    //   setActiveIndex(newActiveIndex);
+    //   console.log(
+    //     "Active Index:",
+    //     newActiveIndex,
+    //     "Slide ID:",
+    //     slidesData[newActiveIndex]?.id
+    //   ); 
+    // }
 
     infoBoxes.forEach((box) => {
       const boxIndex = parseInt(box.getAttribute("data-slide") || "0");
@@ -297,16 +297,16 @@ const CircleSlider = () => {
                     muted
                     playsInline
                     className={styles.slideImage}
-                    onLoadedData={() =>
-                      console.log(
-                        `Loaded video for slide ${slide.id}: ${slide.activeimage}`
-                      )
-                    }
-                    onError={() =>
-                      console.error(
-                        `Failed to load video for slide ${slide.id}: ${slide.activeimage}`
-                      )
-                    }
+                    // onLoadedData={() =>
+                    //   console.log(
+                    //     `Loaded video for slide ${slide.id}: ${slide.activeimage}`
+                    //   )
+                    // }
+                    // onError={() =>
+                    //   console.error(
+                    //     `Failed to load video for slide ${slide.id}: ${slide.activeimage}`
+                    //   )
+                    // }
                     style={{ width: 130, height: 130, objectFit: "cover" }}
                   />
                 ) : (
@@ -317,16 +317,16 @@ const CircleSlider = () => {
                     muted
                     playsInline
                     className={styles.image}
-                    onLoadedData={() =>
-                      console.log(
-                        `Loaded video for slide ${slide.id}: ${slide.activeimage}`
-                      )
-                    }
-                    onError={() =>
-                      console.error(
-                        `Failed to load video for slide ${slide.id}: ${slide.activeimage}`
-                      )
-                    }
+                    // onLoadedData={() =>
+                    //   console.log(
+                    //     `Loaded video for slide ${slide.id}: ${slide.activeimage}`
+                    //   )
+                    // }
+                    // onError={() =>
+                    //   console.error(
+                    //     `Failed to load video for slide ${slide.id}: ${slide.activeimage}`
+                    //   )
+                    // }
                     style={{ width: 100, height: 100, objectFit: "cover" }}
                   />
                 )}
