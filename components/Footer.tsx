@@ -88,7 +88,7 @@ const HomeFooter = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="pdf/Corporate Governance.pdf" target="_blank">
+                  <Link href="pdf/tbc/Corporate Governance.pdf" target="_blank">
                     Corporate Governance
                   </Link>
                 </li>
@@ -253,7 +253,7 @@ const InnerPageFooter = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="pdf/Corporate Governance.pdf" target="_blank">
+                  <Link href="pdf/tbc/Corporate Governance.pdf" target="_blank">
                     Corporate Governance
                   </Link>
                 </li>
