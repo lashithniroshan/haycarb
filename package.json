@@ -1,1 +1,44 @@
-{\n  "name": "haycarb",\n  "version": "0.1.0",\n  "private": true,\n  "scripts": {\n    "dev": "next dev --turbopack",\n    "build": "next build",\n    "start": "next start",\n    "lint": "next lint"\n  },\n  "dependencies": {\n    "@amcharts/amcharts5": "^5.14.4",\n    "@radix-ui/react-avatar": "^1.1.11",\n    "@radix-ui/react-scroll-area": "^1.2.10",\n    "class-variance-authority": "^0.7.1",\n    "clsx": "^2.1.1",\n    "file-saver": "^2.0.5",\n    "framer-motion": "^12.23.26",\n    "keen-slider": "^6.8.6",\n    "lucide-react": "^0.562.0",\n    "next": "16.2.1",\n    "pdf-lib": "^1.17.1",\n    "react": "19.2.3",\n    "react-dom": "19.2.3",\n    "react-markdown": "^10.1.0",\n    "rehype-raw": "^7.0.0",\n    "remark-breaks": "^4.0.0",\n    "remark-gfm": "^4.0.1",\n    "tailwind-merge": "^3.4.0",\n    "tailwindcss-animate": "^1.0.7"\n  },\n  "devDependencies": {\n    "@eslint/eslintrc": "^3",\n    "@tailwindcss/postcss": "^4",\n    "@types/file-saver": "^2.0.7",\n    "@types/node": "^25",\n    "@types/react": "^19",\n    "@types/react-dom": "^19",\n    "eslint": "^9",\n    "eslint-config-next": "16.2.1",\n    "tailwindcss": "^4",\n    "typescript": "^5"\n  }\n}
+{
+  "name": "haycarb",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@amcharts/amcharts5": "^5.14.4",
+    "@radix-ui/react-avatar": "^1.1.11",
+    "@radix-ui/react-scroll-area": "^1.2.10",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "file-saver": "^2.0.5",
+    "framer-motion": "^12.23.26",
+    "keen-slider": "^6.8.6",
+    "lucide-react": "^0.562.0",
+    "next": "^16.2.1",
+    "pdf-lib": "^1.17.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-markdown": "^10.1.0",
+    "rehype-raw": "^7.0.0",
+    "remark-breaks": "^4.0.0",
+    "remark-gfm": "^4.0.1",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/file-saver": "^2.0.7",
+    "@types/node": "^25",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
