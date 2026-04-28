@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import FooterSelector from "components/FooterSelector";
-import AccessibilityScript from "components/AccessibilityScript";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -80,7 +78,11 @@ export default function RootLayout({
         </noscript>
 
         {/* Accessibility Plugin Script */}
-        <AccessibilityScript />
+        <Script
+  src="https://dash.accessibly.app/widget/0198cc9a-8a1c-7166-ae34-0700f160961f/autoload.js"
+  strategy="afterInteractive"
+/>
+
         {children}
       </body>
     </html>

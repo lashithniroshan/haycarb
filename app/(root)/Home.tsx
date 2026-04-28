@@ -242,7 +242,7 @@ const Home = () => {
           title="Blue Whale"
           frameBorder="0"
           allowFullScreen
-          allow="autoplay; fullscreen; xr-spatial-tracking"
+          allow="autoplay; fullscreen; xr-spatial-tracking; accelerometer; gyroscope; magnetometer"
           xr-spatial-tracking="true"
           execution-while-out-of-viewport="true"
           execution-while-not-rendered="true"
